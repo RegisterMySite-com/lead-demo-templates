@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ace GreenCare | Adrian’s Landscaping & Tree Service</title>
+  <meta name="description" content="Ace GreenCare | Adrian’s Landscaping & Tree Service — demo website by RegisterMySite">
+  <style>
+    :root { --bg:#0b0d10; --panel:#12161c; --ink:#f4f1ea; --muted:#9aa3ad; --line:rgba(255,255,255,.08); --accent:#c9a227; --ok:#3dd68c; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(11,13,16,.82); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg, .brand .mark { width:36px; height:36px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#1a1406; }
+    .btn.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .grid { display:grid; gap:18px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    input, select, textarea { width:100%; background:#0d1116; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .pill { display:inline-flex; gap:6px; align-items:center; border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:12px; color:var(--muted); }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1b2430; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); }
+    .qty { display:flex; gap:8px; align-items:center; }
+    .qty button { width:32px; height:32px; border-radius:8px; border:1px solid var(--line); background:#0d1116; color:var(--ink); cursor:pointer; }
+    
+    :root { --accent:#86c46a; --bg:#0c130e; --panel:#132016; }
+    .season { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    .season button { border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--ink); padding:8px 12px; cursor:pointer; }
+    .season button.on { background:var(--accent); color:#10210e; }
+    
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36"><rect width="36" height="36" rx="9" fill="#86c46a"/><path d="M18 7c6 7 9 11 9 16a9 9 0 11-18 0c0-5 3-9 9-16z" fill="#10210e"/></svg>
+    Ace GreenCare
+  </a>
+  <nav class="links">
+    <a href="#services">Services</a>
+    <a href="#plan">Season planner</a>
+    <a href="#visit">Contact</a>
+  </nav>
+  <a class="btn" href="tel:+15622768406">(562) 276-8406</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Long Beach 90805 · third generation since ~1989</p>
+    <h1>Lawns, trees, and yards that look looked-after.</h1>
+    <p class="lede">Adrian Vasquez’s crew — listed as Ace GreenCare and Adrian’s Landscaping & Tree Service. Yelp 5.0 from 60 reviews. Nextdoor Neighborhood Favorite 2022–2024.</p>
+  </div></section>
+  <section id="services"><div class="wrap cards">
+    <article class="card"><h3>Lawn care</h3><p>Mow, edge, feed, and irrigation checks.</p></article>
+    <article class="card"><h3>Tree service</h3><p>Trim, thin, and haul-away for street and backyard trees.</p></article>
+    <article class="card"><h3>Cleanup</h3><p>Seasonal blowouts, leaf removal, and hauling.</p></article>
+  </div></section>
+  <section id="plan"><div class="wrap">
+    <h2>Season planner + lawn quote</h2>
+    <div class="season" id="seasons">
+      <button class="on" data-s="spring">Spring</button>
+      <button data-s="summer">Summer</button>
+      <button data-s="fall">Fall</button>
+      <button data-s="winter">Winter</button>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr 1fr;">
+      <div class="card" id="seasonCopy"></div>
+      <div class="card">
+        <label>Lot size (sq ft of turf)</label>
+        <input id="turf" type="number" value="1800">
+        <label>Visit frequency</label>
+        <select id="freq"><option value="4">Weekly</option><option value="2">Biweekly</option><option value="1">Monthly</option></select>
+        <label>Add tree trim visit?</label>
+        <select id="tree"><option value="0">Not this month</option><option value="185">Small tree package +$185</option><option value="340">Two-tree package +$340</option></select>
+        <div style="height:12px"></div>
+        <button class="btn" id="quoteLawn">Quote this month</button>
+        <p id="lawnOut"></p>
+        <p class="lede">Email Adrian: <a href="mailto:adrianvasquez78@yahoo.com">adrianvasquez78@yahoo.com</a></p>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Ace GreenCare / Adrian’s Landscaping & Tree Service</strong><br>Long Beach, CA 90805<br>Street address not consistently published — confirm by phone</div>
+  <div>Adrian Vasquez<br><a href="tel:+15622768406">(562) 276-8406</a><br><a href="mailto:adrianvasquez78@yahoo.com">adrianvasquez78@yahoo.com</a></div>
+  <div>Reviews<br>Yelp 5.0 / 60<br>Nextdoor Favorite 2022–2024</div>
+</div></footer>
+
+  <div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+  <script>
+
+    const copy = {
+      spring:'Fertilize, overseed thin patches, reset sprinkler heads, and first heavy trim of hedges.',
+      summer:'Raise mower height, deep water in the morning, watch for grubs, and keep parkway trees lifted.',
+      fall:'Leaf programs, last feed before cool nights, and reduce irrigation run time.',
+      winter:'Structural tree work, irrigation off except storms, and hardscape reset after rains.'
+    };
+    const box = document.getElementById('seasonCopy');
+    box.textContent = copy.spring;
+    document.getElementById('seasons').onclick = (e) => {
+      const b=e.target.closest('button'); if(!b) return;
+      [...e.currentTarget.children].forEach(x=>x.classList.toggle('on',x===b));
+      box.textContent = copy[b.dataset.s];
+    };
+    document.getElementById('quoteLawn').onclick = () => {
+      const turf=+turf.value, visits=+freq.value, tree=+tree.value;
+      const base = Math.max(95, Math.round(turf*0.055));
+      const month = base*visits + tree;
+      lawnOut.textContent = 'Suggested monthly starting point: $'+month+' ('+visits+' visit(s) at ~$'+base+' plus selected tree work). Actual price after seeing the yard.';
+    };
+    
+  </script>
+</body>
+</html>

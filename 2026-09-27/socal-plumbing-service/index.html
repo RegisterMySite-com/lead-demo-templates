@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoCal Plumbing Service | Long Beach & Lakewood</title>
+  <meta name="description" content="SoCal Plumbing Service | Long Beach & Lakewood — demo website by RegisterMySite">
+  <style>
+    :root { --bg:#0b0d10; --panel:#12161c; --ink:#f4f1ea; --muted:#9aa3ad; --line:rgba(255,255,255,.08); --accent:#c9a227; --ok:#3dd68c; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(11,13,16,.82); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg, .brand .mark { width:36px; height:36px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#1a1406; }
+    .btn.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .grid { display:grid; gap:18px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    input, select, textarea { width:100%; background:#0d1116; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .pill { display:inline-flex; gap:6px; align-items:center; border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:12px; color:var(--muted); }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1b2430; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); }
+    .qty { display:flex; gap:8px; align-items:center; }
+    .qty button { width:32px; height:32px; border-radius:8px; border:1px solid var(--line); background:#0d1116; color:var(--ink); cursor:pointer; }
+    
+    :root { --accent:#4aa3ff; --bg:#0b1220; --panel:#121a2a; }
+    .urgent { background:linear-gradient(180deg,#1a2740,#121a2a); }
+    
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36"><rect width="36" height="36" rx="9" fill="#4aa3ff"/><path d="M12 8h4v8h6v4h-6v8h-4v-8H8v-4h4V8z" fill="#07101d"/></svg>
+    SoCal Plumbing Service
+  </a>
+  <nav class="links">
+    <a href="#services">Services</a>
+    <a href="#dispatch">Emergency dispatch</a>
+    <a href="#visit">NAP</a>
+  </nav>
+  <a class="btn" href="tel:+15622359785">(562) 235-9785</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Long Beach · Lakewood · owner-operated</p>
+    <h1>When the water is where it shouldn’t be.</h1>
+    <p class="lede">Carlos B.’s crew. Yelp 4.9 from about 354 reviews. Shop addresses published at Faust Ave in Long Beach and Bellflower Blvd in Lakewood.</p>
+  </div></section>
+  <section id="services"><div class="wrap cards">
+    <article class="card"><h3>Drains</h3><p>Kitchen, tub, and main-line clearing.</p></article>
+    <article class="card"><h3>Water heaters</h3><p>Repair, same-day swap, permit-ready installs.</p></article>
+    <article class="card"><h3>Repipes & fixtures</h3><p>Valves, toilets, and leak tracing behind walls.</p></article>
+  </div></section>
+  <section id="dispatch"><div class="wrap grid" style="grid-template-columns:1.1fr .9fr;">
+    <div class="card urgent">
+      <h2>Emergency dispatch board</h2>
+      <label>What’s happening?</label>
+      <select id="issue">
+        <option value="burst">Burst pipe / active flooding</option>
+        <option value="heater">No hot water</option>
+        <option value="drain">Slow or backed-up drain</option>
+        <option value="toilet">Running or overflowing toilet</option>
+        <option value="leak">Under-sink or slab leak suspicion</option>
+      </select>
+      <label>Property type</label>
+      <select id="ptype"><option>House</option><option>Duplex</option><option>Apartment</option><option>Small commercial</option></select>
+      <label>Can you shut the water off?</label>
+      <select id="shut"><option>Yes</option><option>Not sure where the valve is</option><option>Valve stuck</option></select>
+      <div style="height:12px"></div>
+      <button class="btn" id="triage">Get next-step card</button>
+      <p id="triageOut"></p>
+    </div>
+    <div class="card">
+      <h2>Ballpark menu</h2>
+      <table>
+        <tr><th>Call type</th><th>From</th></tr>
+        <tr><td>Service call / diagnosis</td><td>$89–$129</td></tr>
+        <tr><td>Drain clear (standard)</td><td>$149+</td></tr>
+        <tr><td>Toilet reset or rebuild</td><td>$165+</td></tr>
+        <tr><td>Water heater swap</td><td>quoted on site</td></tr>
+      </table>
+      <p class="lede">Figures are demo ranges so the page has a useful feature. Final price after the tech sees the job.</p>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">SoCal Plumbing Service</strong><br>3686 Faust Ave, Long Beach, CA 90808<br>Also listed: 5222 Bellflower Blvd, Lakewood, CA 90713</div>
+  <div>Carlos B.<br><a href="tel:+15622359785">(562) 235-9785</a><br>No verified public email (directory mail hits a parked domain)</div>
+  <div>Reviews<br>Yelp 4.9 / ~354</div>
+</div></footer>
+
+  <div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+  <script>
+
+    const cards = {
+      burst:'Shut the main if you can. Move valuables off the floor. We treat this as first-out dispatch — call (562) 235-9785 now and keep this tab open for the address.',
+      heater:'Check the breaker and the pilot/error code. If the tank is leaking at the base, shut cold supply and catch water. Typical same-day swap window after diagnosis.',
+      drain:'Stop using the fixture. Do not keep adding chemical opener on a main-line backup. We’ll snake or jet after a camera if needed.',
+      toilet:'If it’s overflowing, lift the tank lid and close the fill valve. Don’t flush again until we clear the trap or flange.',
+      leak:'Open the cabinet, set a pan, and photograph the source. If the ceiling is staining, we look at supply lines first.'
+    };
+    document.getElementById('triage').onclick = () => {
+      triageOut.textContent = cards[issue.value] + ' Property: '+ptype.value+'. Water shut: '+shut.value+'.';
+    };
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2B1 Tint | Garden Grove Window Tint</title>
+  <meta name="description" content="2B1 Tint | Garden Grove Window Tint — demo website by RegisterMySite">
+  <style>
+    :root { --bg:#0b0d10; --panel:#12161c; --ink:#f4f1ea; --muted:#9aa3ad; --line:rgba(255,255,255,.08); --accent:#c9a227; --ok:#3dd68c; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    img { max-width:100%; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(11,13,16,.82); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg, .brand .mark { width:36px; height:36px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#1a1406; }
+    .btn.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .grid { display:grid; gap:18px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    input, select, textarea { width:100%; background:#0d1116; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .pill { display:inline-flex; gap:6px; align-items:center; border:1px solid var(--line); border-radius:999px; padding:6px 10px; font-size:12px; color:var(--muted); }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1b2430; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); }
+    .qty { display:flex; gap:8px; align-items:center; }
+    .qty button { width:32px; height:32px; border-radius:8px; border:1px solid var(--line); background:#0d1116; color:var(--ink); cursor:pointer; }
+    
+    :root { --accent:#7ee0c6; --bg:#0a0f12; --panel:#10181c; }
+    .shop { display:grid; grid-template-columns:2fr 1fr; gap:16px; }
+    .film { cursor:pointer; }
+    .film.on { outline:2px solid var(--accent); }
+    .cart-row { display:flex; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid var(--line); }
+    
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36"><rect width="36" height="36" rx="9" fill="#7ee0c6"/><path d="M7 11h22v14H7z" fill="#0a1210" opacity=".35"/><path d="M7 11l22 14" stroke="#0a1210" stroke-width="2"/></svg>
+    2B1 Tint
+  </a>
+  <nav class="links">
+    <a href="#films">Films</a>
+    <a href="#quote">Vehicle quote</a>
+    <a href="#visit">Shop</a>
+  </nav>
+  <a class="btn" href="tel:+17145915530">(714) 591-5530</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Garden Grove · Instagram @2b1tint</p>
+    <h1>Shade, heat rejection, and a clean cut line.</h1>
+    <p class="lede">Yelp about 4.9 from ~380 reviews and 479 photos. Primary shop listing: 7525 Park Ave. Older maps still show Garden Grove Blvd — call before you drive.</p>
+  </div></section>
+  <section id="films"><div class="wrap">
+    <h2>Film catalog</h2>
+    <div class="filters" id="filmFilters" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+      <button class="btn" data-f="all">All</button>
+      <button class="btn ghost" data-f="ceramic">Ceramic</button>
+      <button class="btn ghost" data-f="carbon">Carbon</button>
+      <button class="btn ghost" data-f="auto">Auto</button>
+      <button class="btn ghost" data-f="arch">Home / storefront</button>
+    </div>
+    <div class="cards" id="filmList"></div>
+  </div></section>
+  <section id="quote"><div class="wrap shop">
+    <div class="card">
+      <h2>Build a tint quote</h2>
+      <label>Vehicle class</label>
+      <select id="vclass">
+        <option value="1">Coupe / sedan</option>
+        <option value="1.15">Small SUV / hatch</option>
+        <option value="1.3">Full SUV / truck</option>
+      </select>
+      <label>Coverage</label>
+      <select id="cover">
+        <option value="1">Full vehicle (typical 2-front + rears + windshield strip)</option>
+        <option value=".72">Rears only</option>
+        <option value="1.18">Full + windshield</option>
+      </select>
+      <p id="quoteOut"></p>
+    </div>
+    <div class="card">
+      <h3>Selected film</h3>
+      <div id="cart"></div>
+      <a class="btn ghost" href="https://www.instagram.com/2b1tint/" target="_blank" rel="noreferrer">Book via Instagram @2b1tint</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">2B1 Tint</strong><br>7525 Park Ave, Garden Grove, CA 92841<br>Secondary listing: 9825 Garden Grove Blvd, CA 92844</div>
+  <div><a href="tel:+17145915530">(714) 591-5530</a><br>Instagram @2b1tint</div>
+  <div>Reviews<br>Yelp ~4.9 / ~380<br>479 photos</div>
+</div></footer>
+
+  <div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+  <script>
+
+    const films = [
+      {n:'IR ceramic 20', cat:'ceramic auto', p:449, d:'High heat rejection, low haze, street-legal look.'},
+      {n:'IR ceramic 35', cat:'ceramic auto', p:429, d:'Lighter cabin, still cuts glare.'},
+      {n:'Carbon 15', cat:'carbon auto', p:289, d:'Dark privacy without metal interference.'},
+      {n:'Carbon 35', cat:'carbon auto', p:269, d:'Daily-driver shade.'},
+      {n:'Architectural bronze', cat:'arch', p:12, d:'Priced per sq ft for storefronts.'},
+      {n:'Architectural clear UV', cat:'arch', p:9, d:'Near-invisible UV skin for offices.'}
+    ];
+    let current = films[0];
+    const list = document.getElementById('filmList');
+    function draw(f='all') {
+      list.innerHTML='';
+      films.filter(x => f==='all' || x.cat.includes(f)).forEach(item => {
+        const el=document.createElement('article');
+        el.className='card film'+(item===current?' on':'');
+        el.innerHTML = '<h3>'+item.n+'</h3><p>'+item.d+'</p><strong>'+(item.cat.includes('arch')?(' $'+item.p+'/sq ft'):(' from $'+item.p))+'</strong>';
+        el.onclick=()=>{ current=item; quote(); draw(f); };
+        list.append(el);
+      });
+    }
+    document.getElementById('filmFilters').onclick = (e) => {
+      const b=e.target.closest('button'); if(!b) return;
+      draw(b.dataset.f);
+    };
+    function quote() {
+      const mult = (+vclass.value)*(+cover.value);
+      const arch = current.cat.includes('arch');
+      const price = arch ? current.p : Math.round(current.p*mult);
+      quoteOut.textContent = arch ? (current.n+' at $'+current.p+' per sq ft — measure glass on site.') : (current.n+' on this vehicle class / coverage: about $'+price+'.');
+      cart.innerHTML = '<div class="cart-row"><span>'+current.n+'</span><span>'+(arch?('$'+current.p+'/sq ft'):('$'+price))+'</span></div><p class="lede">Demo cart only. Connect Square or shop-pay later. Instagram is how most customers already book.</p>';
+    }
+    document.getElementById('vclass').onchange = quote;
+    document.getElementById('cover').onchange = quote;
+    draw(); quote();
+    
+  </script>
+</body>
+</html>
