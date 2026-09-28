@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mona’s Custom Tailors | Long Beach alterations</title>
+  <meta name="description" content="Mona’s Custom Tailors on E Del Amo Blvd — RegisterMySite demo with an alteration ticket builder.">
+  <style>
+    :root { --bg:#16110e; --panel:#221b16; --ink:#f7f1ea; --muted:#b3a79b; --line:rgba(255,255,255,.08); --accent:#e8b48a; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Georgia,serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(22,17,14,.88); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; font-family:Georgia,serif; }
+    nav.links { display:flex; gap:18px; color:var(--muted); font-size:14px; font-family:Inter,sans-serif; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#2a1b12; font-family:Inter,sans-serif; }
+    .hero { padding:72px 0 40px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; font-family:Inter,sans-serif; }
+    h1 { font-size:clamp(34px,6vw,60px); line-height:1.08; margin:10px 0 16px; }
+    .lede { color:var(--muted); font-size:18px; max-width:60ch; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:24px 0 52px; }
+    h2 { font-size:30px; margin:0 0 14px; }
+    label { display:block; font-size:13px; color:var(--muted); margin:10px 0 6px; font-family:Inter,sans-serif; }
+    input, select { width:100%; background:#18120e; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; font-family:Inter,sans-serif; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; font-family:Inter,sans-serif; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#2a221c; border:1px solid var(--line); font-size:12px; padding:8px 12px; border-radius:999px; font-family:Inter,sans-serif; }
+    .kit { display:grid; grid-template-columns:1.25fr .75fr; gap:16px; }
+    .pills { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 14px; }
+    .pills button { border:1px solid var(--line); background:#18120e; color:var(--ink); border-radius:999px; padding:8px 12px; cursor:pointer; font-family:Inter,sans-serif; }
+    .pills button.on { background:var(--accent); color:#2a1b12; }
+    table { width:100%; border-collapse:collapse; font-family:Inter,sans-serif; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); }
+    @media (max-width:780px) { nav.links { display:none; } .kit { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36" width="36" height="36"><rect width="36" height="36" rx="9" fill="#e8b48a"/><path d="M10 26c6-14 16-14 16 0" stroke="#2a1b12" stroke-width="2" fill="none"/><circle cx="18" cy="12" r="3" fill="#2a1b12"/></svg>
+    Mona’s Custom Tailors
+  </a>
+  <nav class="links">
+    <a href="#work">Atelier</a>
+    <a href="#ticket">Alteration ticket</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+15624203219">(562) 420-3219</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Los Altos / 90808 · since about 1977</p>
+    <h1>Almost fifty years of hems, jackets, and wedding-day fixes.</h1>
+    <p class="lede">Yelp 4.5 from about 81 reviews at 5446 E Del Amo Blvd. BBB listed but not accredited. Brand domains are still NXDOMAIN — this demo gives Mona a ticket builder customers can fill before they walk in.</p>
+  </div></section>
+  <section id="work"><div class="wrap cards">
+    <article class="card"><h3>Alterations</h3><p>Hems, take-in, zippers, and sleeves on everyday and formal wear.</p></article>
+    <article class="card"><h3>Custom tailoring</h3><p>Jackets and trousers fitted in the shop rather than guessed from a chart.</p></article>
+    <article class="card"><h3>Events</h3><p>Wedding-party rush work when the date is already on the calendar.</p></article>
+  </div></section>
+  <section id="ticket"><div class="wrap kit">
+    <div class="card">
+      <h2>Alteration ticket</h2>
+      <p class="lede">Filter the menu, add pieces, and pick a pickup window. Ready to connect later to SMS reminders — quantities stay on this page only.</p>
+      <div class="pills" id="filters">
+        <button class="on" data-f="all">All</button>
+        <button data-f="hem">Hems</button>
+        <button data-f="fit">Fit</button>
+        <button data-f="repair">Repair</button>
+        <button data-f="formal">Formal</button>
+      </div>
+      <table>
+        <thead><tr><th>Service</th><th></th><th>From</th></tr></thead>
+        <tbody id="menu"></tbody>
+      </table>
+      <label>Pickup date</label>
+      <input id="when" type="date">
+    </div>
+    <div class="card">
+      <h3>Ticket</h3>
+      <div id="cart"></div>
+      <a class="btn" href="tel:+15624203219">Call the shop</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Mona’s Custom Tailors</strong><br>5446 E Del Amo Blvd<br>Long Beach, CA 90808</div>
+  <div><a href="tel:+15624203219">(562) 420-3219</a><br>Email not published<br>Founded ~1977</div>
+  <div>Reviews<br>Yelp 4.5 / ~81<br>Yelp · MapQuest · Yellow Pages · Giftly · Waze</div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+  const services = [
+    {id:'ph', name:'Pant hem', cat:'hem', price:18},
+    {id:'dh', name:'Dress hem', cat:'hem', price:35},
+    {id:'jh', name:'Jean original-hem', cat:'hem', price:28},
+    {id:'waist', name:'Waist take-in / let-out', cat:'fit', price:32},
+    {id:'side', name:'Jacket side seams', cat:'fit', price:55},
+    {id:'sleeve', name:'Jacket sleeve length', cat:'fit', price:40},
+    {id:'zip', name:'Zipper replacement', cat:'repair', price:24},
+    {id:'btn', name:'Buttons / hook-and-eye', cat:'repair', price:12},
+    {id:'bridal', name:'Bridal bustle', cat:'formal', price:85},
+    {id:'tux', name:'Tuxedo pant + jacket package', cat:'formal', price:95}
+  ];
+  let filter = 'all';
+  const qty = {};
+  const when = document.getElementById('when');
+  const t = new Date(); t.setDate(t.getDate()+4);
+  when.value = t.toISOString().slice(0,10);
+  function render() {
+    const rows = services.filter(s => filter==='all' || s.cat===filter);
+    menu.innerHTML = rows.map(s => `
+      <tr>
+        <td>${s.name}</td>
+        <td><button class="btn" data-add="${s.id}" style="padding:6px 12px">Add</button></td>
+        <td>$${s.price}</td>
+      </tr>`).join('');
+    const lines = services.filter(s => qty[s.id]>0);
+    const total = lines.reduce((n,s)=>n+s.price*qty[s.id],0);
+    cart.innerHTML = (lines.length? lines.map(s=>`<p>${s.name} × ${qty[s.id]} — $${s.price*qty[s.id]}</p>`).join('') : '<p>Empty ticket.</p>')
+      + `<p><strong>Estimate $${total}</strong></p><p>Pickup ${when.value || 'TBD'}.</p>`;
+  }
+  filters.addEventListener('click', e => {
+    const b = e.target.closest('button'); if(!b) return;
+    filter = b.dataset.f;
+    [...filters.children].forEach(x=>x.classList.toggle('on', x===b));
+    render();
+  });
+  menu.addEventListener('click', e => {
+    const id = e.target.dataset.add; if(!id) return;
+    qty[id] = (qty[id]||0)+1; render();
+  });
+  when.onchange = render;
+  render();
+</script>
+</body>
+</html>
