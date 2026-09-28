@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Johns Electric | Long Beach Electrician</title>
+  <meta name="description" content="Johns Electric (John's Electric LLC) — RegisterMySite demo for a Long Beach licensed electrician.">
+  <style>
+    :root { --bg:#07090d; --panel:#11161e; --ink:#eef3f8; --muted:#93a0ae; --line:rgba(255,255,255,.08); --accent:#3ee0c3; --warn:#f5b942; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(7,9,13,.86); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; }
+    nav.links { display:flex; gap:18px; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#04221c; }
+    .hero { padding:72px 0 40px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(34px,6vw,62px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:60ch; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:24px 0 52px; }
+    h2 { font-size:30px; letter-spacing:-.03em; margin:0 0 14px; }
+    label { display:block; font-size:13px; color:var(--muted); margin:10px 0 6px; }
+    input, select { width:100%; background:#0b1016; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#15202b; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid var(--line); }
+    .kit { display:grid; grid-template-columns:1.25fr .75fr; gap:16px; }
+    .bar { height:10px; background:#0b1016; border-radius:99px; overflow:hidden; margin:10px 0; }
+    .bar > i { display:block; height:100%; background:var(--accent); width:0; }
+    .bar.warn > i { background:var(--warn); }
+    .bar.hot > i { background:#ef4444; }
+    @media (max-width:780px) { nav.links { display:none; } .kit { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36" width="36" height="36"><rect width="36" height="36" rx="9" fill="#3ee0c3"/><path d="M18 7l2.2 7.2H28l-6.1 4.4 2.3 7.2L18 21.4 11.8 25.8l2.3-7.2L8 14.2h7.8z" fill="#04221c"/></svg>
+    Johns Electric
+  </a>
+  <nav class="links">
+    <a href="#services">Services</a>
+    <a href="#load">Panel load calculator</a>
+    <a href="#visit">Contact</a>
+  </nav>
+  <a class="btn" href="tel:+15625522179">(562) 552-2179</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Long Beach · CSLB #1141372 · John's Electric LLC</p>
+    <h1>Licensed electrical work without the parked-domain dead end.</h1>
+    <p class="lede">Yelp 5.0 (~90) and Google ~5.0 (~23). Shop at 6911 Long Beach Blvd, Unit 3. Customers mention Freddy; LLC agent is Jesus D. Gonzalez. This page is a RegisterMySite demo — johnselectric.com is still a parking page.</p>
+  </div></section>
+  <section id="services"><div class="wrap cards">
+    <article class="card"><h3>Panel & service</h3><p>100A / 200A upgrades, meter-main, and load calculations before the inspector visit.</p></article>
+    <article class="card"><h3>Troubleshooting</h3><p>Breakers that trip, flickering rooms, and dead circuits across 90805 / Lakewood edge.</p></article>
+    <article class="card"><h3>New circuits</h3><p>Kitchen, EV-ready homerun, and shop tools pulled to a labeled breaker.</p></article>
+  </div></section>
+  <section id="load"><div class="wrap kit">
+    <div class="card">
+      <h2>Panel load calculator</h2>
+      <p class="lede">Add the circuits you want quoted. Demo math uses conservative continuous-load factors so the crew can sanity-check before a site visit.</p>
+      <label>Existing panel</label>
+      <select id="panel">
+        <option value="100">100 amp</option>
+        <option value="125">125 amp</option>
+        <option value="150">150 amp</option>
+        <option value="200" selected>200 amp</option>
+      </select>
+      <table>
+        <thead><tr><th>Circuit</th><th>Qty</th><th>Amps</th></tr></thead>
+        <tbody id="loadBody"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Capacity check</h3>
+      <div id="loadOut"></div>
+      <div class="bar" id="bar"><i></i></div>
+      <p class="lede">Not a permit document. Freddy’s crew still walks the panel labels on site.</p>
+      <a class="btn" href="tel:+15625522179">Call Johns Electric</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Johns Electric</strong><br>John's Electric LLC<br>6911 Long Beach Blvd, Unit 3<br>Long Beach, CA 90805</div>
+  <div>Jesus D. Gonzalez · customers often name Freddy<br><a href="tel:+15625522179">(562) 552-2179</a><br>Email not published in the lead scan</div>
+  <div>Reviews<br>Yelp 5.0 / ~90<br>Google ~5.0 / ~23<br>Yelp · Google · BuildZoom / NCI · CA SOS</div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+  const items = [
+    {id:'lite', name:'Lighting circuit', a:15},
+    {id:'rec', name:'Receptacle circuit', a:20},
+    {id:'kit', name:'Kitchen small-appliance', a:20},
+    {id:'dry', name:'Electric dryer', a:30},
+    {id:'range', name:'Range / oven', a:40},
+    {id:'ac', name:'A/C condenser', a:30},
+    {id:'ev', name:'EV charger (Level 2)', a:40},
+    {id:'wh', name:'Water heater', a:25}
+  ];
+  const qty = {lite:4, rec:6, kit:2, dry:1, range:1, ac:1, ev:0, wh:0};
+  function render() {
+    loadBody.innerHTML = items.map(i => `
+      <tr>
+        <td>${i.name}</td>
+        <td><input data-id="${i.id}" type="number" min="0" max="20" value="${qty[i.id]}" style="width:80px"></td>
+        <td>${i.a}A</td>
+      </tr>`).join('');
+    const demand = items.reduce((s,i)=>s + i.a*(qty[i.id]||0)*0.8, 0);
+    const cap = +panel.value;
+    const pct = Math.min(140, Math.round(demand/cap*100));
+    const cls = pct>100?'hot':pct>80?'warn':'';
+    bar.className = 'bar '+cls;
+    bar.firstElementChild.style.width = Math.min(100,pct)+'%';
+    loadOut.innerHTML = `<p><strong>${Math.round(demand)}A estimated demand</strong> on a ${cap}A panel (${pct}%).</p>
+      <p>${pct>100?'Likely needs a service upgrade.':pct>80?'Tight — confirm diversity on site.':'Looks comfortable for a quote visit.'}</p>`;
+  }
+  panel.onchange = render;
+  loadBody.addEventListener('input', e => {
+    const id = e.target.dataset.id; if(!id) return;
+    qty[id] = Math.max(0, +e.target.value||0); render();
+  });
+  render();
+</script>
+</body>
+</html>
