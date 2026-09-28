@@ -14,4 +14,9 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `2b1-tint` — filterable film catalog + vehicle quote cart
 - `chau-moving` — moving-materials calculator (boxes, blankets, tape, shrink wrap, paper)
 
+## 2026-09-28
+- `johns-electric` — panel load calculator (circuits vs 100–200A service)
+- `croff-electric` — EV charger planner (breaker, wire, permit flags)
+- `monas-custom-tailors` — filterable alteration ticket + pickup date
+
 These are outreach demos, not the businesses' live sites.
