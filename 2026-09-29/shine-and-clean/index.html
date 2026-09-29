@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shine &amp; Clean Professional Cleaning Service | Long Beach</title>
+  <meta name="description" content="Shine &amp; Clean Professional Cleaning Service — Long Beach house cleaning demo by RegisterMySite">
+  <style>
+    :root { --bg:#07120f; --panel:#10201b; --ink:#eef8f4; --muted:#9fb6ad; --line:rgba(255,255,255,.08); --accent:#7fd3b0; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(7,18,15,.86); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; }
+    .brand svg { width:36px; height:36px; }
+    nav.links { display:flex; gap:18px; color:var(--muted); font-size:14px; }
+    .btn { display:inline-flex; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#07211a; }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(34px,5.6vw,58px); line-height:1.06; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    input, select { width:100%; background:#0a1814; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#143028; border:1px solid var(--line); color:#d7efe6; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .kit { display:grid; grid-template-columns:1.2fr .8fr; gap:16px; }
+    .fields { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .rooms { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+    .rooms button { border:1px solid var(--line); background:#0a1814; color:var(--ink); border-radius:999px; padding:8px 12px; cursor:pointer; }
+    .rooms button.on { background:var(--accent); color:#07211a; }
+    .out { font-size:28px; font-weight:700; }
+    @media (max-width:720px) { nav.links { display:none; } .kit, .fields { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="9" fill="#7fd3b0"/><circle cx="18" cy="16" r="7" fill="none" stroke="#07211a" stroke-width="2.4"/><path d="M13 23 Q18 30 23 23" fill="none" stroke="#07211a" stroke-width="2.4"/></svg>
+    Shine &amp; Clean
+  </a>
+  <nav class="links">
+    <a href="#services">Services</a>
+    <a href="#quote">Room quote</a>
+    <a href="#visit">Contact</a>
+  </nav>
+  <a class="btn" href="tel:+15626194185">(562) 619-4185</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Downtown Long Beach · Elisabet · since 2004</p>
+    <h1>Houses that look like company is already on the way.</h1>
+    <p class="lede">Professional house cleaning from 6th Street. HomeAdvisor ~4.6 from 40 reviews, Facebook page live. The .com is unpublished — this demo adds a room-by-room recurring quote builder.</p>
+  </div></section>
+  <section id="services"><div class="wrap cards">
+    <article class="card"><h3>Standard clean</h3><p>Kitchen, baths, floors, and dusting on a weekly or biweekly route.</p></article>
+    <article class="card"><h3>Deep / move-out</h3><p>Inside appliances, baseboards, and interior windows before keys change hands.</p></article>
+    <article class="card"><h3>Office suite</h3><p>After-hours tidy for small downtown offices near the 6th Street suite.</p></article>
+  </div></section>
+  <section id="quote"><div class="wrap kit">
+    <div class="card">
+      <h2>Room-by-room recurring quote</h2>
+      <p class="lede">Toggle rooms like a filterable menu, pick cadence, and the cart totals a first-visit deep plus the standing rate. Ready to connect to a booking calendar later.</p>
+      <div class="fields">
+        <div><label>Cadence</label>
+          <select id="cad">
+            <option value="1">Weekly</option>
+            <option value="0.85" selected>Every other week</option>
+            <option value="0.7">Monthly</option>
+          </select>
+        </div>
+        <div><label>First visit</label>
+          <select id="first">
+            <option value="1.35" selected>Deep clean first</option>
+            <option value="1">Same as standing</option>
+          </select>
+        </div>
+      </div>
+      <div class="rooms" id="rooms"></div>
+    </div>
+    <div class="card">
+      <h3>Quote cart</h3>
+      <div class="out" id="total"></div>
+      <div id="lines"></div>
+      <p class="lede">Elisabet confirms pets, parking, and product allergies by phone.</p>
+      <a class="btn" href="tel:+15626194185">Book a walk-through</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Shine &amp; Clean Professional Cleaning Service</strong><br>1237 E 6th St, Suite 101, Long Beach, CA 90802</div>
+  <div>Elisabet · since 2004<br><a href="tel:+15626194185">(562) 619-4185</a><br>Email not published</div>
+  <div>Reviews<br>HomeAdvisor ~4.6 / 40<br>Facebook page present</div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+  const catalog = [
+    {id:'kit', name:'Kitchen', price:45, on:true},
+    {id:'ba1', name:'Bath 1', price:28, on:true},
+    {id:'ba2', name:'Bath 2', price:24, on:true},
+    {id:'lr', name:'Living / dining', price:32, on:true},
+    {id:'br1', name:'Bedroom 1', price:22, on:true},
+    {id:'br2', name:'Bedroom 2', price:22, on:false},
+    {id:'br3', name:'Bedroom 3', price:22, on:false},
+    {id:'ld', name:'Laundry / mud', price:16, on:false},
+    {id:'off', name:'Home office', price:18, on:false}
+  ];
+  function renderRooms() {
+    rooms.innerHTML = catalog.map(r => `<button data-id="${r.id}" class="${r.on?'on':''}">${r.name}</button>`).join('');
+    quote();
+  }
+  function quote() {
+    const base = catalog.filter(r => r.on).reduce((s,r)=>s+r.price,0);
+    const stand = base * (+cad.value);
+    const first = stand * (+firstEl.value);
+    lines.innerHTML = catalog.filter(r=>r.on).map(r=>`<div>${r.name} · $${r.price}</div>`).join('')
+      + `<p>Standing visit <strong>$${stand.toFixed(0)}</strong><br>First visit <strong>$${first.toFixed(0)}</strong></p>`;
+    total.textContent = '$' + first.toFixed(0);
+  }
+  const firstEl = document.getElementById('first');
+  rooms.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const r = catalog.find(x => x.id === b.dataset.id); r.on = !r.on; renderRooms();
+  });
+  cad.onchange = firstEl.onchange = quote;
+  renderRooms();
+</script>
+</body>
+</html>
