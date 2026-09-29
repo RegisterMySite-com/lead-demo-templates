@@ -1,0 +1,22 @@
+Land-Lord Management concept demo — source notes
+Opened September 28, 2026. Internal only. Folder is land-lord-mixed-rentals because the verified inventory is one apartment plus one commercial suite.
+
+BUSINESS
+- https://www.landlordmgmt.com/ opened. Family owned. Founders named Francis & Amy Hsu. Site says "for over 40 years" connecting residents and businesses with homes, apartments, and commercial space.
+- Phone 714-821-8888. Email alan@landlordmgmt.com. Address 6888 Lincoln Ave., Ste. A, Buena Park, CA 90620. Same block on the homepage and on the listing page.
+- https://www.landlordmgmt.com/availability was opened and did not list any units. Only the contact block rendered.
+- DRE disciplinary history was not put on the demo. The name "Ko, Francis" was not used. No DRE number was printed because it was not on the pages opened.
+- Company FAQ on the homepage (income about 3–4x rent, guarantor, first month plus one month deposit, certified checks) is summarized as company policy, not as terms of a specific unit.
+
+LISTINGS
+1. Apartment — 319 Josie Circle, Placentia, CA 92870. Opened https://www.rentalsource.com/details/319-josie-circle-placentia-ca-84010090/
+   Apartment, $2,595, 2 bed, 1 bath, 900 sq ft, pet friendly: no, garage: yes, laundry facilities, listing text also says laundry hookup, 1 car garage, and HOA. Managed by Land-Lord Management, (714) 821-8888 (same phone as the site). Page said RentalSource last checked September 28, 2026 at 10:47 AM ET. The ad says several units are available; they were not enumerated, so the address is one card. Market-average rent commentary on RentalSource was not copied.
+   Curl of that URL hit a bot wall, so image URLs were not captured. WebFetch did not return photo URLs. Card uses an SVG illustration labeled as not a photo.
+2. Commercial — 1625 E. 17th St., Unit 106, Santa Ana, CA 92705-8517. Opened https://www.landlordmgmt.com/listings/detail/7a8f5597-9239-4be6-b3c7-1ab9d7d07a50
+   Headline: ground-level suite for retail and a sales office (their spelling "locatioin" was not copied). Modified gross lease, utilities included. Phone on the listing: (714) 821-8888 Ext. 5. No rent, beds, baths, sq ft, or availability date on the page fetched, so those are omitted.
+   Direct curl to landlordmgmt.com failed TLS (unexpected eof). WebFetch returned no image URLs. SVG storefront illustration, labeled as not a photo.
+   A search-index snippet of the same URL used "new home" / "apartment" wording. The page fetch used office/retail wording. The demo follows the fetched page, not the snippet.
+
+NOT USED
+- Review carousel omitted. No Google, Yelp, Facebook, or Instagram review profile was opened, so no rating or quote is shown.
+- No padded units. Pagination is omitted because there are two listings.

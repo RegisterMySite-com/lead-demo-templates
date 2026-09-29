@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Illustration of a storefront, not a photograph">
+  <rect width="800" height="520" fill="#efe6d6"/>
+  <rect x="120" y="120" width="560" height="300" fill="#f7f1e6" stroke="#1e3a2f" stroke-width="8"/>
+  <rect x="160" y="170" width="220" height="160" fill="#d7cbb6"/>
+  <rect x="420" y="170" width="210" height="160" fill="#1e3a2f"/>
+  <rect x="300" y="300" width="90" height="120" fill="#c46a3a"/>
+  <text x="400" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#1e3a2f">Illustration, not a photo of this suite</text>
+</svg>

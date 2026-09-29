@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Illustration of an apartment building, not a photograph">
+  <rect width="800" height="520" fill="#efe6d6"/>
+  <rect x="180" y="70" width="440" height="380" fill="#1e3a2f"/>
+  <g fill="#efe6d6">
+    <rect x="220" y="110" width="70" height="50"/><rect x="320" y="110" width="70" height="50"/><rect x="420" y="110" width="70" height="50"/><rect x="520" y="110" width="70" height="50"/>
+    <rect x="220" y="190" width="70" height="50"/><rect x="320" y="190" width="70" height="50"/><rect x="420" y="190" width="70" height="50"/><rect x="520" y="190" width="70" height="50"/>
+    <rect x="220" y="270" width="70" height="50"/><rect x="320" y="270" width="70" height="50"/><rect x="420" y="270" width="70" height="50"/><rect x="520" y="270" width="70" height="50"/>
+  </g>
+  <rect x="360" y="350" width="80" height="100" fill="#c46a3a"/>
+  <text x="400" y="490" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#1e3a2f">Illustration, not a photo of this home</text>
+</svg>
