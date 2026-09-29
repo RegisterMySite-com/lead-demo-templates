@@ -1,0 +1,33 @@
+APG Properties concept demo — source notes
+Opened September 28, 2026 (America/Los_Angeles). Internal only.
+
+BUSINESS
+- Name used: APG Properties. Homepage title: "APG Properties: Anaheim Residential Property Management". https://apgproperties.com/
+- Phone shown: (714) 400-9997. On homepage, about, owners, and find-a-home.
+- Offices shown, as they advertise them: 675 N. Euclid Street #532, Anaheim, CA 92801 and 371 Oak Place, Suite H, Brea, CA 92821. Same pages.
+- Corporation DRE #01525202 on the find-a-home and about-page footers ("© 2026 APG Properties | DRE License: #01525202").
+- No email is printed. None shown on the demo.
+- People from https://apgproperties.com/about-us/ : Shane Roach, owner, DRE #01879273; Phil Yates, DRE #01888174; Dan Groomer, DRE #02003512, described as office manager and a licensed agent; Dale R. Jamieson II, DRE #01913031, San Diego County rep, about page says since 2010.
+- Services paraphrased from homepage and owners page (leasing, accounting/rent collection, online rent, marketing and screening, 24/7 maintenance, rules, AppFolio named on the owners page). Typos on the live site were not repeated. Founding-year claims were not used.
+- Markets named on the homepage: Garden Grove, Yorba Linda, Anaheim, Anaheim Hills, Fullerton, Orange County, Brea, Santee, Buena Park, Placentia.
+
+LISTINGS
+All nine were on https://apgproperties.com/find-a-home/ and each detail page below was opened on AppFolio the same day. Card photo plus three more large images downloaded from images.cdn.appfolio.com into images/. Photos are watermarked by APG on at least the Greenleaf exterior.
+1. 1850 W Greenleaf Ave Apt E, Anaheim, CA 92801. Condo. $1,875. 1 bd / 1 ba. 722 sq ft. Available now. Deposit $1,875 in two payments. Fee $49.50. Generally pet restricted. https://apgpropertiesinc.appfolio.com/listings/detail/ee79de46-0c76-4840-831e-666f4eaaf310
+2. 11959 Buckingham Cir, Garden Grove, CA 92840. Townhouse. $3,500. 4 bd / 2.5 ba. 1,452 sq ft. Available now. Deposit $3,500. Fee $49.50. "Please submit for pets." https://apgpropertiesinc.appfolio.com/listings/detail/f7c03506-5ca3-45c0-8e17-610f32b01dba
+3. 15068 Mountain Spring St, Hacienda Heights, CA 91745. House. $4,300. 4 bd / 2 ba. 1,564 sq ft. Available 10/1/26. Listing says it is being upgraded from a previously advertised 3/1, work scheduled 9/26–10/1, new photos to follow. Deposit $4,300. Fee $49.50. https://apgpropertiesinc.appfolio.com/listings/detail/05e061a9-8734-48ea-8f3a-942749a31c8c
+4. 13217 San Antonio Dr, Norwalk, CA 90650. Townhome. $4,190. Card: 3 bd / 4 ba / 1,872 sq ft. Available now. Description also says 1,900 sq ft and 2 full + 2 half baths. Demo shows the card figures and states the conflict. Deposit $4,190. Fee $49.50. Built 2021 and a Tesla charger are in the description. https://apgpropertiesinc.appfolio.com/listings/detail/c41d8215-1c5f-4daf-900f-32b549f5ccb8
+5. 11151 Chadsey Dr, Whittier, CA 90604. House. $3,695. 3/2. 1,672 sq ft. Available now. $500 off first month. Deposit $3,695. Fee $49.50. https://apgpropertiesinc.appfolio.com/listings/detail/91aadaa1-52d7-4593-ba9c-0be8f20f98cf
+6. 460 S Bridge View Dr, Anaheim, CA 92808. Listed as a home in Old Bridge / Anaheim Hills. $6,500. Card 4 bd / 4 ba / 3,356 sq ft. Available now. Description also says two full and two half baths. Demo shows the card count and notes the split. Deposit $6,500. Fee $49.50. https://apgpropertiesinc.appfolio.com/listings/detail/f316b419-551f-456c-b6cc-9b6abaa2ca38
+7. 1002 W Santa Clara Ave, Santa Ana, CA 92706. House. $5,490. 3/2. 1,700 sq ft. Available now. Pool. Small pets considered. Deposit $5,490. Fee $49.50. https://apgpropertiesinc.appfolio.com/listings/detail/1c17a46c-7580-454b-adc2-0881a3256dd6
+8. 1968 Cherry Ave #12, Signal Hill, CA 90755. Townhome. $3,495. 3/3. 1,510 sq ft. Available now. $500 off first month. Deposit $3,495. Fee $49.50. https://apgpropertiesinc.appfolio.com/listings/detail/22618e8f-2b31-4f62-9883-8b1667b5e22a
+9. 162 W Robinson Ave, San Diego, CA 92103. Townhome, Hillcrest. $6,495. Card 3 bd / 5 ba / 1,800 sq ft. Description: 3 full + 2 half. Available now. Half off first month ($3,247.50). Deposit $6,495. Fee $49.50. https://apgpropertiesinc.appfolio.com/listings/detail/a0e88504-d2c5-4a72-9167-94d37699657f
+
+NOT USED
+- Review carousel omitted. Google and Yelp pages were not opened. PropertyManagement.com secondhand ratings (Google 4.7/99, Yelp 4.5/116) were not used. Facebook and Instagram were not confirmed. Homepage quotes from Michael Marron and Nadia Milner are on APG’s own site, not a public review profile, so they were not turned into a review carousel.
+- Extra phones refused: (714) 203-2771, (714) 253-4395, (619) 648-3996.
+- No email.
+- DRE Yorba Linda office and any Lambert Rd address were not shown.
+- Founding year (1996 vs later dates) was not printed.
+- Other AppFolio/search hits (Union St, Katella, Mirano, Irvine, Fullerton, and others) were not on the find-a-home HTML opened today, so they were not added.
+- Empty "Years Experience / Managing Units / Happy Tenants" counters on the homepage had no numbers and were not invented.
