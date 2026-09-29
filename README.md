@@ -18,5 +18,6 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `johns-electric` — panel load calculator (circuits vs 100–200A service)
 - `croff-electric` — EV charger planner (breaker, wire, permit flags)
 - `monas-custom-tailors` — filterable alteration ticket + pickup date
+- `land-lord-mixed-rentals` — apartment and commercial suite, filterable, with a listing modal
 
 These are outreach demos, not the businesses' live sites.
