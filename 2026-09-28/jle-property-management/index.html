@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JLE Property Management — current rental board</title>
+<meta name="description" content="Concept demo of JLE Property Management’s rental board, using only units listed on jle1.com on September 28, 2026.">
+<style>
+  :root {
+    --ink: #102033;
+    --blue: #14365c;
+    --cyan: #0e8f9a;
+    --paper: #f3f6f8;
+    --card: #ffffff;
+    --line: #d5dee6;
+    --amber: #b86e12;
+    --focus: #0b5fff;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; color: var(--ink); background: var(--paper); font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.45; }
+  a { color: var(--blue); }
+  img { max-width: 100%; display: block; }
+  .skip { position: absolute; left: 1rem; top: -4rem; background: #fff; padding: .5rem 1rem; }
+  .skip:focus { top: .5rem; }
+  header.bar {
+    background: var(--blue); color: #fff; display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+    padding: .8rem 5vw; position: sticky; top: 0; z-index: 3;
+  }
+  .brand { display: flex; gap: .65rem; align-items: center; color: inherit; text-decoration: none; }
+  .brand strong { font-size: 1.15rem; letter-spacing: .02em; }
+  .brand span { display: block; font-size: .75rem; opacity: .8; }
+  nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+  nav a { color: #fff; text-decoration: none; font-size: .92rem; }
+  .mast {
+    padding: 1.6rem 5vw 1rem; display: grid; grid-template-columns: 1.4fr .8fr; gap: 1rem; align-items: stretch;
+  }
+  h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0 0 .4rem; letter-spacing: -0.03em; }
+  .board {
+    background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--cyan); padding: 1rem 1.1rem;
+  }
+  .board p { margin: .25rem 0; }
+  main { padding: 0 5vw 2.5rem; }
+  .controls { display: grid; grid-template-columns: 1.3fr repeat(3, 1fr); gap: .6rem; margin: .5rem 0 1rem; }
+  label { display: grid; gap: .25rem; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: #4c6274; }
+  select, input, textarea { font: inherit; color: inherit; border: 1px solid #b7c6d2; border-radius: 8px; padding: .55rem .65rem; background: #fff; }
+  .chips { display: flex; flex-wrap: wrap; gap: .35rem; align-items: end; }
+  button { font: inherit; cursor: pointer; }
+  .chips button, .pager button { border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: .45rem .7rem; }
+  .chips button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .list { display: grid; gap: .7rem; }
+  article.row {
+    display: grid; grid-template-columns: 220px 1fr auto; gap: 1rem; background: var(--card);
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden; align-items: center; padding-right: 1rem;
+  }
+  .shot { height: 150px; background: #e6eef2; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; }
+  .rent { font-size: 1.45rem; margin: 0; font-weight: 700; }
+  .tag { display: inline-block; background: #e5f6f7; color: #0c5c63; border-radius: 999px; padding: .1rem .5rem; font-size: .78rem; margin-right: .3rem; }
+  .tag.warn { background: #f8efe3; color: var(--amber); }
+  .open-btn { background: var(--cyan); color: #fff; border: 0; border-radius: 8px; padding: .65rem .9rem; white-space: nowrap; }
+  .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .pager { display: flex; gap: .35rem; justify-content: center; margin: 1rem 0; }
+  .pager[hidden], .empty[hidden], #confirm[hidden], form[hidden] { display: none; }
+  .pager button[aria-current="page"] { background: var(--blue); color: #fff; }
+  .empty { background: #fff; border: 1px dashed var(--line); padding: 1.2rem; border-radius: 12px; }
+  section { margin-top: 2.2rem; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem; }
+  .cities { columns: 2; margin: .3rem 0 0; }
+  form { display: grid; gap: .7rem; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+  .go { background: var(--blue); color: #fff; border: 0; border-radius: 8px; padding: .75rem 1rem; }
+  .alt { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: .65rem .9rem; }
+  .ok { background: #e7f6ea; border: 1px solid #b7dfc0; padding: 1rem; border-radius: 12px; }
+  dialog { width: min(720px, calc(100vw - 1.2rem)); border: 0; border-radius: 14px; padding: 0; }
+  dialog::backdrop { background: rgba(16, 32, 51, .55); }
+  .dh { display: flex; justify-content: space-between; gap: .8rem; padding: 1rem 1rem .3rem; }
+  .db { padding: 0 1rem 1rem; display: grid; gap: .7rem; }
+  .db img { width: 100%; max-height: 360px; object-fit: cover; border-radius: 10px; background: #e6eef2; }
+  .cta { display: flex; flex-wrap: wrap; gap: .5rem; }
+  footer { background: var(--ink); color: #d5e2ec; padding: 1.5rem 5vw; }
+  footer a { color: #9ee4ea; }
+  .fg { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1rem; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  @media (max-width: 860px) {
+    .mast, .controls, article.row, .cols, .pair, .fg { grid-template-columns: 1fr; }
+    article.row { padding: 0 0 .8rem; }
+    .open-btn { margin: 0 1rem; }
+    header.bar { flex-direction: column; align-items: flex-start; }
+    .shot { height: 200px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#board">Skip to rentals</a>
+<header class="bar">
+  <a class="brand" href="#top">
+    <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="6" fill="#0e8f9a"/>
+      <rect x="7" y="7" width="10" height="10" fill="#fff"/>
+      <rect x="23" y="7" width="10" height="10" fill="#14365c"/>
+      <rect x="7" y="23" width="10" height="10" fill="#14365c"/>
+      <rect x="23" y="23" width="10" height="10" fill="#fff"/>
+    </svg>
+    <span><strong>JLE Property Management</strong><span>Tustin leasing board</span></span>
+  </a>
+  <nav aria-label="Page">
+    <a href="#board">Rentals</a>
+    <a href="#company">Company</a>
+    <a href="#inquiry">Inquire</a>
+  </nav>
+</header>
+<div class="mast" id="top">
+  <div>
+    <h1>Eight rentals on the board. No extra units added.</h1>
+    <p>JLE Property Management, Inc. says it manages apartments, duplexes, and homes across Orange County, Los Angeles County, and the Inland Empire. The individual ads on their site do not label each one house or apartment, so this demo calls every card a rental and lets you filter by city, bedrooms, and the pet line they actually printed.</p>
+  </div>
+  <aside class="board">
+    <p><strong>700 W. First St., Suite 12</strong><br>Tustin, CA 92780</p>
+    <p>(714) 778-0480 · Fax (714) 491-0864</p>
+    <p>frontdesk@jle1.com</p>
+    <p>Office hours on their contact page: Monday–Friday, 9am–5pm.</p>
+    <p>DRE #01216720, as printed on their homepage.</p>
+  </aside>
+</div>
+<main>
+  <section id="board">
+    <div class="controls">
+      <div class="chips" role="group" aria-label="Listing type">
+        <button type="button" data-type="all" aria-pressed="true">All types</button>
+        <button type="button" data-type="Rental" aria-pressed="false">Rental</button>
+      </div>
+      <label>City
+        <select id="city"><option value="all">All cities</option></select>
+      </label>
+      <label>Bedrooms
+        <select id="beds">
+          <option value="all">Any</option>
+          <option value="0">Studio</option>
+          <option value="1">1 bedroom</option>
+          <option value="2">2 bedrooms</option>
+          <option value="3">3 bedrooms</option>
+        </select>
+      </label>
+      <label>Pets, as listed
+        <select id="pets">
+          <option value="all">Any</option>
+          <option value="No pets">No pets</option>
+          <option value="Dogs allowed">Dogs allowed</option>
+        </select>
+      </label>
+    </div>
+    <div class="toolbar">
+      <p id="count" aria-live="polite"></p>
+      <label>Sort
+        <select id="sort">
+          <option value="rent-asc">Rent, low to high</option>
+          <option value="rent-desc">Rent, high to low</option>
+        </select>
+      </label>
+    </div>
+    <div class="list" id="list"></div>
+    <p class="empty" id="empty" hidden>Nothing on the current board matches. Reset a filter.</p>
+    <nav class="pager" id="pager" aria-label="Listing pages" hidden></nav>
+  </section>
+
+  <section id="company" class="cols">
+    <div class="panel">
+      <h2>Cities named on their homepage</h2>
+      <p>These are service areas they list, not proof of a vacancy in each city.</p>
+      <ul class="cities">
+        <li>Anaheim</li><li>Bellflower</li><li>Buena Park</li><li>Chino Hills</li><li>Corona</li>
+        <li>Costa Mesa</li><li>Cudahy</li><li>Cypress</li><li>Downey</li><li>Fullerton</li>
+        <li>Garden Grove</li><li>Hawthorne</li><li>Huntington Beach</li><li>Huntington Park</li>
+        <li>Inglewood</li><li>Irvine</li><li>La Habra</li><li>La Mirada</li><li>Loma Linda</li>
+        <li>Long Beach</li><li>Los Angeles</li><li>Newport Beach</li><li>Orange</li><li>Placentia</li>
+        <li>Riverside</li><li>San Clemente</li><li>Santa Ana</li><li>Stanton</li><li>Torrance</li>
+        <li>West Covina</li><li>Whittier</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>What is actually for rent</h2>
+      <p>On September 28, 2026 their available-rentals page showed eight ads: Santa Ana (three), Anaheim (two), Buena Park, Whittier, and Riverside. Rents ran from $1,250 to $3,600. Square footage was published for only two of them.</p>
+      <p>Their homepage says the staff is bilingual and that maintenance is aimed at both apartments and rental homes. Each card on the board links out to Zillow for the live application. This demo keeps tour and apply requests on the page.</p>
+    </div>
+  </section>
+
+  <section id="inquiry">
+    <h2>Tour or application note</h2>
+    <div class="cols">
+      <form id="form">
+        <div class="pair">
+          <label>Name <input id="name" required autocomplete="name"></label>
+          <label>Email <input id="email" type="email" required autocomplete="email"></label>
+        </div>
+        <div class="pair">
+          <label>Phone <input id="phone" type="tel" autocomplete="tel"></label>
+          <label>Listing
+            <select id="listing" required></select>
+          </label>
+        </div>
+        <label>Request
+          <select id="intent">
+            <option>Question</option>
+            <option>Schedule a tour</option>
+            <option>Apply now</option>
+          </select>
+        </label>
+        <label>Message <textarea id="message" rows="4"></textarea></label>
+        <button class="go" type="submit">Keep this note on the page</button>
+      </form>
+      <div>
+        <div class="ok" id="confirm" hidden>
+          <h3>Stays on this page</h3>
+          <p>This concept demo does not submit the form to JLE or to any server.</p>
+          <button class="alt" type="button" id="again">Start over</button>
+        </div>
+        <div class="panel" id="aside">
+          <p>Live office: (714) 778-0480, Monday–Friday 9am–5pm, at the Tustin suite above. Their site’s apply buttons go to Zillow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="fg">
+    <div>
+      <strong>Concept demo for outreach by Ryan Swanson / RegisterMySite.</strong>
+      <p>This is not the official JLE Property Management website.</p>
+    </div>
+    <div>
+      <strong>JLE Property Management, Inc.</strong>
+      <p>700 W. First St., Suite 12<br>Tustin, CA 92780<br>(714) 778-0480</p>
+    </div>
+    <div>
+      <p>Fax (714) 491-0864<br>frontdesk@jle1.com<br>DRE #01216720</p>
+    </div>
+  </div>
+</footer>
+<dialog id="dlg" aria-labelledby="dt">
+  <div class="dh">
+    <h2 id="dt" style="margin:0"></h2>
+    <button class="alt" type="button" id="close">Close</button>
+  </div>
+  <div class="db">
+    <img id="photo" alt="">
+    <p id="onephoto"></p>
+    <p id="copy"></p>
+    <ul id="points"></ul>
+    <p><a id="src" target="_blank" rel="noopener">JLE listing page</a> · <a id="zillow" target="_blank" rel="noopener">Zillow link from their board</a></p>
+    <div class="cta">
+      <button class="go" type="button" id="tour">Schedule a tour</button>
+      <button class="alt" type="button" id="apply">Apply now</button>
+    </div>
+  </div>
+</dialog>
+<script src="photos/civic.js"></script>
+<script src="photos/evergreen.js"></script>
+<script src="photos/highland.js"></script>
+<script src="photos/indiana.js"></script>
+<script src="photos/lincoln.js"></script>
+<script src="photos/redondo.js"></script>
+<script src="photos/seymour.js"></script>
+<script src="photos/telegraph.js"></script>
+<script>
+const LISTINGS = [
+  {id:"lincoln", address:"918 W Lincoln Ave Suite 3", city:"Anaheim", beds:1, bedLabel:"1 bedroom", baths:"1", sqft:null, rent:1250, pets:"No pets", type:"Rental",
+    blurb:"One-bedroom, one-bath rental. Square footage was not published.",
+    copy:"Their available-rentals board lists this Anaheim suite at $1,250 a month, 1 bedroom and 1 bath, with no pets. No square footage was shown.",
+    img:"lincoln", page:"https://jle1.com/rental/918-w-lincoln-ave-suite-3/",
+    zillow:"https://www.zillow.com/homedetails/918-W-Lincoln-Ave-SUITE-3-Anaheim-CA-92805/463032123_zpid/?view=public"},
+  {id:"telegraph", address:"14250 Telegraph Rd, APT 3", city:"Whittier", beds:0, bedLabel:"Studio", baths:"1", sqft:null, rent:1595, pets:"No pets", type:"Rental",
+    blurb:"Studio with one bath. Square footage was not published.",
+    copy:"The board files this Whittier apartment as a studio (0 bedrooms) and 1 bath at $1,595, marked no pets. Square footage was left blank.",
+    img:"telegraph", page:"https://jle1.com/rental/14250-telegraph-rd-apt-3/",
+    zillow:"https://www.zillow.com/homedetails/14250-Telegraph-Rd-APT-3-Whittier-CA-90604/2116318864_zpid/?view=public"},
+  {id:"highland", address:"1107 W Highland St, #3", city:"Santa Ana", beds:1, bedLabel:"1 bedroom", baths:"1", sqft:null, rent:1950, pets:"No pets", type:"Rental",
+    blurb:"One-bedroom, one-bath rental. Square footage was not published.",
+    copy:"Santa Ana unit #3 is listed at $1,950, 1 bedroom and 1 bath, no pets. The photo on their site is a kitchen looking toward a bath.",
+    img:"highland", page:"https://jle1.com/rental/1107-w-highland-st/",
+    zillow:"https://www.zillow.com/homedetails/1107-W-Highland-St-3-Santa-Ana-CA-92703/465471161_zpid/?view=public"},
+  {id:"evergreen", address:"1610 Evergreen St, APT D", city:"Santa Ana", beds:2, bedLabel:"2 bedrooms", baths:"1", sqft:null, rent:2100, pets:"No pets", type:"Rental",
+    blurb:"Two-bedroom, one-bath rental. Square footage was not published.",
+    copy:"Apt D is on the board at $2,100, 2 bedrooms and 1 bath, no pets. Square footage was not published.",
+    img:"evergreen", page:"https://jle1.com/rental/1610-evergreen-st-apt-d/",
+    zillow:"https://www.zillow.com/homedetails/1610-Evergreen-St-APT-D-Santa-Ana-CA-92707/463760994_zpid/?view=public"},
+  {id:"indiana", address:"6132 Indiana Ave, APT D", city:"Buena Park", beds:2, bedLabel:"2 bedrooms", baths:"1", sqft:null, rent:2450, pets:"No pets", type:"Rental",
+    blurb:"Two-bedroom, one-bath rental. Square footage was not published.",
+    copy:"Buena Park Apt D is listed at $2,450, 2 bedrooms and 1 bath, no pets. Square footage was not published.",
+    img:"indiana", page:"https://jle1.com/rental/6132-indiana-ave-apt-d/",
+    zillow:"https://www.zillow.com/homedetails/6132-Indiana-Ave-APT-D-Buena-Park-CA-90621/465535538_zpid/?view=public"},
+  {id:"civic", address:"1610 W Civic Center Dr, #4", city:"Santa Ana", beds:2, bedLabel:"2 bedrooms", baths:"1", sqft:null, rent:2595, pets:"Dogs allowed", type:"Rental",
+    blurb:"Two-bedroom, one-bath rental. The board says dogs are allowed.",
+    copy:"Unit #4 is the only ad on the September 28 board marked dogs allowed. Rent is $2,595, with 2 bedrooms and 1 bath. Square footage was not published.",
+    img:"civic", page:"https://jle1.com/rental/1610-w-civic-center-dr-4/",
+    zillow:"https://www.zillow.com/homedetails/1610-W-Civic-Center-Dr-4-Santa-Ana-CA-92703/454083426_zpid/?view=public"},
+  {id:"seymour", address:"4127 Seymour St", city:"Riverside", beds:3, bedLabel:"3 bedrooms", baths:"2", sqft:"1,436", rent:3200, pets:"No pets", type:"Rental",
+    blurb:"Three-bedroom, two-bath rental with 1,436 sq ft published.",
+    copy:"Riverside listing at $3,200, 3 bedrooms, 2 baths, and 1,436 sq ft. Marked no pets. Their page does not say whether it is a house or an apartment, so this demo does not guess.",
+    img:"seymour", page:"https://jle1.com/rental/4127-seymour-st/",
+    zillow:"https://www.zillow.com/homedetails/4127-Seymour-St-Riverside-CA-92505/17803454_zpid/?view=public"},
+  {id:"redondo", address:"849 N Redondo Dr E", city:"Anaheim", beds:3, bedLabel:"3 bedrooms", baths:"2", sqft:"1,101", rent:3600, pets:"No pets", type:"Rental",
+    blurb:"Three-bedroom, two-bath rental with 1,101 sq ft published.",
+    copy:"Anaheim listing at $3,600, 3 bedrooms, 2 baths, and 1,101 sq ft. Marked no pets. Property type was not labeled on the page that was opened.",
+    img:"redondo", page:"https://jle1.com/rental/849-n-redondo-dr-e/",
+    zillow:"https://www.zillow.com/homedetails/849-N-Redondo-Dr-E-Anaheim-CA-92801/25124743_zpid/?view=public"}
+];
+const PAGE = 6;
+let typeFilter = "all", page = 1, current = null;
+const list = document.getElementById("list");
+const pager = document.getElementById("pager");
+const empty = document.getElementById("empty");
+const citySel = document.getElementById("city");
+const listingSel = document.getElementById("listing");
+const dlg = document.getElementById("dlg");
+const form = document.getElementById("form");
+[...new Set(LISTINGS.map(l => l.city))].sort().forEach(c => {
+  const o = document.createElement("option"); o.value = c; o.textContent = c; citySel.appendChild(o);
+});
+const g = document.createElement("option"); g.value = "General"; g.textContent = "General question"; listingSel.appendChild(g);
+LISTINGS.forEach(l => { const o = document.createElement("option"); o.value = l.id; o.textContent = l.address; listingSel.appendChild(o); });
+function money(n){ return "$" + n.toLocaleString("en-US"); }
+function filtered(){
+  const city = citySel.value, beds = document.getElementById("beds").value, pets = document.getElementById("pets").value, sort = document.getElementById("sort").value;
+  let rows = LISTINGS.filter(l => {
+    if (typeFilter !== "all" && l.type !== typeFilter) return false;
+    if (city !== "all" && l.city !== city) return false;
+    if (beds !== "all" && String(l.beds) !== beds) return false;
+    if (pets !== "all" && l.pets !== pets) return false;
+    return true;
+  });
+  rows.sort((a,b) => sort === "rent-desc" ? b.rent - a.rent : a.rent - b.rent);
+  return rows;
+}
+function render(){
+  const rows = filtered();
+  const pages = Math.max(1, Math.ceil(rows.length / PAGE));
+  if (page > pages) page = pages;
+  const slice = rows.slice((page-1)*PAGE, page*PAGE);
+  document.getElementById("count").textContent = rows.length + " shown" + (pages>1 ? " · page " + page + " of " + pages : "");
+  list.innerHTML = "";
+  empty.hidden = rows.length !== 0;
+  slice.forEach(l => {
+    const art = document.createElement("article");
+    art.className = "row";
+    const petClass = l.pets === "Dogs allowed" ? "tag" : "tag warn";
+    art.innerHTML = '<div class="shot"><img src="'+LEAD_PHOTOS[l.img]+'" alt="Photo from the JLE listing for '+l.address+'"></div>' +
+      '<div><p class="rent">'+money(l.rent)+'<span style="font-size:.85rem;font-weight:500"> / mo</span></p>' +
+      '<p style="margin:.2rem 0"><span class="tag">Rental</span><span class="'+petClass+'">'+l.pets+'</span></p>' +
+      '<p style="margin:.15rem 0;font-weight:650">'+l.address+'</p>' +
+      '<p style="margin:.15rem 0">'+l.city+' · '+l.bedLabel+' · '+l.baths+' bath'+(l.sqft ? ' · '+l.sqft+' sq ft' : '')+'</p>' +
+      '<p style="margin:.15rem 0">'+l.blurb+'</p></div>' +
+      '<button type="button" class="open-btn">Open details</button>';
+    art.querySelector("button").addEventListener("click", () => openListing(l.id));
+    list.appendChild(art);
+  });
+  pager.hidden = rows.length <= PAGE;
+  pager.innerHTML = "";
+  if (rows.length > PAGE) {
+    const prev = document.createElement("button"); prev.type="button"; prev.textContent="Previous"; prev.disabled = page===1;
+    prev.addEventListener("click", () => { page--; render(); }); pager.appendChild(prev);
+    for (let i=1;i<=pages;i++){
+      const b=document.createElement("button"); b.type="button"; b.textContent=String(i);
+      if (i===page) b.setAttribute("aria-current","page");
+      b.addEventListener("click", () => { page=i; render(); }); pager.appendChild(b);
+    }
+    const next=document.createElement("button"); next.type="button"; next.textContent="Next"; next.disabled=page===pages;
+    next.addEventListener("click", () => { page++; render(); }); pager.appendChild(next);
+  }
+}
+document.querySelectorAll("[data-type]").forEach(btn => btn.addEventListener("click", () => {
+  typeFilter = btn.getAttribute("data-type");
+  document.querySelectorAll("[data-type]").forEach(b => b.setAttribute("aria-pressed", String(b===btn)));
+  page = 1; render();
+}));
+["city","beds","pets","sort"].forEach(id => document.getElementById(id).addEventListener("change", () => { page=1; render(); }));
+function openListing(id){
+  current = LISTINGS.find(l => l.id===id);
+  document.getElementById("dt").textContent = current.address + ", " + current.city;
+  const img = document.getElementById("photo");
+  img.src = LEAD_PHOTOS[current.img];
+  img.alt = "The single photo published for " + current.address;
+  document.getElementById("onephoto").textContent = "Their listing page published one photo. No extra pictures were added.";
+  document.getElementById("copy").textContent = current.copy;
+  const ul = document.getElementById("points"); ul.innerHTML="";
+  [money(current.rent)+" per month", current.bedLabel, current.baths+" bath", current.sqft ? current.sqft+" sq ft" : "Square footage not published", current.pets].forEach(t => {
+    const li=document.createElement("li"); li.textContent=t; ul.appendChild(li);
+  });
+  document.getElementById("src").href = current.page;
+  document.getElementById("zillow").href = current.zillow;
+  dlg.showModal();
+}
+function toForm(intent){
+  if (current) listingSel.value = current.id;
+  document.getElementById("intent").value = intent;
+  dlg.close();
+  document.getElementById("inquiry").scrollIntoView();
+  document.getElementById("name").focus();
+}
+document.getElementById("tour").addEventListener("click", () => toForm("Schedule a tour"));
+document.getElementById("apply").addEventListener("click", () => toForm("Apply now"));
+document.getElementById("close").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target===dlg) dlg.close(); });
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  form.hidden = true; document.getElementById("aside").hidden = true; document.getElementById("confirm").hidden = false;
+});
+document.getElementById("again").addEventListener("click", () => {
+  form.reset(); form.hidden = false; document.getElementById("aside").hidden = false; document.getElementById("confirm").hidden = true;
+});
+render();
+</script>
+</body>
+</html>
