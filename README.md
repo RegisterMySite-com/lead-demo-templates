@@ -19,5 +19,7 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `croff-electric` — EV charger planner (breaker, wire, permit flags)
 - `monas-custom-tailors` — filterable alteration ticket + pickup date
 - `land-lord-mixed-rentals` — apartment and commercial suite, filterable, with a listing modal
+- `apg-properties-rental-homes` — filterable house, condo, and townhome rentals, with a listing modal
+- `jle-property-management` — filterable rental board: city, beds, pets, with a listing modal
 
 These are outreach demos, not the businesses' live sites.
