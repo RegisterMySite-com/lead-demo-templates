@@ -22,4 +22,7 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `apg-properties-rental-homes` — filterable house, condo, and townhome rentals, plus a private office chat and a 24-hour specialist (`chat/`)
 - `jle-property-management` — filterable rental board, plus a private office chat and a 24-hour specialist (`chat/`)
 
+## 2026-09-29
+- `good-steward-property-management` — filterable house and townhouse rentals, Placentia lead listing, on-page tour and apply form
+
 These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
