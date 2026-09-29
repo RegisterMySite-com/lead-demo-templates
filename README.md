@@ -18,8 +18,8 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `johns-electric` — panel load calculator (circuits vs 100–200A service)
 - `croff-electric` — EV charger planner (breaker, wire, permit flags)
 - `monas-custom-tailors` — filterable alteration ticket + pickup date
-- `land-lord-mixed-rentals` — apartment and commercial suite, filterable, with a listing modal
-- `apg-properties-rental-homes` — filterable house, condo, and townhome rentals, with a listing modal
-- `jle-property-management` — filterable rental board: city, beds, pets, with a listing modal
+- `land-lord-mixed-rentals` — apartment and commercial suite, plus a private office chat and a 24-hour specialist (`chat/`)
+- `apg-properties-rental-homes` — filterable house, condo, and townhome rentals, plus a private office chat and a 24-hour specialist (`chat/`)
+- `jle-property-management` — filterable rental board, plus a private office chat and a 24-hour specialist (`chat/`)
 
-These are outreach demos, not the businesses' live sites.
+These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
