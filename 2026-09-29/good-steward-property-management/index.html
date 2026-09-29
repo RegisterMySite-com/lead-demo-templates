@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Steward Property Management — houses for rent</title>
+<style>
+:root {
+  --ink:#1c1914; --paper:#f3ecdf; --panel:#fffaf3; --pine:#1e3b32; --pine2:#163029;
+  --copper:#a24c2e; --line:#e0d4c2; --muted:#5e574c; --focus:#8c3d22;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; color:var(--ink); background:
+    radial-gradient(circle at 12% -10%, #efe2cc 0, transparent 42%),
+    var(--paper);
+  font:18px/1.5 "Segoe UI", system-ui, sans-serif;
+}
+h1,h2,h3 { font-family:Georgia, "Iowan Old Style", Palatino, "Palatino Linotype", serif; font-weight:600; line-height:1.15; }
+a { color:var(--pine); }
+img { max-width:100%; display:block; }
+.skip { position:absolute; left:-999px; top:0; background:#fff; padding:.4rem .7rem; }
+.skip:focus { left:.5rem; z-index:5; }
+.top {
+  display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; align-items:center; justify-content:space-between;
+  padding:.85rem 6vw; background:var(--pine); color:#f6f1e7;
+}
+.brand { display:flex; gap:.7rem; align-items:center; color:#f6f1e7; text-decoration:none; font-weight:700; }
+.brand span { font-family:Georgia, Palatino, serif; font-size:1.15rem; }
+nav { display:flex; flex-wrap:wrap; gap:.35rem 1rem; }
+nav a { color:#f6f1e7; }
+.phone { color:#f6f1e7; font-weight:700; text-decoration:none; }
+.wrap { width:min(1080px, 92vw); margin:0 auto; }
+.hero { display:grid; grid-template-columns:1fr 1.05fr; gap:1.5rem; align-items:start; padding:2rem 0 1rem; }
+.kicker { letter-spacing:.14em; text-transform:uppercase; font-size:.78rem; color:var(--copper); font-weight:700; margin:0 0 .4rem; }
+h1 { font-size:clamp(2rem, 4vw, 3.1rem); margin:0 0 .6rem; }
+.lede { margin:0 0 1rem; color:var(--muted); }
+.office { margin:0; padding:.75rem .9rem; background:var(--pine2); color:#f6f1e7; }
+.office a { color:#f6f1e7; }
+.lead {
+  background:var(--panel); border:1px solid var(--line); box-shadow:8px 8px 0 #e7dccb;
+  display:grid; grid-template-rows:auto 1fr;
+}
+.lead img, .card img, #dlg-photo { width:100%; height:240px; object-fit:cover; background:#e7e0d4; }
+.lead-body, .card-body { padding:1rem 1.05rem 1.15rem; }
+.badge { display:inline-block; background:#f3d7c8; color:#6d2e18; font-size:.78rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:.15rem .45rem; }
+.price { font-family:Georgia, Palatino, serif; font-size:1.7rem; margin:.35rem 0; }
+.meta { color:var(--muted); margin:.2rem 0 .6rem; }
+button, .btn {
+  font:inherit; cursor:pointer; border:0; background:var(--copper); color:#fffaf3;
+  padding:.55rem .9rem; text-decoration:none; display:inline-block;
+}
+button.ghost, .btn.ghost { background:transparent; color:var(--pine); border:1px solid var(--pine); }
+button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline:3px solid var(--focus); outline-offset:2px;
+}
+.board { padding:1.5rem 0 2rem; }
+.filters { display:flex; flex-wrap:wrap; gap:1rem; margin:0 0 1rem; }
+label { display:block; font-size:.85rem; font-weight:700; }
+select, input, textarea { width:100%; font:inherit; padding:.45rem .55rem; border:1px solid var(--line); background:#fff; color:var(--ink); }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.card { background:var(--panel); border:1px solid var(--line); display:flex; flex-direction:column; }
+.card-body { display:flex; flex-direction:column; gap:.35rem; flex:1; }
+.card h3 { margin:.2rem 0; font-size:1.35rem; }
+.card p { margin:0; }
+.card .btn, .card button { margin-top:auto; align-self:flex-start; }
+.empty { display:none; padding:1rem; background:#fff; border:1px dashed var(--line); }
+.services, .team, .contact { padding:1rem 0 2rem; }
+.cols { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.8rem; }
+.cols article, .person { background:var(--panel); border-top:4px solid var(--pine); padding:.8rem .9rem; }
+.person h3, .cols h3 { margin:.2rem 0; font-size:1.15rem; }
+.team-grid { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+form .row { display:grid; grid-template-columns:1fr 1fr; gap:.7rem; }
+.confirm { display:none; background:#e5f0ea; border:1px solid #1e3b32; padding:.8rem; margin-top:.8rem; }
+dialog { border:0; padding:0; width:min(640px, 94vw); background:var(--panel); color:var(--ink); }
+dialog::backdrop { background:rgba(28,25,20,.62); }
+.dlg-bar { display:flex; justify-content:space-between; gap:.5rem; padding:.6rem .8rem; background:var(--pine); color:#f6f1e7; }
+.dlg-bar button { background:#f6f1e7; color:var(--pine); }
+#dlg-photo { height:280px; }
+.thumbs { display:flex; gap:.4rem; padding:.5rem .8rem 0; }
+.thumbs button { padding:0; background:transparent; border:2px solid transparent; }
+.thumbs button[aria-current="true"] { border-color:var(--copper); }
+.thumbs img { width:72px; height:54px; object-fit:cover; }
+.dlg-copy { padding:.2rem 1rem 1rem; }
+.dlg-copy dl { display:grid; grid-template-columns:9rem 1fr; gap:.25rem .6rem; margin:.6rem 0; }
+.dlg-copy dt { font-weight:700; }
+.dlg-copy dd { margin:0; }
+.actions { display:flex; flex-wrap:wrap; gap:.5rem; }
+footer { background:var(--pine2); color:#f6f1e7; padding:1.4rem 6vw 2rem; }
+footer a { color:#f6f1e7; }
+.fine { font-size:.92rem; color:#ddd4c6; }
+@media (max-width:800px) {
+  .hero, .grid, .cols, .team-grid, form .row { grid-template-columns:1fr; }
+  .lead img, .card img { height:200px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  * { animation:none !important; transition:none !important; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#lead">Skip to lead listing</a>
+<header class="top">
+  <a class="brand" href="#top">
+    <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="45" height="45" rx="8" fill="#f6f1e7"/>
+      <path d="M9 23 L24 10 L39 23 V38 H9 Z" fill="none" stroke="#1e3b32" stroke-width="2.4"/>
+      <circle cx="24" cy="27" r="2.3" fill="#a24c2e"/>
+      <path d="M24 29.4 V35" stroke="#a24c2e" stroke-width="2.2" stroke-linecap="square"/>
+    </svg>
+    <span>Good Steward Property Management</span>
+  </a>
+  <nav aria-label="Page">
+    <a href="#lead">Lead home</a>
+    <a href="#board">Rentals</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="phone" href="tel:+17143988476">(714) 398-8476</a>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <p class="kicker">Yorba Linda office</p>
+      <h1>Houses for rent, looked after locally.</h1>
+      <p class="lede">Good Steward Property Management is the DBA of broker Jeffrey Andres Terreros Ugarte, California DRE 01918337. The company site brands itself for the Orange area. The office on that site is in Yorba Linda, not in the city of Orange.</p>
+      <p class="lede">The public rental board on September 29, 2026 listed four homes. The Placentia house is the lead listing on this page. Corona, Riverside, and Rancho Cucamonga follow in the board.</p>
+      <p class="office">Office: 19631 Yorba Linda Blvd, Yorba Linda, CA 92886<br>
+        <a href="tel:+17143988476">(714) 398-8476</a><br>
+        <a href="mailto:Jeff@GoodStewardPM.com">Jeff@GoodStewardPM.com</a>
+      </p>
+    </div>
+    <article class="lead" id="lead">
+      <img data-photo="placentia-1" alt="Listing photo of 1760 Taylor Ln, Placentia">
+      <div class="lead-body">
+        <p class="kicker">Lead listing</p>
+        <span class="badge">Single-family</span>
+        <h2>1760 Taylor Ln, Placentia</h2>
+        <p class="price">$4,600/mo</p>
+        <p class="meta">4 bedrooms · 3 baths · 1,817 sq ft · Available immediately</p>
+        <p>Four-bedroom house in a gated Placentia community, with hardwood floors and a community pool. The detail page counts two full baths and one half bath. Deposit $5,000.</p>
+        <button type="button" data-open="placentia">View Placentia home</button>
+      </div>
+    </article>
+  </section>
+  <section class="board" id="board" aria-labelledby="board-title">
+    <h2 id="board-title">Current rental board</h2>
+    <form class="filters" id="filters">
+      <div>
+        <label for="city">City</label>
+        <select id="city">
+          <option value="all">All cities</option>
+          <option>Placentia</option>
+          <option>Corona</option>
+          <option>Riverside</option>
+          <option>Rancho Cucamonga</option>
+        </select>
+      </div>
+      <div>
+        <label for="kind">Home type</label>
+        <select id="kind">
+          <option value="all">All types</option>
+          <option value="Single-family">Single-family</option>
+          <option value="Townhouse">Townhouse</option>
+        </select>
+      </div>
+    </form>
+    <div class="grid" id="grid">
+      <article class="card" data-city="Placentia" data-type="Single-family">
+        <img data-photo="placentia-1" alt="Listing photo of 1760 Taylor Ln, Placentia">
+        <div class="card-body">
+          <span class="badge">Single-family</span>
+          <h3>1760 Taylor Ln</h3>
+          <p>Placentia, CA 92870</p>
+          <p>Gated-community house, 4 bedrooms and about 1,817 sq ft, $4,600 a month, available immediately.</p>
+          <button type="button" data-open="placentia">Details</button>
+        </div>
+      </article>
+      <article class="card" data-city="Corona" data-type="Single-family">
+        <img data-photo="corona-1" alt="Listing photo of 1604 Avenida Del Vista, Corona">
+        <div class="card-body">
+          <span class="badge">Single-family</span>
+          <h3>1604 Avenida Del Vista</h3>
+          <p>Corona, CA 92882</p>
+          <p>Four-bedroom house, about 2,050 sq ft, $3,900 a month. The listing says it is being worked on and will be painted. Solar, a large backyard, and RV parking are listed.</p>
+          <button type="button" data-open="corona">Details</button>
+        </div>
+      </article>
+      <article class="card" data-city="Riverside" data-type="Single-family">
+        <img data-photo="riverside-1" alt="Listing photo of 5154 Merrill Ave, Riverside">
+        <div class="card-body">
+          <span class="badge">Single-family</span>
+          <h3>5154 Merrill Ave</h3>
+          <p>Riverside, CA 92504</p>
+          <p>Four-bedroom house, about 2,008 sq ft, $3,500 a month. Available October 16, 2026. Granite counters are listed.</p>
+          <button type="button" data-open="riverside">Details</button>
+        </div>
+      </article>
+      <article class="card" data-city="Rancho Cucamonga" data-type="Townhouse">
+        <img data-photo="rancho-1" alt="Listing photo of 9608 Nova Pl., Rancho Cucamonga">
+        <div class="card-body">
+          <span class="badge">Townhouse</span>
+          <h3>9608 Nova Pl.</h3>
+          <p>Rancho Cucamonga, CA 91730</p>
+          <p>Two-bedroom townhouse, about 1,164 sq ft, $2,900 a month. No pets. Two full baths and a half bath. Available immediately.</p>
+          <button type="button" data-open="rancho">Details</button>
+        </div>
+      </article>
+    </div>
+    <p class="empty" id="empty">No listing on this board matches that city and home type.</p>
+  </section>
+  <section class="services" aria-labelledby="svc-title">
+    <h2 id="svc-title">What the company says it handles</h2>
+    <div class="cols">
+      <article><h3>Rent the house</h3><p>The site says they market each rental, screen applicants, and collect rent on a set schedule.</p></article>
+      <article><h3>Keep it up</h3><p>Maintenance is dispatched through the office. Silvino Briceno is named as maintenance manager.</p></article>
+      <article><h3>Report to the owner</h3><p>The site says owners can pull monthly and yearly financial statements, and that leases are revisited each year.</p></article>
+    </div>
+  </section>
+  <section class="team" id="team" aria-labelledby="team-title">
+    <h2 id="team-title">Team named on the site</h2>
+    <div class="team-grid">
+      <article class="person"><h3>Jeff Terreros</h3><p>Property manager. Broker license CA DRE 01918337, Jeffrey Andres Terreros Ugarte. DBA: Good Steward Property Management.</p></article>
+      <article class="person"><h3>Elyse Terreros</h3><p>Leasing manager. Salesperson license CA DRE 01986038 on the same broker record.</p></article>
+      <article class="person"><h3>Rose Briceno</h3><p>Assistant property manager.</p></article>
+      <article class="person"><h3>Silvino Briceno</h3><p>Maintenance manager.</p></article>
+      <article class="person"><h3>Jeffrey Simons</h3><p>Listing manager.</p></article>
+    </div>
+  </section>
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Ask about a tour or an application</h2>
+    <p>This form stays on the page. It does not email Good Steward and it is not an application.</p>
+    <form id="request-form" action="#contact">
+      <div class="row">
+        <div><label for="request-name">Name</label><input id="request-name" name="name" autocomplete="name" required></div>
+        <div><label for="request-email">Email</label><input id="request-email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="row">
+        <div><label for="request-phone">Phone</label><input id="request-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div><label for="request-type">Request</label>
+          <select id="request-type" name="type">
+            <option value="tour">Schedule a tour</option>
+            <option value="apply">Apply now</option>
+          </select>
+        </div>
+      </div>
+      <div><label for="request-home">Home</label>
+        <select id="request-home" name="home">
+          <option value="placentia">1760 Taylor Ln, Placentia</option>
+          <option value="corona">1604 Avenida Del Vista, Corona</option>
+          <option value="riverside">5154 Merrill Ave, Riverside</option>
+          <option value="rancho">9608 Nova Pl., Rancho Cucamonga</option>
+        </select>
+      </div>
+      <div><label for="request-note">Note</label><textarea id="request-note" name="note" rows="4"></textarea></div>
+      <p><button type="submit">Save on this page</button></p>
+      <div class="confirm" id="confirm" role="status"></div>
+    </form>
+  </section>
+</main>
+<footer>
+  <p><strong>Good Steward Property Management</strong><br>
+  19631 Yorba Linda Blvd, Yorba Linda, CA 92886<br>
+  <a href="tel:+17143988476">(714) 398-8476</a> · <a href="mailto:Jeff@GoodStewardPM.com">Jeff@GoodStewardPM.com</a></p>
+  <p class="fine">Outreach demo, not the company’s website. Listing facts were read from orangepropertymanager.com on September 29, 2026 (PT) and can change. Photos are compressed copies of images on those listing pages. No review carousel: a Google or Birdeye profile was not opened. The form never leaves this page.</p>
+</footer>
+<dialog id="home-dialog" aria-labelledby="dlg-title">
+  <div class="dlg-bar">
+    <strong id="dlg-kicker">Listing</strong>
+    <button type="button" id="dlg-close">Close</button>
+  </div>
+  <img id="dlg-photo" alt="">
+  <div class="thumbs" id="dlg-thumbs"></div>
+  <div class="dlg-copy">
+    <h2 id="dlg-title"></h2>
+    <p id="dlg-summary"></p>
+    <dl id="dlg-facts"></dl>
+    <div class="actions">
+      <button type="button" id="dlg-tour">Schedule a tour</button>
+      <button type="button" id="dlg-apply">Apply now</button>
+      <a class="btn ghost" id="dlg-source" href="#">Listing page</a>
+    </div>
+  </div>
+</dialog>
+<noscript><p class="wrap">Listing details and the on-page confirmation need the short script in this file. Nothing is sent to a server.</p></noscript>
+<script src="photos/placentia-1.js"></script>
+<script src="photos/placentia-2.js"></script>
+<script src="photos/placentia-3.js"></script>
+<script src="photos/corona-1.js"></script>
+<script src="photos/corona-2.js"></script>
+<script src="photos/corona-3.js"></script>
+<script src="photos/riverside-1.js"></script>
+<script src="photos/riverside-2.js"></script>
+<script src="photos/riverside-3.js"></script>
+<script src="photos/rancho-1.js"></script>
+<script src="photos/rancho-2.js"></script>
+<script src="photos/rancho-3.js"></script>
+<script>
+(function () {
+  var PLACEHOLDER = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320"><rect width="100%" height="100%" fill="#e7e0d4"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#1c1914">Not a photo of this home</text></svg>');
+  var HOMES = {
+    placentia: {
+      title: "1760 Taylor Ln, Placentia, CA 92870",
+      summary: "Single-family house in a gated Placentia community. Hardwood floors, garage, and a community pool are on the feature list. The page asks people to call or text (714) 916-2880 for gate instructions. It also still prints an open house for Sunday, September 27, 1:30–2:30 p.m.",
+      photos: ["placentia-1","placentia-2","placentia-3"],
+      source: "https://www.orangepropertymanager.com/orange-homes-for-rent/215/1760-taylor-ln-placentia-ca-92870",
+      facts: [
+        ["Rent", "$4,600 per month"],
+        ["Deposit", "$5,000"],
+        ["Beds", "4"],
+        ["Baths", "3 on the card (2 full and 1 half on the detail)"],
+        ["Size", "1,817 sq ft"],
+        ["Type", "Single-family"],
+        ["Available", "Immediately"],
+        ["Pets", "Yes, dogs and cats. The page also says $40 monthly pet fee, 1 pet max, up to 30 pounds."]
+      ]
+    },
+    corona: {
+      title: "1604 Avenida Del Vista, Corona, CA 92882",
+      summary: "Single-family house with solar, a large backyard, and room listed for an RV or trailer plus more vehicles. A note on the page says the property is being worked on and will be completely painted.",
+      photos: ["corona-1","corona-2","corona-3"],
+      source: "https://www.orangepropertymanager.com/orange-homes-for-rent/209/1604-avenida-del-vista-corona-ca-92882",
+      facts: [
+        ["Rent", "$3,900 per month"],
+        ["Deposit", "$4,000"],
+        ["Beds", "4"],
+        ["Baths", "2"],
+        ["Size", "2,050 sq ft"],
+        ["Type", "Single-family"],
+        ["Available", "Immediately"],
+        ["Pets", "Yes, dogs and cats"]
+      ]
+    },
+    riverside: {
+      title: "5154 Merrill Ave, Riverside, CA 92504",
+      summary: "Single-family house. The page lists granite counters, a fenced patio, and drop-in times on September 27 and October 4, both 11 a.m.–12 p.m.",
+      photos: ["riverside-1","riverside-2","riverside-3"],
+      source: "https://www.orangepropertymanager.com/orange-homes-for-rent/213/5154-merrill-ave-riverside-ca-92504",
+      facts: [
+        ["Rent", "$3,500 per month"],
+        ["Deposit", "$4,000"],
+        ["Beds", "4"],
+        ["Baths", "2"],
+        ["Size", "2,008 sq ft"],
+        ["Type", "Single-family"],
+        ["Available", "October 16, 2026 (page: 10-16-2026)"],
+        ["Pets", "Yes, dogs and cats"]
+      ]
+    },
+    rancho: {
+      title: "9608 Nova Pl., Rancho Cucamonga, CA 91730",
+      summary: "Townhouse with a garage, stacked washer and dryer, and community pool, gym, and jacuzzi on the feature list. The page mentions an open house Sunday, November 24, 1–2 p.m., and does not give a year.",
+      photos: ["rancho-1","rancho-2","rancho-3"],
+      source: "https://www.orangepropertymanager.com/orange-homes-for-rent/73/9608-nova-pl-rancho-cucamonga-ca-91730",
+      facts: [
+        ["Rent", "$2,900 per month"],
+        ["Deposit", "$3,000"],
+        ["Beds", "2"],
+        ["Baths", "3 on the card (description: two full and one half)"],
+        ["Size", "1,164 sq ft"],
+        ["Type", "Townhouse"],
+        ["Available", "Immediately"],
+        ["Pets", "No"]
+      ]
+    }
+  };
+  function uri(id) {
+    var table = window.LEAD_PHOTOS || {};
+    return table[id] || PLACEHOLDER;
+  }
+  document.querySelectorAll("[data-photo]").forEach(function (img) {
+    img.src = uri(img.getAttribute("data-photo"));
+    img.addEventListener("error", function () { img.src = PLACEHOLDER; });
+  });
+  var dlg = document.getElementById("home-dialog");
+  var opener = null;
+  var current = "placentia";
+  var shot = 0;
+  function paint() {
+    var home = HOMES[current];
+    var id = home.photos[shot];
+    var photo = document.getElementById("dlg-photo");
+    photo.src = uri(id);
+    photo.alt = "Photo " + (shot + 1) + " of " + home.photos.length + " from the listing for " + home.title;
+    document.getElementById("dlg-title").textContent = home.title;
+    document.getElementById("dlg-summary").textContent = home.summary;
+    document.getElementById("dlg-kicker").textContent = home.facts[5][1];
+    var facts = document.getElementById("dlg-facts");
+    facts.replaceChildren();
+    home.facts.forEach(function (pair) {
+      var dt = document.createElement("dt");
+      dt.textContent = pair[0];
+      var dd = document.createElement("dd");
+      dd.textContent = pair[1];
+      facts.appendChild(dt);
+      facts.appendChild(dd);
+    });
+    var link = document.getElementById("dlg-source");
+    link.href = home.source;
+    var thumbs = document.getElementById("dlg-thumbs");
+    thumbs.replaceChildren();
+    home.photos.forEach(function (pid, index) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "Show photo " + (index + 1));
+      if (index === shot) b.setAttribute("aria-current", "true");
+      var im = document.createElement("img");
+      im.src = uri(pid);
+      im.alt = "";
+      b.appendChild(im);
+      b.addEventListener("click", function () { shot = index; paint(); });
+      thumbs.appendChild(b);
+    });
+  }
+  function openHome(id) {
+    current = id;
+    shot = 0;
+    opener = document.activeElement;
+    paint();
+    if (typeof dlg.showModal === "function") dlg.showModal();
+    else dlg.setAttribute("open", "");
+    document.getElementById("dlg-close").focus();
+  }
+  document.getElementById("grid").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-open]");
+    if (b) openHome(b.getAttribute("data-open"));
+  });
+  document.querySelector(".lead").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-open]");
+    if (b) openHome(b.getAttribute("data-open"));
+  });
+  document.getElementById("dlg-close").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("close", function () { if (opener && opener.focus) opener.focus(); });
+  function toForm(kind) {
+    document.getElementById("request-type").value = kind;
+    document.getElementById("request-home").value = current;
+    dlg.close();
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.getElementById("contact").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    document.getElementById("request-name").focus();
+  }
+  document.getElementById("dlg-tour").addEventListener("click", function () { toForm("tour"); });
+  document.getElementById("dlg-apply").addEventListener("click", function () { toForm("apply"); });
+  document.getElementById("filters").addEventListener("submit", function (e) { e.preventDefault(); });
+  document.getElementById("city").addEventListener("change", filter);
+  document.getElementById("kind").addEventListener("change", filter);
+  function filter() {
+    var city = document.getElementById("city").value;
+    var kind = document.getElementById("kind").value;
+    var shown = 0;
+    document.querySelectorAll("#grid .card").forEach(function (card) {
+      var ok = (city === "all" || card.getAttribute("data-city") === city) &&
+               (kind === "all" || card.getAttribute("data-type") === kind);
+      card.hidden = !ok;
+      if (ok) shown += 1;
+    });
+    document.getElementById("empty").style.display = shown ? "none" : "block";
+  }
+  document.getElementById("request-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("request-name").value.trim();
+    var email = document.getElementById("request-email").value.trim();
+    var box = document.getElementById("confirm");
+    if (!name || !email) {
+      box.style.display = "block";
+      box.textContent = "Add a name and email to keep a note on this page. Nothing is sent.";
+      return;
+    }
+    var home = HOMES[document.getElementById("request-home").value];
+    var kind = document.getElementById("request-type").value === "apply" ? "Apply now" : "Schedule a tour";
+    box.style.display = "block";
+    box.textContent = "Kept on this page only for " + name + ": " + kind + " — " + home.title + ". This demo did not contact Good Steward.";
+  });
+})();
+</script>
+</body>
+</html>
