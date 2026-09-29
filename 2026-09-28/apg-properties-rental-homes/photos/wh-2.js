@@ -1,0 +1,1 @@
+window.LEAD_PHOTOS=window.LEAD_PHOTOS||{};window.LEAD_PHOTOS["wh-2"]="data:image/jpeg;base64,WH2_PLACEHOLDER";
