@@ -1,0 +1,30 @@
+.sc-demo-banner { right:auto; left:14px; }
+  #sc-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #7fd3b0; color: #07211a; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 650;
+  }
+  #sc-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #143028; color: #eef8f4;
+  }
+  #sc-chat::backdrop { background: rgba(7,18,15,.65); }
+  #sc-chat .bar { background: #10201b; color: #eef8f4; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #sc-chat h2 { font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 1.05rem; margin: 0; }
+  #sc-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  #sc-chat button, #sc-chat input, #sc-chat textarea { font: inherit; }
+  #sc-chat .choice { display: grid; gap: .45rem; }
+  #sc-chat .choice button, #sc-chat .quiet { background: #0a1814; color: #eef8f4; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #sc-chat .go { background: #7fd3b0; color: #07211a; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #sc-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #sc-chat .me, #sc-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #sc-chat .me { background: #1a3a30; justify-self: end; }
+  #sc-chat .them { background: #10201b; border: 1px solid rgba(255,255,255,.12); }
+  #sc-chat .meta { color: #9fb6ad; font-size: .75rem; }
+  #sc-chat .row { display: flex; gap: .4rem; }
+  #sc-chat input, #sc-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #0a1814; color: inherit; }
+  #sc-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #9fb6ad; margin-right: .35rem; }
+  #sc-chat .dot.on { background: #7fd3b0; }
+  @media (max-width: 640px) { #sc-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
