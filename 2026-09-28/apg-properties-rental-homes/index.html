@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APG Properties — homes, condos, and townhomes for rent</title>
+<meta name="description" content="Concept demo of a rental portfolio for APG Properties. Listings are limited to homes published on their public pages on September 28, 2026.">
+<style>
+  :root {
+    --ink: #1c2430;
+    --ink-soft: #3d4a5c;
+    --paper: #f4efe6;
+    --card: #fffdf8;
+    --line: #e2d8c8;
+    --terra: #c2512a;
+    --terra-dark: #8d3418;
+    --pine: #234237;
+    --pine-2: #1a332b;
+    --focus: #0b5fff;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  h1, h2, h3, .brand-name { font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; font-weight: 600; letter-spacing: -0.02em; }
+  a { color: var(--terra-dark); }
+  img { max-width: 100%; display: block; }
+  .skip {
+    position: absolute; left: 1rem; top: -4rem; background: #fff; padding: .5rem 1rem; z-index: 5;
+  }
+  .skip:focus { top: .5rem; }
+  header.site {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: .85rem 6vw; background: var(--pine-2); color: #f6f1e7;
+    position: sticky; top: 0; z-index: 4;
+  }
+  .brand { display: flex; align-items: center; gap: .7rem; color: inherit; text-decoration: none; }
+  .brand svg { width: 42px; height: 42px; flex: none; }
+  .brand-name { font-size: 1.35rem; margin: 0; line-height: 1; }
+  .brand small { display: block; font-family: inherit; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; opacity: .75; }
+  nav.primary { display: flex; flex-wrap: wrap; gap: .4rem 1rem; }
+  nav.primary a { color: #f6f1e7; text-decoration: none; font-size: .95rem; }
+  nav.primary a:hover { text-decoration: underline; }
+  .hero {
+    display: grid; grid-template-columns: 1.3fr .7fr; gap: 2rem;
+    padding: 3rem 6vw 2rem; align-items: end;
+  }
+  .kicker { letter-spacing: .16em; text-transform: uppercase; font-size: .75rem; color: var(--terra-dark); margin: 0 0 .4rem; }
+  h1 { font-size: clamp(2.1rem, 4vw, 3.6rem); line-height: 1.05; margin: 0 0 .6rem; }
+  .lede { font-size: 1.08rem; max-width: 40rem; color: var(--ink-soft); }
+  .hero-panel {
+    background: var(--pine); color: #f6f1e7; padding: 1.25rem 1.35rem; border-radius: 18px;
+  }
+  .hero-panel strong { display: block; font-size: 1.7rem; font-family: Palatino, Georgia, serif; }
+  .hero-panel p { margin: .2rem 0 0; font-size: .92rem; }
+  .offices { display: grid; gap: .7rem; margin-top: 1rem; }
+  .offices span { display: block; font-size: .88rem; opacity: .9; }
+  main { padding: 0 6vw 3rem; }
+  .filters {
+    display: grid; grid-template-columns: 1.2fr repeat(3, 1fr); gap: .75rem;
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  label { display: grid; gap: .3rem; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+  select, input, textarea {
+    font: inherit; color: inherit; background: #fff; border: 1px solid #cfc3b0; border-radius: 10px; padding: .6rem .7rem;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; align-items: end; }
+  .chips button, .pager button, .text-btn, .primary-btn, .ghost-btn {
+    font: inherit; cursor: pointer; border-radius: 999px; border: 1px solid transparent;
+  }
+  .chips button {
+    background: #efe7da; color: var(--ink); padding: .45rem .8rem; border-color: #e0d4c2;
+  }
+  .chips button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .toolbar { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin: .4rem 0 1rem; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  article.card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .photo { aspect-ratio: 4/3; background: #ddd4c6; position: relative; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .badge {
+    position: absolute; left: .7rem; top: .7rem; background: #fffdf8; color: var(--pine);
+    border-radius: 999px; padding: .2rem .6rem; font-size: .78rem; font-weight: 650;
+  }
+  .card-body { padding: 1rem 1rem 1.1rem; display: flex; flex-direction: column; gap: .45rem; flex: 1; }
+  .rent { font-family: Palatino, Georgia, serif; font-size: 1.55rem; margin: 0; }
+  .rent span { font-family: "Segoe UI", sans-serif; font-size: .85rem; color: var(--ink-soft); }
+  .addr { margin: 0; font-weight: 650; }
+  .meta { margin: 0; color: var(--ink-soft); font-size: .92rem; }
+  .card-body p { margin: 0; }
+  .card-body .text-btn { margin-top: auto; align-self: flex-start; background: var(--terra); color: #fff; padding: .55rem 1rem; }
+  .card-body .text-btn:hover { background: var(--terra-dark); }
+  .pager { display: flex; gap: .4rem; justify-content: center; margin: 1.2rem 0; flex-wrap: wrap; }
+  .pager[hidden] { display: none; }
+  .pager button { background: #fff; border-color: var(--line); min-width: 2.4rem; padding: .4rem .7rem; }
+  .pager button[aria-current="page"] { background: var(--pine); color: #fff; }
+  .empty { padding: 2rem; text-align: center; background: var(--card); border-radius: 16px; }
+  section { margin-top: 3rem; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 1.2rem 1.3rem; }
+  ul.clean { margin: .4rem 0 0; padding-left: 1.1rem; }
+  .people { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+  .people article { background: #f7f3eb; border-radius: 12px; padding: .8rem; }
+  .people h3 { margin: 0 0 .2rem; font-size: 1.15rem; }
+  .people p { margin: 0; font-size: .92rem; color: var(--ink-soft); }
+  form { display: grid; gap: .75rem; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+  .primary-btn { background: var(--pine); color: #fff; padding: .75rem 1.1rem; border-radius: 12px; }
+  .ghost-btn { background: #fff; color: var(--ink); border: 1px solid var(--line); padding: .7rem 1rem; border-radius: 12px; }
+  .confirm { background: #e7f2ec; border: 1px solid #b7d7c6; border-radius: 16px; padding: 1rem 1.1rem; }
+  dialog {
+    width: min(860px, calc(100vw - 1.5rem)); border: none; border-radius: 18px; padding: 0;
+    background: var(--card); color: var(--ink);
+  }
+  dialog::backdrop { background: rgba(22, 26, 32, .55); }
+  .dlg-head { display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; padding: 1rem 1rem 0; }
+  .dlg-body { padding: 0 1rem 1rem; display: grid; gap: .8rem; }
+  .gallery { display: grid; grid-template-columns: 1.4fr .6fr; gap: .4rem; }
+  .gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; background: #ddd; }
+  .thumbs { display: grid; gap: .4rem; }
+  .thumbs button { padding: 0; border: 2px solid transparent; border-radius: 10px; background: none; cursor: pointer; }
+  .thumbs button[aria-current="true"] { border-color: var(--terra); }
+  .thumbs img { height: 64px; width: 100%; object-fit: cover; border-radius: 8px; }
+  .facts { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .facts span { background: #efe7da; border-radius: 999px; padding: .25rem .65rem; font-size: .88rem; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: .5rem; }
+  footer {
+    background: var(--ink); color: #efe7da; padding: 2rem 6vw; font-size: .92rem;
+  }
+  footer a { color: #f3d2c4; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 1rem; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  @media (max-width: 980px) {
+    .hero, .filters, .grid, .split, .people, .foot-grid, .row2, .gallery { grid-template-columns: 1fr; }
+    .thumbs { grid-template-columns: repeat(4, 1fr); }
+    header.site { align-items: flex-start; flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#listings">Skip to listings</a>
+<header class="site">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="14" fill="#f4efe6"/>
+      <path d="M8 34 L22 18 L36 34" fill="none" stroke="#c2512a" stroke-width="3"/>
+      <path d="M20 34 L34 18 L48 34" fill="none" stroke="#234237" stroke-width="3"/>
+      <path d="M32 36 L46 20 L58 36" fill="none" stroke="#1c2430" stroke-width="3"/>
+      <rect x="14" y="36" width="36" height="14" rx="2" fill="#234237"/>
+    </svg>
+    <span><span class="brand-name">APG Properties</span><small>Rental homes</small></span>
+  </a>
+  <nav class="primary" aria-label="Page">
+    <a href="#listings">Listings</a>
+    <a href="#areas">Areas</a>
+    <a href="#team">Team</a>
+    <a href="#inquiry">Inquire</a>
+  </nav>
+</header>
+<div class="hero" id="top">
+  <div>
+    <p class="kicker">North Orange County and nearby Los Angeles County</p>
+    <h1>Houses, condos, and townhomes — not a single apartment tower.</h1>
+    <p class="lede">APG Properties is a residential property manager. This concept page shows only the rentals that were on their public list on September 28, 2026, with the rent, size, and photos from those listings.</p>
+  </div>
+  <aside class="hero-panel">
+    <strong>9 homes on the list</strong>
+    <p>Rents on that list ran from $1,875 to $6,500. One Hacienda Heights house is dated available October 1, 2026. The rest were marked available now.</p>
+    <div class="offices">
+      <div><b>Anaheim office</b><span>675 N. Euclid Street #532, Anaheim, CA 92801</span></div>
+      <div><b>Brea office</b><span>371 Oak Place, Suite H, Brea, CA 92821</span></div>
+      <div><b>Phone</b><span>(714) 400-9997</span></div>
+    </div>
+  </aside>
+</div>
+<main>
+  <section id="listings" aria-labelledby="list-heading">
+    <h2 id="list-heading">Open rentals</h2>
+    <div class="filters">
+      <div class="chips" role="group" aria-label="Home type">
+        <button type="button" data-type="all" aria-pressed="true">All types</button>
+        <button type="button" data-type="House" aria-pressed="false">House</button>
+        <button type="button" data-type="Condo" aria-pressed="false">Condo</button>
+        <button type="button" data-type="Townhome" aria-pressed="false">Townhome</button>
+      </div>
+      <label>City
+        <select id="city">
+          <option value="all">All cities</option>
+        </select>
+      </label>
+      <label>County
+        <select id="county">
+          <option value="all">All counties</option>
+          <option>Orange County</option>
+          <option>Los Angeles County</option>
+          <option>San Diego County</option>
+        </select>
+      </label>
+      <label>Bedrooms
+        <select id="beds">
+          <option value="0">Any</option>
+          <option value="1">1+</option>
+          <option value="3">3+</option>
+          <option value="4">4+</option>
+        </select>
+      </label>
+    </div>
+    <div class="toolbar">
+      <p id="count" aria-live="polite" style="margin:0"></p>
+      <label>Sort
+        <select id="sort">
+          <option value="rent-asc">Rent, low to high</option>
+          <option value="rent-desc">Rent, high to low</option>
+          <option value="beds-desc">Most bedrooms</option>
+        </select>
+      </label>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No homes match these filters. Clear a filter to see the published list again.</p>
+    <nav class="pager" id="pager" aria-label="Listing pages" hidden></nav>
+  </section>
+
+  <section id="areas" class="split">
+    <div class="panel">
+      <h2>Where they say they work</h2>
+      <p>Their homepage names these markets: Garden Grove, Yorba Linda, Anaheim, Anaheim Hills, Fullerton, Orange County, Brea, Santee, Buena Park, and Placentia.</p>
+      <p>Cities with a home actually on the September 28 list: Anaheim, Garden Grove, Hacienda Heights, Norwalk, Whittier, Santa Ana, Signal Hill, and San Diego.</p>
+    </div>
+    <div class="panel">
+      <h2>What the management work covers</h2>
+      <ul class="clean">
+        <li>Leasing homes and collecting rent, including online payment</li>
+        <li>Accounting and owner statements through AppFolio, which their owners page names</li>
+        <li>Marketing and tenant screening</li>
+        <li>Maintenance calls, which they describe as 24/7</li>
+        <li>Enforcing property rules</li>
+      </ul>
+      <p>Corporation license on their site footer: DRE #01525202. Every open listing also showed a $49.50 application fee.</p>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>People named on the about page</h2>
+    <div class="people">
+      <article>
+        <h3>Shane Roach</h3>
+        <p>Owner. DRE #01879273. The about page describes tenant relations, vendors, lease compliance, maintenance, and budgets.</p>
+      </article>
+      <article>
+        <h3>Phil Yates</h3>
+        <p>Property manager. DRE #01888174.</p>
+      </article>
+      <article>
+        <h3>Dan Groomer</h3>
+        <p>Office manager. DRE #02003512. The about page says he is also a licensed real estate agent.</p>
+      </article>
+      <article>
+        <h3>Dale R. Jamieson II</h3>
+        <p>San Diego County representative. DRE #01913031. The about page says he has held that role since 2010.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="inquiry">
+    <h2>Ask about a tour or an application</h2>
+    <div class="split">
+      <form id="form">
+        <div class="row2">
+          <label>Name
+            <input id="name" name="name" required autocomplete="name">
+          </label>
+          <label>Email
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </label>
+        </div>
+        <div class="row2">
+          <label>Phone
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </label>
+          <label>Listing
+            <select id="listing" name="listing" required></select>
+          </label>
+        </div>
+        <label>What you need
+          <select id="intent" name="intent">
+            <option value="Question">Question</option>
+            <option value="Tour">Schedule a tour</option>
+            <option value="Apply">Apply now</option>
+          </select>
+        </label>
+        <label>Message
+          <textarea id="message" name="message" rows="4"></textarea>
+        </label>
+        <button class="primary-btn" type="submit">Keep this note on the page</button>
+      </form>
+      <div>
+        <div class="confirm" id="confirm" hidden>
+          <h3>Noted on this page only</h3>
+          <p>This concept demo does not send the form anywhere. Nothing was emailed or stored on a server.</p>
+          <button class="ghost-btn" type="button" id="again">Write another note</button>
+        </div>
+        <div class="panel" id="form-aside">
+          <h3>How a real inquiry would work</h3>
+          <p>APG’s listings say applications are accepted through their own website, and showings are scheduled from the listing. Use (714) 400-9997 for the offices they advertise in Anaheim and Brea.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="foot-grid">
+    <div>
+      <strong>Concept demo for outreach by Ryan Swanson / RegisterMySite.</strong>
+      <p>This is not the official APG Properties website and it is not a live application portal.</p>
+    </div>
+    <div>
+      <strong>APG Properties</strong>
+      <p>(714) 400-9997<br>675 N. Euclid Street #532<br>Anaheim, CA 92801</p>
+    </div>
+    <div>
+      <strong>Brea office</strong>
+      <p>371 Oak Place, Suite H<br>Brea, CA 92821<br>DRE #01525202</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg-head">
+    <div>
+      <p class="kicker" id="dlg-type"></p>
+      <h2 id="dlg-title" style="margin:0"></h2>
+    </div>
+    <button class="ghost-btn" type="button" id="dlg-close">Close</button>
+  </div>
+  <div class="dlg-body">
+    <div class="gallery">
+      <img id="hero-img" alt="">
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+    <div class="facts" id="facts"></div>
+    <p id="dlg-copy"></p>
+    <ul id="dlg-points"></ul>
+    <p id="dlg-note"></p>
+    <p><a id="source-link" href="" target="_blank" rel="noopener">Open the AppFolio listing</a></p>
+    <div class="cta-row">
+      <button class="primary-btn" type="button" id="tour-btn">Schedule a tour</button>
+      <button class="ghost-btn" type="button" id="apply-btn">Apply now</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="photos/bv-1.js"></script>
+<script src="photos/bv-2.js"></script>
+<script src="photos/bv-3.js"></script>
+<script src="photos/bv-4.js"></script>
+<script src="photos/gg-1.js"></script>
+<script src="photos/gg-2.js"></script>
+<script src="photos/gg-3.js"></script>
+<script src="photos/gg-4.js"></script>
+<script src="photos/gl-1.js"></script>
+<script src="photos/gl-2.js"></script>
+<script src="photos/gl-3.js"></script>
+<script src="photos/gl-4.js"></script>
+<script src="photos/hh-1.js"></script>
+<script src="photos/hh-2.js"></script>
+<script src="photos/hh-3.js"></script>
+<script src="photos/hh-4.js"></script>
+<script src="photos/nw-1.js"></script>
+<script src="photos/nw-2.js"></script>
+<script src="photos/nw-3.js"></script>
+<script src="photos/nw-4.js"></script>
+<script src="photos/sa-1.js"></script>
+<script src="photos/sa-2.js"></script>
+<script src="photos/sa-3.js"></script>
+<script src="photos/sa-4.js"></script>
+<script src="photos/sd-1.js"></script>
+<script src="photos/sd-2.js"></script>
+<script src="photos/sd-3.js"></script>
+<script src="photos/sd-4.js"></script>
+<script src="photos/sh-1.js"></script>
+<script src="photos/sh-2.js"></script>
+<script src="photos/sh-3.js"></script>
+<script src="photos/sh-4.js"></script>
+<script src="photos/wh-1.js"></script>
+<script src="photos/wh-2.js"></script>
+<script src="photos/wh-3.js"></script>
+<script src="photos/wh-4.js"></script>
+<script>
+const LISTINGS = [
+  {
+    id: "greenleaf",
+    address: "1850 W Greenleaf Ave Apt E",
+    city: "Anaheim",
+    county: "Orange County",
+    type: "Condo",
+    badge: "Condo",
+    beds: 1, baths: "1", sqft: "722",
+    rent: 1875, avail: "Available now",
+    blurb: "One-bedroom, one-bath condo with a one-car garage in Anaheim.",
+    copy: "The listing describes laminate and tile floors, a bedroom with a mirrored closet, a reglazed tub and shower with a separate vanity, and a detached one-car garage.",
+    points: ["Rent $1,875", "Security deposit $1,875, payable in two payments", "Application fee $49.50", "Generally pet restricted, with possible legal exceptions"],
+    note: "",
+    images: ["gl-1","gl-2","gl-3","gl-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/ee79de46-0c76-4840-831e-666f4eaaf310"
+  },
+  {
+    id: "buckingham",
+    address: "11959 Buckingham Cir",
+    city: "Garden Grove",
+    county: "Orange County",
+    type: "Townhome",
+    badge: "Townhouse",
+    beds: 4, baths: "2.5", sqft: "1,452",
+    rent: 3500, avail: "Available now",
+    blurb: "Four-bedroom, 2.5-bath townhouse near the Anaheim Resort area of Garden Grove.",
+    copy: "The listing places all four bedrooms upstairs, with a primary suite that has dual closets and a private bath. A private enclosed patio leads to an attached two-car garage. The kitchen notes mention stone counters, a double sink, a garbage disposal, and a new dishwasher.",
+    points: ["Rent $3,500", "Security deposit $3,500, payable in two payments", "Application fee $49.50", "Pet note on the listing: please submit for pets", "Near Pioneer Park, per the listing"],
+    note: "",
+    images: ["gg-1","gg-2","gg-3","gg-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/f7c03506-5ca3-45c0-8e17-610f32b01dba"
+  },
+  {
+    id: "mountain",
+    address: "15068 Mountain Spring St",
+    city: "Hacienda Heights",
+    county: "Los Angeles County",
+    type: "House",
+    badge: "House",
+    beds: 4, baths: "2", sqft: "1,564",
+    rent: 4300, avail: "Available 10/1/26",
+    blurb: "Four-bedroom, two-bath house with a two-car garage. Available October 1, 2026.",
+    copy: "The listing says this house is being updated from a previously advertised 3-bedroom, 1-bath to a 4-bedroom, 2-bath, with work scheduled between September 26 and October 1, 2026, and new photos to follow. Published notes also mention ceramic tile, no carpet, an ensuite primary with backyard access, and an attached two-car garage.",
+    points: ["Rent $4,300", "1,564 sq ft on the listing card", "Security deposit $4,300, in two installments", "Application fee $49.50", "Generally pet restricted, with possible legal exceptions"],
+    note: "Showings were described as available after the renovation window.",
+    images: ["hh-1","hh-2","hh-3","hh-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/05e061a9-8734-48ea-8f3a-942749a31c8c"
+  },
+  {
+    id: "norwalk",
+    address: "13217 San Antonio Dr",
+    city: "Norwalk",
+    county: "Los Angeles County",
+    type: "Townhome",
+    badge: "Townhome",
+    beds: 3, baths: "4", sqft: "1,872",
+    rent: 4190, avail: "Available now",
+    blurb: "Three-bedroom, four-bath tri-level townhome with a two-car garage and an EV charger.",
+    copy: "The card lists 1,872 sq ft. The description also says about 1,900 sq ft and describes four bathrooms as two full and two half. This page shows the card figures. Other notes: built in 2021, vinyl plank, a Tesla charger in the garage, and a primary suite with a walk-in closet.",
+    points: ["Rent $4,190", "Card: 3 bed / 4 bath / 1,872 sq ft", "Security deposit $4,190, in two installments", "Application fee $49.50", "Generally pet restricted, with possible legal exceptions"],
+    note: "Square footage and bath mix are shown as published, without picking a winner between the card and the description.",
+    images: ["nw-1","nw-2","nw-3","nw-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/c41d8215-1c5f-4daf-900f-32b549f5ccb8"
+  },
+  {
+    id: "whittier",
+    address: "11151 Chadsey Dr",
+    city: "Whittier",
+    county: "Los Angeles County",
+    type: "House",
+    badge: "House",
+    beds: 3, baths: "2", sqft: "1,672",
+    rent: 3695, avail: "Available now",
+    blurb: "Updated three-bedroom, two-bath house with a two-car garage in South Whittier.",
+    copy: "The listing describes fresh paint, wood floors, a family room with new carpet and a decorative brick fireplace, a fenced yard with a covered patio, and an attached two-car garage. It also advertises $500 off the first month’s rent.",
+    points: ["Rent $3,695", "Move-in note: $500 off the first month", "Security deposit $3,695, in two installments", "Application fee $49.50", "Generally pet restricted, with possible legal exceptions"],
+    note: "",
+    images: ["wh-1","wh-2","wh-3","wh-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/91aadaa1-52d7-4593-ba9c-0be8f20f98cf"
+  },
+  {
+    id: "bridge",
+    address: "460 S Bridge View Dr",
+    city: "Anaheim",
+    county: "Orange County",
+    type: "House",
+    badge: "House",
+    beds: 4, baths: "4", sqft: "3,356",
+    rent: 6500, avail: "Available now",
+    blurb: "Four-bedroom home with a three-car garage in the Old Bridge area of Anaheim Hills.",
+    copy: "The card says 4 bedrooms and 4 bathrooms and 3,356 sq ft. The description also says two full bathrooms and two half bathrooms. Notes mention a primary suite with two walk-in closets, a stone fireplace, a wet bar, and a three-car garage. The address city is Anaheim.",
+    points: ["Rent $6,500", "Security deposit $6,500, in two installments", "Application fee $49.50", "Generally pet restricted, with possible legal exceptions"],
+    note: "Bath count is shown as the card states it: 4. The write-up’s full-versus-half split is noted, not resolved.",
+    images: ["bv-1","bv-2","bv-3","bv-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/f316b419-551f-456c-b6cc-9b6abaa2ca38"
+  },
+  {
+    id: "santaclara",
+    address: "1002 W Santa Clara Ave",
+    city: "Santa Ana",
+    county: "Orange County",
+    type: "House",
+    badge: "House",
+    beds: 3, baths: "2", sqft: "1,700",
+    rent: 5490, avail: "Available now",
+    blurb: "Single-story three-bedroom, two-bath house with a pool in Santa Ana.",
+    copy: "The listing calls it a single-family home of about 1,700 sq ft and mentions a pool, a covered patio, hardwood and tile, an indoor laundry with a dog-wash station, and a two-car garage. It says small pets are considered, and that pool service and gardening are included.",
+    points: ["Rent $5,490", "Security deposit $5,490, in two installments", "Application fee $49.50", "Small pets are considered"],
+    note: "",
+    images: ["sa-1","sa-2","sa-3","sa-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/1c17a46c-7580-454b-adc2-0881a3256dd6"
+  },
+  {
+    id: "signal",
+    address: "1968 Cherry Ave #12",
+    city: "Signal Hill",
+    county: "Los Angeles County",
+    type: "Townhome",
+    badge: "Townhome",
+    beds: 3, baths: "3", sqft: "1,510",
+    rent: 3495, avail: "Available now",
+    blurb: "Three-bedroom, three-bath townhome with a two-car garage in Signal Hill.",
+    copy: "The listing describes a 2006, three-level townhome toward the rear of the community, with an attached two-car garage. It advertises $500 off the first month’s rent.",
+    points: ["Rent $3,495", "Move-in note: $500 off the first month", "Security deposit $3,495, in two installments", "Application fee $49.50"],
+    note: "",
+    images: ["sh-1","sh-2","sh-3","sh-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/22618e8f-2b31-4f62-9883-8b1667b5e22a"
+  },
+  {
+    id: "hillcrest",
+    address: "162 W Robinson Ave",
+    city: "San Diego",
+    county: "San Diego County",
+    type: "Townhome",
+    badge: "Townhome",
+    beds: 3, baths: "5", sqft: "1,800",
+    rent: 6495, avail: "Available now",
+    blurb: "Four-level Hillcrest townhome: 3 bedrooms, 3 full baths, and 2 half baths.",
+    copy: "The card counts 5 baths and 1,800 sq ft. The listing describes a private elevator, an attached 3-car garage, and a rooftop patio it sizes at 500 sq ft. It also says half off the first month’s rent, a $3,247.50 savings, and that only street parking is available.",
+    points: ["Rent $6,495", "Move-in note: half off the first month", "Security deposit $6,495, in two installments", "Application fee $49.50"],
+    note: "The card’s 5-bath count matches 3 full baths plus 2 half baths in the description.",
+    images: ["sd-1","sd-2","sd-3","sd-4"],
+    source: "https://apgpropertiesinc.appfolio.com/listings/detail/a0e88504-d2c5-4a72-9167-94d37699657f"
+  }
+];
+
+const PAGE = 6;
+let typeFilter = "all";
+let page = 1;
+let current = null;
+let photoIndex = 0;
+
+const grid = document.getElementById("grid");
+const pager = document.getElementById("pager");
+const empty = document.getElementById("empty");
+const countEl = document.getElementById("count");
+const citySel = document.getElementById("city");
+const listingSel = document.getElementById("listing");
+const dlg = document.getElementById("dlg");
+const form = document.getElementById("form");
+const confirmBox = document.getElementById("confirm");
+
+const cities = [...new Set(LISTINGS.map(l => l.city))].sort();
+cities.forEach(c => {
+  const o = document.createElement("option");
+  o.value = c; o.textContent = c;
+  citySel.appendChild(o);
+});
+const general = document.createElement("option");
+general.value = "General"; general.textContent = "General question";
+listingSel.appendChild(general);
+LISTINGS.forEach(l => {
+  const o = document.createElement("option");
+  o.value = l.id; o.textContent = l.address + ", " + l.city;
+  listingSel.appendChild(o);
+});
+
+function money(n) { return "$" + n.toLocaleString("en-US"); }
+
+function filtered() {
+  const city = citySel.value;
+  const county = document.getElementById("county").value;
+  const beds = Number(document.getElementById("beds").value);
+  const sort = document.getElementById("sort").value;
+  let rows = LISTINGS.filter(l => {
+    if (typeFilter !== "all" && l.type !== typeFilter) return false;
+    if (city !== "all" && l.city !== city) return false;
+    if (county !== "all" && l.county !== county) return false;
+    if (l.beds < beds) return false;
+    return true;
+  });
+  rows.sort((a, b) => {
+    if (sort === "rent-desc") return b.rent - a.rent;
+    if (sort === "beds-desc") return b.beds - a.beds || a.rent - b.rent;
+    return a.rent - b.rent;
+  });
+  return rows;
+}
+
+function render() {
+  const rows = filtered();
+  const pages = Math.max(1, Math.ceil(rows.length / PAGE));
+  if (page > pages) page = pages;
+  const slice = rows.slice((page - 1) * PAGE, page * PAGE);
+  countEl.textContent = rows.length + (rows.length === 1 ? " home" : " homes") + " on this view" + (pages > 1 ? " · page " + page + " of " + pages : "");
+  grid.innerHTML = "";
+  empty.hidden = rows.length !== 0;
+  slice.forEach(l => {
+    const art = document.createElement("article");
+    art.className = "card";
+    art.innerHTML =
+      '<div class="photo"><img alt="Listing photo of ' + l.address + '" src="' + LEAD_PHOTOS[l.images[0]] + '"><span class="badge">' + l.badge + '</span></div>' +
+      '<div class="card-body"><p class="rent">' + money(l.rent) + ' <span>/ month</span></p>' +
+      '<p class="addr">' + l.address + '</p>' +
+      '<p class="meta">' + l.city + ' · ' + l.county + '</p>' +
+      '<p class="meta">' + l.beds + ' bd · ' + l.baths + ' ba · ' + l.sqft + ' sq ft · ' + l.avail + '</p>' +
+      '<p>' + l.blurb + '</p>' +
+      '<button type="button" class="text-btn">View home details</button></div>';
+    art.querySelector("button").addEventListener("click", () => openListing(l.id));
+    grid.appendChild(art);
+  });
+  pager.hidden = rows.length <= PAGE;
+  pager.innerHTML = "";
+  if (rows.length > PAGE) {
+    const prev = document.createElement("button");
+    prev.type = "button"; prev.textContent = "Previous";
+    prev.disabled = page === 1;
+    prev.addEventListener("click", () => { page -= 1; render(); });
+    pager.appendChild(prev);
+    for (let i = 1; i <= pages; i++) {
+      const b = document.createElement("button");
+      b.type = "button"; b.textContent = String(i);
+      if (i === page) b.setAttribute("aria-current", "page");
+      b.addEventListener("click", () => { page = i; render(); });
+      pager.appendChild(b);
+    }
+    const next = document.createElement("button");
+    next.type = "button"; next.textContent = "Next";
+    next.disabled = page === pages;
+    next.addEventListener("click", () => { page += 1; render(); });
+    pager.appendChild(next);
+  }
+}
+
+document.querySelectorAll("[data-type]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    typeFilter = btn.getAttribute("data-type");
+    document.querySelectorAll("[data-type]").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
+    page = 1; render();
+  });
+});
+["city","county","beds","sort"].forEach(id => {
+  document.getElementById(id).addEventListener("change", () => { page = 1; render(); });
+});
+
+function showPhoto() {
+  const img = document.getElementById("hero-img");
+  img.src = LEAD_PHOTOS[current.images[photoIndex]];
+  img.alt = "Photo " + (photoIndex + 1) + " of " + current.address + " from the APG listing";
+  document.querySelectorAll("#thumbs button").forEach((b, i) => b.setAttribute("aria-current", String(i === photoIndex)));
+}
+
+function openListing(id) {
+  current = LISTINGS.find(l => l.id === id);
+  photoIndex = 0;
+  document.getElementById("dlg-type").textContent = current.badge + " · " + current.avail;
+  document.getElementById("dlg-title").textContent = current.address + ", " + current.city;
+  document.getElementById("dlg-copy").textContent = current.copy;
+  document.getElementById("dlg-note").textContent = current.note;
+  document.getElementById("source-link").href = current.source;
+  const facts = document.getElementById("facts");
+  facts.innerHTML = "";
+  [money(current.rent) + "/mo", current.beds + " bed", current.baths + " bath", current.sqft + " sq ft", current.county].forEach(t => {
+    const s = document.createElement("span"); s.textContent = t; facts.appendChild(s);
+  });
+  const ul = document.getElementById("dlg-points");
+  ul.innerHTML = "";
+  current.points.forEach(p => { const li = document.createElement("li"); li.textContent = p; ul.appendChild(li); });
+  const thumbs = document.getElementById("thumbs");
+  thumbs.innerHTML = "";
+  current.images.forEach((src, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", "Show photo " + (i + 1));
+    const im = document.createElement("img");
+    im.src = LEAD_PHOTOS[src]; im.alt = "";
+    b.appendChild(im);
+    b.addEventListener("click", () => { photoIndex = i; showPhoto(); });
+    thumbs.appendChild(b);
+  });
+  showPhoto();
+  dlg.showModal();
+}
+
+function toForm(intent) {
+  if (current) listingSel.value = current.id;
+  document.getElementById("intent").value = intent;
+  dlg.close();
+  document.getElementById("inquiry").scrollIntoView();
+  document.getElementById("name").focus();
+}
+document.getElementById("tour-btn").addEventListener("click", () => toForm("Tour"));
+document.getElementById("apply-btn").addEventListener("click", () => toForm("Apply"));
+document.getElementById("dlg-close").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  form.hidden = true;
+  document.getElementById("form-aside").hidden = true;
+  confirmBox.hidden = false;
+});
+document.getElementById("again").addEventListener("click", () => {
+  form.reset();
+  form.hidden = false;
+  document.getElementById("form-aside").hidden = false;
+  confirmBox.hidden = true;
+});
+
+render();
+</script>
+</body>
+</html>
