@@ -1,0 +1,30 @@
+.eiw-demo-banner { right:auto; left:14px; }
+  #eiw-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #c9d4de; color: #11161c; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 650;
+  }
+  #eiw-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #1b2430; color: #eef3f8;
+  }
+  #eiw-chat::backdrop { background: rgba(11,14,18,.65); }
+  #eiw-chat .bar { background: #141920; color: #eef3f8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #eiw-chat h2 { font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 1.05rem; margin: 0; }
+  #eiw-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  #eiw-chat button, #eiw-chat input, #eiw-chat textarea { font: inherit; }
+  #eiw-chat .choice { display: grid; gap: .45rem; }
+  #eiw-chat .choice button, #eiw-chat .quiet { background: #0d1218; color: #eef3f8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #eiw-chat .go { background: #c9d4de; color: #11161c; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #eiw-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #eiw-chat .me, #eiw-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #eiw-chat .me { background: #243040; justify-self: end; }
+  #eiw-chat .them { background: #141920; border: 1px solid rgba(255,255,255,.12); }
+  #eiw-chat .meta { color: #9aa7b4; font-size: .75rem; }
+  #eiw-chat .row { display: flex; gap: .4rem; }
+  #eiw-chat input, #eiw-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #0d1218; color: inherit; }
+  #eiw-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #c9d4de; margin-right: .35rem; }
+  #eiw-chat .dot.on { background: #c9d4de; }
+  @media (max-width: 640px) { #eiw-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
