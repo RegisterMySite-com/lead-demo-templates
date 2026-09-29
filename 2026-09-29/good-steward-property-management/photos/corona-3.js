@@ -1,1 +1,1 @@
-window.LEAD_PHOTOS=window.LEAD_PHOTOS||{};window.LEAD_PHOTOS["corona-3"]="data:image/jpeg;base64,/9j/RETRY_SAME_PLUS_FIX
+PLACEHOLDER_WILL_NOT_SEND
