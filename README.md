@@ -24,5 +24,8 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 
 ## 2026-09-29
 - `good-steward-property-management` — filterable house and townhouse rentals, Placentia lead listing, on-page tour and apply form
+- `sams-roofing` — roof square & pitch estimator (tear-off / overlay / flat)
+- `estradas-iron-works` — fence materials calculator (posts, panels, gates, primer)
+- `shine-and-clean` — room-by-room recurring cleaning quote cart
 
 These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
