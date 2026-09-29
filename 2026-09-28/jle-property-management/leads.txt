@@ -1,0 +1,29 @@
+JLE Property Management concept demo — source notes
+Opened September 28, 2026. Internal only.
+
+BUSINESS
+- Site confirmed: https://jle1.com/
+- Legal-style name on the site: JLE Property Management, Inc.
+- Office: 700 W. First St. Suite 12, Tustin, CA 92780 (contact page also writes "700 W. 1st – Suite 12").
+- Phone (714) 778-0480. Email frontdesk@jle1.com. Both on the homepage and https://jle1.com/contact_us/
+- Fax 714.491.0864 is labeled "FAX" on the contact page HTML.
+- Hours on the contact page: M-F 9am–5pm.
+- Homepage footer heading text: "DRE #: 01216720". That is the number shown. A prior note of corporation DRE 01460075 was not on the pages opened (home, contact, available rentals, eight rental URLs). It was not put on the demo. The official DRE lookup was not opened.
+- Homepage says they manage apartments, duplexes, and homes from a few units to hundreds, bilingual staff, and names these cities: Anaheim, Bellflower, Buena Park, Chino Hills, Corona, Costa Mesa, Cudahy, Cypress, Downey, Fullerton, Garden Grove, Hawthorne, Huntington Beach, Huntington Park, Inglewood, Irvine, La Habra, La Mirada, Loma Linda, Long Beach, Los Angeles, Newport Beach, Orange, Placentia, Riverside, San Clemente, Santa Ana, Stanton, Torrance, West Covina, Whittier. Those are service-area claims, not vacancies.
+
+LISTINGS
+Source board: https://jle1.com/available_rentals/ (eight loop items). Permalinks from https://jle1.com/rental-sitemap.xml and each rental URL was opened. Those detail pages were thin (title, one featured image, nav). Beds, baths, rent, pets, and sq ft come from the board. Bedroom taxonomy classes on the board matched the numbers (studio, 1-bed, 2-beds, 3-beds). First icon is a bed; the next number is treated as baths, consistent with the board layout. One photo each, downloaded from jle1.com uploads. No second photo existed on the pages opened.
+- 918 W Lincoln Ave Suite 3, Anaheim, CA 92805. $1,250. 1/1. sq ft not published. No pets. https://jle1.com/rental/918-w-lincoln-ave-suite-3/
+- 14250 Telegraph Rd, APT 3, Whittier, CA 90604. $1,595. Studio (0 bed) / 1 bath. sq ft blank. No pets. https://jle1.com/rental/14250-telegraph-rd-apt-3/
+- 1107 W Highland St, #3, Santa Ana, CA 92703. $1,950. 1/1. sq ft blank. No pets. https://jle1.com/rental/1107-w-highland-st/
+- 1610 Evergreen St, APT D, Santa Ana, CA 92707. $2,100. 2/1. sq ft blank. No pets. https://jle1.com/rental/1610-evergreen-st-apt-d/
+- 6132 Indiana Ave, APT D, Buena Park, CA 90621. $2,450. 2/1. sq ft blank. No pets. https://jle1.com/rental/6132-indiana-ave-apt-d/
+- 1610 W Civic Center Dr, #4, Santa Ana, CA 92703. $2,595. 2/1. sq ft blank. Dogs allowed. https://jle1.com/rental/1610-w-civic-center-dr-4/
+- 4127 Seymour St, Riverside, CA 92505. $3,200. 3/2. 1,436 sq ft. No pets. Type not labeled. https://jle1.com/rental/4127-seymour-st/
+- 849 N Redondo Dr E, Anaheim, CA 92801. $3,600. 3/2. 1,101 sq ft. No pets. Type not labeled. https://jle1.com/rental/849-n-redondo-dr-e/
+Each board card had an "Apply On Zillow" link. Those URLs are in the demo modal. Property type (house vs apartment) was not stated on the pages, so every card is badged "Rental" only. The type filter has All types and Rental. Extra filters are city, exact bedroom count, and the pet line.
+
+NOT USED
+- Review carousel omitted. No Google, Yelp, or Facebook review page was opened. A CompareHOAManagers page in search results claimed Google 2.9/55 and DRE 01460075; that page was not used.
+- Older dev.jle1.com listings and the Broadway, Anaheim address were not on the current site pages opened, so they were not used.
+- LinkedIn revenue, headcount, and Facebook URL were not opened as review profiles and were not shown.
