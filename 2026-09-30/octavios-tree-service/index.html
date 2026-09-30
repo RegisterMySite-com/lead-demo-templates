@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Octavio's Tree Service | Long Beach Tree Care Demo</title>
+  <meta name="description" content="Family-owned Long Beach tree service. Canopy estimator for trim, removal, and stump grind. RegisterMySite demo." />
+  <style>
+    :root {
+      --ink: #12261a; --moss: #1f6b3a; --leaf: #2f9e4f; --sand: #f4efe4;
+      --bark: #3c2a1e; --paper: #fffdf8; --line: #d7ccb8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Georgia, serif; color: var(--ink); background: var(--sand); }
+    a { color: var(--moss); }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(244,239,228,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; font-weight: 700; }
+    nav a { margin-left: 16px; text-decoration: none; font-size: 15px; }
+    .cta { background: var(--moss); color: #fff !important; padding: 8px 14px; border-radius: 999px; }
+    .hero { padding: 56px 0 40px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: center; }
+    .hero h1 { font-size: clamp(32px, 5vw, 56px); line-height: 1.05; margin: 0 0 12px; }
+    .badge { display: inline-block; background: #e7f4ea; color: var(--moss); padding: 4px 10px; border-radius: 999px; font-size: 13px; }
+    .demo { position: fixed; top: 12px; right: 12px; background: #0f172a; color: #fff; font: 12px/1.3 system-ui, sans-serif; padding: 8px 10px; border-radius: 8px; z-index: 40; max-width: 220px; }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+    label { display: block; font-size: 13px; margin: 10px 0 4px; font-family: system-ui, sans-serif; }
+    select, input, button { font: inherit; }
+    select, input { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+    .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .svc { padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+    footer { margin-top: 56px; background: var(--bark); color: #f4efe4; padding: 36px 0; font-family: system-ui, sans-serif; font-size: 14px; }
+    footer a { color: #cde8d4; }
+    .foot { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 20px; }
+    @media (max-width: 800px) { .hero, .grid3, .foot { grid-template-columns: 1fr; } nav a:not(.cta) { display: none; } }
+  </style>
+</head>
+<body>
+  <div class="demo">RegisterMySite demo — not the live business site. Built from the Sep 30, 2026 lead scan.</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <circle cx="18" cy="18" r="18" fill="#1f6b3a"/>
+          <path d="M18 7c4 5 7 8 7 12a7 7 0 1 1-14 0c0-4 3-7 7-12z" fill="#e7f4ea"/>
+          <rect x="16.2" y="20" width="3.6" height="9" rx="1" fill="#3c2a1e"/>
+        </svg>
+        Octavio's Tree Service
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#estimator">Canopy estimator</a>
+        <a href="#reviews">Reviews</a>
+        <a class="cta" href="tel:+15624803818">Call (562) 480-3818</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" id="top">
+    <section class="hero">
+      <div>
+        <span class="badge">Family-owned · Long Beach · CSLB #910932 (D49)</span>
+        <h1>Twenty years in the canopy of Long Beach.</h1>
+        <p>Trim, take-down, and stump grind for homes from Los Altos to Bixby Knolls. Crews that show up with chips hauled off the same day.</p>
+        <p><strong>(562) 480-3818</strong> · Long Beach, CA 90808</p>
+      </div>
+      <div class="panel" id="estimator">
+        <h2 style="margin-top:0">Canopy job estimator</h2>
+        <p style="margin-top:0;font-family:system-ui,sans-serif;font-size:14px;color:#445">Ballpark only — final price after a walk-around.</p>
+        <label>Service</label>
+        <select id="svc">
+          <option value="trim">Crown thin / shape</option>
+          <option value="remove">Full removal</option>
+          <option value="stump">Stump grind only</option>
+          <option value="storm">Storm hangers / emergency</option>
+        </select>
+        <label>Tree height (ft)</label>
+        <input id="ht" type="number" min="8" max="80" value="28" />
+        <label>Trunk access</label>
+        <select id="access">
+          <option value="open">Open yard / drive</option>
+          <option value="tight">Tight side yard</option>
+          <option value="power">Near power lines</option>
+        </select>
+        <label>Species (optional)</label>
+        <select id="sp">
+          <option>Ficus</option><option>Queen palm</option><option>Crape myrtle</option>
+          <option>Eucalyptus</option><option>Pine</option><option>Other / mixed</option>
+        </select>
+        <p id="out" style="font-size:22px;margin:16px 0 8px"></p>
+        <button onclick="est()" style="background:var(--moss);color:#fff;border:0;border-radius:999px;padding:10px 16px;cursor:pointer">Recalculate</button>
+      </div>
+    </section>
+    <section id="services">
+      <h2>Work we do every week</h2>
+      <div class="grid3">
+        <article class="svc"><h3>Prune &amp; thin</h3><p>Weight reduction over roofs, sidewalks, and pools. Clean cuts, no lion-tailing.</p></article>
+        <article class="svc"><h3>Take-downs</h3><p>Sectional removals when a crane cannot squeeze the lot. Stump grind same visit when asked.</p></article>
+        <article class="svc"><h3>Storm response</h3><p>Hangers, split leaders, and street-blocking limbs. Call the shop number first.</p></article>
+      </div>
+    </section>
+    <section id="reviews">
+      <h2>Neighbors keep sending neighbors</h2>
+      <p>Yelp about 4.8–5.0 across ~486–489 reviews. Directory listings also show (323) 537-5820 — use <strong>(562) 480-3818</strong> first.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <strong>Octavio's Tree Service (OTS)</strong>
+        <p>Long Beach, CA 90808<br>Street on some listings: 3126 E 64th St (unconfirmed)</p>
+        <p>Phone <a href="tel:+15624803818">(562) 480-3818</a><br>Alt directory (323) 537-5820</p>
+      </div>
+      <div>CSLB #910932 · Tree Service / D49<br>Family-owned, 20+ years claimed<br>No public social listed in the lead scan.</div>
+      <div>RegisterMySite outreach demo · Sep 30, 2026<br>Not affiliated as the live site until the owner publishes it.</div>
+    </div>
+  </footer>
+  <script>
+    function est() {
+      const svc = document.getElementById('svc').value;
+      const ht = +document.getElementById('ht').value || 20;
+      const access = document.getElementById('access').value;
+      let base = svc === 'trim' ? 280 : svc === 'remove' ? 650 : svc === 'stump' ? 180 : 420;
+      base += Math.max(0, ht - 20) * (svc === 'remove' ? 28 : 14);
+      if (access === 'tight') base *= 1.18;
+      if (access === 'power') base *= 1.32;
+      const lo = Math.round(base * 0.85);
+      const hi = Math.round(base * 1.2);
+      document.getElementById('out').textContent = 'Ballpark $' + lo.toLocaleString() + '–$' + hi.toLocaleString();
+    }
+    est();
+  </script>
+</body>
+</html>

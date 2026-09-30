@@ -28,4 +28,10 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `estradas-iron-works` — fence materials calculator (posts, panels, gates, primer), plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `shine-and-clean` — room-by-room recurring cleaning quote cart, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 
+## 2026-09-30
+- `octavios-tree-service` — canopy job estimator (trim / removal / stump / storm + access)
+- `junk-buster-hauling` — truck-load calculator with item catalog and fill bar
+- `walts-tree-service` — seasonal prune calendar + demo crew booking windows
+- `allstar-property-management` — existing folder already on this date (left in place)
+
 These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
