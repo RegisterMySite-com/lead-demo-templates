@@ -32,6 +32,6 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `octavios-tree-service` — canopy job estimator (trim / removal / stump / storm + access)
 - `junk-buster-hauling` — truck-load calculator with item catalog and fill bar
 - `walts-tree-service` — seasonal prune calendar + demo crew booking windows
-- `allstar-property-management` — existing folder already on this date (left in place)
+- `allstar-property-management` — Yorba Linda rental-management pitch plus the five live lease vacancies, filterable by city, with an on-page tour and apply form
 
 These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
