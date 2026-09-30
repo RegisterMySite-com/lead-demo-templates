@@ -1,0 +1,73 @@
+AllStar Property Management outreach demo — facts, sources, omissions
+Checked 2026-09-30 PT.
+
+BRAND
+- Live brand site used: https://www.allstarpm.co/
+- Older domain not used as the live brand: https://allstarpropertymanagement.com/ (not treated as the site)
+- Sister sales site read only for context: https://majorleaguesocal.com/
+- The AllStar homepage says Major League Properties is a sister organization used when an owner wants to sell. That relationship is mentioned once. Sister office address, phones, and DRE 02014153 were not copied onto the demo.
+- 02014153 / Side, Inc. was not found on the allstarpm.co HTML pulled for home, about, property-management, contact-us, or property-for-lease.
+
+OFFICE (shown)
+- 4854 Main Street, Suite B, Yorba Linda, CA 92886
+- 714-386-1126
+- info@allstarpm.co
+- Sources: homepage, about, contact, property-management, property-for-lease footer. https://www.allstarpm.co/ and https://www.allstarpm.co/contact-us
+
+LICENSES (shown, labeled as given)
+- Corporation: Matt Luke Home Team Real Estate, Inc., DRE 01889436
+- Designated officer: Matthew Clifford Luke, broker DRE 01379779
+- The property-management and about pages print "Brokerage ID #01889436" next to the name Matt Luke. That number is the corporation, not a personal broker license, so the demo labels them separately. Personal DRE 01379779 is not printed on those AllStar pages; it is labeled from the brief and matches a Compass listing credit ("Matt Luke DRE #01379779, Brokerage DRE #01889436, AllStar Property Management") for 111 S Lakeview. https://www.compass.com/homedetails/111-S-Lakeview-Ave-Placentia-CA-92870/2148960493514644857_lid/
+
+PEOPLE
+- About page (https://www.allstarpm.co/about) names Kara Venuto, Office Manager and Administrator, same office phone and info@allstarpm.co.
+- Property management page (https://www.allstarpm.co/property-management) names Kara Joffe with the same phone and email and no bio.
+- Sister page https://majorleaguesocal.com/agents/kara-joffe displays the heading Kara Venuto with nearly the same bio. That is not an allstarpm.co page.
+- Both AllStar pages were opened. Neither page shows a date that proves which name is current. Personal name omitted. Both names are not printed.
+
+WHAT THEY DO (from allstarpm.co, paraphrased on the demo)
+- Southern California rental management and tenant placement from the Yorba Linda office.
+- Property management page services: list vacancies on major sites, the MLS, and their site; screen applicants; collect rent and distribute it electronically; repairs and maintenance; year-end tax data and 1099s; routine inspections.
+- Owner portal: draws and contributions, management agreement, income and expenses, reports.
+- Tenant portal: balance, online rent, maintenance requests, lease documents, phone directory.
+- Homepage: a conversation, a service plan, then a walk-through if the property fits. "For over 15 years" and "Peace-of-Mind & Free Time for 15+ Years" are in the body copy.
+- Owner note paraphrased from the homepage (Michele G.), not presented as a review carousel: out-of-state owner, about 10 years, repairs, inspections, tenant issues, careful screening, two turnovers in eight years.
+- Nav item PROPERTY FOR SALE links to https://majorleaguesocal.com (new tab).
+- Tenant login on the homepage: https://allstarmgmt.managebuilding.com/Resident/portal/login
+- Owner login URL on the homepage includes long analytics query parameters and was not copied.
+
+VACANCIES
+Opened https://www.allstarpm.co/property-for-lease. The markdown fetch showed filters (address, available date, bedrooms, bathrooms, garage, land area) and "Nothing to compare" but not the cards, because they render from an embedded widget. A full-page render showed three cards and a pager (pages 1 and 2, page size 3). The widget JSON in the page HTML (base64 propertyList) has five records. Photos are on irp.cdn-website.com under site 9d75efdc and were downloaded with curl, then ffmpeg scale=480:-2 -q:v 16.
+
+1) 353 S Crest — Orange, CA 92868 — $3950 — bedrooms 3 — bathrooms field 2 — landarea field 1148 displayed by the widget as Sq Ft — rentaltype Residential — garage "2-Car" — dateavailable "available now" — image https://irp.cdn-website.com/9d75efdc/dms3rep/multi/Crest.jpg
+Description says 1,148 sq ft living, 3 bedrooms and 1.5 bathrooms, 6,180 sq ft lot, detached two-car garage. Detail link on the widget: https://majorleaguesocal.com/properties/353-s-crest-orange-ca-us-92868-pw26191154 (not used as a demo destination). Sister page also lists an open house 10/3/2026 10:30–11:30 AM PT; that was not in the AllStar widget text, so it is not on the demo.
+
+2) 17764 La Entrada — Yorba Linda, CA 92886 — $3200 — 1 bed, 1 bath — about 500 sq ft — propertytype ADU — rentaltype Residential — available now — image https://irp.cdn-website.com/9d75efdc/dms3rep/multi/La+Entrada.jpeg
+Description: 2025 detached ADU, private entrance, utilities included, furnishings optional. Widget detail link is only https://majorleaguesocal.com/properties?36ae23a005ab45418d4f6e9fb8a4f676=5
+
+3) 111 S Lakeview 111D — Placentia, CA 92870 — $2850 — 2 / 2 — 852 sq ft — garage Yes — available now — image https://irp.cdn-website.com/9d75efdc/dms3rep/multi/111+Lakeview+-111D-1.jpg
+Description: upper-level condo, Lakeview Orchard, one-car garage plus extra parking, two balconies, association pool and spa. Widget link: https://majorleaguesocal.com/properties/111-s-lakeview-111d-placentia-ca-us-92870-pw26083282
+A Compass page for 111 S Lakeview Ave Unit D uses MLS PW26152852 at the same rent, beds, baths, and sq ft. The AllStar widget link uses PW26083282. Demo uses the AllStar card, not the other MLS number.
+
+4) 32078 Paseo Vibrante — San Juan Capistrano, CA 92675 — price 5350 — card bedrooms 3, bathrooms 3.5, sq ft field 1904 — available now — image https://irp.cdn-website.com/9d75efdc/dms3rep/multi/32078+Paseo+Vibrante-2+arrow.jpg (arrow is in their file)
+Card name field is "32078 Paseo Vibrantre" (typo). Description, photo filename, and link use Vibrante: https://majorleaguesocal.com/properties/32078-paseo-vibrante-san-juan-capistrano-ca-us-92675-pw26173491
+Description says 4 bedrooms, 3.5 bathrooms, about 1,904 sq ft, 2-car garage, built 2023, Petra Avelina, trails, community BBQ and park. The conflict is stated on the demo instead of picking one bedroom count.
+
+5) 5700 Scotch Pine Ridge — Yorba Linda, CA 92886 — $6500 — card 4 bed, 3 bath, 2383 sq ft — rentaltype Residential — available now — image https://irp.cdn-website.com/9d75efdc/dms3rep/multi/5700+Scotch+Pine+Ridge-2.jpg
+Description is a remodel narrative (quartz kitchen, fireplaces, three-car garage, EV charger, turf yard, near a park). It does not restate 4 bedrooms or 2,383 sq ft. Link: https://majorleaguesocal.com/properties/5700-scotch-pine-yorba-linda-ca-us-92886-pw26165314
+
+Widget contact fields on every record (Matt Luke, matt@majorleaguesocal.com or Matt@MajorLeagueSoCal.com, (714) 874-8588) were not printed. The demo uses the AllStar office NAP only.
+
+Each listing had one downloadable photo. No extra gallery images were in the widget, so the dialog shows that one photo rather than stock or a fake gallery.
+
+LEFT OUT ON PURPOSE
+- Duplicate homepage tagline ("We serve our community's best interest...") was not copied.
+- Stats slider in the HTML reads 50+ Managed Properties, 880+ Real Estate Transactions, $30M average annual volume, 20+ years in real estate. The brief says the visible stats block is incomplete and years-in-real-estate has no number. Those figures were not turned into a stats row and 20+ was not invented onto a blank tile. "For over 15 years" from the body copy is used instead.
+- Not used: 4858 Main St; DRE mailing-address warnings; phones (714) 779-0230, (714) 988-2416, (714) 412-1982, (714) 874-8588; Yahoo/Yelp review counts; any review carousel.
+- Phemom homepage quote (including "62 closings in 2015") was not used.
+- Sister phones, 4858 Main Street, Side DRE 02014153, and matt@majorleaguesocal.com were not placed on the demo.
+- No invented listings, prices, photos, reviews, phones, or emails.
+- No commercial catalog. A meta description mentions residential to commercial; the demo stays with the rental services and the five leases.
+- City filter only. Listing-type filter was not added because the widget does not give a real second type for every home (only the ADU has propertytype filled).
+- No pagination: five listings.
+- Instagram https://www.instagram.com/majorleagueproperties40 is in the AllStar footer and was left off so the sister brand's social is not presented as the PM contact.
