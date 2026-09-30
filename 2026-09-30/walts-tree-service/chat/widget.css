@@ -1,0 +1,30 @@
+.wts-demo-banner { right:auto; left:14px; }
+  #wts-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #8fb56a; color: #163528; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 650;
+  }
+  #wts-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #1f4030; color: #e6f0dc;
+  }
+  #wts-chat::backdrop { background: rgba(22,53,40,.65); }
+  #wts-chat .bar { background: #163528; color: #e6f0dc; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #wts-chat h2 { font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 1.05rem; margin: 0; }
+  #wts-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  #wts-chat button, #wts-chat input, #wts-chat textarea { font: inherit; }
+  #wts-chat .choice { display: grid; gap: .45rem; }
+  #wts-chat .choice button, #wts-chat .quiet { background: #0f241a; color: #e6f0dc; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #wts-chat .go { background: #8fb56a; color: #163528; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #wts-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #wts-chat .me, #wts-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #wts-chat .me { background: #2a5240; justify-self: end; }
+  #wts-chat .them { background: #163528; border: 1px solid rgba(255,255,255,.12); }
+  #wts-chat .meta { color: #b8c9a8; font-size: .75rem; }
+  #wts-chat .row { display: flex; gap: .4rem; }
+  #wts-chat input, #wts-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #0f241a; color: inherit; }
+  #wts-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #b8c9a8; margin-right: .35rem; }
+  #wts-chat .dot.on { background: #8fb56a; }
+  @media (max-width: 640px) { #wts-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
