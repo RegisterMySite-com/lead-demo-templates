@@ -1,0 +1,11 @@
+AllStar Property Management vacancies seen on https://www.allstarpm.co/property-for-lease
+Source: the page's home-filter widget (propertyList), confirmed on a full-page render of that URL on 2026-09-30. Page size is 3, so the public grid is two pages. Five records total. No pagination on this demo (not more than 6).
+
+1. 353 S Crest, Orange, CA 92868 — Residential — $3,950/mo — 3 bed, bath field 2 (description: 1 full + 1 half) — 1,148 sq ft living — garage field 2-Car — available now — photo Crest.jpg
+2. 17764 La Entrada, Yorba Linda, CA 92886 — ADU / Residential — $3,200/mo — 1 bed, 1 bath — about 500 sq ft — available now — utilities included, furnishings optional — photo La Entrada.jpeg
+3. 111 S Lakeview 111D, Placentia, CA 92870 — Residential condo — $2,850/mo — 2 bed, 2 bath — 852 sq ft — one-car garage plus extra space — available now — photo 111 Lakeview -111D-1.jpg
+4. 32078 Paseo Vibrante, San Juan Capistrano, CA 92675 — card title misspells Vibrantre — $5,350/mo — card fields 3 bed / 3.5 bath; description says 4 bed / 3.5 bath — 1,904 sq ft — 2-car in the description — available now — 2023 Petra Avelina — photo with arrow
+5. 5700 Scotch Pine Ridge, Yorba Linda, CA 92886 — Residential — $6,500/mo — card fields 4 bed / 3 bath / 2,383 sq ft — description: remodeled, 3-car garage, EV charger — available now
+
+Cities on the board: Orange, Yorba Linda, Placentia, San Juan Capistrano.
+Type filter not added: rentaltype is Residential or blank, and propertytype is filled only for the ADU.
