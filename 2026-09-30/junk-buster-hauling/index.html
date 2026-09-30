@@ -28,7 +28,7 @@
   </style>
 </head>
 <body>
-  <div class="demo">RegisterMySite demo — not the live business site. Sep 30, 2026 lead scan.</div>
+  <div class="demo jbh-demo-banner">RegisterMySite demo — not the live business site. Sep 30, 2026 lead scan.</div>
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top">
@@ -41,6 +41,7 @@
       <nav>
         <a href="#load">Load calculator</a>
         <a href="#about">Crew</a>
+        <a href="#message" id="jbh-open">Message</a>
         <a href="tel:+15623388000">Call (562) 338-8000</a>
       </nav>
     </div>
@@ -101,5 +102,6 @@
     function resetLoad(){ document.querySelectorAll('#catalog input').forEach(i=>i.checked=false); recalc(); }
     recalc();
   </script>
+<script src="chat/widget.js"></script>
 </body>
 </html>
