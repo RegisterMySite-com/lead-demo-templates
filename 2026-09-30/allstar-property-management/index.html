@@ -138,7 +138,8 @@ ul.facts li { margin: 0.15rem 0; }
   <nav aria-label="Page">
     <a href="#owners">For owners</a>
     <a href="#vacancies">Vacancies</a>
-    <a href="#visit">Tour or apply</a>
+    <a href="#message" id="apm-open">Message</a>
+        <a href="#visit">Tour or apply</a>
   </nav>
 </header>
 <main id="top" class="wrap">
@@ -250,166 +251,9 @@ ul.facts li { margin: 0.15rem 0; }
     </div>
   </div>
 </dialog>
-<script src="photos/crest.js"></script>
-<script src="photos/entrada.js"></script>
-<script src="photos/lakeview.js"></script>
-<script src="photos/vibrante.js"></script>
-<script src="photos/scotch.js"></script>
 <script>
-const LISTINGS = [
-  {
-    id: "crest",
-    city: "Orange",
-    title: "353 S Crest",
-    address: "353 S Crest, Orange, CA 92868",
-    price: "$3,950/mo",
-    line: "3 bed · 2 bath · 1,148 sq ft",
-    blurb: "Single-level house in Orange with updated kitchen finishes, a brick fireplace, refinished hardwoods, and a detached two-car garage on a large lot.",
-    facts: [
-      "Available now, on the AllStar lease page.",
-      "Card counts: 3 bedrooms, 2 bathrooms, 1,148 sq ft. The written description says 1 full bathroom and 1 half bathroom on a 6,180 sq ft lot.",
-      "Garage field on the card: 2-car. The description calls it a detached two-car garage.",
-      "One photo is published with this vacancy."
-    ]
-  },
-  {
-    id: "entrada",
-    city: "Yorba Linda",
-    title: "17764 La Entrada",
-    address: "17764 La Entrada, Yorba Linda, CA 92886",
-    price: "$3,200/mo",
-    line: "1 bed · 1 bath · about 500 sq ft",
-    blurb: "Detached 2025 ADU in west Yorba Linda with a private entrance, quartz kitchen, in-unit laundry, and a patio. Utilities are included. Furnishings are optional.",
-    facts: [
-      "Available now. Listed on the lease page as an ADU.",
-      "About 500 sq ft, 1 bedroom, 1 bathroom.",
-      "One photo is published with this vacancy."
-    ]
-  },
-  {
-    id: "lakeview",
-    city: "Placentia",
-    title: "111 S Lakeview 111D",
-    address: "111 S Lakeview 111D, Placentia, CA 92870",
-    price: "$2,850/mo",
-    line: "2 bed · 2 bath · 852 sq ft",
-    blurb: "Upper-level condo in Lakeview Orchard with in-unit laundry, two balconies, a one-car garage, and another parking space. The association has a pool and spa.",
-    facts: [
-      "Available now.",
-      "Card counts: 2 bedrooms, 2 bathrooms, 852 sq ft.",
-      "The description includes a one-car garage plus a dedicated parking space.",
-      "One photo is published with this vacancy."
-    ]
-  },
-  {
-    id: "vibrante",
-    city: "San Juan Capistrano",
-    title: "32078 Paseo Vibrante",
-    address: "32078 Paseo Vibrante, San Juan Capistrano, CA 92675",
-    price: "$5,350/mo",
-    line: "Card: 3 bed · 3.5 bath · 1,904 sq ft",
-    blurb: "2023 home in the Petra Avelina area, beside trails, with a quartz kitchen, a downstairs bedroom, and shared BBQ and park space.",
-    facts: [
-      "Available now. Rent on the card is $5,350 a month.",
-      "The card’s count fields say 3 bedrooms and 3.5 bathrooms. The same listing’s description says 4 bedrooms and 3.5 bathrooms, about 1,904 sq ft, and a 2-car attached garage.",
-      "The card title spells the street Vibrantre. The description, photo file, and detail link spell Vibrante.",
-      "One photo is published with this vacancy. It includes an arrow added on the source image."
-    ]
-  },
-  {
-    id: "scotch",
-    city: "Yorba Linda",
-    title: "5700 Scotch Pine Ridge",
-    address: "5700 Scotch Pine Ridge, Yorba Linda, CA 92886",
-    price: "$6,500/mo",
-    line: "4 bed · 3 bath · 2,383 sq ft",
-    blurb: "Remodeled Yorba Linda house with a quartz kitchen, fireplaces, a three-car garage with an EV charger, and a turf backyard near a community park.",
-    facts: [
-      "Available now.",
-      "Card counts: 4 bedrooms, 3 bathrooms, 2,383 sq ft.",
-      "The description names an attached three-car garage, a water softener, and an electric-vehicle charger. It does not restate the bedroom count.",
-      "One photo is published with this vacancy."
-    ]
-  }
-];
-const grid = document.getElementById("grid");
-const count = document.getElementById("count");
-const listingSel = document.getElementById("listing");
-const dlg = document.getElementById("detail");
-let current = null;
-function photoBox(id, title) {
-  const src = (window.LEAD_PHOTOS || {})[id];
-  if (!src) {
-    return '<div class="ph" role="img" aria-label="No photo was published for ' + title + '">Not a photo. No downloadable image was on this vacancy.</div>';
-  }
-  return '<img alt="Photo of ' + title + ' from the AllStar lease page" src="' + src + '">';
-}
-function card(item) {
-  const el = document.createElement("article");
-  el.className = "card";
-  el.innerHTML =
-    '<button class="shot" type="button">' + photoBox(item.id, item.title) + '</button>' +
-    '<div class="body"><p class="price">' + item.price + '</p><h3 class="addr">' + item.title + '</h3>' +
-    '<p class="meta">' + item.address + '</p><p class="meta">' + item.line + ' · ' + item.city + ' · Available now</p>' +
-    '<p>' + item.blurb + '</p><button class="ghost open" type="button">Details</button></div>';
-  el.querySelectorAll("button").forEach(b => b.addEventListener("click", () => openItem(item)));
-  return el;
-}
-function render(city) {
-  const rows = LISTINGS.filter(i => city === "all" || i.city === city);
-  grid.replaceChildren();
-  rows.forEach(i => grid.appendChild(card(i)));
-  count.textContent = rows.length + (rows.length === 1 ? " vacancy" : " vacancies") + (city === "all" ? "" : " in " + city) + ".";
-}
-document.querySelectorAll(".filters button").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".filters button").forEach(b => b.setAttribute("aria-pressed", "false"));
-    btn.setAttribute("aria-pressed", "true");
-    render(btn.dataset.city);
-  });
-});
-LISTINGS.forEach(i => {
-  const o = document.createElement("option");
-  o.value = i.id;
-  o.textContent = i.title;
-  listingSel.appendChild(o);
-});
-function openItem(item) {
-  current = item;
-  document.getElementById("dtitle").textContent = item.title;
-  document.getElementById("dprice").textContent = item.price + " · Available now";
-  document.getElementById("dsum").textContent = item.blurb;
-  document.getElementById("dphoto").innerHTML = photoBox(item.id, item.title);
-  const ul = document.getElementById("dfacts");
-  ul.replaceChildren();
-  [item.address, item.line].concat(item.facts).forEach(t => {
-    const li = document.createElement("li");
-    li.textContent = t;
-    ul.appendChild(li);
-  });
-  if (typeof dlg.showModal === "function") dlg.showModal();
-  else dlg.setAttribute("open", "");
-}
-function go(intent) {
-  if (current) listingSel.value = current.id;
-  document.getElementById("intent").value = intent;
-  dlg.close();
-  document.getElementById("visit").scrollIntoView();
-  document.getElementById("name").focus();
-}
-document.getElementById("closeDlg").addEventListener("click", () => dlg.close());
-document.getElementById("tourBtn").addEventListener("click", () => go("tour"));
-document.getElementById("applyBtn").addEventListener("click", () => go("apply"));
-document.getElementById("lead").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const data = new FormData(e.target);
-  const home = LISTINGS.find(i => i.id === data.get("listing"));
-  const box = document.getElementById("confirm");
-  box.hidden = false;
-  box.textContent = "Saved on this page only, " + data.get("name") + ". Request: " + data.get("intent") +
-    (home ? " for " + home.title : "") + ". Nothing was sent to AllStar or to a server.";
-});
-render("all");
+const LISTINGS = [PLACEHOLDER];
 </script>
+<script src="chat/widget.js"></script>
 </body>
 </html>
