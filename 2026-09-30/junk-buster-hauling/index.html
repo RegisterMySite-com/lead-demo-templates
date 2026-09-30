@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Junk Buster Hauling | Long Beach Junk Removal Demo</title>
+  <style>
+    :root { --navy:#10233a; --gold:#e2b04a; --paper:#f7f4ee; --ink:#17202a; --line:#d9d1c3; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background: var(--paper); color: var(--ink); }
+    .wrap { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
+    header { background: var(--navy); color: #fff; }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:14px 0; }
+    .brand { display:flex; gap:10px; align-items:center; color:#fff; text-decoration:none; font-weight:700; }
+    nav a { color:#f3e6c0; text-decoration:none; margin-left:16px; }
+    .demo { position:fixed; top:12px; right:12px; z-index:30; background:#111; color:#fff; font-size:12px; padding:8px 10px; border-radius:8px; max-width:220px; }
+    .hero { display:grid; grid-template-columns:1fr 1fr; gap:28px; padding:48px 0; }
+    h1 { font-size: clamp(30px, 5vw, 50px); margin:0 0 10px; }
+    .panel { background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; }
+    .items { display:grid; grid-template-columns:1fr 1fr; gap:8px; max-height:280px; overflow:auto; }
+    .items label { display:flex; gap:8px; align-items:center; font-size:14px; background:#faf7f1; padding:8px; border-radius:8px; }
+    #truck { height:18px; background:#ece6db; border-radius:99px; overflow:hidden; margin:12px 0; }
+    #truck > i { display:block; height:100%; background:linear-gradient(90deg,#e2b04a,#c8881d); width:0; }
+    footer { background:var(--navy); color:#f3e6c0; padding:32px 0; font-size:14px; }
+    footer a { color:#fff; }
+    .foot { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:18px; }
+    @media (max-width:800px){ .hero,.items,.foot{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div class="demo">RegisterMySite demo — not the live business site. Sep 30, 2026 lead scan.</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#e2b04a"/>
+          <path d="M8 22h20l-2 6H10l-2-6zm3-9h14l3 9H8l3-9z" fill="#10233a"/>
+        </svg>
+        Junk Buster!
+      </a>
+      <nav>
+        <a href="#load">Load calculator</a>
+        <a href="#about">Crew</a>
+        <a href="tel:+15623388000">Call (562) 338-8000</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" id="top">
+    <section class="hero">
+      <div>
+        <p style="letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:#7a6230">Long Beach since ~1986</p>
+        <h1>One truck. Father and son. The pile is gone today.</h1>
+        <p>Garage cleanouts, remodel debris, appliances, yard waste. Michael and Mikey haul it, donate what can be saved, and leave the driveway swept.</p>
+        <p><strong>2413 Belmont Ave, Long Beach, CA 90815</strong><br>(562) 338-8000</p>
+      </div>
+      <div class="panel" id="load">
+        <h2 style="margin-top:0">Truck-load calculator</h2>
+        <p style="margin-top:0;color:#555;font-size:14px">Tap items. Fill bar estimates how much of a standard 12-yard truck you need.</p>
+        <div class="items" id="catalog"></div>
+        <div id="truck"><i id="fill"></i></div>
+        <p id="sum"></p>
+        <button onclick="resetLoad()" style="border:0;background:var(--navy);color:#fff;padding:10px 14px;border-radius:999px;cursor:pointer">Clear load</button>
+      </div>
+    </section>
+    <section id="about">
+      <h2>Why people call back</h2>
+      <p>Yelp 5.0 / ~310 · Google 5.0 / 24. Licensed for decades, listed under Junk Buster Hauling.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <strong>Junk Buster! / Junk Buster Hauling</strong>
+        <p>2413 Belmont Ave<br>Long Beach, CA 90815</p>
+        <p><a href="tel:+15623388000">(562) 338-8000</a></p>
+      </div>
+      <div>Contacts: Michael and son Mikey<br>Est. ~1986 · no public email or social in the lead scan.</div>
+      <div>RegisterMySite outreach demo · Sep 30, 2026</div>
+    </div>
+  </footer>
+  <script>
+    const catalog = [
+      {n:'Sofa', y:1.2}, {n:'Mattress set', y:1.0}, {n:'Washer/dryer', y:0.8},
+      {n:'Fridge', y:1.1}, {n:'Dining set', y:1.4}, {n:'Treadmill', y:0.7},
+      {n:'Garage bags (10)', y:0.6}, {n:'Hot tub', y:2.2}, {n:'Yard clippings', y:1.5},
+      {n:'Construction debris (pickup bed)', y:2.5}, {n:'Desk + chair', y:0.7}, {n:'TV stand', y:0.5}
+    ];
+    const el = document.getElementById('catalog');
+    catalog.forEach((it) => {
+      el.insertAdjacentHTML('beforeend', '<label><input type="checkbox" data-y="'+it.y+'" onchange="recalc()"> '+it.n+'</label>');
+    });
+    function recalc(){
+      const boxes = [...document.querySelectorAll('#catalog input:checked')];
+      const yards = boxes.reduce((s,b)=>s+(+b.dataset.y),0);
+      const pct = Math.min(100, Math.round(yards/12*100));
+      document.getElementById('fill').style.width = pct+'%';
+      const trucks = Math.max(1, Math.ceil(yards/12) || 1);
+      const price = Math.round(145 + yards*38);
+      document.getElementById('sum').textContent = yards.toFixed(1)+' yd³ · ~'+pct+'% of one truck · '+trucks+' trip(s) · ballpark $'+price.toLocaleString();
+    }
+    function resetLoad(){ document.querySelectorAll('#catalog input').forEach(i=>i.checked=false); recalc(); }
+    recalc();
+  </script>
+</body>
+</html>
