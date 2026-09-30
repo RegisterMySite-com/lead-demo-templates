@@ -29,9 +29,9 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `shine-and-clean` — room-by-room recurring cleaning quote cart, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 
 ## 2026-09-30
-- `octavios-tree-service` — canopy job estimator (trim / removal / stump / storm + access)
-- `junk-buster-hauling` — truck-load calculator with item catalog and fill bar
-- `walts-tree-service` — seasonal prune calendar + demo crew booking windows
-- `allstar-property-management` — Yorba Linda rental-management pitch plus the five live lease vacancies, filterable by city, with an on-page tour and apply form
+- `octavios-tree-service` — canopy job estimator (trim / removal / stump / storm + access), plus private office chat worker files (`chat/`; not live until deploy + data-origin)
+- `junk-buster-hauling` — truck-load calculator with item catalog and fill bar, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
+- `walts-tree-service` — seasonal prune calendar + demo crew booking windows, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
+- `allstar-property-management` — Yorba Linda rental-management pitch plus the five live lease vacancies, filterable by city, with an on-page tour and apply form, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 
 These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
