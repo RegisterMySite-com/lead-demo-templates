@@ -35,3 +35,8 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 - `allstar-property-management` — Yorba Linda rental-management pitch plus the five live lease vacancies, filterable by city, with an on-page tour and apply form, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 
 These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
+
+## 2026-10-03
+- `jmn-painting` — room and elevation paint estimator (gallons, coats, sheen, color chips, prep checklist)
+- `long-beach-flooring` — filterable paginated material board + room cart with waste (hardwood, LVP, tile, carpet)
+- `a-to-z-pool-plastering` — pool plaster surface calculator (shape, depth, finish, bags, drain-down days)

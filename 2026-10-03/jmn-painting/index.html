@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JMN Painting Company | Long Beach Interior & Exterior Painting</title>
+<meta name="description" content="RegisterMySite demo for JMN Painting Company, Long Beach. Room and exterior paint estimator with gallon, coat, and sheen planning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c1712;--paper:#f6f1e8;--cream:#fffaf3;--navy:#1e3a4c;--gold:#c4a46a;--rust:#9a4b2f;--line:#e4d9c8;--ok:#2f6b4f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Outfit,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+a{color:inherit}img{max-width:100%}
+.demo{background:#1e3a4c;color:#f6f1e8;text-align:center;font-size:.82rem;letter-spacing:.04em;padding:.55rem 1rem}
+.demo strong{color:var(--gold)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 6vw;background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand span{font-family:Fraunces,serif;font-size:1.2rem}
+.links{display:flex;gap:1.1rem;align-items:center;font-size:.95rem}
+.links a{text-decoration:none}
+.cta{background:var(--navy);color:#fff;padding:.55rem .9rem;border-radius:999px;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;padding:4rem 6vw 3rem;align-items:center}
+h1,h2,h3{font-family:Fraunces,serif;line-height:1.15;margin:0 0 .6rem}
+h1{font-size:clamp(2.2rem,4vw,3.6rem)}
+.lede{font-size:1.1rem;max-width:38rem}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.2rem 0}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.3rem .7rem;font-size:.85rem}
+.swatch-wall{border-radius:18px;min-height:280px;padding:1.2rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 50px rgba(30,58,76,.12);border:1px solid rgba(0,0,0,.05)}
+.swatch-wall p{margin:0;font-weight:600}
+section{padding:3rem 6vw}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.1rem}
+label{display:block;font-size:.82rem;font-weight:600;margin:.7rem 0 .25rem}
+input,select{width:100%;padding:.6rem .7rem;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+button{font:inherit;cursor:pointer;border:0;border-radius:999px;padding:.7rem 1rem;background:var(--rust);color:#fff}
+.out{margin-top:1rem;background:#fff;border-radius:16px;padding:1rem;border:1px solid var(--line)}
+.stat{font-family:Fraunces,serif;font-size:1.6rem}
+.palette{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:.6rem}
+.dot{width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #d9cbb8;cursor:pointer}
+footer{background:var(--ink);color:#f6f1e8;padding:2.2rem 6vw;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.2rem}
+footer a{color:var(--gold)}
+.fine{font-size:.8rem;opacity:.75}
+@media(max-width:800px){.hero,.grid,footer,.row{grid-template-columns:1fr}.links{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">RegisterMySite demo — sample site for outreach, not the live JMN Painting website. <strong>License cited from the lead scan: CSLB #779420</strong></div>
+<nav>
+  <a class="brand" href="#top">
+    <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#1e3a4c"/><path d="M8 24c4-9 7-13 10-13s6 4 10 13" stroke="#c4a46a" stroke-width="2.2" fill="none"/><rect x="15" y="22" width="6" height="6" rx="1" fill="#f6f1e8"/></svg>
+    <span>JMN Painting Company</span>
+  </a>
+  <div class="links">
+    <a href="#estimator">Estimator</a>
+    <a href="#work">Work</a>
+    <a href="#reviews">Reviews</a>
+    <a class="cta" href="tel:+15622357248">(562) 235-7248</a>
+  </div>
+</nav>
+<header class="hero" id="top">
+  <div>
+    <p class="chip" style="display:inline-block">Long Beach · 90802 · Painting & decorating</p>
+    <h1>Clean lines, honest prep, paint that holds up.</h1>
+    <p class="lede">JMN Painting Company is John Mark Negrini’s Long Beach shop — interiors, exteriors, and the prep that makes a coat last. This demo lets a homeowner size a room before they call.</p>
+    <div class="chips"><span class="chip">Owner: John Mark Negrini</span><span class="chip">CSLB #779420</span><span class="chip">Yelp about 5.0 · ~86 reviews</span></div>
+    <a class="cta" href="#estimator">Open the paint estimator</a>
+  </div>
+  <div class="swatch-wall" id="wall" style="background:#d7c4a3;color:#1c1712">
+    <p>Preview wall</p>
+    <div>
+      <strong id="sheenLabel">Eggshell</strong>
+      <p style="font-weight:400;margin-top:.3rem">Tap a chip. Sheen changes the highlight, not the color family.</p>
+    </div>
+  </div>
+</header>
+<section id="estimator">
+  <h2>Room & elevation paint estimator</h2>
+  <p>Unique to this demo: enter wall runs, subtract openings, pick coats and sheen, and get gallons plus a prep checklist. Numbers are planning aids, not a bid.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Surfaces</h3>
+      <label>Job type</label>
+      <select id="job"><option value="int">Interior walls</option><option value="ext">Exterior elevation</option><option value="trim">Trim & doors only</option></select>
+      <div class="row">
+        <div><label>Length (ft)</label><input id="len" type="number" min="1" value="18"></div>
+        <div><label>Width (ft)</label><input id="wid" type="number" min="1" value="14"></div>
+      </div>
+      <div class="row">
+        <div><label>Height (ft)</label><input id="ht" type="number" min="1" value="9"></div>
+        <div><label>Openings (sq ft)</label><input id="open" type="number" min="0" value="40"></div>
+      </div>
+      <label>Coats</label>
+      <select id="coats"><option>1</option><option selected>2</option><option>3</option></select>
+      <label>Sheen</label>
+      <select id="sheen"><option>Flat</option><option selected>Eggshell</option><option>Satin</option><option>Semi-gloss</option></select>
+      <label>Color family</label>
+      <div class="palette" id="palette"></div>
+      <button id="calc" type="button">Calculate gallons</button>
+    </div>
+    <div class="out" style="grid-column:span 2">
+      <div class="row">
+        <div><div class="fine">Paintable area</div><div class="stat" id="area">—</div></div>
+        <div><div class="fine">Gallons (with 10% waste)</div><div class="stat" id="gal">—</div></div>
+      </div>
+      <p id="note"></p>
+      <h3>Prep checklist</h3>
+      <ul id="prep"></ul>
+    </div>
+  </div>
+</section>
+<section id="work">
+  <h2>What the crew is booked for</h2>
+  <div class="grid">
+    <article class="card"><h3>Interiors</h3><p>Walls, ceilings, cabinets, and color changes. Occupied homes get floor protection and a nightly reset.</p></article>
+    <article class="card"><h3>Exteriors</h3><p>Stucco, wood, and trim on Long Beach houses. Salt air and sun are planned into primer and sheen.</p></article>
+    <article class="card"><h3>Decorating detail</h3><p>Accent walls, doors, and enamel on millwork. License class on file: painting and decorating.</p></article>
+  </div>
+</section>
+<section id="reviews">
+  <h2>Reviews on file</h2>
+  <div class="card"><p class="stat">~5.0</p><p>About 86 Yelp reviews. Customers name owner John. This page does not invent quotes — the rating is from the Oct 3, 2026 lead scan.</p></div>
+</section>
+<footer>
+  <div>
+    <strong>JMN Painting Company</strong>
+    <p>J M N Painting Company<br>1055 E Broadway #1<br>Long Beach, CA 90802</p>
+  </div>
+  <div>
+    <p>Phone: <a href="tel:+15622357248">(562) 235-7248</a></p>
+    <p>Email: not published in the lead scan</p>
+    <p>CSLB #779420 · John Mark Negrini</p>
+  </div>
+  <div>
+    <p>Directories: Yelp, BuildZoom, MapQuest</p>
+    <p class="fine">RegisterMySite demo. Original SVG mark — no third-party logo. Not affiliated with Anthony Negrini / Negrini Painting.</p>
+  </div>
+</footer>
+<script>
+const colors=[{n:"Sand",h:"#d7c4a3"},{n:"Naval",h:"#243e52"},{n:"Clay",h:"#c47a5a"},{n:"Sage",h:"#8fa58a"},{n:"Cream",h:"#f3eadc"},{n:"Ink",h:"#2b2723"}];
+const pal=document.getElementById("palette");
+let current="#d7c4a3";
+colors.forEach(c=>{
+  const b=document.createElement("button");
+  b.type="button"; b.className="dot"; b.style.background=c.h; b.title=c.n; b.setAttribute("aria-label",c.n);
+  b.onclick=()=>{current=c.h; paint();};
+  pal.appendChild(b);
+});
+function paint(){
+  const sheen=document.getElementById("sheen").value;
+  document.getElementById("sheenLabel").textContent=sheen;
+  const wall=document.getElementById("wall");
+  wall.style.background=current;
+  wall.style.color = current==="#243e52"||current==="#2b2723" ? "#f6f1e8" : "#1c1712";
+  wall.style.boxShadow = sheen==="Flat" ? "none" : "inset 0 30px 50px rgba(255,255,255,.18), 0 20px 50px rgba(30,58,76,.12)";
+}
+document.getElementById("sheen").onchange=paint;
+document.getElementById("calc").onclick=()=>{
+  const L=+document.getElementById("len").value||0, W=+document.getElementById("wid").value||0, H=+document.getElementById("ht").value||0;
+  const open=+document.getElementById("open").value||0, coats=+document.getElementById("coats").value||2;
+  const job=document.getElementById("job").value;
+  let area = job==="trim" ? Math.max(40, (L+W)*2) : Math.max(0, 2*(L+W)*H - open);
+  if(job==="ext") area=Math.max(0, L*H - open);
+  const coverage = job==="trim"?400:350;
+  const gal=Math.ceil((area*coats/coverage)*1.1*10)/10;
+  document.getElementById("area").textContent=Math.round(area)+" sq ft";
+  document.getElementById("gal").textContent=gal+" gal";
+  document.getElementById("note").textContent=`${coats} coat${coats>1?"s":""} of ${document.getElementById("sheen").value.toLowerCase()} at ~${coverage} sq ft per gallon, plus 10% for cut-in and touch-up.`;
+  const items=job==="ext"
+    ? ["Wash and scrape loose film","Caulk stucco cracks","Spot-prime bare patches","Mask windows and plants"]
+    : job==="trim"
+    ? ["Sand enamel gloss","Fill nail holes","Prime raw wood","Mask adjacent walls"]
+    : ["Fill nail holes and cracks","Sand patches","Caulk trim","Protect floors and furniture"];
+  document.getElementById("prep").innerHTML=items.map(i=>`<li>${i}</li>`).join("");
+  paint();
+};
+paint();
+document.getElementById("calc").click();
+</script>
+</body>
+</html>

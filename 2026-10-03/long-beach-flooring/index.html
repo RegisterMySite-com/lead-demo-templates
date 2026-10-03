@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Long Beach Flooring | YZ Flooring — hardwood, LVP, tile</title>
+<meta name="description" content="RegisterMySite demo for Long Beach Flooring / YZ Flooring. Filterable material catalog and room-by-room flooring cart with waste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,620&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#221c16;--oak:#c4a484;--paper:#f7f3ee;--card:#fff;--line:#e6ddd2;--pine:#3d5c4a}
+*{box-sizing:border-box}body{margin:0;font-family:Sora,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
+.demo{background:#221c16;color:#f7f3ee;text-align:center;padding:.55rem 1rem;font-size:.82rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:.9rem 6vw;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:4}
+.brand{display:flex;gap:.65rem;align-items:center;text-decoration:none;color:inherit;font-family:Literata,serif;font-size:1.2rem}
+.links{display:flex;gap:1rem;align-items:center}
+.links a{text-decoration:none;color:inherit}
+.cta{background:var(--pine);color:#fff;padding:.5rem .85rem;border-radius:999px}
+header{padding:3.5rem 6vw 2rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:end}
+h1,h2,h3{font-family:Literata,serif;margin:0 0 .5rem;line-height:1.15}
+h1{font-size:clamp(2.1rem,4vw,3.4rem)}
+.board{height:220px;border-radius:18px;background:repeating-linear-gradient(90deg,#c9a27a 0 42px,#b8926a 42px 44px,#d7b48c 44px 86px);box-shadow:inset 0 0 0 8px #fff,0 16px 40px rgba(34,28,22,.12)}
+section{padding:1.5rem 6vw 2.5rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.filters button,button{font:inherit;border:1px solid var(--line);background:#fff;border-radius:999px;padding:.45rem .8rem;cursor:pointer}
+.filters button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.sw{height:72px}
+.card div.body{padding:.8rem}
+.meta{font-size:.82rem;color:#665c52}
+.pager{display:flex;gap:.5rem;align-items:center;margin-top:1rem}
+label{display:block;font-size:.78rem;font-weight:600;margin:.4rem 0 .2rem}
+input,select{width:100%;padding:.5rem;border-radius:8px;border:1px solid var(--line);font:inherit}
+.cart{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1rem}
+footer{background:#221c16;color:#f7f3ee;padding:2rem 6vw;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1rem}
+footer a{color:#e6c7a2}
+@media(max-width:800px){header,.grid,footer{grid-template-columns:1fr}.links{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">RegisterMySite demo for Long Beach Flooring (YZ Flooring). Planning cart only — not a checkout and not the business’s live site.</div>
+<nav>
+  <a class="brand" href="#top">
+    <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#3d5c4a"/><rect x="7" y="9" width="6" height="18" fill="#e7d3b8"/><rect x="15" y="9" width="6" height="18" fill="#c4a484"/><rect x="23" y="9" width="6" height="18" fill="#efe4d4"/></svg>
+    <span>Long Beach Flooring</span>
+  </a>
+  <div class="links">
+    <a href="#catalog">Materials</a>
+    <a href="#cart">Room cart</a>
+    <a class="cta" href="tel:+15624425831">(562) 442-5831</a>
+  </div>
+</nav>
+<header id="top">
+  <div>
+    <p class="meta">YZ Flooring · Yason Oswaldo Zapata · Long Beach 90805</p>
+    <h1>Floors measured room by room, not guessed from the doorway.</h1>
+    <p>Hardwood, luxury vinyl, tile, and carpet for Long Beach homes. Filter the sample board, add rooms, and see waste before anyone rolls out a tape on site.</p>
+    <p class="meta">CSLB #1083930 · Flooring & floor covering · Google / ProsGrade about 4.8 from ~61–70 reviews. Crew names often mentioned: Nathaniel and Barry.</p>
+  </div>
+  <div class="board" aria-hidden="true"></div>
+</header>
+<section id="catalog">
+  <h2>Filterable material board</h2>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+  <div class="pager"><button type="button" id="prev">Previous</button><span id="page"></span><button type="button" id="next">Next</button></div>
+</section>
+<section id="cart">
+  <h2>Room cart</h2>
+  <p>Add each room with a material. Waste is 8% for plank and 12% for tile. Later this cart can hand off square footage to a supplier — it does not place an order today.</p>
+  <div class="grid">
+    <form class="card" id="form" style="padding:1rem">
+      <label>Room</label><input id="room" value="Living room" required>
+      <label>Length (ft)</label><input id="len" type="number" min="1" step="0.1" value="16" required>
+      <label>Width (ft)</label><input id="wid" type="number" min="1" step="0.1" value="14" required>
+      <label>Material</label><select id="mat"></select>
+      <button type="submit" style="margin-top:.8rem;background:#3d5c4a;color:#fff;border:0">Add room</button>
+    </form>
+    <div class="cart" style="grid-column:span 2">
+      <div id="lines"></div>
+      <p><strong id="total">0 sq ft · $0 materials estimate</strong></p>
+      <p class="meta">Prices are demo retail ranges for planning, not a YZ Flooring quote. Install labor is extra.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div><strong>Long Beach Flooring</strong><p>YZ Flooring / Yason Zapata<br>46 E 68th Way<br>Long Beach, CA 90805</p></div>
+  <div>
+    <p>Phone: <a href="tel:+15624425831">(562) 442-5831</a></p>
+    <p>Alt listing: <a href="tel:+15623036634">(562) 303-6634</a></p>
+    <p>Email: not published in the lead scan</p>
+  </div>
+  <div>
+    <p>CSLB #1083930 · license cited ~Nov 2021</p>
+    <p class="meta">RegisterMySite demo. Original SVG mark. No social profile was listed in the Oct 3 scan.</p>
+  </div>
+</footer>
+<script>
+const items=[
+ {name:"White oak plank",cat:"Hardwood",price:8.4,color:"#d7b48c",waste:.08},
+ {name:"Smoked walnut",cat:"Hardwood",price:9.6,color:"#6b4a33",waste:.08},
+ {name:"Natural maple",cat:"Hardwood",price:7.9,color:"#e6d3b4",waste:.08},
+ {name:"Coastal LVP oak",cat:"LVP",price:4.2,color:"#cbb79a",waste:.08},
+ {name:"Stone LVP gray",cat:"LVP",price:3.8,color:"#b7b2aa",waste:.08},
+ {name:"Waterproof LVP walnut",cat:"LVP",price:4.6,color:"#7a5a42",waste:.08},
+ {name:"12x24 porcelain sand",cat:"Tile",price:6.1,color:"#e4d5c3",waste:.12},
+ {name:"Hex cement gray",cat:"Tile",price:7.4,color:"#9aa0a4",waste:.12},
+ {name:"Terracotta square",cat:"Tile",price:6.8,color:"#c26a45",waste:.12},
+ {name:"Plush nylon mist",cat:"Carpet",price:3.1,color:"#d5ddd8",waste:.08},
+ {name:"Berber sand",cat:"Carpet",price:2.8,color:"#cfc3ae",waste:.08},
+ {name:"Patterned wool blend",cat:"Carpet",price:5.5,color:"#8d735c",waste:.08}
+];
+const cats=["All","Hardwood","LVP","Tile","Carpet"];
+let cat="All", page=0, per=6, cart=[];
+const filters=document.getElementById("filters");
+cats.forEach(c=>{
+  const b=document.createElement("button"); b.textContent=c; b.type="button"; if(c==="All") b.className="on";
+  b.onclick=()=>{cat=c; page=0; [...filters.children].forEach(x=>x.classList.toggle("on",x.textContent===c)); draw();};
+  filters.appendChild(b);
+});
+const sel=document.getElementById("mat");
+items.forEach((it,i)=>{const o=document.createElement("option"); o.value=i; o.textContent=`${it.name} · $${it.price}/sq ft`; sel.appendChild(o);});
+function filtered(){return items.filter(i=>cat==="All"||i.cat===cat)}
+function draw(){
+  const list=filtered(); const pages=Math.max(1,Math.ceil(list.length/per)); page=Math.min(page,pages-1);
+  const slice=list.slice(page*per,page*per+per);
+  document.getElementById("grid").innerHTML=slice.map(it=>`<article class="card"><div class="sw" style="background:${it.color}"></div><div class="body"><h3>${it.name}</h3><p class="meta">${it.cat} · $${it.price.toFixed(2)} / sq ft demo · waste ${Math.round(it.waste*100)}%</p></div></article>`).join("");
+  document.getElementById("page").textContent=`Page ${page+1} of ${pages}`;
+}
+document.getElementById("prev").onclick=()=>{page=Math.max(0,page-1);draw()};
+document.getElementById("next").onclick=()=>{page++;draw()};
+function renderCart(){
+  if(!cart.length){document.getElementById("lines").innerHTML="<p>No rooms yet.</p>"; document.getElementById("total").textContent="0 sq ft · $0 materials estimate"; return;}
+  let sq=0, cost=0;
+  document.getElementById("lines").innerHTML=cart.map((l,i)=>`<p>${l.room}: ${l.sq} sq ft ${l.name} + waste → <strong>${l.order} sq ft</strong> · $${l.cost.toLocaleString()} <button type="button" data-i="${i}">Remove</button></p>`).join("");
+  cart.forEach(l=>{sq+=l.sq; cost+=l.cost});
+  document.getElementById("total").textContent=`${sq.toFixed(1)} net sq ft · $${cost.toLocaleString()} materials estimate`;
+  document.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{cart.splice(+b.dataset.i,1); renderCart();});
+}
+document.getElementById("form").onsubmit=e=>{
+  e.preventDefault();
+  const it=items[+sel.value];
+  const sq=+document.getElementById("len").value * +document.getElementById("wid").value;
+  const order=Math.ceil(sq*(1+it.waste));
+  cart.push({room:document.getElementById("room").value, name:it.name, sq:+sq.toFixed(1), order, cost:Math.round(order*it.price)});
+  renderCart();
+};
+draw(); renderCart();
+</script>
+</body>
+</html>
