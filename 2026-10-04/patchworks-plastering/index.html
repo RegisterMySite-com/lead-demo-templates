@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patchwork's Plastering Co | Garden Grove stucco & patching</title>
+<meta name="description" content="RegisterMySite demo for Patchwork's Plastering Co — Garden Grove C-35 lathing and plastering. Stucco patch materials calculator.">
+<style>
+:root{--ink:#1c1410;--clay:#8c4a32;--sand:#f6efe6;--paper:#fffdf9;--line:#e6d9cc;--ok:#2f6b4f}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,"Iowan Old Style",Palatino,serif;color:var(--ink);background:var(--sand)}
+a{color:inherit}nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 6vw;background:#231812;color:#f6efe6;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}
+.brand svg{width:36px;height:36px}nav a{text-decoration:none;font-family:system-ui,sans-serif;font-size:14px;margin-left:16px}
+.demo{background:#8c4a32;color:#fff;text-align:center;font-family:system-ui,sans-serif;font-size:13px;padding:8px 16px}
+header.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;padding:56px 6vw;align-items:center}
+h1{font-size:clamp(36px,5vw,62px);line-height:.95;margin:0 0 12px}
+.lede{font-family:system-ui,sans-serif;font-size:18px;line-height:1.5;max-width:42rem}
+.chip{display:inline-block;font-family:system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#fff}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;font-family:system-ui,sans-serif}
+section{padding:28px 6vw 10px}h2{font-size:32px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;font-family:system-ui,sans-serif}
+label{display:block;font-size:13px;margin:10px 0 4px}input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+button{background:var(--clay);color:#fff;border:0;border-radius:999px;padding:12px 16px;font:inherit;cursor:pointer}
+.out{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.out div{background:#f8f1e8;border-radius:10px;padding:10px;font-size:13px}.out strong{display:block;font-size:20px}
+table{width:100%;border-collapse:collapse;font-family:system-ui,sans-serif;font-size:14px}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+footer{margin-top:28px;background:#231812;color:#f6efe6;padding:32px 6vw;font-family:system-ui,sans-serif;font-size:14px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:18px}
+footer a{color:#f3c7a8}
+@media(max-width:800px){header.hero,footer,.grid,.out{grid-template-columns:1fr}nav{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<div class="demo">RegisterMySite demo — not the live site. Materials list is a planning tool and can later connect to a supplier order.</div>
+<nav>
+  <div class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#f6efe6"/><path d="M10 42h44v6H10zM14 38l8-16h8l-6 16H14zm16 0l6-16h10l-8 16H30z" fill="#8c4a32"/><path d="M12 48h40" stroke="#231812" stroke-width="2"/></svg>
+    Patchwork's Plastering
+  </div>
+  <div><a href="#calc">Materials</a><a href="#work">Work</a><a href="#contact">Call</a></div>
+</nav>
+<header class="hero">
+  <div>
+    <span class="chip">Garden Grove · CSLB #737480 · C-35</span>
+    <h1>Stucco patches that disappear into the wall.</h1>
+    <p class="lede">Patchwork's Plastering & Patching Specialists, owned by Aston C. Hill, has held a California lathing and plastering license since June 25, 1997 (expires June 30, 2027). Crack repair, window returns, and full elevations across northwest Orange County.</p>
+    <p class="lede">Yelp about 5.0 from roughly 135 reviews. MapQuest aggregates about 166. BestProsInTown about 99. Recent December 2025 stucco notes on directory listings.</p>
+  </div>
+  <div class="panel">
+    <strong>Shop</strong>
+    <p>12331 Elmwood St<br>Garden Grove, CA 92840</p>
+    <p><a href="tel:+17145305119">(714) 530-5119</a><br><a href="mailto:aston.patchworks@yahoo.com">aston.patchworks@yahoo.com</a></p>
+    <p>Listed on Yelp, MapQuest, BestProsInTown, Nextdoor, and CSLB directories.</p>
+  </div>
+</header>
+<section id="calc">
+  <h2>Stucco & patch materials calculator</h2>
+  <p class="lede">Estimate bags, lath, and bead before the crew rolls. Figures are demo planning numbers, not a bid.</p>
+  <div class="panel">
+    <div class="grid">
+      <div><label>Job</label><select id="job"><option value="patch">Crack / window patch</option><option value="elev">One elevation</option><option value="house">Whole house re-stucco</option></select></div>
+      <div><label>Wall area (sq ft)</label><input id="sqft" type="number" min="10" value="240"></div>
+      <div><label>Finish</label><select id="tex"><option value="1">Sand</option><option value="1.08">Lace</option><option value="1.15">Dash</option><option value="0.95">Smooth</option></select></div>
+    </div>
+    <label><input type="checkbox" id="lath"> Replace lath (water damage or hollow)</label>
+    <p><button type="button" id="go">Build materials list</button></p>
+    <div class="out" id="out"></div>
+    <table id="list"><thead><tr><th>Item</th><th>Qty</th><th>Note</th></tr></thead><tbody></tbody></table>
+  </div>
+</section>
+<section id="work">
+  <h2>What the crew actually does</h2>
+  <div class="grid">
+    <article class="card"><h3>Patch</h3><p>Cut back to sound brown coat, tie new lath, three-coat fill, texture match.</p></article>
+    <article class="card"><h3>Returns</h3><p>Window and door returns after retrofit windows, with weep and corner bead.</p></article>
+    <article class="card"><h3>Elevation</h3><p>Color coat or full re-stucco on one face when the rest of the house still holds.</p></article>
+  </div>
+</section>
+<footer id="contact">
+  <div><strong>Patchwork's Plastering Co</strong><br>Patchwork's Plastering & Patching Specialists<br>Aston C. Hill, DBA<br>12331 Elmwood St, Garden Grove, CA 92840</div>
+  <div>(714) 530-5119<br>aston.patchworks@yahoo.com<br>CSLB #737480 · C-35 Lathing & Plastering</div>
+  <div>Reviews: Yelp ~5.0 / ~135 · MapQuest ~166 · BestProsInTown ~99<br>Directories: Yelp, MapQuest, BestProsInTown, Nextdoor, CSLB<br>RegisterMySite demo</div>
+</footer>
+<script>
+document.getElementById('go').onclick=function(){
+  var sq=Math.max(10,+document.getElementById('sqft').value||0);
+  var tex=+document.getElementById('tex').value;
+  var job=document.getElementById('job').value;
+  var waste=job==='patch'?1.2:job==='elev'?1.1:1.08;
+  var base=Math.ceil(sq*0.09*waste);
+  var finish=Math.ceil(sq*0.035*tex*waste);
+  var lath=document.getElementById('lath').checked?Math.ceil(sq/32):0;
+  var bead=Math.ceil(sq/40);
+  var days=job==='house'?Math.ceil(sq/450):job==='elev'?Math.ceil(sq/300):1;
+  document.getElementById('out').innerHTML='<div><strong>'+base+'</strong>base-coat bags</div><div><strong>'+finish+'</strong>finish bags</div><div><strong>'+lath+'</strong>lath sheets</div><div><strong>'+days+'</strong>crew days</div>';
+  document.querySelector('#list tbody').innerHTML='<tr><td>Scratch / brown base</td><td>'+base+' bags</td><td>80 lb, demo yield</td></tr><tr><td>Finish / color</td><td>'+finish+' bags</td><td>Texture factor '+tex+'</td></tr><tr><td>Metal lath</td><td>'+lath+' sheets</td><td>'+(lath?'Replace':'Sound lath assumed')+'</td></tr><tr><td>Corner bead</td><td>'+bead+' sticks</td><td>Openings and edges</td></tr>';
+};
+document.getElementById('go').click();
+</script>
+</body>
+</html>

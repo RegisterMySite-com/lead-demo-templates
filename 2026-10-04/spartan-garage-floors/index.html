@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spartan Garage Floors | Garden Grove epoxy & flake coatings</title>
+<meta name="description" content="RegisterMySite demo for Spartan Garage Floors. Garage coating calculator for flake, metallic, and polyaspartic systems.">
+<style>
+:root{--ink:#1b1a17;--copper:#8a5a2b;--bg:#f3f1ec;--card:#fff;--line:#e4dfd4}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:#1b1a17;color:#f6f3ee;position:sticky;top:0}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700}nav a{color:#f6f3ee;text-decoration:none;margin-left:14px}
+.brand svg{width:36px;height:36px}
+.demo{background:#8a5a2b;color:#fff;text-align:center;font-size:13px;padding:8px}
+.hero{padding:48px 6vw;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+h1{font-size:clamp(34px,5vw,58px);line-height:.95;margin:8px 0}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+label{display:block;font-size:13px;margin:10px 0 4px}input,select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px}
+button{background:#8a5a2b;color:#fff;border:0;border-radius:999px;padding:12px 16px;cursor:pointer}
+.swatches{display:flex;gap:8px;margin-top:8px}.sw{width:36px;height:36px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #ccc}
+.out{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.out div{background:#f7f1e8;border-radius:10px;padding:10px;font-size:13px}.out strong{display:block;font-size:22px}
+section{padding:10px 6vw 24px}.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:#fff}
+footer{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;background:#1b1a17;color:#f6f3ee;padding:28px 6vw;font-size:14px}
+footer a{color:#e7c39a}
+@media(max-width:800px){.hero,footer,.out{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo">RegisterMySite demo — not the live site. Coating quantities are planning figures for a later materials order.</div>
+<nav>
+  <div class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="10" fill="#f3f1ec"/><path d="M8 40 L32 16 L56 40 V50 H8 Z" fill="#1b1a17"/><path d="M18 50 V36 H46 V50" fill="#8a5a2b"/><circle cx="32" cy="30" r="3" fill="#e7c39a"/></svg>
+    Spartan Garage Floors
+  </div>
+  <div><a href="#calc">Calculator</a><a href="#systems">Systems</a><a href="#contact">Contact</a></div>
+</nav>
+<header class="hero">
+  <div>
+    <h1>Flake floors that survive a hot Orange County garage.</h1>
+    <p>Spartan Floor Coatings, owner Moses / Moises Sepulveda, serves Garden Grove, La Mirada, and the rest of OC. Street address is not consistently published; service area is Garden Grove, CA 92840. Yelp about 5.0 from roughly 86–88 reviews. MapQuest about 88. Thumbtack mixed, about 4.2.</p>
+  </div>
+  <div class="panel">
+    <strong>Book a look</strong>
+    <p><a href="tel:+17148860710">(714) 886-0710</a></p>
+    <p>Instagram @spartanfloorcoating. Also on Yelp, MapQuest, Thumbtack, and LinkedIn. Email and license were not in the lead email, so they are left blank.</p>
+    <div class="swatches" aria-hidden="true"><span class="sw" style="background:#1b1a17"></span><span class="sw" style="background:#8a5a2b"></span><span class="sw" style="background:#d8d2c8"></span><span class="sw" style="background:#4d6b5a"></span></div>
+  </div>
+</header>
+<section id="calc">
+  <h2>Garage coating calculator</h2>
+  <div class="panel">
+    <div class="out" style="grid-template-columns:1fr 1fr 1fr;margin-top:0">
+      <div><label>Length (ft)</label><input id="L" type="number" value="20" min="8"></div>
+      <div><label>Width (ft)</label><input id="W" type="number" value="20" min="8"></div>
+      <div><label>System</label>
+        <select id="sys">
+          <option value="flake">Full flake epoxy</option>
+          <option value="solid">Solid color epoxy</option>
+          <option value="metal">Metallic epoxy</option>
+          <option value="poly">Polyaspartic one-day</option>
+        </select>
+      </div>
+    </div>
+    <label><input type="checkbox" id="crack" checked> Crack chase and fill</label>
+    <label><input type="checkbox" id="moist"> Moisture mitigation primer</label>
+    <p><button id="go" type="button">Calculate kit</button></p>
+    <div class="out" id="out"></div>
+  </div>
+</section>
+<section id="systems">
+  <h2>Systems</h2>
+  <div class="chips">
+    <span class="chip">Full flake — hide oil spots</span>
+    <span class="chip">Solid color — showroom</span>
+    <span class="chip">Metallic — motion in the coat</span>
+    <span class="chip">Polyaspartic — back in the garage next day</span>
+  </div>
+</section>
+<footer id="contact">
+  <div><strong>Spartan Garage Floors</strong><br>Spartan Floor Coatings<br>Garden Grove, CA 92840<br>Serves Garden Grove, La Mirada, and OC<br>Street address not published</div>
+  <div>(714) 886-0710<br>Moses / Moises Sepulveda<br>Email not listed</div>
+  <div>Reviews: Yelp ~5.0 / ~86–88 · MapQuest ~88<br>Social: Instagram @spartanfloorcoating<br>RegisterMySite demo</div>
+</footer>
+<script>
+document.getElementById('go').onclick=function(){
+  var sq=Math.max(1,(+document.getElementById('L').value)*(+document.getElementById('W').value));
+  var sys=document.getElementById('sys').value;
+  var rates={flake:{base:0.012,top:0.008,flake:0.35},solid:{base:0.014,top:0.008,flake:0},metal:{base:0.016,top:0.007,flake:0},poly:{base:0,top:0.02,flake:0.2}};
+  var r=rates[sys];
+  var base=+(sq*r.base).toFixed(1);
+  var top=+(sq*r.top).toFixed(1);
+  var flake=Math.ceil(sq*r.flake);
+  var days=sys==='poly'?1:2;
+  if(document.getElementById('moist').checked) base=+(base+sq*0.006).toFixed(1);
+  var crack=document.getElementById('crack').checked?Math.ceil(sq/80):0;
+  document.getElementById('out').innerHTML='<div><strong>'+sq+'</strong>sq ft</div><div><strong>'+base+'</strong>gal base / primer</div><div><strong>'+top+'</strong>gal topcoat</div><div><strong>'+flake+'</strong>lb flake · '+crack+' crack kits · '+days+' day'+(days>1?'s':'')+'</div>';
+};
+document.getElementById('go').click();
+</script>
+</body>
+</html>

@@ -40,3 +40,8 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `jmn-painting` — room and elevation paint estimator (gallons, coats, sheen, color chips, prep checklist)
 - `long-beach-flooring` — filterable paginated material board + room cart with waste (hardwood, LVP, tile, carpet)
 - `a-to-z-pool-plastering` — pool plaster surface calculator (shape, depth, finish, bags, drain-down days)
+
+## 2026-10-04
+- `patchworks-plastering` — stucco patch and elevation materials list (base bags, finish, lath, bead, crew days)
+- `ad-auto-glass` — filterable paginated glass catalog + insurance claim cart with ADAS calibration
+- `spartan-garage-floors` — garage coating calculator (flake, solid, metallic, polyaspartic, moisture, crack kits)
