@@ -1,1 +1,18 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj48aGVhZD48bWV0YSBjaGFyc2V0PSJ1dGYtOCI+PG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xIj4KPHRpdGxlPk5hdGggUHJvcGVydHkgU29sdXRpb25zIOKAkyBsb2FkaW5nPC90aXRsZT48L2hlYWQ+Cjxib2R5Pgo8cD5zbW9rZSB0ZXN0PC9wPgo8L2JvZHk+PC9odG1sPgo=
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nath Property Solutions — loading</title></head>
+<body>
+<script src="photos/nath-page.js"></script>
+<script>
+(async()=>{
+  const B64=window.NATH_PAGE_B64;
+  if(!B64){document.body.textContent="Demo payload missing.";return;}
+  const bin=Uint8Array.from(atob(B64),c=>c.charCodeAt(0));
+  const ds=new DecompressionStream("gzip");
+  const stream=new Blob([bin]).stream().pipeThrough(ds);
+  const text=await new Response(stream).text();
+  document.open();document.write(text);document.close();
+})().catch(e=>{document.body.textContent="Demo failed to inflate: "+e;});
+</script>
+<noscript>Enable JavaScript to view this concept demo.</noscript>
+</body></html>
