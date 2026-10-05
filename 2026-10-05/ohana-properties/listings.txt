@@ -1,0 +1,21 @@
+Ohana Properties — open rentals verified 2026-10-05 from https://ohana.appfolio.com/listings
+
+1) 609 N Malden Ave, Fullerton, CA 92832
+   Type: Duplex | 1 bd / 1 ba | 673 sq ft
+   Rent: $2,000 | Available: 11/1/26
+   Title: 609 Malden - 1 Bdrm Duplex Home in Historic DT Fullerton
+   Notes: Historic DT Fullerton; water & trash included; cats/small dogs; single-car garage; side patio
+   Detail: https://ohana.appfolio.com/listings/detail/f7fd0ad0-4417-459a-9c7d-3a76f1aa769f
+   Photos: AppFolio ohana CDN (malden-1..4)
+
+2) 301 N Ford Ave #304, Fullerton, CA 92832
+   Type: Condo (55+) | 1 bd / 1 ba | 574 sq ft
+   Rent: $1,700 | Available: Now
+   Title: Condo in The Fountains Senior Community of Fullerton - 55+
+   Notes: Occupant 55+; top floor; balcony overlooking Ford Park; pool/spa; gated parking; elevator
+   Detail: https://ohana.appfolio.com/listings/detail/3e1f853e-fd85-4ac9-a428-88cad8d9270f
+   Photos: AppFolio ohana CDN (ford-1..4)
+
+SKIPPED (not inventory):
+- "OhanaApp - Application Site" / 123 Apply Here / $0 — AppFolio placeholder, not a unit
+- Facebook Oct 9, 2025 Fullerton 4bd/2ba post — no address, rent, or photo available on the post; skipped
