@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Ohana Properties desk</title><style>
+:root { --ink:#f6f3ec; --forest:#1f4a3a; --clay:#8d3f2b; --sand:#14201a; --card:#1f4a3a; --line:rgba(255,255,255,.12); }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--sand); color:var(--ink); font:16px/1.45 "Segoe UI", Helvetica, Arial, sans-serif; }
+h1,h2 { font-family: Georgia, Palatino, serif; font-weight:600; }
+header { background:var(--forest); color:var(--ink); padding:1rem 1.2rem; display:flex; justify-content:space-between; gap:1rem; align-items:center; }
+main { display:grid; grid-template-columns: 280px 1fr; min-height: calc(100vh - 64px); }
+aside, section { padding:1rem; }
+aside { border-right:1px solid var(--line); }
+button, input { font:inherit; }
+button { background:var(--clay); color:#fffdf8; border:0; border-radius:999px; padding:.45rem .8rem; cursor:pointer; }
+button.quiet { background:var(--card); color:var(--ink); border:1px solid var(--line); }
+input { width:100%; padding:.45rem .55rem; border:1px solid var(--line); border-radius:6px; background:var(--sand); color:var(--ink); }
+ul { list-style:none; padding:0; margin:0; display:grid; gap:.4rem; }
+li button { width:100%; text-align:left; background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:8px; }
+#log { display:grid; gap:.6rem; align-content:start; min-height:50vh; }
+.me, .them { max-width:36rem; padding:.55rem .7rem; border-radius:10px; }
+.me { background:#2a5c48; justify-self:end; }
+.them { background:var(--card); border:1px solid var(--line); }
+.meta { color:#c9d7cf; font-size:.78rem; }
+form.row { display:flex; gap:.4rem; }
+#gate { max-width:28rem; margin:2rem auto; background:var(--card); padding:1rem; border:1px solid var(--line); }
+[hidden] { display:none !important; }
+:focus-visible { outline:3px solid #a9783a; outline-offset:2px; }
+@media (max-width:800px) { main { grid-template-columns:1fr; } }
+</style></head><body><header><h1 style="margin:0;font-size:1.3rem">Ohana Properties desk</h1><p id="who" style="margin:0"></p></header><div id="gate"><h2>Open the desk</h2><p>This password is the worker secret. It never goes on the public page.</p><form id="login"><label>Your name <input id="staffName" autocomplete="name" value="Ohana office"></label><label style="display:block;margin:.6rem 0">Desk password <input id="token" type="password" autocomplete="current-password" required></label><button type="submit">Open inbox</button><p id="loginErr" role="alert"></p></form></div><main id="app" hidden><aside><h2 style="margin-top:0">Private rooms</h2><p class="meta">Each room is one visitor and you. Nobody else can join.</p><ul id="rooms"></ul></aside><section><p id="presence" class="meta">Pick a conversation.</p><p id="typing" class="meta" hidden></p><div id="log" aria-live="polite"></div><form class="row" id="send"><input id="box" aria-label="Message" maxlength="1500" placeholder="Reply to this visitor"><button type="submit">Send</button></form></section></main><script>
+const $ = (id) => document.getElementById(id);
+let token = "", ticket = "", socket = null, roomId = "";
+function stamp(iso) {
+const d = new Date(iso); if (Number.isNaN(d.getTime())) return "";
+const tz = "America/Los_Angeles";
+const key = (dt) => new Intl.DateTimeFormat("en-CA", { timeZone: tz, year:"numeric", month:"2-digit", day:"2-digit" }).format(dt);
+const time = new Intl.DateTimeFormat("en-US", { timeZone: tz, hour:"numeric", minute:"2-digit", hour12:true }).format(d).replace(/\s/g,"").toLowerCase();
+const today = key(new Date());
+const [y,m,day] = today.split("-").map(Number);
+const yest = new Date(Date.UTC(y, m - 1, day - 1)).toISOString().slice(0, 10);
+const mine = key(d);
+if (mine === today) return "today at " + time;
+if (mine === yest) return "yesterday at " + time;
+return new Intl.DateTimeFormat("en-US", { timeZone: tz, month:"long", day:"numeric", year:"numeric" }).format(d);
+}
+function bubble(msg) {
+const el = document.createElement("div");
+el.className = msg.role === "staff" ? "me" : "them";
+const who = document.createElement("strong"); who.textContent = msg.name;
+const body = document.createElement("div"); body.textContent = msg.text;
+const when = document.createElement("div"); when.className = "meta"; when.textContent = stamp(msg.at);
+el.append(who, body, when); return el;
+}
+$("login").addEventListener("submit", async (e) => {
+e.preventDefault();
+token = $("token").value;
+const res = await fetch("/api/inbox", { headers: { Authorization: "Bearer " + token } });
+if (!res.ok) { $("loginErr").textContent = "That password did not open the desk."; return; }
+$("gate").hidden = true; $("app").hidden = false;
+$("who").textContent = $("staffName").value;
+loadInbox();
+});
+async function loadInbox() {
+const res = await fetch("/api/inbox", { headers: { Authorization: "Bearer " + token } });
+const data = await res.json();
+$("rooms").replaceChildren();
+for (const room of data.rooms || []) {
+const li = document.createElement("li");
+const btn = document.createElement("button");
+btn.type = "button";
+const title = document.createElement("strong"); title.textContent = room.visitorName + " · " + room.desk;
+const preview = document.createElement("div"); preview.className = "meta"; preview.textContent = room.preview;
+btn.append(title, preview);
+btn.addEventListener("click", () => openRoom(room.roomId));
+li.append(btn); $("rooms").append(li);
+}
+if (!(data.rooms || []).length) $("rooms").textContent = "No messages yet.";
+}
+async function openRoom(id) {
+roomId = id;
+if (socket) socket.close();
+const res = await fetch("/api/ticket", { method:"POST", headers:{ Authorization:"Bearer " + token, "Content-Type":"application/json" }, body: JSON.stringify({ name: $("staffName").value }) });
+const data = await res.json();
+if (!res.ok) { $("presence").textContent = data.error || "Could not join."; return; }
+const wsUrl = (location.origin.replace(/^http/, "ws")) + "/api/room/" + id + "?role=staff&ticket=" + encodeURIComponent(data.ticket);
+socket = new WebSocket(wsUrl);
+socket.addEventListener("message", (ev) => {
+const msg = JSON.parse(ev.data);
+if (msg.type === "ready") { $("log").replaceChildren(...msg.messages.map(bubble)); paintPresence(msg.presence); }
+if (msg.type === "message") $("log").append(bubble(msg.message));
+if (msg.type === "presence") paintPresence(msg.presence);
+if (msg.type === "typing") { $("typing").hidden = !msg.on; $("typing").textContent = msg.on ? msg.name + " is typing" : ""; }
+if (msg.type === "error") $("presence").textContent = msg.error;
+});
+}
+function paintPresence(people) {
+const names = (people || []).map((p) => p.name + (p.role === "staff" ? " (you)" : ""));
+$("presence").textContent = names.length ? "In this chat: " + names.join(", ") : "Nobody is in this chat.";
+}
+let typingTimer = 0;
+$("box").addEventListener("input", () => {
+if (socket && socket.readyState === 1) socket.send(JSON.stringify({ type:"typing", on:true }));
+clearTimeout(typingTimer);
+typingTimer = setTimeout(() => { if (socket && socket.readyState === 1) socket.send(JSON.stringify({ type:"typing", on:false })); }, 1200);
+});
+$("send").addEventListener("submit", (e) => {
+e.preventDefault();
+const text = $("box").value.trim();
+if (!text || !socket || socket.readyState !== 1) return;
+socket.send(JSON.stringify({ type:"chat", text }));
+socket.send(JSON.stringify({ type:"typing", on:false }));
+$("box").value = "";
+});
+setInterval(() => { if (!$("app").hidden) loadInbox(); }, 15000);
+</script></body></html>
