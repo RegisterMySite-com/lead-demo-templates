@@ -26,7 +26,7 @@ export interface Env {
 }
 interface SocketMeta { role: "visitor" | "staff"; name: string }
 interface ChatMsg { id: string; role: "visitor" | "staff"; name: string; text: string; at: string }
-interface RoomMeta { roomId: string; desk: "leasing" | "maintenance"; visitorName: string; preview: string; at: string }
+interface RoomMeta { roomId: string; desk: "quotes" | "bookings"; visitorName: string; preview: string; at: string }
 interface SupportMsg { role: "user" | "assistant"; content: string; at: string }
 
 const MAX_TEXT = 1500;
@@ -56,7 +56,7 @@ export class ChatRoom {
   async fetch(request: Request): Promise<Response> {
     const url = new URL(request.url);
     if (url.pathname === "/init" && request.method === "POST") {
-      const body = await request.json() as { roomId: string; visitorKey: string; desk: "leasing" | "maintenance"; name: string };
+      const body = await request.json() as { roomId: string; visitorKey: string; desk: "quotes" | "bookings"; name: string };
       if (await this.ctx.storage.get("visitorKey")) return new Response("exists", { status: 409 });
       await this.ctx.storage.put("visitorKey", body.visitorKey);
       await this.ctx.storage.put("roomId", body.roomId);
