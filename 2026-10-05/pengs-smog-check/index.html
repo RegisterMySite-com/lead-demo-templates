@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peng's Smog Check Station | Long Beach STAR test</title>
+<meta name="description" content="RegisterMySite demo for Peng's Smog Check Station, 2041 E Carson St Ste B, Long Beach. Appointment board and test-fee estimator.">
+<style>
+:root{--ink:#14202b;--amber:#e3a008;--bay:#0e7490;--paper:#f4f7f8;--line:#d5e0e4;--muted:#5c6b73}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+.demo{background:#14202b;color:#f8e7b0;text-align:center;font-size:12px;padding:8px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0}
+.brand{display:flex;gap:10px;align-items:center;font-weight:750}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.links{display:flex;gap:16px;font-size:14px} .links a{text-decoration:none;color:inherit}
+.cta{background:var(--amber);color:#14202b;text-decoration:none;padding:10px 14px;border-radius:8px;font-weight:700}
+.hero{padding:48px 6vw;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;background:linear-gradient(160deg,#123,#0e7490)}
+.hero h1{color:#fff;font-size:clamp(34px,5vw,56px);margin:8px 0;line-height:1}
+.hero p{color:#d5eef2}
+.kicker{letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-size:12px}
+.panel{background:#fff;border-radius:16px;padding:16px}
+section{padding:32px 6vw}
+h2{margin:0 0 8px}
+.board{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.slot{border:1px solid var(--line);border-radius:12px;padding:10px;background:#fff;cursor:pointer}
+.slot.on{outline:2px solid var(--bay)}
+.slot b{display:block}
+.muted{color:var(--muted);font-size:13px}
+label{display:block;font-size:13px;margin-top:10px}
+select,input{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px}
+.check li{margin:6px 0}
+.fee{font-size:28px;font-weight:800}
+footer{background:#14202b;color:#e7eef1;padding:28px 6vw;font-size:14px}
+footer a{color:#f0c14b}
+@media(max-width:800px){.hero,.board{grid-template-columns:1fr}.links{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">RegisterMySite demo — sample fees and open slots, not a live BAR appointment book.</div>
+<nav>
+  <div class="brand">
+    <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#14202b"/><path d="M8 22h20v3H8zM10 14h4v8h-4zm6-4h4v12h-4zm6 3h4v9h-4z" fill="#e3a008"/></svg>
+    <div>Peng's Smog Check Station<small>Carson St · Signal Hill edge</small></div>
+  </div>
+  <div class="links"><a href="#book">Book a bay</a><a href="#ready">Readiness</a></div>
+  <a class="cta" href="tel:+15624242368">(562) 424-2368</a>
+</nav>
+<header class="hero">
+  <div>
+    <p class="kicker">STAR smog · Long Beach</p>
+    <h1>Five stars, one bay on Carson.</h1>
+    <p>Pengchiv Sreng's station at 2041 E Carson St, Ste B. Yelp 5.0 from 165 reviews. Owner history in smog goes back to a 1990 Cherry Ave license. This demo holds a day board and a fee estimate — no public website was found.</p>
+  </div>
+  <div class="panel">
+    <div class="fee" id="fee">$68</div>
+    <p class="muted" id="feeNote">Passenger car STAR test, sample outreach rate.</p>
+    <label>Vehicle class
+      <select id="klass">
+        <option value="68">Passenger car</option>
+        <option value="78">Truck / SUV</option>
+        <option value="92">Diesel</option>
+        <option value="54">Motorcycle</option>
+        <option value="48">Re-test (sample)</option>
+      </select>
+    </label>
+    <label>Plate or last 3<input id="plate" placeholder="optional"></label>
+  </div>
+</header>
+<section id="book">
+  <h2>Same-week bay board</h2>
+  <p class="muted">Pick a window. Chosen slots stay on this page only.</p>
+  <div class="board" id="board"></div>
+  <p id="hold" class="muted">No window held.</p>
+</section>
+<section id="ready">
+  <h2>Readiness checklist</h2>
+  <p class="muted">Common reasons a STAR test waits. Check what you already did.</p>
+  <ul class="check" id="checks"></ul>
+  <p id="readyNote"></p>
+</section>
+<footer>
+  <strong>Peng's Smog Check Station</strong>
+  <p>2041 E Carson St, Ste B, Long Beach, CA 90807<br>Phone <a href="tel:+15624242368">(562) 424-2368</a><br>Yelp 5.0 / 165 · aggregated about 4.9 / 202 · MapQuest 165<br>License BU21803792 at this address since Nov 20, 2017. Husband-and-wife team noted in reviews.</p>
+  <p class="muted">RegisterMySite demo. Email not verified in the lead scan. No live domain (pengssmog.com and related names were NXDOMAIN).</p>
+</footer>
+<script>
+const days=["Mon","Tue","Wed","Thu","Fri"];
+const times=["8:30","10:00","11:30","1:30","3:00"];
+const board=document.getElementById("board");
+let held=null;
+days.forEach(d=>times.forEach(t=>{
+  const el=document.createElement("button");
+  el.className="slot"; el.type="button";
+  const taken=(d+t).length%5===0;
+  el.innerHTML=`<b>${d} ${t}</b><span class="muted">${taken?"Held":"Open"}</span>`;
+  if(!taken) el.onclick=()=>{held=`${d} ${t}`;[...board.children].forEach(n=>n.classList.remove("on"));el.classList.add("on");document.getElementById("hold").textContent=`Held (demo): ${held} for plate ${document.getElementById("plate").value||"(none)"}. Call (562) 424-2368 to confirm.`;};
+  else el.disabled=true;
+  board.appendChild(el);
+}));
+const klass=document.getElementById("klass");
+function price(){document.getElementById("fee").textContent="$"+klass.value;document.getElementById("feeNote").textContent=klass.options[klass.selectedIndex].text+" · sample outreach rate, not a posted BAR fee.";}
+klass.onchange=price;
+const items=["Warm the engine 10–15 minutes","Check engine light is off","Gas cap clicks","Recent repair paperwork in the car","Registration and insurance in hand","Tires hold air for the dyno rollers"];
+const ul=document.getElementById("checks");
+items.forEach(t=>{const li=document.createElement("li");const cb=document.createElement("input");cb.type="checkbox";cb.onchange=score;li.appendChild(cb);li.append(" "+t);ul.appendChild(li)});
+function score(){const n=[...ul.querySelectorAll("input")].filter(i=>i.checked).length;document.getElementById("readyNote").textContent=n===items.length?"Looks ready for a STAR bay.":`${items.length-n} item(s) still open before the test.`;}
+score();
+</script>
+</body>
+</html>

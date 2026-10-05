@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Flight Mechanic | Mobile mechanic, Long Beach</title>
+<meta name="description" content="RegisterMySite demo for Top Flight Mechanic LLC. Mobile job builder with travel radius from Wisconsin Ave, Long Beach.">
+<style>
+:root{--ink:#10141c;--orange:#ff6a1a;--steel:#e8edf2;--line:#d5dbe3;--muted:#5e6976}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#f7f8fa;color:var(--ink)}
+.demo{background:#10141c;color:#ffd7c2;text-align:center;font-size:12px;padding:8px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:12px}
+a.cta{background:var(--orange);color:#fff;text-decoration:none;padding:10px 14px;border-radius:8px;font-weight:700}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;padding:46px 6vw;background:#10141c;color:#fff}
+h1{font-size:clamp(34px,5vw,58px);line-height:.95;margin:8px 0}
+.kicker{color:var(--orange);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.panel{background:#fff;color:var(--ink);border-radius:16px;padding:16px}
+section{padding:28px 6vw}
+.jobs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.job{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+button.add,button.win{border:0;background:var(--ink);color:#fff;border-radius:8px;padding:8px 10px;cursor:pointer}
+button.win{background:#fff;color:var(--ink);border:1px solid var(--line)}
+button.win.on{background:var(--orange);color:#fff;border-color:var(--orange)}
+.windows{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+label{font-size:13px;display:block;margin-top:8px}
+input,select{width:100%;padding:8px;border-radius:8px;border:1px solid var(--line)}
+.total{font-size:28px;font-weight:800}
+footer{background:#10141c;color:#e7edf3;padding:28px 6vw;font-size:14px}
+footer a{color:#ffb088}
+.muted{color:var(--muted);font-size:13px}
+@media(max-width:800px){.hero,.jobs{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo">RegisterMySite demo — travel math and labor rates are sample outreach figures. Directories list topflightmechanic.com; that name is not registered.</div>
+<nav>
+  <div class="brand">
+    <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#ff6a1a"/><path d="M8 20h14l3-4h3v6h-2a3 3 0 1 1-6 0H14a3 3 0 1 1-6 0H6v-2z" fill="#10141c"/></svg>
+    <div>Top Flight Mechanic<small>Mobile · Long Beach</small></div>
+  </div>
+  <a class="cta" href="tel:+15622852634">(562) 285-2634</a>
+</nav>
+<header class="hero">
+  <div>
+    <p class="kicker">Juan comes to the driveway</p>
+    <h1>Mobile repair, rated 5.0 on 190 Google reviews.</h1>
+    <p>Top Flight Mechanic LLC. Service pin on this demo is 340 Wisconsin Ave, Long Beach 90814. LLC mailing address on file is 161 E 67th St, 90805. Build a job, then see a travel add-on inside a rough radius.</p>
+  </div>
+  <div class="panel">
+    <div class="total" id="total">$0</div>
+    <p class="muted" id="breakout">Labor plus travel. Parts not included.</p>
+    <label>ZIP near the car
+      <select id="zip">
+        <option value="0">90814 — Belmont / Wisconsin (base)</option>
+        <option value="25">90804 — eastside</option>
+        <option value="20">90803 — Belmont Shore</option>
+        <option value="30">90815 — Cal State edge</option>
+        <option value="35">90806 — Wrigley / Willow</option>
+        <option value="40">90807 — Bixby / Signal Hill edge</option>
+        <option value="45">90805 — north side</option>
+        <option value="70">Outside primary radius</option>
+      </select>
+    </label>
+    <label>Vehicle<input id="car" placeholder="year make model"></label>
+  </div>
+</header>
+<section>
+  <h2>Same-day windows</h2>
+  <div class="windows" id="wins"></div>
+  <h2>Job builder</h2>
+  <p class="muted">Toggle work. Diagnostic is credited if the repair is approved the same visit (sample policy).</p>
+  <div class="jobs" id="jobs"></div>
+</section>
+<footer>
+  <strong>Top Flight Mechanic LLC</strong>
+  <p>Service address used here: 340 Wisconsin Ave, Long Beach, CA 90814<br>LLC registered address: 161 E 67th St, Long Beach, CA 90805<br>Phone <a href="tel:+15622852634">(562) 285-2634</a><br>Google 5.0 / 190 · AutoTechIQ 4.9 · AutoRepairScore 87/100 (#6 of 104 Long Beach shops, #1 in 90814)</p>
+  <p class="muted">RegisterMySite demo. Owner first name Juan in reviews. CA SOS LLC #202025410694 (2020); OpenCorporates showed Suspended – FTB. No verified email. No confirmed Yelp page in the scan.</p>
+</footer>
+<script>
+const WORK=[
+ {n:"Diagnostic scan",p:95},
+ {n:"Brake pad axle",p:220},
+ {n:"Battery & terminal service",p:45},
+ {n:"Alternator R&R labor",p:180},
+ {n:"Starter R&R labor",p:170},
+ {n:"Oil & filter",p:70},
+ {n:"Cooling leak check",p:110},
+ {n:"No-start house call",p:125}
+];
+const picked=new Set();
+const jobs=document.getElementById("jobs");
+WORK.forEach(w=>{
+  const el=document.createElement("div"); el.className="job";
+  el.innerHTML=`<div><b>${w.n}</b><div class="muted">$${w.p} labor sample</div></div>`;
+  const b=document.createElement("button"); b.className="add"; b.textContent="Add";
+  b.onclick=()=>{if(picked.has(w.n))picked.delete(w.n);else picked.add(w.n);b.textContent=picked.has(w.n)?"Remove":"Add";quote()};
+  el.appendChild(b); jobs.appendChild(el);
+});
+let win="ASAP";
+const wins=document.getElementById("wins");
+["ASAP","10–12","12–2","2–4","After 4"].forEach(t=>{
+  const b=document.createElement("button"); b.className="win"+(t==="ASAP"?" on":""); b.textContent=t; b.type="button";
+  b.onclick=()=>{win=t;[...wins.children].forEach(x=>x.classList.remove("on"));b.classList.add("on");quote()};
+  wins.appendChild(b);
+});
+function quote(){
+  let labor=[...picked].reduce((s,n)=>s+WORK.find(w=>w.n===n).p,0);
+  const travel=Number(document.getElementById("zip").value);
+  const rush=win==="ASAP"?35:0;
+  document.getElementById("total").textContent="$"+(labor+travel+rush);
+  const car=document.getElementById("car").value||"vehicle";
+  document.getElementById("breakout").textContent=`${[...picked].join(", ")||"No jobs yet"} · ${car} · travel $${travel} · window ${win}${rush?" · ASAP $35":""}. Call (562) 285-2634 to lock.`;
+}
+document.getElementById("zip").onchange=quote;
+document.getElementById("car").oninput=quote;
+quote();
+</script>
+</body>
+</html>
