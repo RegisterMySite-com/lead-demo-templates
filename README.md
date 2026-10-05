@@ -45,3 +45,6 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `patchworks-plastering` — stucco patch and elevation materials list (base bags, finish, lath, bead, crew days)
 - `ad-auto-glass` — filterable paginated glass catalog + insurance claim cart with ADAS calibration
 - `spartan-garage-floors` — garage coating calculator (flake, solid, metallic, polyaspartic, moisture, crack kits)
+
+## 2026-10-05
+- `ohana-properties` — Fullerton / North OC family PM rental board (duplex + 55+ condo from AppFolio), type/city filters, listing modal, on-page tour/apply form (no Worker, no chat)
