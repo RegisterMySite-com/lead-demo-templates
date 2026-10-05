@@ -1,0 +1,72 @@
+NATH PROPERTY SOLUTIONS — outreach demo research log
+Built: 2026-10-05 PT | Local: /tmp/nath-demo/ | Repo: 2026-10-01/nath-property-solutions/
+
+=== VERIFIED FACTS (used on page) ===
+Brand: https://www.nathproperty.com/
+About: https://www.nathproperty.com/about
+Properties: https://www.nathproperty.com/properties
+Contact: https://www.nathproperty.com/contact
+Community microsites:
+  https://www.rentcedarglen.com/
+  https://www.rentsandcastleapts.com/
+  https://www.rentthebeachhouseapts.com/
+
+NAP (home/contact footer still shows, 2026-10-05):
+  Office: 115 N. Resh St, Anaheim, CA 92805
+  Phone: (714) 409-0440
+  Fax: (714) 409-0441 (still on contact/home footers)
+  Email: info@nathproperty.com
+
+Founded: About page still says “Providing Property Solutions to Southern Californian Investors since 2008”
+
+People named on demo (About page still lists):
+  Jeff Nath — Chief Executive Officer, Broker (DRE officer record: Jeffrey Alan Nath)
+  Ryan Nath — Chief Operating Officer, Director of Operations
+
+DRE (public lookup 2026-10-05; labeled separately on demo):
+  Corporation License ID 01854149 — Nath Property Solutions — LICENSED — Issued 10/23/08 — Main office 115 N RESH ST ANAHEIM, CA 92805
+  Designated Officer 01851376 — Nath, Jeffrey Alan — License Type OFFICER — Affiliated corp 01854149
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01854149
+          https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01851376
+  Do not print corp 01854149 as Jeff’s personal license.
+
+Services (home page wording): Anaheim-based exclusive real estate management; residential multifamily apartment complexes and single-family homes; also commercial and industrial realty. Properties page lists Anaheim, La Habra, Garden Grove, Orange, Fullerton, Newport Beach, and other OC / inland assets.
+
+Portfolio unit claims (properties page wording, site’s claim only — not a verified unit audit):
+  Beach House Apartments (225 units)
+  Cedar Glen Apartment Homes (235 units)
+  Sand Castle Apartment Homes (121 units)
+  Normandy Park Apartments (88 units)
+  Garden View Apartments (81 units)
+
+Demo cards: those five multifamily communities from the properties page.
+  Beach House / Cedar Glen / Sand Castle: real photos downloaded from each community microsite CDN (capi.myleasestar.com).
+  Normandy Park / Garden View: no downloadable community photos found on brand or a dedicated microsite → SVG “not a photo” placeholders only.
+
+Cedar Glen address used on card: microsite listing address
+  603 North Chippewa Avenue, Anaheim, CA 92801
+  CONFLICT: brand properties page lists “603 N. Chippewa Ave. Anaheim, CA 92805”
+  Microsite footer/location: 92801. Demo uses microsite listing ZIP; conflict noted here only — no invented agreement.
+
+=== LEFT OUT (do not print as facts on page) ===
+- Google 4.8/23, any star widget, any review carousel
+- 611 W Lincoln Ave #1 as the office (commercial asset on properties page, not office NAP)
+- Conflicting staff names omitted: Claudia Fernandez (About) vs Claudia Rodriguez (Properties); Kay Gordan (About) vs Kay Gordon (Properties); Danielle DiLorenzo (About) — no second Danielle Nath source found on pages opened; omitted with other staff to avoid conflict risk
+- Other About staff (Karen, Melody, Kareen, Linda, Sherry, Mayra, Jordan, Sarah, maintenance) — omitted from demo page (only Jeff + Ryan named)
+- blank-4 / 123 N. Resh Chino Hills boilerplate and pet phone (909) 315-5702 — not present on brand pages opened; still not printed
+- LinkedIn employee count
+- Wix title “HOME | nathproperty” as page brand copy
+- Invented rents, floor-plan prices, phones for Normandy/Garden View beyond what properties page shows for community managers (community manager phones omitted from demo to keep NAP to corporate office)
+- No Cloudflare Worker, no chat/ files, no stock photos, no contact to anyone
+
+=== PITCH NOTES (outreach only, not page content) ===
+- Wix brand site with thin photography on the portfolio page; three RealPage community microsites carry the real galleries
+- Cedar Glen ZIP mismatch (92805 vs 92801) is a trust/clarity fix opportunity
+- Conflicting staff surname spellings on About vs Properties
+- Demo is a cleaner PM portfolio board with filters, modal galleries, and on-page tour/apply form
+
+=== DEMO SCOPE ===
+Static HTML under 2026-10-01/nath-property-solutions/
+Files: index.html, leads.txt, listings.txt, photos/*.js
+No Worker deploy; no chat; no contact to anyone
+Distinct cool slate/teal portfolio design (not AllStar clay/pine, not Ohana)
