@@ -72,6 +72,6 @@ No Worker deploy; no chat; no contact to anyone
 Distinct cool slate/teal portfolio design (not AllStar clay/pine, not Ohana)
 
 === INDEX.HTML NOTE ===
-index.html on GitHub is a gzip bootstrap (DecompressionStream) of the full local /tmp/nath-demo/index.html.
+index.html is a tiny gzip loader. Page body is split across photos/nath-page-0.js … nath-page-4.js (NATH_PAGE_PARTS joined + DecompressionStream).
 Photo embeds uploaded: beach-house-1, cedar-glen-1, cedar-glen-2, sand-castle-1 (real microsite CDN JPEGs).
 Additional gallery slots omitted from upload to keep embeds small; modal still works with available photos.
