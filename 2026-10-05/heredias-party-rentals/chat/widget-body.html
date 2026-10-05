@@ -1,0 +1,29 @@
+<button type="button" id="hpr-launcher" aria-haspopup="dialog" aria-controls="hpr-chat">Message the office</button>
+<dialog id="hpr-chat" aria-labelledby="hpr-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="hpr-title">Heredia's Party Rentals</h2>
+      <p class="meta" id="hpr-presence" style="margin:.15rem 0 0"><span class="dot" id="hpr-dot"></span><span id="hpr-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="hpr-close" style="color:#fbf6f1">Close</button>
+  </div>
+  <div class="body">
+    <div id="hpr-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="leasing"><strong>Leasing</strong><br><span class="meta">Ask about renting tables, chairs, tents, linens, or flowers for an event</span></button>
+      <button type="button" data-desk="maintenance"><strong>Maintenance</strong><br><span class="meta">Write the shop about a booked setup, a delivery, or returning rented items</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (562) 490-2040.</p>
+    </div>
+    <div id="hpr-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="hpr-back">Back</button>
+      <div id="hpr-log" class="log" aria-live="polite"></div>
+      <p id="hpr-typing" class="meta" hidden></p>
+      <form id="hpr-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="hpr-box">Message</label>
+        <input id="hpr-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>

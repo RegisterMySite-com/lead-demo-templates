@@ -1,0 +1,30 @@
+#hpr-launcher {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+  background: #c6a15b; color: #1c1214; border: 0; border-radius: 999px;
+  padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 650;
+}
+#hpr-chat {
+  width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+  border: none; border-radius: 14px; padding: 0; background: #1c1214; color: #fbf6f1;
+}
+#hpr-chat::backdrop { background: rgba(0,0,0,.55); }
+#hpr-chat .bar { background: #7a2433; color: #fbf6f1; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+#hpr-chat .bar .meta { color: #fbf6f1; opacity: .85; }
+#hpr-chat h2 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.05rem; margin: 0; }
+#hpr-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+#hpr-chat button, #hpr-chat input, #hpr-chat textarea { font: inherit; }
+#hpr-chat .choice { display: grid; gap: .45rem; }
+#hpr-chat .choice button, #hpr-chat .quiet { background: #2b1b1f; color: #fbf6f1; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+#hpr-chat .go { background: #c6a15b; color: #1c1214; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+#hpr-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+#hpr-chat .me, #hpr-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+#hpr-chat .me { background: #7a2433; color: #fff; justify-self: end; }
+#hpr-chat .them { background: #2b1b1f; border: 1px solid rgba(255,255,255,.12); }
+#hpr-chat .meta { color: #ead2c6; font-size: .75rem; }
+#hpr-chat .row { display: flex; gap: .4rem; }
+#hpr-chat input, #hpr-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #2b1b1f; color: inherit; }
+#hpr-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #ead2c6; margin-right: .35rem; }
+#hpr-chat .dot.on { background: #c6a15b; }
+#hpr-chat [hidden] { display: none !important; }
+@media (max-width: 640px) { #hpr-chat { width: 100vw; height: 100vh; max-height: 100vh; border-radius: 0; } }
