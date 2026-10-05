@@ -39,7 +39,7 @@ interface DurableObjectState {
 }
 interface SocketMeta { role: "visitor" | "staff"; name: string }
 interface ChatMsg { id: string; role: "visitor" | "staff"; name: string; text: string; at: string }
-interface RoomMeta { roomId: string; desk: "leasing" | "maintenance"; visitorName: string; preview: string; at: string }
+interface RoomMeta { roomId: string; desk: "quotes" | "bookings"; visitorName: string; preview: string; at: string }
 
 const MODEL = "@cf/meta/llama-3.1-8b-instruct";
 const MAX_TEXT = 1500;
@@ -57,8 +57,8 @@ export default {
 
     if (url.pathname === "/api/rooms" && request.method === "POST") {
       const body = await readJson(request);
-      if (body.desk !== "leasing" && body.desk !== "maintenance") {
-        return json(request, { error: "Choose leasing or maintenance." }, 400);
+      if (body.desk !== "quotes" && body.desk !== "bookings") {
+        return json(request, { error: "Choose quotes or bookings." }, 400);
       }
       const desk = body.desk;
       const name = cleanName(body.name, "Visitor");
@@ -217,4 +217,3 @@ async function adminPage(env: Env, request: Request) {
   const html = await asset.text();
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' } });
 }
-
