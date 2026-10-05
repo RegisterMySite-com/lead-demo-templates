@@ -1,5 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-<head><meta charset="utf-8"><title>Ohana test</title></head>
-<body><p>close test</p></body>
-</html>
