@@ -51,6 +51,6 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 
 ## 2026-10-05
 - `ohana-properties` — Fullerton / North OC family PM rental board (duplex + 55+ condo from AppFolio), type/city filters, listing modal, on-page tour/apply form (no Worker, no chat)
-- `heredias-party-rentals` — filterable paginated party catalog (tables, chairs, tents, linens, flowers) + guest-count cart (Long Beach lead scan)
-- `pengs-smog-check` — STAR bay board + vehicle-class fee estimator and readiness checklist
-- `top-flight-mechanic` — mobile job builder with ZIP travel add-on and same-day windows
+- `heredias-party-rentals` — filterable paginated party catalog (tables, chairs, tents, linens, flowers) + guest-count cart (Long Beach lead scan), plus private office chat worker files (`chat/`; not live until deploy + data-origin)
+- `pengs-smog-check` — STAR bay board + vehicle-class fee estimator and readiness checklist, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
+- `top-flight-mechanic` — mobile job builder with ZIP travel add-on and same-day windows, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
