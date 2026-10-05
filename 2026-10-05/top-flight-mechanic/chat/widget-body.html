@@ -1,0 +1,29 @@
+<button type="button" id="tfm-launcher" aria-haspopup="dialog" aria-controls="tfm-chat">Message the office</button>
+<dialog id="tfm-chat" aria-labelledby="tfm-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="tfm-title">Top Flight Mechanic</h2>
+      <p class="meta" id="tfm-presence" style="margin:.15rem 0 0"><span class="dot" id="tfm-dot"></span><span id="tfm-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="tfm-close" style="color:#f7f8fa">Close</button>
+  </div>
+  <div class="body">
+    <div id="tfm-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="leasing"><strong>Leasing</strong><br><span class="meta">Ask about a repair job, a same-day window, or the travel add-on</span></button>
+      <button type="button" data-desk="maintenance"><strong>Maintenance</strong><br><span class="meta">Write Juan about a car that won't start or a repair already booked</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (562) 285-2634.</p>
+    </div>
+    <div id="tfm-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="tfm-back">Back</button>
+      <div id="tfm-log" class="log" aria-live="polite"></div>
+      <p id="tfm-typing" class="meta" hidden></p>
+      <form id="tfm-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="tfm-box">Message</label>
+        <input id="tfm-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>
