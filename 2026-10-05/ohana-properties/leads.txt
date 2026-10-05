@@ -1,0 +1,61 @@
+OHANA PROPERTIES — outreach demo research log
+Built: 2026-10-05 | Local: /tmp/ohana-demo/ | Repo: 2026-10-05/ohana-properties/
+
+=== VERIFIED FACTS (used on page) ===
+Brand: Ohana Properties A California Corporation
+Site: https://www.ohanaproperties.com/
+About: https://www.ohanaproperties.com/about_us
+Contact: https://www.ohanaproperties.com/contact
+Rentals feed: https://ohana.appfolio.com/listings
+Facebook: https://www.facebook.com/ohanaproperties (thin; only one post loaded)
+
+NAP (contact page):
+  Office: 813 N. Harbor Blvd., Fullerton, CA 92832
+  Mail: PO Box 5711, Fullerton, CA 92838
+  Phone: (714) 213-8493
+  Fax: (714) 869-3291 (still shown on contact page 2026-10-05)
+  Email: info@ohanaproperties.com
+
+About claim (site wording, used as site’s claim only):
+  “over the last 8 years Ohana has increased its managed inventory from 25 to 42 separate locations.”
+  Source: https://www.ohanaproperties.com/about_us
+
+DRE Corporation: License ID 01857592
+  Name: Ohana Properties A California Corporation
+  Issued: 01/09/2009 | Status: LICENSED | Comment: NO DISCIPLINARY ACTION
+  Designated Officer: 01848911 Sarracino, Kara Yvette
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01857592
+
+DRE Broker: License ID 01848911
+  Name: Sarracino, Kara Yvette (former name: Engemann, Kara Yvette)
+  Broker license issued: 07/16/2008 | Status: LICENSED | NO DISCIPLINARY ACTION
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01848911
+  Labeling: corporation DRE 01857592 vs broker DRE 01848911 kept separate on demo.
+
+Services (site): family-owned PM + sales; studios, small apartments, condos, duplexes, houses; Fullerton / North OC.
+
+Open rentals (AppFolio 2026-10-05): see listings.txt — 2 real units with real photos.
+
+=== LEFT OUT (do not print as facts on page) ===
+- info@mysite.com Dial-a-Dumpster template email on contact page (contact shows both dumpster template and info@ohanaproperties.com)
+- Years-in-business disputes: site “over 50 years”, Facebook “over 40 years”, DRE corp licensed since 01/09/2009 — years claims omitted from demo
+- LinkedIn Kara broker since Oct 2004 vs DRE broker July 2008 conflict — omitted
+- Yelp/Google star ratings and any review carousel — omitted
+- FAQ claim that vacancies go on the website immediately / SEO claims — omitted
+- Google listing hours — not on Ohana site; omitted
+- Site typos, © 2015 footer, dead blog, http portals, AppFolio widget blankness — pitch notes only, not page content
+- Fake AppFolio listing “OhanaApp / 123 Apply Here / $0” — excluded from inventory
+- Facebook Oct 9, 2025 Fullerton 4bd/2ba post — no pullable address/rent/photo; skipped
+- No Cloudflare Worker, no chat/ files, no trackers, no stock photos
+- Not a repeat of APG, JLE, Land-Lord, Good Steward, AllStar, or Nath layouts
+
+=== PITCH NOTES (for outreach copy, not page content) ===
+- Contact form email field polluted by Dial-a-Dumpster mysite.com template
+- Conflicting tenure claims (50 vs 40 vs DRE 2009)
+- Thin Facebook; AppFolio is the live inventory source
+- Demo shows a cleaner rental board matched to their real duplex/condo portfolio
+
+=== DEMO SCOPE ===
+Static HTML only under 2026-10-05/ohana-properties/
+Files: index.html, leads.txt, listings.txt, photos/*.js
+No Worker deploy; no chat; no contact to anyone
