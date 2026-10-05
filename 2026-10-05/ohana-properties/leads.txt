@@ -59,3 +59,6 @@ Open rentals (AppFolio 2026-10-05): see listings.txt — 2 real units with real 
 Static HTML only under 2026-10-05/ohana-properties/
 Files: index.html, leads.txt, listings.txt, photos/*.js
 No Worker deploy; no chat; no contact to anyone
+
+=== INDEX.HTML NOTE ===
+index.html on GitHub is a 10,600-byte gzip bootstrap: it client-side decompresses (DecompressionStream) to the full 23,929-byte demo page (exact local /tmp/ohana-demo/index.html). Photos are real AppFolio JPEG embeds in photos/*.js.
