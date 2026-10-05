@@ -1,0 +1,30 @@
+.ohp-demo-banner { right:auto; left:14px; }
+  #ohp-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #c45c3e; color: #fffaf3; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-weight: 650;
+  }
+  #ohp-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #1c2a2e; color: #f6f1e8;
+  }
+  #ohp-chat::backdrop { background: rgba(28,42,46,.55); }
+  #ohp-chat .bar { background: #0f5c63; color: #f6f1e8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #ohp-chat h2 { font-family: Inter, ui-sans-serif, system-ui, sans-serif; font-size: 1.05rem; margin: 0; }
+  #ohp-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  #ohp-chat button, #ohp-chat input, #ohp-chat textarea { font: inherit; }
+  #ohp-chat .choice { display: grid; gap: .45rem; }
+  #ohp-chat .choice button, #ohp-chat .quiet { background: #0a4248; color: #f6f1e8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #ohp-chat .go { background: #c45c3e; color: #fffaf3; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #ohp-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #ohp-chat .me, #ohp-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #ohp-chat .me { background: #0f5c63; justify-self: end; }
+  #ohp-chat .them { background: #1c2a2e; border: 1px solid rgba(255,255,255,.12); }
+  #ohp-chat .meta { color: #c5dedf; font-size: .75rem; }
+  #ohp-chat .row { display: flex; gap: .4rem; }
+  #ohp-chat input, #ohp-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #0a4248; color: inherit; }
+  #ohp-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #c5dedf; margin-right: .35rem; }
+  #ohp-chat .dot.on { background: #c45c3e; }
+  @media (max-width: 640px) { #ohp-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
