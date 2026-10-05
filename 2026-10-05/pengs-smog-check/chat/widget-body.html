@@ -1,0 +1,29 @@
+<button type="button" id="psc-launcher" aria-haspopup="dialog" aria-controls="psc-chat">Message the office</button>
+<dialog id="psc-chat" aria-labelledby="psc-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="psc-title">Peng's Smog Check Station</h2>
+      <p class="meta" id="psc-presence" style="margin:.15rem 0 0"><span class="dot" id="psc-dot"></span><span id="psc-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="psc-close" style="color:#f4f7f8">Close</button>
+  </div>
+  <div class="body">
+    <div id="psc-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="leasing"><strong>Leasing</strong><br><span class="meta">Ask about holding a bay window or getting a STAR smog test</span></button>
+      <button type="button" data-desk="maintenance"><strong>Maintenance</strong><br><span class="meta">Write the station about a failed test, a re-test, or repair paperwork</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (562) 424-2368.</p>
+    </div>
+    <div id="psc-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="psc-back">Back</button>
+      <div id="psc-log" class="log" aria-live="polite"></div>
+      <p id="psc-typing" class="meta" hidden></p>
+      <form id="psc-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="psc-box">Message</label>
+        <input id="psc-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>
