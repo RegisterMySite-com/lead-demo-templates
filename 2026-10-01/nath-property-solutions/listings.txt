@@ -1,0 +1,40 @@
+Nath Property Solutions — portfolio communities used on demo (verified 2026-10-05)
+
+1) The Beach House Apartments
+   Address: 1433 Superior Avenue, Newport Beach, CA 92663
+   Type: Multifamily apartment community
+   Site claim: 225 units (nathproperty.com/properties)
+   Microsite: https://www.rentthebeachhouseapts.com/
+   Notes: Cape Cod–style studios and one-bedrooms; microsite describes pools, spas, fitness, sauna, laundry, carports; pets not allowed (service animals accepted per microsite).
+   Photos: real microsite CDN (beach-house-1..3)
+
+2) Cedar Glen Apartment Homes
+   Address: 603 North Chippewa Avenue, Anaheim, CA 92801  ← microsite listing address
+   Type: Multifamily apartment community
+   Site claim: 235 units (nathproperty.com/properties)
+   Microsite: https://www.rentcedarglen.com/
+   Notes: Brand properties page lists ZIP 92805; microsite shows 92801 — conflict logged in leads.txt.
+   Photos: real microsite CDN (cedar-glen-1..3)
+
+3) Sand Castle Apartment Homes
+   Address: 900 West Lambert Road, La Habra, CA 90631
+   Type: Multifamily apartment community
+   Site claim: 121 units (nathproperty.com/properties)
+   Microsite: https://www.rentsandcastleapts.com/
+   Notes: Gated community; microsite describes pools/spas, fitness, laundry, garages; indoor cats.
+   Photos: real microsite CDN (sand-castle-1..3)
+
+4) Normandy Park Apartments
+   Address: 920 S. Nutwood St., Anaheim, CA 92804
+   Type: Multifamily apartment community
+   Site claim: 88 units (nathproperty.com/properties)
+   Photos: none downloadable → SVG “not a photo”
+
+5) Garden View Apartments
+   Address: 11930 Banner Dr., Garden Grove, CA 92843
+   Type: Multifamily apartment community
+   Site claim: 81 units (nathproperty.com/properties)
+   Photos: none downloadable → SVG “not a photo”
+
+NOT carded (listed on properties page but no pullable community gallery for this demo):
+Hummel Cottages; smaller multifamily on Citron/Lemon/Lincoln/etc.; single-family homes; commercial & industrial assets.
