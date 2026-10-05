@@ -106,5 +106,6 @@ items.forEach(t=>{const li=document.createElement("li");const cb=document.create
 function score(){const n=[...ul.querySelectorAll("input")].filter(i=>i.checked).length;document.getElementById("readyNote").textContent=n===items.length?"Looks ready for a STAR bay.":`${items.length-n} item(s) still open before the test.`;}
 score();
 </script>
+<script src="chat/widget.js"></script>
 </body>
 </html>
