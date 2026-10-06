@@ -1,0 +1,29 @@
+<button type="button" id="bpc-launcher" aria-haspopup="dialog" aria-controls="bpc-chat">Message the office</button>
+<dialog id="bpc-chat" aria-labelledby="bpc-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="bpc-title">Brockman Properties</h2>
+      <p class="meta" id="bpc-presence" style="margin:.15rem 0 0"><span class="dot" id="bpc-dot"></span><span id="bpc-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="bpc-close" style="color:#fffdf9">Close</button>
+  </div>
+  <div class="body">
+    <div id="bpc-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="leasing"><strong>Leasing</strong><br><span class="meta">Ask about a rental on this page, a tour, or applying through RentCafe</span></button>
+      <button type="button" data-desk="maintenance"><strong>Maintenance</strong><br><span class="meta">Write the office about a repair, or an owner or HOA question</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (562) 597-0676.</p>
+    </div>
+    <div id="bpc-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="bpc-back">Back</button>
+      <div id="bpc-log" class="log" aria-live="polite"></div>
+      <p id="bpc-typing" class="meta" hidden></p>
+      <form id="bpc-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="bpc-box">Message</label>
+        <input id="bpc-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>

@@ -1,0 +1,30 @@
+.bpc-demo-banner { right:auto; left:14px; }
+  #bpc-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #d4622b; color: #fffdf9; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #bpc-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #13294b; color: #fffdf9;
+  }
+  #bpc-chat::backdrop { background: rgba(19,41,75,.55); }
+  #bpc-chat .bar { background: #1d3b66; color: #fffdf9; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #bpc-chat h2 { font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif; font-size: 1.05rem; margin: 0; }
+  #bpc-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif; }
+  #bpc-chat button, #bpc-chat input, #bpc-chat textarea { font: inherit; }
+  #bpc-chat .choice { display: grid; gap: .45rem; }
+  #bpc-chat .choice button, #bpc-chat .quiet { background: #0f2240; color: #fffdf9; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #bpc-chat .go { background: #d4622b; color: #fffdf9; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #bpc-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #bpc-chat .me, #bpc-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #bpc-chat .me { background: #1d3b66; justify-self: end; }
+  #bpc-chat .them { background: #13294b; border: 1px solid rgba(255,255,255,.12); }
+  #bpc-chat .meta { color: #c9d6e6; font-size: .75rem; }
+  #bpc-chat .row { display: flex; gap: .4rem; }
+  #bpc-chat input, #bpc-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #0f2240; color: inherit; }
+  #bpc-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #c9d6e6; margin-right: .35rem; }
+  #bpc-chat .dot.on { background: #d4622b; }
+  @media (max-width: 640px) { #bpc-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
