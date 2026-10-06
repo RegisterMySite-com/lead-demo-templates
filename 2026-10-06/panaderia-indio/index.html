@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panaderia Indio | Buena Park pan dulce, cakes, and champurrado</title>
+<meta name="description" content="RegisterMySite demo for Panaderia Indio in Buena Park. Filterable pan dulce menu and pickup cart. Open daily 4 AM to 9 PM.">
+<style>
+:root{--terra:#b64b2a;--ink:#2b2118;--cream:#fbf6ee;--sage:#5e6b4a;--line:#eadfce;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,serif}
+a{color:inherit}button,input,select{font:inherit}
+.demo{background:var(--terra);color:#fff8f3;text-align:center;font:12px/1.4 ui-sans-serif,system-ui,sans-serif;padding:8px 14px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;position:sticky;top:0;background:#fbf6eeef;border-bottom:1px solid var(--line);z-index:4}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700}
+.brand small{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--sage)}
+.cta{background:var(--ink);color:#fff;text-decoration:none;padding:10px 14px;border-radius:999px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+.hero{padding:48px 6vw 12px;display:grid;grid-template-columns:1.4fr .6fr;gap:24px;align-items:end}
+h1{font-size:clamp(36px,5vw,58px);line-height:.96;margin:0 0 10px}
+.lede{font-size:18px;line-height:1.45;max-width:40rem}
+.hours{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+section{padding:20px 6vw}h2{margin:0 0 6px}
+.sub{font-family:ui-sans-serif,system-ui,sans-serif;color:#6e6256;margin:0 0 12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filters button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px}
+.filters button.on{background:var(--terra);color:#fff;border-color:var(--terra)}
+.layout{display:grid;grid-template-columns:1fr 280px;gap:16px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.item button{margin-top:8px;background:var(--sage);color:#fff;border:0;border-radius:999px;padding:7px 12px;cursor:pointer}
+.cart{background:#2b2118;color:#fbf6ee;border-radius:16px;padding:14px;font-family:ui-sans-serif,system-ui,sans-serif}
+.cart li{display:flex;justify-content:space-between;gap:8px;font-size:13px;margin:6px 0}
+.apps{display:flex;gap:8px;margin-top:10px}
+.apps span{border:1px dashed #c9b59a;border-radius:999px;padding:6px 8px;font-size:12px}
+footer{margin-top:24px;background:#2b2118;color:#fbf6ee;padding:28px 6vw;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px}
+footer a{color:#f3d2c4}.fine{grid-column:1/-1;color:#cbb8a4;font-size:12px}
+@media(max-width:800px){.hero,.layout,.menu,footer{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="demo">RegisterMySite demo — not the live Panaderia Indio site. Menu prices are sample figures. The cart is a pickup list, not a live DoorDash or Uber Eats order.</div>
+<nav>
+  <div class="brand">
+    <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="8" fill="#b64b2a"/><ellipse cx="18" cy="20" rx="10" ry="7" fill="#f4d7a8"/><path d="M10 18c2-6 14-6 16 0" fill="none" stroke="#5e6b4a" stroke-width="2"/><circle cx="14" cy="19" r="1.2" fill="#b64b2a"/><circle cx="18" cy="18" r="1.2" fill="#b64b2a"/><circle cx="22" cy="19" r="1.2" fill="#b64b2a"/></svg>
+    <div>Panaderia Indio<small>Buena Park · since 1994</small></div>
+  </div>
+  <a class="cta" href="tel:+17145224112">Call (714) 522-4112</a>
+</nav>
+<header class="hero">
+  <div>
+    <h1>Conchas at 4 AM. Cakes when the tray is still warm.</h1>
+    <p class="lede">Pan dulce, empanadas, jalapeño-cheese bolillos, cakes, flan and gelatinas, and champurrado. Commonwealth Avenue, open every day from 4 in the morning until 9 at night.</p>
+  </div>
+  <div class="hours">
+    <strong>Open daily 4:00 AM – 9:00 PM</strong>
+    <p>Google 4.5 · 250 reviews<br>Yelp 4.5 · 25 reviews</p>
+    <p>8204 Commonwealth Ave, Buena Park, CA 90621</p>
+  </div>
+</header>
+<section>
+  <h2>Pickup menu</h2>
+  <p class="sub">Filter the case, page through the tray, and build a pickup cart. A production site can hand the same cart to DoorDash or Uber Eats. This demo only totals the case.</p>
+  <div class="filters" id="filters"></div>
+  <div class="layout">
+    <div>
+      <div class="menu" id="menu"></div>
+      <div class="filters" id="pager" style="margin-top:12px"></div>
+    </div>
+    <aside class="cart">
+      <strong>Pickup cart</strong>
+      <ul id="lines"></ul>
+      <p id="total"></p>
+      <div class="apps"><span>DoorDash — later</span><span>Uber Eats — later</span></div>
+      <p>Call the counter to hold a cake. No public email was verified in the lead scan.</p>
+    </aside>
+  </div>
+</section>
+<footer>
+  <div>
+    <strong>Panaderia Indio</strong>
+    <p>Panaderia Indio Inc.<br>8204 Commonwealth Ave<br>Buena Park, CA 90621</p>
+  </div>
+  <div>
+    <p><a href="tel:+17145224112">(714) 522-4112</a></p>
+    <p>Email not published in the lead scan.</p>
+    <p>Google 4.5 / 250 · Restaurantji 4.4 / 77 · Yelp 4.5 / 25</p>
+  </div>
+  <div>
+    <p><a href="https://www.facebook.com/226138411525199">Facebook</a></p>
+    <p>Directory listing names Maria Robles as owner; that identity was not verified.</p>
+  </div>
+  <p class="fine">RegisterMySite demo generated 6 Oct 2026 from the daily website-lead scan. Google’s website field points at the OC Register events calendar, not this bakery. Sample prices are not a quote.</p>
+</footer>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Bakery","name":"Panaderia Indio","telephone":"+1-714-522-4112","address":{"@type":"PostalAddress","streetAddress":"8204 Commonwealth Ave","addressLocality":"Buena Park","addressRegion":"CA","postalCode":"90621"},"openingHours":"Mo-Su 04:00-21:00","sameAs":["https://www.facebook.com/226138411525199"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"250"}}
+</script>
+<script>
+const items=[
+  {cat:"Pan dulce",name:"Concha",price:1.75},
+  {cat:"Pan dulce",name:"Cuerno",price:1.75},
+  {cat:"Pan dulce",name:"Oreja",price:1.85},
+  {cat:"Pan dulce",name:"Polvorón",price:1.65},
+  {cat:"Pan dulce",name:"Mantecada",price:2.1},
+  {cat:"Savory",name:"Jalapeño-cheese bolillo",price:2.5},
+  {cat:"Savory",name:"Empanada de pollo",price:3.25},
+  {cat:"Savory",name:"Empanada de calabaza",price:2.75},
+  {cat:"Cakes",name:"Tres leches, slice",price:4.5},
+  {cat:"Cakes",name:"Half sheet, vanilla",price:42},
+  {cat:"Sweets",name:"Flan",price:3.5},
+  {cat:"Sweets",name:"Gelatina cup",price:2.25},
+  {cat:"Drinks",name:"Champurrado",price:3},
+  {cat:"Drinks",name:"Café de olla",price:2.5}
+];
+const cats=["All","Pan dulce","Savory","Cakes","Sweets","Drinks"];
+let cat="All", page=0, cart={};
+const per=4;
+const filters=document.getElementById("filters");
+cats.forEach(c=>{
+  const b=document.createElement("button");
+  b.textContent=c; if(c==="All") b.className="on";
+  b.onclick=()=>{cat=c; page=0; [...filters.children].forEach(x=>x.classList.remove("on")); b.classList.add("on"); draw();};
+  filters.appendChild(b);
+});
+function list(){return items.filter(i=>cat==="All"||i.cat===cat)}
+function draw(){
+  const rows=list();
+  const slice=rows.slice(page*per,page*per+per);
+  document.getElementById("menu").innerHTML=slice.map((i)=>`<article class="item"><strong>${i.name}</strong><div>${i.cat} · $${i.price.toFixed(2)}</div><button data-name="${i.name}">Add</button></article>`).join("");
+  document.querySelectorAll("#menu button").forEach(b=>b.onclick=()=>{cart[b.dataset.name]=(cart[b.dataset.name]||0)+1; sum();});
+  const pages=Math.max(1,Math.ceil(rows.length/per));
+  document.getElementById("pager").innerHTML=Array.from({length:pages},(_,n)=>`<button class="${n===page?"on":""}" data-p="${n}">${n+1}</button>`).join(" ");
+  document.querySelectorAll("#pager button").forEach(b=>b.onclick=()=>{page=+b.dataset.p; draw();});
+}
+function sum(){
+  let dollars=0; const lines=[];
+  Object.entries(cart).forEach(([name,qty])=>{
+    const item=items.find(i=>i.name===name);
+    const line=item.price*qty; dollars+=line;
+    lines.push(`<li><span>${qty} × ${name}</span><span>$${line.toFixed(2)}</span></li>`);
+  });
+  document.getElementById("lines").innerHTML=lines.join("")||"<li><span>Cart is empty</span><span></span></li>";
+  document.getElementById("total").textContent=`Pickup total $${dollars.toFixed(2)}`;
+}
+draw(); sum();
+</script>
+</body>
+</html>

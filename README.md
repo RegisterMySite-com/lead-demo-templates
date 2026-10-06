@@ -54,3 +54,8 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `heredias-party-rentals` — filterable paginated party catalog (tables, chairs, tents, linens, flowers) + guest-count cart (Long Beach lead scan), plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `pengs-smog-check` — STAR bay board + vehicle-class fee estimator and readiness checklist, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `top-flight-mechanic` — mobile job builder with ZIP travel add-on and same-day windows, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
+
+## 2026-10-06
+- `kaos-tv-repair` — symptom triage (brand, size, fault) + diagnostic visit estimate, loaner flag, and same-day windows
+- `thuy-bridal-florist` — filterable paginated wedding package builder (flowers, draping, tea ceremony, gowns, rentals) + guest-count cart
+- `panaderia-indio` — filterable paginated pan dulce menu + pickup cart marked for a later DoorDash / Uber Eats handoff
