@@ -1,0 +1,29 @@
+<button type="button" id="pin-launcher" aria-haspopup="dialog" aria-controls="pin-chat">Message the office</button>
+<dialog id="pin-chat" aria-labelledby="pin-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="pin-title">Panaderia Indio</h2>
+      <p class="meta" id="pin-presence" style="margin:.15rem 0 0"><span class="dot" id="pin-dot"></span><span id="pin-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="pin-close" style="color:#fff8f3;background:transparent;border-color:rgba(255,255,255,.35)">Close</button>
+  </div>
+  <div class="body">
+    <div id="pin-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="orders"><strong>Orders</strong><br><span class="meta">Ask about a cake, a tray of pan dulce, or holding an order</span></button>
+      <button type="button" data-desk="pickup"><strong>Pickup</strong><br><span class="meta">Write the counter about a pickup already held or a question at the case</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (714) 522-4112.</p>
+    </div>
+    <div id="pin-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="pin-back">Back</button>
+      <div id="pin-log" class="log" aria-live="polite"></div>
+      <p id="pin-typing" class="meta" hidden></p>
+      <form id="pin-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="pin-box">Message</label>
+        <input id="pin-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>
