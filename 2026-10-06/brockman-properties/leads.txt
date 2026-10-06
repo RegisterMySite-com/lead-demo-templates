@@ -1,0 +1,46 @@
+Lead: Brockman Properties Corporation (Long Beach, CA)
+Lead date: Tuesday, October 6, 2026 (from Leads Bot Realters, PM lead file leads-pm-2026-10-06.md)
+Demo built: October 6, 2026 (PT) by Leads-Build Bot
+Folder: 2026-10-06/brockman-properties
+Lead type: Small Long Beach property and association (HOA) manager with mixed residential, association, commercial, and industrial work. Built as a small-portfolio rental board plus owner/HOA services, not a single-home sales site and not a large apartment-brand template.
+
+BUSINESS FACTS USED ON THE PAGE (all opened and checked 10/6/2026)
+- Legal name: Brockman Properties Corporation. CA DRE corporation license 02117384, LICENSED, issued 05/18/20, expires 05/17/28. Main office 3720 E Anaheim St Ste 201, Long Beach, CA 90804.
+  https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=02117384 (pulled 10/6/2026 8:41 AM PT)
+- Designated officer: Michael Frank Chekian, broker DRE 01087448, LICENSED, expires 11/17/29. (Personal broker license, labeled separately from the corporation number.)
+  https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01087448 (pulled 10/6/2026 8:41 AM PT)
+- Phone (562) 597-0676, owner inquiries ext. 2. Office hours Mon-Fri 8:00am-5:00pm, closed 12-1. Address 3720 East Anaheim St. Suite 201, Long Beach, CA 90804.
+  https://www.brockmanproperties.com/contact-us.html
+- Emails shown: vacancies@brockmanprop.com and maintenance@brockmanprop.com (decoded from the site's Cloudflare-protected links). Staff names Alyceanne Nunn and Yadhira Espericueta are also from the contact page.
+- "Residential, association, commercial, and industrial property management," "purposefully a small company," husband and wife owners, office staff Alyceanne, maintenance men Mike and Andy, "500+ units that we currently manage," "premier rentals in Long Beach since 1978."
+  https://www.brockmanproperties.com/
+- Renter process from the FAQ: vacant units viewed Mon-Fri 8:30am-4:30pm, keys picked up at the office (upstairs in the back, between Termino and Redondo Ave), applications through RentCafe, $40 nonrefundable fee per applicant over 18 and/or with a different last name, about 24-48 hours to process, move-in funds by cashier's check or money order, "No pets allowed - cats only at certain properties."
+  https://www.brockmanproperties.com/faq.html
+
+LISTINGS (3 cards, so no pagination)
+1) 305 Coronado Ave, Unit 16, Long Beach, CA 90814. 1 bed / 1 bath apartment, $2,095/mo, deposit $2,095, available now. Hardwood floors, faux wood blinds, large closets, stainless appliances, onsite laundry, near 2nd Street. RentCafe pet note: cats and dogs that meet community criteria. Manager named on RentCafe: Brockman Properties Corporation. RentCafe leasing line (562) 442-9452 was NOT used on the page; the page uses the main office number.
+   https://www.rentcafe.com/apartments/ca/long-beach/305-coronado/default.aspx (opened 10/6/2026 ~8:39 AM PT)
+   Brockman Listings page also shows "305 Coronado Avenue - 1 bedroom $2,095/ month": https://www.brockmanproperties.com/listings.html
+   Photos (4): loaded directly from the RentCafe listing's image CDN, https://cdngeneral.rentcafe.com/dmslivecafe/3/2270710/ (IMG_1511, IMG_1504_1, IMG_1505, IMG_1507; all returned HTTP 200 on 10/6/2026). A fifth near-duplicate exterior shot was dropped. If RentCafe rotates these files, the cards fall back to empty frames, so swap in owner-supplied photos for a live build.
+2) 305 Coronado Ave, studio plan. Studio / 1 bath from $1,795 on RentCafe, but no studio unit is shown as available, so it is presented as an interest-list card with an SVG floor-plan illustration (no photo).
+3) 235 1/2 6th St, Seal Beach, CA 90740. 3-bedroom townhouse, $4,495/mo, from the Brockman Listings page link text "235 6th Street- 3 bedroom- $4,495/ month" (its link points to Zillow zpid 2098363731 at 235-1-2-6th-St-Seal-Beach-CA-90740). No photos could be opened (Zillow and Trulia both returned 403 to the box), so the card uses an SVG illustration marked "Photos on request." Bath count is left as "ask office" because sources disagree (Trulia facts 2.5 vs. description 3, per Leads Bot research I could not re-open).
+   Note: Leads Bot found Trulia showing $4,395 (reduced from $4,495) with one month free on a 12-month lease. I could not open Trulia today, so the page uses Brockman's own posted $4,495. Mention the stale price in the pitch.
+
+OTHER IMAGE
+- Hero skyline photo: https://www.brockmanproperties.com/files/theme/slide1.jpg (from the Brockman site's own theme), loaded directly from that URL.
+- Logo: a new SVG mark (house with an orange door and a wave). The Brockman site logo was not reused.
+
+REVIEWS
+- No review carousel. The only review profile I could open was Nextdoor (https://nextdoor.com/pages/brockman-properties-long-beach-ca/), and its recommendations feed returned no recommendations. Yelp (https://www.yelp.com/biz/brockman-properties-long-beach) returned 403. Google reviews were only seen through a third-party aggregator in Leads Bot's research and were not opened here. No review quotes or star ratings were invented.
+- Shown instead: the RentCafe company rating printed on the 305 Coronado listing, 4.0 from 34 reviews (staff 4.5, location 4.5, maintenance 4.0, value 4.0), linked to that listing.
+
+LEFT OUT ON PURPOSE
+- jill@brockmanprop.com (Nextdoor only), alyceanne@ and yadhira@ personal addresses, the AACSC fax number (snippet only), and the RentCafe leasing number.
+- Unconfirmed officer roles (Erin B. Chekian / Michael F. Chekian SOS roles), the predecessor Brockman Properties, Inc. (DRE 00804389, expired), and the attorney background.
+- Anything from https://brockman-redesign.vercel.app/ (a third-party mock-up with data that doesn't match Brockman's real listings). Heads-up: someone else may already be pitching them.
+
+PAGE BEHAVIOR
+- Filters: area chips (Long Beach / Seal Beach), type, beds, and "available now," with a live result count and reset.
+- More-info modal: photo stage with previous/next, thumbnails, arrow keys, facts, source line, and Schedule a tour / Apply now buttons.
+- Form: Schedule a tour (weekday-only date check and viewing windows), Apply now (explains RentCafe application path), and Owner or HOA. Demo only, nothing is sent, and it warns visitors not to enter SSN or license numbers.
+- Static, no Worker or chat yet. Ready for Project-Scaffold to add the two-way Cloudflare chat and the branded support specialist.

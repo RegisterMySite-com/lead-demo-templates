@@ -59,3 +59,4 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `kaos-tv-repair` — symptom triage (brand, size, fault) + diagnostic visit estimate, loaner flag, and same-day windows
 - `thuy-bridal-florist` — filterable paginated wedding package builder (flowers, draping, tea ceremony, gowns, rentals) + guest-count cart
 - `panaderia-indio` — filterable paginated pan dulce menu + pickup cart marked for a later DoorDash / Uber Eats handoff
+- `brockman-properties` — Long Beach PM and HOA office rental board (Long Beach apartment from RentCafe, Seal Beach townhouse, studio interest list), area/type/beds/available-now filters, photo modal, tour/apply/owner form (no Worker, no chat yet; no review carousel because no openable review profile had reviews)
