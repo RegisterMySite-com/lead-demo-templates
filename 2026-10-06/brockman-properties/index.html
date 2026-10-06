@@ -377,7 +377,7 @@ dialog::backdrop{background:rgba(12,24,44,.6)}
 
   function money(n){ return "$" + n.toLocaleString("en-US"); }
   function bedTxt(l){ return l.beds===0 ? "Studio" : l.beds + " bd"; }
-  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&","<":"<",">":">",'"':"""}[c];}); }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"\x26amp;","<":"\x26lt;",">":"\x26gt;",'"':"\x26quot;"}[c];}); }
   function cover(l){ return l.photos.length && P[l.photos[0]] ? '<img src="'+P[l.photos[0]]+'" alt="'+esc(l.title)+'" loading="lazy">' : l.svg; }
 
   function render(){
