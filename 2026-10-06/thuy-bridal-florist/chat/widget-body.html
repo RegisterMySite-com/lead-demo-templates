@@ -1,0 +1,29 @@
+<button type="button" id="tbf-launcher" aria-haspopup="dialog" aria-controls="tbf-chat">Message the office</button>
+<dialog id="tbf-chat" aria-labelledby="tbf-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="tbf-title">Thuy Bridal &amp; Florist</h2>
+      <p class="meta" id="tbf-presence" style="margin:.15rem 0 0"><span class="dot" id="tbf-dot"></span><span id="tbf-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="tbf-close" style="color:#fbf6f2;background:transparent;border-color:rgba(255,255,255,.35)">Close</button>
+  </div>
+  <div class="body">
+    <div id="tbf-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="consultations"><strong>Consultations</strong><br><span class="meta">Ask about wedding or quince flowers, draping, a tea ceremony, or gowns</span></button>
+      <button type="button" data-desk="bookings"><strong>Bookings</strong><br><span class="meta">Write Thuy and Danh about an event already booked, a fitting, or a rental</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (714) 839-6588.</p>
+    </div>
+    <div id="tbf-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="tbf-back">Back</button>
+      <div id="tbf-log" class="log" aria-live="polite"></div>
+      <p id="tbf-typing" class="meta" hidden></p>
+      <form id="tbf-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="tbf-box">Message</label>
+        <input id="tbf-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>

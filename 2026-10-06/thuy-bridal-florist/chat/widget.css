@@ -1,0 +1,30 @@
+#tbf-launcher {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+  background: #6e2436; color: #fbf6f2; border: 0; border-radius: 999px;
+  padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 650;
+}
+#tbf-chat {
+  width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+  border: none; border-radius: 14px; padding: 0; background: #2a1b1e; color: #fbf6f2;
+}
+#tbf-chat::backdrop { background: rgba(0,0,0,.55); }
+#tbf-chat .bar { background: #6e2436; color: #fbf6f2; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+#tbf-chat .bar .meta { color: #fbf6f2; opacity: .85; }
+#tbf-chat h2 { font-family: "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.05rem; margin: 0; }
+#tbf-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+#tbf-chat button, #tbf-chat input, #tbf-chat textarea { font: inherit; }
+#tbf-chat .choice { display: grid; gap: .45rem; }
+#tbf-chat .choice button, #tbf-chat .quiet { background: #3a262b; color: #fbf6f2; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+#tbf-chat .go { background: #6e2436; color: #fbf6f2; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+#tbf-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+#tbf-chat .me, #tbf-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+#tbf-chat .me { background: #8a3a4c; color: #fff; justify-self: end; }
+#tbf-chat .them { background: #3a262b; border: 1px solid rgba(255,255,255,.12); }
+#tbf-chat .meta { color: #f0d3c4; font-size: .75rem; }
+#tbf-chat .row { display: flex; gap: .4rem; }
+#tbf-chat input, #tbf-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #3a262b; color: inherit; }
+#tbf-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #b08958; margin-right: .35rem; }
+#tbf-chat .dot.on { background: #4ade80; }
+#tbf-chat [hidden] { display: none !important; }
+@media (max-width: 640px) { #tbf-chat { width: 100vw; height: 100vh; max-height: 100vh; border-radius: 0; } }
