@@ -9,30 +9,31 @@ BUSINESS FACTS USED ON THE PAGE (all opened and checked 10/6/2026)
   https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=02117384 (pulled 10/6/2026 8:41 AM PT)
 - Designated officer: Michael Frank Chekian, broker DRE 01087448, LICENSED, expires 11/17/29. (Personal broker license, labeled separately from the corporation number.)
   https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=01087448 (pulled 10/6/2026 8:41 AM PT)
-- Phone (562) 597-0676, owner inquiries ext. 2. Office hours Mon-Fri 8:00am-5:00pm, closed 12-1. Address 3720 East Anaheim St. Suite 201, Long Beach, CA 90804.
+- Phone (562) 597-0676, owner inquiries ext. 2. (Office hours removed from the page in the 10/6 fix; see FIX LOG.) Address 3720 East Anaheim St. Suite 201, Long Beach, CA 90804.
   https://www.brockmanproperties.com/contact-us.html
-- Emails shown: vacancies@brockmanprop.com and maintenance@brockmanprop.com (decoded from the site's Cloudflare-protected links). Staff names Alyceanne Nunn and Yadhira Espericueta are also from the contact page.
+- Emails on Brockman's site use the brockmanprop.com domain (decoded from Cloudflare-protected links). NOT used on the page: that domain is a GoDaddy parking page expiring 12/16 (see FIX LOG). Staff names Alyceanne Nunn and Yadhira Espericueta are also from the contact page.
 - "Residential, association, commercial, and industrial property management," "purposefully a small company," husband and wife owners, office staff Alyceanne, maintenance men Mike and Andy, "500+ units that we currently manage," "premier rentals in Long Beach since 1978."
   https://www.brockmanproperties.com/
-- Renter process from the FAQ: vacant units viewed Mon-Fri 8:30am-4:30pm, keys picked up at the office (upstairs in the back, between Termino and Redondo Ave), applications through RentCafe, $40 nonrefundable fee per applicant over 18 and/or with a different last name, about 24-48 hours to process, move-in funds by cashier's check or money order, "No pets allowed - cats only at certain properties."
+- Renter process from the FAQ: keys picked up at the office (upstairs in the back, between Termino and Redondo Ave), applications through RentCafe, $40 nonrefundable fee per applicant over 18 and/or with a different last name, about 24-48 hours to process, move-in funds by cashier's check or money order, "No pets allowed - cats only at certain properties."
   https://www.brockmanproperties.com/faq.html
 
 LISTINGS (3 cards, so no pagination)
 1) 305 Coronado Ave, Unit 16, Long Beach, CA 90814. 1 bed / 1 bath apartment, $2,095/mo, deposit $2,095, available now. Hardwood floors, faux wood blinds, large closets, stainless appliances, onsite laundry, near 2nd Street. RentCafe pet note: cats and dogs that meet community criteria. Manager named on RentCafe: Brockman Properties Corporation. RentCafe leasing line (562) 442-9452 was NOT used on the page; the page uses the main office number.
    https://www.rentcafe.com/apartments/ca/long-beach/305-coronado/default.aspx (opened 10/6/2026 ~8:39 AM PT)
    Brockman Listings page also shows "305 Coronado Avenue - 1 bedroom $2,095/ month": https://www.brockmanproperties.com/listings.html
-   Photos (4): loaded directly from the RentCafe listing's image CDN, https://cdngeneral.rentcafe.com/dmslivecafe/3/2270710/ (IMG_1511, IMG_1504_1, IMG_1505, IMG_1507; all returned HTTP 200 on 10/6/2026). A fifth near-duplicate exterior shot was dropped. If RentCafe rotates these files, the cards fall back to empty frames, so swap in owner-supplied photos for a live build.
+   Photos (4): taken from the RentCafe listing's image CDN, https://cdngeneral.rentcafe.com/dmslivecafe/3/2270710/ (IMG_1511, IMG_1504_1, IMG_1505, IMG_1507; all returned HTTP 200 on 10/6/2026), and now stored in the repo as photos/coronado-1.js to coronado-4.js (see FIX LOG), so nothing is hotlinked. A fifth near-duplicate exterior shot was dropped. Swap in owner-supplied photos for a live build.
 2) 305 Coronado Ave, studio plan. Studio / 1 bath from $1,795 on RentCafe, but no studio unit is shown as available, so it is presented as an interest-list card with an SVG floor-plan illustration (no photo).
-3) 235 1/2 6th St, Seal Beach, CA 90740. 3-bedroom townhouse, $4,495/mo, from the Brockman Listings page link text "235 6th Street- 3 bedroom- $4,495/ month" (its link points to Zillow zpid 2098363731 at 235-1-2-6th-St-Seal-Beach-CA-90740). No photos could be opened (Zillow and Trulia both returned 403 to the box), so the card uses an SVG illustration marked "Photos on request." Bath count is left as "ask office" because sources disagree (Trulia facts 2.5 vs. description 3, per Leads Bot research I could not re-open).
-   Note: Leads Bot found Trulia showing $4,395 (reduced from $4,495) with one month free on a 12-month lease. I could not open Trulia today, so the page uses Brockman's own posted $4,495. Mention the stale price in the pitch.
+   Re-checked 10/6/2026 ~8:53 AM PT: https://www.rentcafe.com/apartments/ca/long-beach/305-coronado/default.aspx , "Floor plans" section, lists "Studio, 1 Bathroom - Studio / 1 Bath - $1,795 - Check for available units" (no studio unit row; header shows Base rent $1,795 - $2,095, Beds Studio-1). Brockman's own Listings page shows only the 1-bedroom. Card kept, labeled Interest list, no unit available.
+3) 235 1/2 6th St, Seal Beach, CA 90740. 3-bedroom townhouse. NOW SHOWN AT $4,395/mo with one month free (source: Trulia, reported by lead research 10/6/2026). Originally built at $4,495/mo from the Brockman Listings page link text "235 6th Street- 3 bedroom- $4,495/ month" (its link points to Zillow zpid 2098363731 at 235-1-2-6th-St-Seal-Beach-CA-90740). No photos could be opened (Zillow and Trulia both returned 403 to the box), so the card uses an SVG illustration labeled "Illustration - not a photo." Bath count is left as "ask office" because sources disagree (Trulia facts 2.5 vs. description 3, per Leads Bot research I could not re-open).
+   Note: Leads Bot found Trulia showing $4,395 (reduced from $4,495) with one month free on a 12-month lease. The page now uses $4,395 + one month free (see FIX LOG). Brockman's own Listings page still says $4,495 as of 10/6, so mention the stale price in the pitch.
 
 OTHER IMAGE
-- Hero skyline photo: https://www.brockmanproperties.com/files/theme/slide1.jpg (from the Brockman site's own theme), loaded directly from that URL.
+- Hero skyline photo: https://www.brockmanproperties.com/files/theme/slide1.jpg (from the Brockman site's own theme). Now stored in the repo as photos/hero-long-beach.js (see FIX LOG).
 - Logo: a new SVG mark (house with an orange door and a wave). The Brockman site logo was not reused.
 
 REVIEWS
 - No review carousel. The only review profile I could open was Nextdoor (https://nextdoor.com/pages/brockman-properties-long-beach-ca/), and its recommendations feed returned no recommendations. Yelp (https://www.yelp.com/biz/brockman-properties-long-beach) returned 403. Google reviews were only seen through a third-party aggregator in Leads Bot's research and were not opened here. No review quotes or star ratings were invented.
-- Shown instead: the RentCafe company rating printed on the 305 Coronado listing, 4.0 from 34 reviews (staff 4.5, location 4.5, maintenance 4.0, value 4.0), linked to that listing.
+- Shown instead: the RentCafe company rating printed on the 305 Coronado listing, 4.0 from 34 reviews (staff 4.5, location 4.5, maintenance 4.0, value 4.0), linked to that listing. Re-opened 10/6/2026 ~8:53 AM PT: still "4.0 Company rating, 34 Reviews" (Staff 4.5, Location 4.5, Maintenance 4.0, Value 4.0), so it stays with its link.
 
 LEFT OUT ON PURPOSE
 - jill@brockmanprop.com (Nextdoor only), alyceanne@ and yadhira@ personal addresses, the AACSC fax number (snippet only), and the RentCafe leasing number.
@@ -42,5 +43,20 @@ LEFT OUT ON PURPOSE
 PAGE BEHAVIOR
 - Filters: area chips (Long Beach / Seal Beach), type, beds, and "available now," with a live result count and reset.
 - More-info modal: photo stage with previous/next, thumbnails, arrow keys, facts, source line, and Schedule a tour / Apply now buttons.
-- Form: Schedule a tour (weekday-only date check and viewing windows), Apply now (explains RentCafe application path), and Owner or HOA. Demo only, nothing is sent, and it warns visitors not to enter SSN or license numbers.
+- Form: Schedule a tour (plain preferred date and preferred time fields; the old weekday-only check and hour windows were removed 10/6), Apply now (explains RentCafe application path), and Owner or HOA. Demo only, nothing is sent, and it warns visitors not to enter SSN or license numbers.
 - Static, no Worker or chat yet. Ready for Project-Scaffold to add the two-way Cloudflare chat and the branded support specialist.
+
+FIX LOG - October 6, 2026 (PT), fix pass on commit 945c0435
+1) Removed vacancies@brockmanprop.com everywhere (contact block, footer, mailto links). Also removed maintenance@brockmanprop.com, since it is on the same domain. Why: brockmanprop.com is a GoDaddy parking page that expires 12/16. Contact paths on the page are now only the phone (562) 597-0676 and RentCafe. The office address (3720 E Anaheim St, Suite 201, Long Beach, CA 90804) stays. The page has no JSON-LD block, so nothing to change there.
+2) Removed all hours: office hours (Mon-Fri 8-5, closed 12-1) from the top bar and footer, the vacant-unit viewing hours (Mon-Fri 8:30-4:30) from the top bar and renter steps, and "Monday through Friday" from the approval-time step. Why: the site, Nextdoor, and Birdeye disagree. The tour form no longer checks for weekdays only. The fixed time windows are gone, and it now has plain "Preferred date" and "Preferred time" fields.
+3) Seal Beach 235 1/2 6th St: rent changed from $4,495 to $4,395 with one month free, shown on the card, the modal (new "Special" row), and the listings note. $4,495 no longer appears on the page (there is no price filter). Source: Trulia, reported by lead research 10/6/2026. Could not verify live: on 10/6 Trulia and Zillow both returned 403 to curl and to the fetch tool. A search-engine snapshot of the Trulia page was older (Trulia estimate "as of May 14, 2025"). It showed the home OFF MARKET and the last rental price as $4,495 (2/24/2023), so the $4,395 figure rests only on lead research. Confirm it before the pitch.
+4) Studio interest-list card for 305 Coronado KEPT. The studio floor plan is on RentCafe at https://www.rentcafe.com/apartments/ca/long-beach/305-coronado/default.aspx ("Floor plans" section: "Studio, 1 Bathroom / Studio / 1 Bath / $1,795 / Check for available units"). It is still labeled Interest list, with no unit available. Count stays at 3 listings, and the Studio bed filter stays.
+5) Photos moved into the repo. Each image was downloaded with curl on 10/6 and recompressed with ffmpeg (scale=480:-2, q:v 16). Each ships as photos/<id>.js, which sets window.LEAD_PHOTOS[id] to a base64 JPEG data URL. index.html loads those scripts and reads window.LEAD_PHOTOS, and it no longer hotlinks anything:
+   - hero-long-beach.js <- https://www.brockmanproperties.com/files/theme/slide1.jpg
+   - coronado-1.js <- https://cdngeneral.rentcafe.com/dmslivecafe/3/2270710/IMG_1511(20260327123248989).jpeg
+   - coronado-2.js <- .../unittype_11_2025_IMG_1504_1_(20260327123257045).jpeg
+   - coronado-3.js <- .../unittype_11_2025_IMG_1505(20260327123255303).jpeg
+   - coronado-4.js <- .../unittype_11_2025_IMG_1507(20260327123256038).jpeg
+   Seal Beach stays an SVG illustration, now labeled "Illustration - not a photo". Brockman's own site has no photo of that unit (its Listings link points to Zillow).
+6) RentCafe company rating: re-opened 10/6, still 4.0 from 34 reviews, so it stays with its link. There is still no review carousel.
+7) Upload note: files were uploaded one at a time with create_or_update_file and checked against the local byte size and git blob SHA. coronado-1.js came back 4 bytes short on the first try (19569 vs 19573) and matched on the retry. index.html's first upload had its HTML entities decoded in transit (38468 vs 38495 bytes; it broke the esc() helper). The source was changed to avoid entity text (a plain "&" in headings and \x26 escapes in the esc() helper), and the retry matched exactly.
