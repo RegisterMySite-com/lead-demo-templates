@@ -1,0 +1,29 @@
+<button type="button" id="ktv-launcher" aria-haspopup="dialog" aria-controls="ktv-chat">Message the office</button>
+<dialog id="ktv-chat" aria-labelledby="ktv-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="ktv-title">Kao's TV Repair Service</h2>
+      <p class="meta" id="ktv-presence" style="margin:.15rem 0 0"><span class="dot" id="ktv-dot"></span><span id="ktv-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="ktv-close" style="color:#14110c;background:transparent;border-color:rgba(255,255,255,.35)">Close</button>
+  </div>
+  <div class="body">
+    <div id="ktv-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="visits"><strong>Visits</strong><br><span class="meta">Ask about a house call, the diagnostic visit estimate, or a same-day window</span></button>
+      <button type="button" data-desk="repairs"><strong>Repairs</strong><br><span class="meta">Write Todd about a set already in for repair, parts on order, or a loaner</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (949) 246-8488.</p>
+    </div>
+    <div id="ktv-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="ktv-back">Back</button>
+      <div id="ktv-log" class="log" aria-live="polite"></div>
+      <p id="ktv-typing" class="meta" hidden></p>
+      <form id="ktv-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="ktv-box">Message</label>
+        <input id="ktv-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>

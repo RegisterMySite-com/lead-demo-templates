@@ -1,0 +1,30 @@
+#ktv-launcher {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+  background: #e8a317; color: #14110c; border: 0; border-radius: 999px;
+  padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 650;
+}
+#ktv-chat {
+  width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+  border: none; border-radius: 14px; padding: 0; background: #1c1408; color: #f6f1e7;
+}
+#ktv-chat::backdrop { background: rgba(0,0,0,.55); }
+#ktv-chat .bar { background: #e8a317; color: #14110c; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+#ktv-chat .bar .meta { color: #14110c; opacity: .85; }
+#ktv-chat h2 { font-family: Georgia, "Iowan Old Style", serif; font-size: 1.05rem; margin: 0; }
+#ktv-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+#ktv-chat button, #ktv-chat input, #ktv-chat textarea { font: inherit; }
+#ktv-chat .choice { display: grid; gap: .45rem; }
+#ktv-chat .choice button, #ktv-chat .quiet { background: #2a2012; color: #f6f1e7; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+#ktv-chat .go { background: #e8a317; color: #14110c; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+#ktv-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+#ktv-chat .me, #ktv-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+#ktv-chat .me { background: #b7791f; color: #fff; justify-self: end; }
+#ktv-chat .them { background: #2a2012; border: 1px solid rgba(255,255,255,.12); }
+#ktv-chat .meta { color: #f6e7c1; font-size: .75rem; }
+#ktv-chat .row { display: flex; gap: .4rem; }
+#ktv-chat input, #ktv-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #2a2012; color: inherit; }
+#ktv-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #8a7350; margin-right: .35rem; }
+#ktv-chat .dot.on { background: #4ade80; }
+#ktv-chat [hidden] { display: none !important; }
+@media (max-width: 640px) { #ktv-chat { width: 100vw; height: 100vh; max-height: 100vh; border-radius: 0; } }
