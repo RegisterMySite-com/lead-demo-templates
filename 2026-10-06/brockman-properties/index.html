@@ -94,10 +94,6 @@ section{scroll-margin-top:80px}
 .steps{margin:0;padding:0;list-style:none;counter-reset:s}
 .steps li{counter-increment:s;position:relative;padding:0 0 .85rem 2.4rem;font-size:.93rem}
 .steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.75rem;height:1.75rem;border-radius:50%;background:var(--door);color:#fff;font-weight:800;font-size:.85rem;display:grid;place-items:center}
-.rating{display:flex;gap:1rem;align-items:center;background:var(--navy);color:#fff;border-radius:1rem;padding:1.2rem 1.3rem}
-.rating strong{font-family:var(--serif);font-size:2.3rem;line-height:1}
-.rating p{margin:0;font-size:.9rem;color:#dbe6f3}
-.rating a{color:#ffd9c4}
 .team{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0 0}
 .team span{background:var(--mint);color:var(--navy);border-radius:999px;padding:.3rem .7rem;font-size:.84rem;font-weight:700}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
@@ -159,13 +155,14 @@ dialog::backdrop{background:rgba(12,24,44,.6)}
       <circle cx="24.4" cy="30" r=".9" fill="#f4efe6"/>
       <path d="M6 38c4-2.2 8-2.2 12 0s8 2.2 12 0 8-2.2 8-2.2" stroke="#2f6f9f" stroke-width="2" fill="none" stroke-linecap="round"/>
     </svg>
-    <span><b>Brockman Properties</b><small>Long Beach · Since 1978</small></span>
+    <span><b>Brockman Properties</b><small>Long Beach property management</small></span>
   </a>
   <nav class="nav-links" aria-label="Primary">
     <a href="#rentals">Rentals</a>
     <a href="#owners">Owners & HOAs</a>
     <a href="#renters">Renter info</a>
     <a href="#contact">Contact</a>
+    <a href="#message" id="bpc-open">Message</a>
     <a class="btn btn-door" href="#inquire" style="padding:.45rem .9rem;font-size:.9rem">Schedule a tour</a>
   </nav>
 </div></header>
@@ -183,11 +180,11 @@ dialog::backdrop{background:rgba(12,24,44,.6)}
     </div>
   </section>
   <div class="wrap">
-    <div class="facts" aria-label="Company highlights">
-      <div><strong>500+</strong><span>units managed (company's stated count)</span></div>
-      <div><strong>Since 1978</strong><span>offering Long Beach rentals</span></div>
-      <div><strong>4 types</strong><span>residential, association, commercial, industrial</span></div>
-      <div><strong>DRE 02117384</strong><span>licensed real estate corporation</span></div>
+    <div class="facts" aria-label="Property types managed">
+      <div><strong>Residential</strong><span>apartments and townhouses</span></div>
+      <div><strong>HOA / Association</strong><span>association management</span></div>
+      <div><strong>Commercial</strong><span>commercial buildings</span></div>
+      <div><strong>Industrial</strong><span>industrial property</span></div>
     </div>
   </div>
 
@@ -245,14 +242,9 @@ dialog::backdrop{background:rgba(12,24,44,.6)}
           <li>Apply online through RentCafe. The nonrefundable application fee is $40 per applicant over 18 and/or with a different last name.</li>
           <li>Approval takes about 24 to 48 hours. Move-in funds are paid by cashier's check or money order.</li>
         </ol>
-        <p class="src">Pets: the FAQ says no pets, cats only at certain properties, so ask about the unit you like. The 305 Coronado RentCafe listing says cats and dogs that meet community criteria may be considered.</p>
       </div>
       <div>
-        <div class="rating">
-          <strong>4.0</strong>
-          <p>Company rating from 34 resident reviews on RentCafe (staff 4.5, location 4.5, maintenance 4.0, value 4.0).<br><a href="https://www.rentcafe.com/apartments/ca/long-beach/305-coronado/default.aspx">See the ratings on RentCafe</a></p>
-        </div>
-        <div class="panel" style="margin-top:1rem">
+        <div class="panel">
           <h3>A purposefully small office</h3>
           <p class="meta" style="font-size:.92rem">Husband-and-wife owners, long-term office staff, and an in-house maintenance crew. Current residents send maintenance requests through their RentCafe account.</p>
           <div class="team" aria-label="Named staff"><span>Alyceanne Nunn</span><span>Yadhira Espericueta</span><span>Mike, maintenance</span><span>Andy, maintenance</span></div>
@@ -283,7 +275,7 @@ dialog::backdrop{background:rgba(12,24,44,.6)}
         <label class="field" id="timeField">Preferred time
           <input id="fTime" type="time">
         </label>
-        <label class="field full">Message <textarea id="fMsg" placeholder="Move-in date, number of adults, pets, or a question for the office"></textarea></label>
+        <label class="field full">Message <textarea id="fMsg" placeholder="Move-in date, number of adults, or a question for the office"></textarea></label>
       </div>
       <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:.55rem">
         <button type="submit" class="btn btn-door" id="submitBtn">Request viewing</button>
@@ -440,7 +432,7 @@ dialog::backdrop{background:rgba(12,24,44,.6)}
     document.getElementById("timeField").classList.toggle("hidden", m!=="tour");
     document.getElementById("listingField").classList.toggle("hidden", m==="owner");
     submitBtn.textContent = m==="tour" ? "Request viewing" : m==="apply" ? "Send me the application link" : "Request an owner call";
-    document.getElementById("fMsg").placeholder = m==="owner" ? "Property address, number of units, residential / HOA / commercial" : "Move-in date, number of adults, pets, or a question for the office";
+    document.getElementById("fMsg").placeholder = m==="owner" ? "Property address, number of units, residential / HOA / commercial" : "Move-in date, number of adults, or a question for the office";
   }
   segBtns.forEach(function(b){ b.addEventListener("click",function(){ setMode(b.getAttribute("data-mode")); }); });
   document.querySelector('#owners [data-mode="owner"]').addEventListener("click",function(){ setMode("owner"); });
@@ -464,5 +456,6 @@ dialog::backdrop{background:rgba(12,24,44,.6)}
   render(); setMode("tour");
 })();
 </script>
+<script src="chat/widget.js"></script>
 </body>
 </html>
