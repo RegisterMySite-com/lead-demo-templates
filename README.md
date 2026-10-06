@@ -37,7 +37,7 @@ Each folder is a single-page site with NAP in the footer, the business name in t
 These are outreach demos, not the businesses' live sites. Each `chat/` worker still needs `npx wrangler deploy` before the button connects.
 
 ## 2026-10-01
-- `nath-property-solutions` — Anaheim PM portfolio board (five multifamily communities from properties page), type/city filters, listing modal, on-page tour/apply form (no Worker, no chat)
+- `nath-property-solutions` — Anaheim PM portfolio board (five multifamily communities from properties page), type/city filters, listing modal, on-page tour/apply form, plus private office chat worker files (`chat/`, Leasing and Maintenance desks + 24-hour specialist; not live until deploy + data-origin)
 
 ## 2026-10-03
 - `jmn-painting` — room and elevation paint estimator (gallons, coats, sheen, color chips, prep checklist)
@@ -50,7 +50,7 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `spartan-garage-floors` — garage coating calculator (flake, solid, metallic, polyaspartic, moisture, crack kits)
 
 ## 2026-10-05
-- `ohana-properties` — Fullerton / North OC family PM rental board (duplex + 55+ condo from AppFolio), type/city filters, listing modal, on-page tour/apply form (no Worker, no chat)
+- `ohana-properties` — Fullerton / North OC family PM rental board (duplex + 55+ condo from AppFolio), type/city filters, listing modal, on-page tour/apply form, plus private office chat worker files (`chat/`, Leasing and Maintenance desks + 24-hour specialist; not live until deploy + data-origin)
 - `heredias-party-rentals` — filterable paginated party catalog (tables, chairs, tents, linens, flowers) + guest-count cart (Long Beach lead scan), plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `pengs-smog-check` — STAR bay board + vehicle-class fee estimator and readiness checklist, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `top-flight-mechanic` — mobile job builder with ZIP travel add-on and same-day windows, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
@@ -59,4 +59,4 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `kaos-tv-repair` — symptom triage (brand, size, fault) + diagnostic visit estimate, loaner flag, and same-day windows, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `thuy-bridal-florist` — filterable paginated wedding package builder (flowers, draping, tea ceremony, gowns, rentals) + guest-count cart, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `panaderia-indio` — filterable paginated pan dulce menu + pickup cart marked for a later DoorDash / Uber Eats handoff, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
-- `brockman-properties` — Long Beach PM and HOA office rental board (Long Beach apartment from RentCafe, Seal Beach townhouse, studio interest list), area/type/beds/available-now filters, photo modal, tour/apply/owner form (no Worker, no chat yet; no review carousel because no openable review profile had reviews)
+- `brockman-properties` — Long Beach PM and HOA office rental board (Long Beach apartment from RentCafe, Seal Beach townhouse, studio interest list), area/type/beds/available-now filters, photo modal, tour/apply/owner form, no review carousel, plus private office chat worker files (`chat/`, Leasing and Maintenance desks + 24-hour specialist; not live until deploy + data-origin)
