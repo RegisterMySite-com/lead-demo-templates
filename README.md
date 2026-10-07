@@ -60,3 +60,6 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `thuy-bridal-florist` — filterable paginated wedding package builder (flowers, draping, tea ceremony, gowns, rentals) + guest-count cart, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `panaderia-indio` — filterable paginated pan dulce menu + pickup cart marked for a later DoorDash / Uber Eats handoff, plus private office chat worker files (`chat/`; not live until deploy + data-origin)
 - `brockman-properties` — Long Beach PM and HOA office rental board (Long Beach apartment from RentCafe, Seal Beach townhouse, studio interest list), area/type/beds/available-now filters, photo modal, tour/apply/owner form, no review carousel, plus private office chat worker files (`chat/`, Leasing and Maintenance desks + 24-hour specialist; not live until deploy + data-origin)
+
+## 2026-10-07
+- `nease-property-management` — Fullerton PM first-site concept (live office suite at 1965 E Chapman from Buildium with real listing photos + generic homes card), commercial/residential filters, photo modal, on-page tour form, Message nav + chat embed line (`chat/` to be added by Project-Scaffold; not live until deploy + data-origin)
