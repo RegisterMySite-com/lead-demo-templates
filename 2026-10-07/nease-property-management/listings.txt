@@ -1,0 +1,19 @@
+Nease Property Management - listings shown (checked 2026-10-07 ~6:20 AM PT)
+Source of truth: https://neasemgmt.managebuilding.com/Resident/public/rentals (1 result)
+
+1) suite - COMMERCIAL - shown as available
+   1965 E. Chapman Ave., Fullerton, CA 92831 (Nease's own building)
+   Private office suite, 650 sq ft, $1,750/month, available 9/9/2026
+   $2,000 deposit, 1-year minimum lease, viewing by appointment
+   Detail page: https://neasemgmt.managebuilding.com/Resident/public/rentals/61134
+   Photos (real, from listing): nease-ext, nease-walk, nease-office1, nease-office2
+   Buttons: Schedule a tour (on-page form, sends nothing) / Apply now (Buildium portal)
+
+2) homes - RESIDENTIAL - generic "Homes we rent" card, NOT a listing
+   Homes, condos and apartments in Fullerton, Orange and Placentia
+   No address, no price. SVG illustration labeled "Illustration, not a photo".
+   States that no residential vacancies are posted right now; links to call and to the portal rentals page.
+
+NOT SHOWN (not on live portal): 326 N. Balcom Ave E (Fullerton), 1324 E Hickory Ln (Orange), 2107 W Almond Ave (Orange), 325 E Amerige Ave D (Fullerton)
+
+Filters: All / Commercial / Residential. No pagination.
