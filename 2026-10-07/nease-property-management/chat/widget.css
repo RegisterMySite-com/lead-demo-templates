@@ -1,0 +1,30 @@
+.npc-demo-banner { right:auto; left:14px; }
+  #npc-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #b4532a; color: #fffdf8; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #npc-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #2c4129; color: #fffdf8;
+  }
+  #npc-chat::backdrop { background: rgba(44,65,41,.55); }
+  #npc-chat .bar { background: #3f5a3c; color: #fffdf8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #npc-chat h2 { font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; font-size: 1.05rem; margin: 0; }
+  #npc-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #npc-chat button, #npc-chat input, #npc-chat textarea { font: inherit; }
+  #npc-chat .choice { display: grid; gap: .45rem; }
+  #npc-chat .choice button, #npc-chat .quiet { background: #22341f; color: #fffdf8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #npc-chat .go { background: #b4532a; color: #fffdf8; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #npc-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #npc-chat .me, #npc-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #npc-chat .me { background: #3f5a3c; justify-self: end; }
+  #npc-chat .them { background: #2c4129; border: 1px solid rgba(255,255,255,.12); }
+  #npc-chat .meta { color: #d9cfbd; font-size: .75rem; }
+  #npc-chat .row { display: flex; gap: .4rem; }
+  #npc-chat input, #npc-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #22341f; color: inherit; }
+  #npc-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #d9cfbd; margin-right: .35rem; }
+  #npc-chat .dot.on { background: #e6b450; }
+  @media (max-width: 640px) { #npc-chat { width: 100vw; height: 100vh; max-height: 100vh; } }

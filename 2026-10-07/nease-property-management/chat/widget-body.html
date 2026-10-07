@@ -1,0 +1,29 @@
+<button type="button" id="npc-launcher" aria-haspopup="dialog" aria-controls="npc-chat">Message the office</button>
+<dialog id="npc-chat" aria-labelledby="npc-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="npc-title">Nease Property Management</h2>
+      <p class="meta" id="npc-presence" style="margin:.15rem 0 0"><span class="dot" id="npc-dot"></span><span id="npc-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="npc-close" style="color:#fffdf8">Close</button>
+  </div>
+  <div class="body">
+    <div id="npc-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="leasing"><strong>Leasing</strong><br><span class="meta">Ask about the office suite, a viewing, homes for rent, or applying on the Nease portal</span></button>
+      <button type="button" data-desk="maintenance"><strong>Maintenance</strong><br><span class="meta">Write the office about a repair, or an owner question</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (714) 525-1750.</p>
+    </div>
+    <div id="npc-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="npc-back">Back</button>
+      <div id="npc-log" class="log" aria-live="polite"></div>
+      <p id="npc-typing" class="meta" hidden></p>
+      <form id="npc-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="npc-box">Message</label>
+        <input id="npc-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>
