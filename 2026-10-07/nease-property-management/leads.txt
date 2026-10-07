@@ -1,0 +1,55 @@
+Nease Property Management - concept demo (2026-10-07)
+Folder: 2026-10-07/nease-property-management
+Lead packet: Leads Bot Realters, Project Scaffolding room, 2026-10-07
+Facts re-verified 2026-10-07 ~6:25 AM PT unless noted.
+
+WEBSITE STATUS
+- neaseproperties.com has no real website; it redirects to the stock Buildium tenant portal (packet). This demo is their first site.
+  Portal home: https://neasemgmt.managebuilding.com/Resident/public/home
+
+NAP
+- Office: 1965 E Chapman Ave, Fullerton, CA 92831
+  Source: https://neasemgmt.managebuilding.com/Resident/public/home (portal footer); https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=00964088 (DRE main office)
+- Phone: (714) 525-1750
+  Source: https://neasemgmt.managebuilding.com/Resident/public/home (portal footer)
+- Email: vacancies@neaseproperties.com
+  Source: https://neasemgmt.managebuilding.com/Resident/public/home (portal footer and listing contact)
+
+LICENSES (both individual CA DRE broker licenses, checked on DRE public lookup 10/7/2026)
+- Bonnie Jill Nease - Broker, DRE 00964088, LICENSED, expires 05/07/28. DBA "Nease Property Management" active as of 06/27/2000. Lists Kennelly as broker associate.
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=00964088
+- Kelly Marie Kennelly - Broker associate, DRE 02032547, LICENSED (broker license), expires 09/19/29. "Broker Associate for: 00964088 Nease, Bonnie Jill".
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=02032547
+- Shown on page as: Broker / Broker associate, "individual license". No company license number used.
+
+SERVICES AND AREA
+- Manages homes, condos and apartments in Fullerton, Orange and Placentia, plus some office space.
+  Source: lead packet; supported by earlier portal featured listings in Fullerton and Orange (search-engine cache of https://neasemgmt.managebuilding.com/Resident/public/home) and a Nease-listed Placentia townhome (https://hotpads.com/306-dolores-cir-placentia-ca-92870-1m66wxv/1/pad). Office suite on live portal.
+
+PORTAL LINKS USED
+- Apply now / Resident sign in / Apply on the portal: https://neasemgmt.managebuilding.com/Resident/public/home
+- Rentals page (for "check for new vacancies"): https://neasemgmt.managebuilding.com/Resident/public/rentals
+
+LIVE LISTING (only listing on the live portal 10/7/2026)
+- 1965 E. Chapman Ave., Fullerton, CA 92831 - private office suite, 650 sq ft, $1,750/month, available 9/9/2026
+  Source: https://neasemgmt.managebuilding.com/Resident/public/rentals and https://neasemgmt.managebuilding.com/Resident/public/rentals/61134
+  Details used: 2 private offices plus common reception area; private entrance off parking lot; kitchen and 2 bathrooms shared with the front two tenants; water, trash, gas, electric and alarm included; tenant provides phone, owner option for internet; 500 sq ft private + 1/3 of 450 sq ft common = 650; owner cleans/supplies common areas; single story, ADA compliant; private off-street parking; A/C and heating; $2,000 security deposit; minimum 1-year lease; viewing by appointment only.
+  Photos: 4 of the 31 listing photos (exterior with sign, front walk, two private offices), downloaded from the listing's public file URLs and recompressed (photos/nease-*.js). All are real photos. The listing also has a floor-plan drawing and 3D renders; those are not used on the page.
+  Hero photo (front walk of the same building) is from the same Nease listing.
+
+LEFT OUT AND WHY
+- Any years-in-business / "since" claim: sources conflict (portal says "since 1979", BBB foundingDate 1979, others say 47 years, 30+, 2000; DRE DBA date is 2000).
+- Office hours: four sources disagree. Portal says "BY APPOINTMENT ONLY"; page only says showings are by appointment (from the listing) and "call ahead".
+- Ratings, review counts, stars, review carousel, testimonials: excluded per packet (third-party ratings exist, e.g. exa.ai 3.5/11 reviews; not used).
+- neasepm.com: a different Nease Property Management in Colorado Springs. Not linked or used.
+- 2011 application PDFs and the instruction to email applications to Casey: outdated; applications go through the Buildium portal.
+- Casey's name: no verified surname.
+- kelly@neaseproperties.com (appears in listing description): not in the packet's contact set; office email used instead.
+- Listing description text "Unit will be vacating 4/15/2024": stale; the portal's structured field says available 9/9/2026, which is what the page shows.
+- 326 N. Balcom Ave E, 1324 E Hickory Ln, 2107 W Almond Ave, 325 E Amerige Ave D: still "READY NOW" in search-engine caches, NOT on the live portal. Not shown; addresses and prices not used.
+- Unit counts / portfolio size: unverified.
+- Buildium "Type" filter values (industrial, retail, storage etc.) are portal defaults, not evidence of inventory; not used.
+- Chat: Project-Scaffold adds chat/ later. index.html includes the Message nav link (id npc-open) and <script src="chat/widget.js"> only.
+
+REPO NOTE
+- photos/nease-plan.js (floor-plan drawing) was uploaded with a 1-byte corruption (13082 vs 13081 bytes) and the single allowed retry produced the same result. It is NOT referenced by index.html. Safe to delete or replace.
