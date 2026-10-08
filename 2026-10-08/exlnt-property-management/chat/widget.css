@@ -1,0 +1,30 @@
+.exl-demo-banner { right:auto; left:14px; }
+  #exl-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #e2702a; color: #fffdf8; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #exl-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #08442d; color: #fffdf8;
+  }
+  #exl-chat::backdrop { background: rgba(8,68,45,.55); }
+  #exl-chat .bar { background: #0b5a3c; color: #fffdf8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #exl-chat h2 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.05rem; margin: 0; }
+  #exl-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #exl-chat button, #exl-chat input, #exl-chat textarea { font: inherit; }
+  #exl-chat .choice { display: grid; gap: .45rem; }
+  #exl-chat .choice button, #exl-chat .quiet { background: #063623; color: #fffdf8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #exl-chat .go { background: #e2702a; color: #fffdf8; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #exl-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #exl-chat .me, #exl-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #exl-chat .me { background: #0b5a3c; justify-self: end; }
+  #exl-chat .them { background: #08442d; border: 1px solid rgba(255,255,255,.12); }
+  #exl-chat .meta { color: #d6ccb6; font-size: .75rem; }
+  #exl-chat .row { display: flex; gap: .4rem; }
+  #exl-chat input, #exl-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #063623; color: inherit; }
+  #exl-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #d6ccb6; margin-right: .35rem; }
+  #exl-chat .dot.on { background: #e2702a; }
+  @media (max-width: 640px) { #exl-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
