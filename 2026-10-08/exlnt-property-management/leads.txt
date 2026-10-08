@@ -1,0 +1,83 @@
+EXLNT Property Management (Norwalk, CA) - concept demo lead notes
+Built 2026-10-08. Folder: 2026-10-08/exlnt-property-management/
+Status: static concept demo only. Not the official site. Nothing deployed, no chat/ folder created by this build.
+
+FACTS USED ON THE PAGE (with sources)
+
+Business name / relationship
+- "EXLNT Property Management is a division of Norwalk Realty Inc." (page wording: "a business name of Norwalk Realty Inc")
+  Source: https://www.exlntpropertymanagement.com/ (About Us)
+  Confirmed: DRE lists DBA "Exlnt Property Management Co" under Norwalk Realty Inc, active as of 08/16/1979
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=00745584 (checked 10/8/2026 6:13 AM PT)
+
+Address
+- 11652 Rosecrans Ave, Norwalk, CA 90650 (site shows 90650-3820)
+  Source: https://www.exlntpropertymanagement.com/ (header and footer)
+  DRE main office for both licenses: 11652 E Rosecrans Ave, Norwalk, CA 90650
+  Source: DRE lookups below
+- "Across from Norwalk Square"
+  Source: https://www.exlntpropertymanagement.com/location-and-contact
+
+Phone
+- (562) 868-0986
+  Source: https://www.exlntpropertymanagement.com/ (header "Call:" and footer)
+
+Email
+- info@exlntpropertymanagement.com
+  Source: https://www.exlntpropertymanagement.com/ (footer mailto link)
+
+Licensing (labeled separately on the page; written as "DRE", never "BRE")
+- Corporation: Norwalk Realty Inc, DRE #00745584, status LICENSED, expires 08/15/27, designated officer 00893555 (Poff, Michael Keith)
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=00745584 (checked 10/8/2026 PT)
+- Broker in charge: Mike Poff (Michael Keith Poff), Broker, DRE #00893555, status LICENSED, expires 12/01/29, officer of Norwalk Realty Inc (00745584), no disciplinary action
+  Source: https://www2.dre.ca.gov/PublicASP/pplinfo.asp?License_id=00893555 (checked 10/8/2026 PT)
+  Also listed on https://www.exlntpropertymanagement.com/ as "Mike Poff, Broker / Property Manager"
+- Equal Housing Opportunity
+  Source: https://www.exlntpropertymanagement.com/ ("Associations: ... Equal Opportunity Housing")
+
+Service area (14 cities)
+- Norwalk, Downey, Whittier, Bellflower, Cerritos, Lakewood, Long Beach, La Mirada, Santa Fe Springs, Paramount, Artesia, Los Alamitos, La Habra, Buena Park
+  Source: https://www.exlntpropertymanagement.com/ ("Service Area: ...")
+
+Rental types
+- Apartments (site groups them as Studio / One Bedroom / Two Bedroom or More, all "More Coming Soon", no listings)
+  Source: https://www.exlntpropertymanagement.com/apartments
+- Houses and Condos (site groups them as 1 Bedroom / 2 Bedrooms, "More Coming Soon", no listings)
+  Source: https://www.exlntpropertymanagement.com/houses-and-condos
+
+Owner services (property management list)
+- Advertisements and vacancy showings; making payments and rent collection; routine property inspections; creation of contracts for preventive maintenance; resident screenings (credit and eviction checks); handling of all necessary repairs; monthly financial reporting including year-end summaries
+  Source: https://www.exlntpropertymanagement.com/property-management
+
+Current site
+- exlntpropertymanagement.com is a "(c)2015 Dex Media" template; apartments and houses/condos listing pages are empty ("More Coming Soon")
+  Source: all five pages above (footer and listing pages)
+
+PHOTOS
+- No real photos used. The site's only images are template/stock: KV.jpg (a stock craftsman house with an "In Business since 1974 | Se Habla Espanol" overlay), ThinkstockPhotos-511728582.jpg (stock, per filename), site_background_education (template background), and a tagline banner PNG. None show EXLNT's office or managed buildings.
+- All three card drawings and the hero sign are original inline SVG, each visibly labeled "Illustration, not a photo".
+
+LEFT OUT AND WHY
+- Gordon Stefenhagen: still on the old site as "Broker / Property Manager, BRE Lic# 00604975", but his DRE affiliation with Norwalk Realty ended 01/31/2026 (Realters' packet); he is not listed on the current DRE corporation record.
+- Years in business / founding date: sources conflict (1978, 1979, "40+"), and the site's own banner image says "In Business since 1974", a fourth figure. DRE shows corp license issued 08/16/79, but no "since" claim is made on the page.
+- Office hours: site says Mon-Fri 9-5, Saturday appointments only; other sources conflict on Saturday. Page says to call ahead instead.
+- Second phone (562) 868-3201: excluded per packet.
+- Fax (562) 868-4943: on the old site footer, but not in the packet and not useful for renters; left off.
+- mike@ address and any Yahoo email: excluded per packet.
+- Ratings, review counts, stars, review carousel: none shown.
+- Scanned PDF rental application ("1 Rental App.pdf" linked as "Click Here for our Rental Application") and the instruction to bring Social Security card copies: replaced by the on-page inquiry form, which is the pitch. The form asks people not to type SSNs or bank numbers.
+- "BRE" label used on the old site: replaced with "DRE" everywhere.
+- "Se Habla Espanol": appears only inside the old stock banner image; not in the packet and not verified as current, so not claimed. Possible pitch point to confirm with them.
+- "Purchases equities and offers ... multiple listings" (About Us): sales/investment side, not part of this rental demo.
+- Stock photos from the old site: not real photos of the business.
+- Any addresses, prices or move-in dates: no verified live vacancies.
+- Invented testimonials or unit counts: none.
+
+PITCH POINTS FOR RYAN
+- Old site is a (c)2015 Dex Media template with empty listing pages ("More Coming Soon").
+- Old site still shows the outdated "BRE" label and a broker whose DRE affiliation has ended.
+- Applications are a scanned PDF; the demo replaces that with a one-minute online inquiry that confirms on the page.
+- Site's own banner says "since 1974" while other sources say 1978/1979/40+: conflicting claims to clean up.
+
+CHAT
+- index.html includes the nav link <a href="#message" id="exl-open">Message</a> (after Contact, no class, matching the other nav links) and <script src="chat/widget.js"></script> right before </body>. chat/ is not part of this build; a 404 for chat/widget.js is expected until Project-Scaffold adds it.
