@@ -1,0 +1,23 @@
+EXLNT Property Management - listings shown on the demo (2026-10-08)
+
+No verified live vacancies. The old site's listing pages are empty ("More Coming Soon"):
+https://www.exlntpropertymanagement.com/apartments
+https://www.exlntpropertymanagement.com/houses-and-condos
+
+The demo shows three generic unit-type cards. No addresses, no prices, no move-in dates.
+Every card says "Availability: call or email", and the section has a "Call or email for current availability" notice.
+
+1. Apartments (filter: Apartments)
+   Studio, one-bedroom and two-bedroom-or-more layouts (the categories on their apartments page).
+   Image: original SVG, labeled "Illustration, not a photo".
+2. Houses (filter: Houses)
+   Single-family homes in Norwalk and neighboring cities.
+   Image: original SVG, labeled "Illustration, not a photo".
+3. Condos (filter: Condos)
+   Condos across Southeast LA County and North Orange County.
+   Image: original SVG, labeled "Illustration, not a photo".
+
+Each card's "More info" modal: short description, "Call or email for current availability", a "Schedule a tour" button and an "Ask about availability / Apply now" button. Both close the modal, scroll to the on-page inquiry form (#inquiry), and preselect the request and home type. The form submits nowhere and confirms on the page.
+
+Filters: All / Apartments / Houses / Condos. No pagination.
+Photos: none (no real photos of the office or managed buildings exist on their site; its images are stock/template).
