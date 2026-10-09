@@ -1,0 +1,29 @@
+<button type="button" id="eqp-launcher" aria-haspopup="dialog" aria-controls="eqp-chat">Message the office</button>
+<dialog id="eqp-chat" aria-labelledby="eqp-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="eqp-title">EquityPro Management</h2>
+      <p class="meta" id="eqp-presence" style="margin:.15rem 0 0"><span class="dot" id="eqp-dot"></span><span id="eqp-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="eqp-close" style="color:#fffdf8">Close</button>
+  </div>
+  <div class="body">
+    <div id="eqp-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="leasing"><strong>Leasing</strong><br><span class="meta">Ask about the Newlin, Christine and Pickering one-bedrooms, a tour, or the areas we serve</span></button>
+      <button type="button" data-desk="maintenance"><strong>Maintenance</strong><br><span class="meta">Write the office about a repair, or an owner question</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (562) 632-1707.</p>
+    </div>
+    <div id="eqp-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="eqp-back">Back</button>
+      <div id="eqp-log" class="log" aria-live="polite"></div>
+      <p id="eqp-typing" class="meta" hidden></p>
+      <form id="eqp-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="eqp-box">Message</label>
+        <input id="eqp-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>

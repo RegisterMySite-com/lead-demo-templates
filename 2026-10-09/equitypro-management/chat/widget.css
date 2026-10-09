@@ -1,0 +1,30 @@
+.eqp-demo-banner { right:auto; left:14px; }
+  #eqp-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #b8792b; color: #fffdf8; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #eqp-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #16242f; color: #fffdf8;
+  }
+  #eqp-chat::backdrop { background: rgba(22,36,47,.55); }
+  #eqp-chat .bar { background: #1d3b52; color: #fffdf8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #eqp-chat h2 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.05rem; margin: 0; }
+  #eqp-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #eqp-chat button, #eqp-chat input, #eqp-chat textarea { font: inherit; }
+  #eqp-chat .choice { display: grid; gap: .45rem; }
+  #eqp-chat .choice button, #eqp-chat .quiet { background: #12202a; color: #fffdf8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #eqp-chat .go { background: #b8792b; color: #fffdf8; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #eqp-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #eqp-chat .me, #eqp-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #eqp-chat .me { background: #1d3b52; justify-self: end; }
+  #eqp-chat .them { background: #16242f; border: 1px solid rgba(255,255,255,.12); }
+  #eqp-chat .meta { color: #ddd3c3; font-size: .75rem; }
+  #eqp-chat .row { display: flex; gap: .4rem; }
+  #eqp-chat input, #eqp-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #12202a; color: inherit; }
+  #eqp-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #ddd3c3; margin-right: .35rem; }
+  #eqp-chat .dot.on { background: #b8792b; }
+  @media (max-width: 640px) { #eqp-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
