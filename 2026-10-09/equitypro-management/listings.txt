@@ -1,0 +1,23 @@
+EquityPro Management - listings shown (from propertymanage.biz/epromanagement feed, loaded 2026-10-09 PT)
+Feed showed 3 listings: 3 x 1 bedroom, 0 x 2 bedroom, 0 x 3+ bedroom. No pagination (3 cards).
+
+1) 7252 Newlin Ave. #5, Whittier, CA
+   Rent $1,800/mo | Deposit $1,800 | 1 bed, 1 bath | 625 sq ft | "AVAILABLE NOW"
+   Lease term not stated. Smoke-free. Air conditioning, personal parking space, open layout.
+   Detail: https://propertymanage.biz/epromanagement/rentals/detail?p=59346615&iframe=1
+   Photos: eqp-newlin-1 (rtd4 file 11675325), -2 (11675329), -3 (11675332)
+
+2) 13834 Christine Dr. "B", Whittier, CA
+   Rent $1,850/mo | Deposit $1,850 | 1 bed, 1 bath | 600 sq ft | availability date not stated
+   Lease 10 months. No pets, no smoking, no third-party checks.
+   AC, wall heater, stove, oven, microwave, on-site laundry, garage parking, retail nearby.
+   Detail: https://propertymanage.biz/epromanagement/rentals/detail?p=409647&iframe=1
+   Photos: eqp-chris-1 (rtd4 file 4601042), -2 (4601028), -3 (4601033)
+
+3) 7041 Pickering Ave. #5, Whittier, CA
+   Rent $1,600/mo | Deposit $1,600 | 1 bed, 1 bath | 375 sq ft | "Available now!"
+   10-month lease. No pets, no smoking, no third-party checks.
+   New vinyl flooring, quartz counters, new custom cabinets, recessed lighting, AC, bathroom heat lamp,
+   on-site laundry with mobile payment, assigned parking, gated community.
+   Detail: https://propertymanage.biz/epromanagement/rentals/detail?p=249816&iframe=1
+   Photos: eqp-pick-1 (rtd4 file 9523073), -2 (9523080), -3 (9523085)
