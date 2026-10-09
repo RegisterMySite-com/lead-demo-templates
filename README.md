@@ -66,3 +66,6 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 
 ## 2026-10-08
 - `exlnt-property-management` — Norwalk / Gateway Cities PM concept replacing a 2015 Dex Media template (generic apartment, house and condo type cards, no live vacancies verified, SVG illustrations labeled not photos), type filters, more-info modal, on-page inquiry form replacing the scanned PDF application, DRE corp and broker licenses labeled separately, plus private office chat worker files (`chat/`, Leasing and Maintenance desks + 24-hour specialist; not live until deploy + data-origin)
+
+## 2026-10-09
+- `equitypro-management` — Whittier PM rental board (three live 1BR units from their Rentec propertymanage.biz feed with real listing photos), beds/rent/parking/available-now filters, photo modal, on-page tour/apply form (no submit), no DRE or years claims, plus Message link and chat/widget.js hook (chat/ added later by Project-Scaffold)
