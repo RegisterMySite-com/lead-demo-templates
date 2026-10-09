@@ -1,0 +1,37 @@
+EquityPro Management (Equitypro Management LLC), Whittier CA
+Demo folder: 2026-10-09/equitypro-management
+Built: 2026-10-09 (PT)
+
+FACTS USED (verified by Leads Bot Realters, checked against the site where possible)
+- Equitypro Management LLC, 13854 Whittier Blvd, Whittier CA 90605
+- (562) 632-1707 (matches tel: link on equitypromanagement.com)
+- info@equitypromanagement.com (matches mailto: link on equitypromanagement.com)
+- Site: https://equitypromanagement.com (bare domain; the www host shows a certificate for another company's domain)
+- Staff (team page): Henry Steven Camacho, CEO and founder; Dana T Camacho, manager; Phillip Gonzalez and Stephen Jordan, leasing and property management
+- Service area: Whittier, Santa Fe Springs, Downey, Montebello, La Puente, Buena Park, Fullerton, Cerritos and nearby
+- Services named in the site navigation: property management, multi-family, sales and acquisitions, 1031 tax exchange, construction management
+- Portal login linked from the site: https://secure.rentecdirect.com/login/login.php?cb=epromanagement (owner/resident login, not a rental application, so Apply now opens an on-page form instead)
+
+SOURCES
+- https://equitypromanagement.com/ (home page: phone, email, services nav, portal link)
+- https://equitypromanagement.com/property-search/available-rental-properties (iframe src below)
+- https://propertymanage.biz/epromanagement/rentals/listings?iframe=1 (Rentec Direct feed; loaded 2026-10-09, 3 listings, all 1 bedroom)
+- https://propertymanage.biz/epromanagement/rentals/detail?p=59346615&iframe=1 (7252 Newlin Ave. #5)
+- https://propertymanage.biz/epromanagement/rentals/detail?p=409647&iframe=1 (13834 Christine Dr. "B")
+- https://propertymanage.biz/epromanagement/rentals/detail?p=249816&iframe=1 (7041 Pickering Ave. #5)
+- Photos: rtd4.com/showpic.php gallery images from those detail pages, downloaded and recompressed (480px wide), stored as photos/*.js. Not hotlinked.
+
+LEFT OUT AND WHY
+- Any DRE number, including 01072434: only from Nestfully, unverified, and the company license is unconfirmed.
+- "Founded in 1990" and any years claim: the LLC dates from 2010, so the claim conflicts.
+- Nestfully Long Beach 90805 address and (562) 761-5710: not the office NAP.
+- Ratings and review counts: sources disagree (18 vs 21). No review carousel.
+- Anything from puglieseproperties.com: not this business.
+- Pickering application requirements (copy of Social Security card, bank statements, $45 cash-only fee, income/FICO thresholds): sensitive document requests and fee details are left for the office to explain; the page only repeats the feed's warning to apply through the office's own forms and not via Zillow/Trulia.
+- Stock photos from the main site (apartments5.jpg, single-family-house2.jpg, multi-family.JPG, LA-Skyline.png) and the EquityPro logo: not used. Only listing photos from the feed are used. The mark is an original SVG.
+- Christine Dr. availability: the feed does not say "available now" for it, so the card says "Call for date".
+- Newlin lease term and pet policy: not stated on its detail page, so the modal says "Ask the office" and lists only smoke-free.
+- Typo in the Newlin feed text ("personal parking space t") not copied.
+
+CHAT
+- Message nav link (id eqp-open) and chat/widget.js script are in index.html. chat/ is not created here; Project-Scaffold adds it (files only, empty data-origin, no Worker).
