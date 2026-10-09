@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EquityPro Management | Whittier rentals and property management (demo)</title>
+<meta name="description" content="Demo concept for Equitypro Management LLC, a Whittier property management office. Current Whittier rentals, owner services and contact info.">
+<style>
+:root{--ink:#16242f;--navy:#1d3b52;--sea:#2f6f73;--brass:#b8792b;--sand:#f6f1e8;--line:#ddd3c3;--mut:#5a6670;--card:#fff;--ok:#2d6a3e;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.55}
+img{max-width:100%;display:block}
+a{color:var(--sea)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:8px 12px;z-index:99}
+.skip:focus{left:8px}
+.demo{background:var(--ink);color:#f3e6cf;font-size:.85rem;text-align:center;padding:6px 12px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand b{font-size:1.1rem;letter-spacing:.02em}
+.brand small{display:block;color:var(--mut);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:4px 16px;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--navy);font-weight:600;font-size:.95rem;padding:6px 2px}
+nav a:hover{color:var(--brass)}
+.hero{background:linear-gradient(135deg,var(--navy),#123045 60%,var(--sea));color:#fff;padding:56px 0 64px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.12;margin:0 0 14px;max-width:16ch}
+.hero p{max-width:56ch;color:#dfe9ee;margin:0 0 22px}
+.hero .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
+.ledger{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--r);padding:18px}
+.ledger h2{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 10px;color:#f3d9b0}
+.ledger dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+.ledger dt{color:#bcd0da;font-size:.9rem}
+.ledger dd{margin:0;font-weight:600}
+.btn{display:inline-block;border:0;border-radius:999px;padding:11px 20px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;text-align:center}
+.btn-b{background:var(--brass);color:#fff}
+.btn-b:hover{background:#9c6421}
+.btn-o{background:transparent;color:inherit;border:2px solid currentColor}
+.btn-s{background:var(--navy);color:#fff}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+section{padding:54px 0}
+h2.t{font-size:clamp(1.4rem,3.5vw,2rem);margin:0 0 6px}
+.lede{color:var(--mut);margin:0 0 24px;max-width:62ch}
+.filters{display:flex;flex-wrap:wrap;gap:12px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-bottom:20px}
+.filters label{display:flex;flex-direction:column;font-size:.8rem;font-weight:700;color:var(--mut);gap:4px}
+select,input,textarea{font:inherit;padding:9px 10px;border:1px solid #b9ad99;border-radius:10px;background:#fff;color:var(--ink);min-width:0;max-width:100%}
+.chk{flex-direction:row!important;align-items:center;gap:8px!important;font-size:.95rem!important;color:var(--ink)!important}
+.count{margin-left:auto;font-size:.9rem;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.ph{position:relative;aspect-ratio:4/3;background:#e7dfd2}
+.ph img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:10px;top:10px;background:var(--navy);color:#fff;font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:999px}
+.avail{position:absolute;right:10px;top:10px;background:#fff;color:var(--ok);font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:999px}
+.avail.call{color:var(--brass)}
+.cb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cb h3{margin:0;font-size:1.05rem}
+.price{font-size:1.3rem;font-weight:800;color:var(--navy)}
+.price span{font-size:.85rem;font-weight:500;color:var(--mut)}
+.facts{display:flex;gap:12px;font-size:.88rem;color:var(--mut);flex-wrap:wrap}
+.cb p{margin:0;font-size:.93rem}
+.cb .btn{margin-top:auto;align-self:flex-start}
+.empty{background:#fff;border:1px dashed var(--brass);border-radius:var(--r);padding:20px}
+.note{font-size:.88rem;color:var(--mut);margin-top:16px}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.svc div{background:#fff;border-left:4px solid var(--brass);border-radius:10px;padding:16px}
+.svc h3{margin:0 0 6px;font-size:1rem}
+.svc p{margin:0;font-size:.93rem;color:var(--mut)}
+.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.person{display:flex;gap:12px;align-items:center;background:var(--sand);border-radius:12px;padding:14px}
+.ini{width:48px;height:48px;border-radius:50%;background:var(--sea);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.person b{display:block}
+.person span{font-size:.88rem;color:var(--mut)}
+.areas{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:0}
+.areas li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600;font-size:.92rem}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+.box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+form .f{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:.9rem}
+form .full{grid-column:1/-1}
+.ok{background:#e6f1e8;border:1px solid #9cc5a5;color:#1f4d2b;border-radius:10px;padding:12px;margin-top:12px}
+footer{background:var(--ink);color:#d9dfe3;padding:34px 0;font-size:.92rem}
+footer a{color:#f3d9b0}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+dialog{border:0;border-radius:var(--r);padding:0;width:min(760px,94vw);max-height:92vh;color:var(--ink)}
+dialog::backdrop{background:rgba(10,20,28,.65)}
+.mh{display:flex;justify-content:space-between;align-items:start;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+.mh h3{margin:0;font-size:1.15rem}
+.x{background:none;border:0;font-size:1.6rem;line-height:1;cursor:pointer;color:var(--ink);padding:2px 8px}
+.mb{padding:16px 18px 20px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:0 0 12px;padding:0;list-style:none}
+.spec li{background:var(--sand);border-radius:8px;padding:8px 10px;font-size:.9rem}
+.spec b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.feat{columns:2;padding-left:18px;margin:0 0 12px;font-size:.92rem}
+.warn{background:#fbf2e3;border-left:4px solid var(--brass);padding:10px 12px;border-radius:8px;font-size:.9rem;margin-bottom:14px}
+@media (max-width:820px){.hero .grid,.contact{grid-template-columns:minmax(0,1fr)}}
+.contact>*,.hero .grid>*{min-width:0}
+@media (max-width:560px){form .f{grid-template-columns:minmax(0,1fr)}.feat{columns:1}.gal{grid-template-columns:1fr}.count{margin-left:0}nav ul{gap:2px 12px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="demo" role="note">Demo concept by RegisterMySite, not the official EquityPro Management website. Listings copied from their public rental feed; please confirm with the office.</div>
+<header>
+<div class="wrap bar">
+<a class="brand" href="#top" aria-label="EquityPro Management home">
+<svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="1" y="1" width="42" height="42" rx="11" fill="#1d3b52"/><path d="M10 23 22 12l12 11" fill="none" stroke="#b8792b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22v11h16V22" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M19 33v-5h6v5" fill="#2f6f73"/></svg>
+<span><b>EquityPro Management</b><small>Whittier, California</small></span>
+</a>
+<nav aria-label="Main">
+<ul>
+<li><a href="#rentals">Rentals</a></li>
+<li><a href="#owners">Owners</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="eqp-open">Message</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+<div class="wrap grid">
+<div>
+<h1>Whittier rentals, managed close to home.</h1>
+<p>Equitypro Management LLC leases and manages apartments and homes from its office on Whittier Boulevard, serving owners and renters across Whittier and nearby cities.</p>
+<div class="row">
+<a class="btn btn-b" href="#rentals">See current rentals</a>
+<a class="btn btn-o" href="tel:+15626321707">Call (562) 632-1707</a>
+</div>
+</div>
+<div class="ledger" aria-label="Office at a glance">
+<h2>Office at a glance</h2>
+<dl>
+<dt>Office</dt><dd>13854 Whittier Blvd, Whittier CA 90605</dd>
+<dt>Phone</dt><dd><a href="tel:+15626321707" style="color:#fff">(562) 632-1707</a></dd>
+<dt>Email</dt><dd><a href="mailto:info@equitypromanagement.com" style="color:#fff;word-break:break-all">info@equitypromanagement.com</a></dd>
+<dt>Listed now</dt><dd id="lcount">3 one-bedroom units</dd>
+</dl>
+</div>
+</div>
+</section>
+
+<section id="rentals">
+<div class="wrap">
+<h2 class="t">Available rentals</h2>
+<p class="lede">Units shown on EquityPro's public rental feed, with the office's own photos. Rent, deposit and terms are as listed there; call to confirm before visiting.</p>
+<div class="filters" role="search" aria-label="Filter rentals">
+<label>Bedrooms<select id="fBeds"><option value="all">Any</option><option value="1">1 bedroom</option><option value="2">2 bedrooms</option><option value="3">3+ bedrooms</option></select></label>
+<label>Max rent<select id="fRent"><option value="99999">Any</option><option value="1700">Up to $1,700</option><option value="1800">Up to $1,800</option><option value="1900">Up to $1,900</option></select></label>
+<label>Parking<select id="fPark"><option value="all">Any</option><option value="garage">Garage</option><option value="assigned">Assigned or personal space</option></select></label>
+<label class="chk"><input type="checkbox" id="fNow"> Marked available now</label>
+<span class="count" id="count" aria-live="polite"></span>
+</div>
+<div class="cards" id="cards"></div>
+<div class="empty" id="empty" hidden><b>No listed unit matches those filters.</b> Call or email for current availability: <a href="tel:+15626321707">(562) 632-1707</a> or <a href="mailto:info@equitypromanagement.com">info@equitypromanagement.com</a>.</div>
+<p class="note">Apply only with EquityPro's own application forms, through the office. The listing feed warns renters not to apply through Zillow, Trulia or other third-party sites, and to watch for scams.</p>
+</div>
+</section>
+
+<section class="alt" id="owners">
+<div class="wrap">
+<h2 class="t">For property owners</h2>
+<p class="lede">Services listed on EquityPro's website. Ask the office which fit your building.</p>
+<div class="svc">
+<div><h3>Property management</h3><p>Day-to-day leasing and management of your rental.</p></div>
+<div><h3>Multi-family</h3><p>Management for apartment and multi-unit buildings.</p></div>
+<div><h3>Sales and acquisitions</h3><p>Help buying or selling income property.</p></div>
+<div><h3>1031 tax exchange</h3><p>Coordination when trading one investment property for another.</p></div>
+<div><h3>Construction management</h3><p>Oversight of building and renovation work.</p></div>
+</div>
+<p class="note">Owners and residents who already have an account can use the <a href="https://secure.rentecdirect.com/login/login.php?cb=epromanagement" rel="noopener">EquityPro portal login</a> linked from their website.</p>
+</div>
+</section>
+
+<section id="team">
+<div class="wrap">
+<h2 class="t">The team</h2>
+<p class="lede">From the EquityPro team page.</p>
+<div class="team">
+<div class="person"><span class="ini" aria-hidden="true">HC</span><div><b>Henry Steven Camacho</b><span>CEO and founder</span></div></div>
+<div class="person"><span class="ini" aria-hidden="true">DC</span><div><b>Dana T Camacho</b><span>Manager</span></div></div>
+<div class="person"><span class="ini" aria-hidden="true">PG</span><div><b>Phillip Gonzalez</b><span>Leasing and property management</span></div></div>
+<div class="person"><span class="ini" aria-hidden="true">SJ</span><div><b>Stephen Jordan</b><span>Leasing and property management</span></div></div>
+</div>
+<h3 style="margin:34px 0 12px">Areas served</h3>
+<ul class="areas">
+<li>Whittier</li><li>Santa Fe Springs</li><li>Downey</li><li>Montebello</li><li>La Puente</li><li>Buena Park</li><li>Fullerton</li><li>Cerritos</li><li>And nearby cities</li>
+</ul>
+</div>
+</section>
+
+<section class="alt" id="contact">
+<div class="wrap contact">
+<div>
+<h2 class="t">Contact the office</h2>
+<p class="lede">Questions about a unit, a tour, or managing your property.</p>
+<div class="box">
+<p style="margin-top:0"><b>Equitypro Management LLC</b><br>13854 Whittier Blvd<br>Whittier, CA 90605</p>
+<p><a href="tel:+15626321707">(562) 632-1707</a><br><a href="mailto:info@equitypromanagement.com">info@equitypromanagement.com</a></p>
+<p style="margin-bottom:0"><a href="https://equitypromanagement.com" rel="noopener">equitypromanagement.com</a></p>
+</div>
+</div>
+<div class="box">
+<h3 style="margin-top:0" id="formTitle">Request a tour or application</h3>
+<form id="lead" novalidate>
+<div class="f">
+<label>I want to<select id="mode" name="mode"><option value="tour">Schedule a tour</option><option value="apply">Apply (get the office's forms)</option><option value="owner">Talk about managing my property</option></select></label>
+<label>Unit<select id="unit" name="unit"><option value="">Any or not sure</option></select></label>
+<label>Name<input id="nm" name="name" autocomplete="name" required></label>
+<label>Phone<input id="ph" name="phone" type="tel" autocomplete="tel" required></label>
+<label class="full">Email<input id="em" name="email" type="email" autocomplete="email"></label>
+<label>Preferred day<input id="day" name="day" type="date"></label>
+<label>Best time<select name="time"><option>Morning</option><option>Midday</option><option>Afternoon</option></select></label>
+<label class="full">Message<textarea name="msg" rows="3"></textarea></label>
+</div>
+<p class="note" style="margin:10px 0">Demo form: nothing is sent or stored. Applications go through the office's own forms.</p>
+<button class="btn btn-b" type="submit">Send request</button>
+<div id="okmsg" class="ok" role="status" hidden></div>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap cols">
+<div><b>Equitypro Management LLC</b><br>13854 Whittier Blvd, Whittier, CA 90605<br><a href="tel:+15626321707">(562) 632-1707</a> | <a href="mailto:info@equitypromanagement.com">info@equitypromanagement.com</a></div>
+<div>Equal housing opportunity. Listing details come from EquityPro's public rental feed and can change; confirm with the office.</div>
+<div>Demo concept prepared by RegisterMySite. Not affiliated with or endorsed by EquityPro Management.</div>
+</div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dTitle">
+<div class="mh"><div><h3 id="dTitle"></h3><div id="dSub" style="color:var(--mut);font-size:.9rem"></div></div><button class="x" type="button" id="dClose" aria-label="Close">×</button></div>
+<div class="mb">
+<div class="gal" id="dGal"></div>
+<ul class="spec" id="dSpec"></ul>
+<p id="dDesc"></p>
+<h4 style="margin:12px 0 6px">Features listed</h4>
+<ul class="feat" id="dFeat"></ul>
+<div class="warn" id="dWarn"></div>
+<div class="row"><button class="btn btn-s" type="button" id="dTour">Schedule a tour</button><button class="btn btn-b" type="button" id="dApply">Apply now</button><a class="btn btn-o" style="color:var(--navy)" href="tel:+15626321707">Call the office</a></div>
+</div>
+</dialog>
+
+<script src="photos/eqp-pick-1.js"></script>
+<script src="photos/eqp-pick-2.js"></script>
+<script src="photos/eqp-pick-3.js"></script>
+<script src="photos/eqp-chris-1.js"></script>
+<script src="photos/eqp-chris-2.js"></script>
+<script src="photos/eqp-chris-3.js"></script>
+<script src="photos/eqp-newlin-1.js"></script>
+<script src="photos/eqp-newlin-2.js"></script>
+<script src="photos/eqp-newlin-3.js"></script>
+<script>
+(function(){
+var U=[
+{id:"newlin",type:"unit",addr:"7252 Newlin Ave. #5",city:"Whittier, CA",rent:1800,beds:1,baths:1,sqft:625,now:true,park:"assigned",
+short:"Open-plan 1 bed, 1 bath with air conditioning and a personal parking space.",
+desc:"A 625 sq ft one-bedroom with an open layout that connects the living and dining areas, air conditioning and a personal parking space. Smoke-free property.",
+dep:"$1,800",lease:"Ask the office",rules:"Smoke-free",feat:["Air conditioning","Personal parking space","Open living and dining layout","Smoke-free"],
+photos:["eqp-newlin-1","eqp-newlin-2","eqp-newlin-3"],cap:["Living area","Kitchen","Bedroom"]},
+{id:"chris",type:"unit",addr:"13834 Christine Dr. \"B\"",city:"Whittier, CA",rent:1850,beds:1,baths:1,sqft:600,now:false,park:"garage",
+short:"1 bed, 1 bath with stove, oven, microwave, on-site laundry and garage parking.",
+desc:"A 600 sq ft one-bedroom with air conditioning, a wall heater, and a kitchen with stove, oven and microwave. On-site laundry and garage parking, with shops nearby.",
+dep:"$1,850",lease:"10 months",rules:"No pets, no smoking, no third-party checks",feat:["Air conditioning","Wall heater","Stove, oven and microwave","On-site laundry","Garage parking","Retail nearby"],
+photos:["eqp-chris-1","eqp-chris-2","eqp-chris-3"],cap:["Building and stairs","Kitchen","Bedroom"]},
+{id:"pick",type:"apartment",addr:"7041 Pickering Ave. #5",city:"Whittier, CA",rent:1600,beds:1,baths:1,sqft:375,now:true,park:"assigned",
+short:"Updated 1 bed, 1 bath with quartz counters, new cabinets and a gated community.",
+desc:"A 375 sq ft updated apartment with new vinyl flooring, recessed lighting, new custom kitchen cabinets and quartz countertops. Air conditioning, a bathroom heat lamp, on-site laundry with mobile payment, assigned parking and a gated community.",
+dep:"$1,600",lease:"10 months",rules:"No pets, no smoking, no third-party checks",feat:["New vinyl flooring","New quartz countertops","New custom kitchen cabinets","Recessed lighting","Air conditioning","Bathroom heat lamp","On-site laundry, mobile payment","Assigned parking","Gated community"],
+photos:["eqp-pick-1","eqp-pick-2","eqp-pick-3"],cap:["Kitchen and living area","Kitchen","Bedroom"]}
+];
+var P=window.LEAD_PHOTOS||{};
+function $(i){return document.getElementById(i)}
+function money(n){return "$"+n.toLocaleString("en-US")}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+var sel=$("unit");
+U.forEach(function(u){var o=el("option",null,u.addr+" ("+money(u.rent)+")");o.value=u.id;sel.appendChild(o)});
+function card(u){
+var c=el("article","card");
+var ph=el("div","ph");var im=el("img");im.src=P[u.photos[0]]||"";im.alt=u.cap[0]+" at "+u.addr+", Whittier";im.loading="lazy";im.width=480;im.height=360;ph.appendChild(im);
+ph.appendChild(el("span","badge",u.beds+" BR "+u.type));
+ph.appendChild(el("span",u.now?"avail":"avail call",u.now?"Available now":"Call for date"));
+c.appendChild(ph);
+var b=el("div","cb");b.appendChild(el("h3",null,u.addr));
+var pr=el("div","price",money(u.rent));pr.appendChild(el("span",null," / month"));b.appendChild(pr);
+var f=el("div","facts");[u.beds+" bed",u.baths+" bath",u.sqft+" sq ft",u.city].forEach(function(t){f.appendChild(el("span",null,t))});b.appendChild(f);
+b.appendChild(el("p",null,u.short));
+var btn=el("button","btn btn-s","More info");btn.type="button";btn.setAttribute("aria-label","More info about "+u.addr);btn.onclick=function(){openU(u,btn)};b.appendChild(btn);
+c.appendChild(b);return c}
+function render(){
+var bd=$("fBeds").value,mx=+$("fRent").value,pk=$("fPark").value,nw=$("fNow").checked;
+var list=U.filter(function(u){
+if(bd!=="all"){if(bd==="3"?u.beds<3:u.beds!==+bd)return false}
+if(u.rent>mx)return false;if(pk!=="all"&&u.park!==pk)return false;if(nw&&!u.now)return false;return true});
+var g=$("cards");g.textContent="";list.forEach(function(u){g.appendChild(card(u))});
+$("empty").hidden=list.length>0;$("count").textContent="Showing "+list.length+" of "+U.length;}
+["fBeds","fRent","fPark","fNow"].forEach(function(i){$(i).addEventListener("change",render)});
+render();
+var dlg=$("dlg"),cur=null,opener=null;
+function openU(u,o){cur=u;opener=o;
+$("dTitle").textContent=u.addr+", Whittier";$("dSub").textContent=money(u.rent)+" per month | "+u.beds+" bed, "+u.baths+" bath | "+u.sqft+" sq ft";
+var g=$("dGal");g.textContent="";u.photos.forEach(function(p,i){var im=el("img");im.src=P[p]||"";im.alt=u.cap[i]+", "+u.addr;g.appendChild(im)});
+var s=$("dSpec");s.textContent="";[["Rent",money(u.rent)+"/mo"],["Deposit",u.dep],["Lease",u.lease],["Availability",u.now?"Available now":"Call to confirm"],["Rules",u.rules]].forEach(function(r){var li=el("li");li.appendChild(el("b",null,r[0]));li.appendChild(document.createTextNode(r[1]));s.appendChild(li)});
+$("dDesc").textContent=u.desc;
+var f=$("dFeat");f.textContent="";u.feat.forEach(function(t){f.appendChild(el("li",null,t))});
+$("dWarn").textContent="Apply only through EquityPro's office with its own forms. Do not apply through Zillow, Trulia or other sites, and watch for scams. Photos courtesy of EquityPro Management.";
+if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");$("dClose").focus();}
+function closeD(){if(dlg.close)dlg.close();else dlg.removeAttribute("open");if(opener)opener.focus()}
+$("dClose").onclick=closeD;
+dlg.addEventListener("click",function(e){if(e.target===dlg)closeD()});
+dlg.addEventListener("cancel",function(e){e.preventDefault();closeD()});
+function toForm(m){$("mode").value=m;$("unit").value=cur?cur.id:"";closeD();
+$("formTitle").textContent=m==="apply"?"Request application forms":"Request a tour";
+$("contact").scrollIntoView();$("nm").focus();}
+$("dTour").onclick=function(){toForm("tour")};$("dApply").onclick=function(){toForm("apply")};
+$("lead").addEventListener("submit",function(e){e.preventDefault();var ok=$("okmsg");
+if(!$("nm").value.trim()||!$("ph").value.trim()){ok.hidden=false;ok.textContent="Please add your name and phone number.";return}
+var u=U.filter(function(x){return x.id===$("unit").value})[0];
+ok.hidden=false;ok.textContent="Demo only: nothing was sent. On the live site this would reach the office"+(u?" about "+u.addr:"")+". For now, call (562) 632-1707 or email info@equitypromanagement.com.";});
+})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
