@@ -1,0 +1,25 @@
+Prime Management Group Inc - Whittier, CA
+Demo folder: 2026-10-12/prime-management-group
+Built: 2026-10-12
+
+SOURCES
+- Lead brief from Leads Bot Realters (Project Scaffolding room, 2026-10-12): business name, 13215 E Penn St, Ste 315, Whittier 90602; (562) 908-1415; info@primemgnt.com; owner Danny Flores; rents apartments, condos and houses in Whittier and nearby LA County.
+- PadMapper listing, checked 2026-10-12: https://www.padmapper.com/rentals/10944660p/studio-apartment-at-6537-painter-ave-whittier-ca-90601
+  The page loaded but says "Bummer, it looks like this pad is no longer available." It confirms "Professionally Managed By PRIME MANAGEMENT GROUP, INC" and (562) 908-1415. Because the unit is off the market, the page does NOT show its address, price ($1,195 in page metadata) or photos. A generic studio card is used instead.
+- primemgnt.com: per Realters it now redirects to Formatic Property Management (Riverside). Not linked and nothing used from it.
+
+WHAT THE PAGE SHOWS
+- Four general inquiry cards (Studio, Apartments, Condos, Houses), no addresses or prices, each saying "Call or email for current availability".
+- All artwork is original SVG labeled "Illustration, not a photo". No real photos were usable (the only listing is off-market), so no photos/ folder.
+- On-page inquiry form (Schedule a tour / Apply now) that sends nothing.
+
+LEFT OUT AND WHY
+- Any DRE number: the corporation's designated officer was canceled 04/04/2025, so no clean license to print.
+- Hours: Yelp and BBB disagree.
+- Whittier Blvd Ste 404, the Newport Beach mailing address, and DRE's "no main office": conflicting/old addresses.
+- Phones 479-7150 and 686-9104, and Tatiana's name: unverified/secondary contacts. (Note: the PadMapper listing text itself lists 562-479-7150; left out.)
+- dflores@ email: personal address, info@ is the public one.
+- Ratings and review counts; no review carousel: no verifiable profile to cite.
+- "20 years" or any years claim: unverified.
+- Anything from Formatic: a different company.
+- PadMapper listing details (address, $1,195, $35 fee, screening rules, photos): the pad is no longer available.
