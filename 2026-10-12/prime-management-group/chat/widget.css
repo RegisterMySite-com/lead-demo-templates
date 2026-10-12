@@ -1,0 +1,30 @@
+.pmg-demo-banner { right:auto; left:14px; }
+  #pmg-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #b8792b; color: #fffdf8; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #pmg-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #16242f; color: #fffdf8;
+  }
+  #pmg-chat::backdrop { background: rgba(22,36,47,.55); }
+  #pmg-chat .bar { background: #1d3b52; color: #fffdf8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #pmg-chat h2 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.05rem; margin: 0; }
+  #pmg-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #pmg-chat button, #pmg-chat input, #pmg-chat textarea { font: inherit; }
+  #pmg-chat .choice { display: grid; gap: .45rem; }
+  #pmg-chat .choice button, #pmg-chat .quiet { background: #12202a; color: #fffdf8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #pmg-chat .go { background: #b8792b; color: #fffdf8; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #pmg-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #pmg-chat .me, #pmg-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #pmg-chat .me { background: #1d3b52; justify-self: end; }
+  #pmg-chat .them { background: #16242f; border: 1px solid rgba(255,255,255,.12); }
+  #pmg-chat .meta { color: #ddd3c3; font-size: .75rem; }
+  #pmg-chat .row { display: flex; gap: .4rem; }
+  #pmg-chat input, #pmg-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #12202a; color: inherit; }
+  #pmg-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #ddd3c3; margin-right: .35rem; }
+  #pmg-chat .dot.on { background: #b8792b; }
+  @media (max-width: 640px) { #pmg-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
