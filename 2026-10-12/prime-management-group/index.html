@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prime Management Group Inc | Whittier Rentals and Property Management</title>
+<meta name="description" content="Prime Management Group Inc rents apartments, condos and houses in Whittier and nearby LA County. Demo site.">
+<style>
+:root{--ink:#1d2433;--plum:#4b2a5c;--plum2:#6d3f84;--gold:#c99a2e;--cream:#faf6ef;--line:#e4dccd;--muted:#5a5f6b;--ok:#2f6b3f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+a{color:var(--plum2)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:.5rem 1rem;z-index:99}
+.skip:focus{left:.5rem}
+.demo{background:var(--ink);color:#fff;font-size:.85rem;text-align:center;padding:.45rem 1rem}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.bar{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:.01em}
+.brand small{display:block;font-weight:500;color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{display:block;padding:.45rem .7rem;border-radius:6px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.95rem}
+nav a:hover{background:var(--cream)}
+.hero{background:linear-gradient(135deg,var(--plum) 0%,var(--plum2) 60%,#8a5a3c 100%);color:#fff}
+.hero .in{max-width:1120px;margin:0 auto;padding:3.2rem 1rem 3.4rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+.hero h1{font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.12;margin:.2rem 0 1rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:#f3dca4;font-weight:700}
+.hero p{font-size:1.08rem;max-width:36rem;color:#f4eef8}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:.75rem 1.2rem;border-radius:8px;text-decoration:none;background:var(--gold);color:#1d1606}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.btn.dark{background:var(--plum);color:#fff}
+.btn.line{background:#fff;color:var(--plum);box-shadow:inset 0 0 0 2px var(--plum)}
+.heroart{background:rgba(255,255,255,.08);border-radius:16px;padding:1rem}
+.heroart svg{width:100%;height:auto;display:block}
+.cap{font-size:.75rem;color:var(--muted);margin:.35rem 0 0}
+.hero .cap{color:#e8dcef}
+section{padding:3.2rem 1rem}
+.wrap{max-width:1120px;margin:0 auto}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 .4rem}
+.lead{color:var(--muted);max-width:44rem;margin:0 0 1.6rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.3rem}
+.filters button{font:inherit;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);padding:.45rem .9rem;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--plum);color:#fff;border-color:var(--plum)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.2rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card figure{margin:0;position:relative;background:#efe7f3}
+.card figure svg{display:block;width:100%;height:auto}
+.badge{position:absolute;top:.6rem;left:.6rem;background:var(--plum);color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .6rem;border-radius:999px}
+.ill{position:absolute;bottom:.5rem;right:.5rem;background:rgba(255,255,255,.92);color:var(--ink);font-size:.7rem;font-weight:600;padding:.15rem .45rem;border-radius:4px}
+.card .body{padding:1rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.card h3{margin:0;font-size:1.12rem}
+.gen{font-size:.75rem;font-weight:700;color:var(--ok);text-transform:uppercase;letter-spacing:.06em}
+.avail{font-weight:700;color:var(--plum)}
+.card .btn{margin-top:auto;align-self:flex-start;padding:.55rem 1rem}
+.empty{display:none;color:var(--muted)}
+.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem}
+.tile{border:1px solid var(--line);border-radius:12px;padding:1.1rem;background:var(--cream)}
+.tile h3{margin:.2rem 0 .4rem;font-size:1.05rem}
+.tile p{margin:0;color:var(--muted)}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.3rem;display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+form .full{grid-column:1/-1}
+label{font-weight:600;font-size:.92rem;display:block;margin-bottom:.25rem}
+input,select,textarea{width:100%;font:inherit;padding:.6rem .7rem;border:1px solid #c9bfae;border-radius:8px;background:#fff;color:var(--ink)}
+textarea{min-height:110px}
+.note{font-size:.85rem;color:var(--muted)}
+.thanks{display:none;background:#eaf4ec;border:1px solid #b9d8c0;color:#1f4a2b;padding:.9rem;border-radius:10px;grid-column:1/-1}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.nap{font-style:normal;background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.3rem}
+.nap p{margin:.3rem 0}
+footer{background:var(--ink);color:#d9dbe2;padding:2rem 1rem;font-size:.9rem}
+footer a{color:#f3dca4}
+dialog{border:0;border-radius:14px;padding:0;max-width:640px;width:calc(100% - 2rem);max-height:calc(100% - 2rem)}
+dialog::backdrop{background:rgba(20,16,28,.6)}
+.mhead{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--line);gap:1rem}
+.mhead h3{margin:0}
+.x{font:inherit;font-size:1.4rem;line-height:1;border:0;background:var(--cream);border-radius:8px;width:2.3rem;height:2.3rem;cursor:pointer}
+.mbody{padding:1.2rem}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.4rem}
+.gal svg{width:100%;height:auto;display:block;border-radius:8px}
+.mbody ul{padding-left:1.2rem}
+@media (max-width:760px){.hero .in,.contact{grid-template-columns:1fr}form{grid-template-columns:1fr}nav a{padding:.4rem .5rem;font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo site prepared as a preview. It is not the official website of Prime Management Group Inc, and forms on this page do not send anything.</div>
+<header>
+<div class="bar">
+<a class="brand" href="#top" aria-label="Prime Management Group Inc, home">
+<svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="1" y="1" width="42" height="42" rx="10" fill="#4b2a5c"/><path d="M9 22 22 11l13 11" fill="none" stroke="#c99a2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 33V22h6.5a4.5 4.5 0 0 1 0 9H14" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="31" r="2.2" fill="#c99a2e"/></svg>
+<span>Prime Management Group<small>Whittier, California</small></span>
+</a>
+<nav aria-label="Main">
+<ul>
+<li><a href="#rentals">Rentals</a></li>
+<li><a href="#owners">Owners</a></li>
+<li><a href="#inquire">Inquire</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="pmg-open">Message</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="top">
+<div class="in">
+<div>
+<div class="eyebrow">Whittier and nearby LA County</div>
+<h1>Apartments, condos and houses, managed from Uptown Whittier.</h1>
+<p>Prime Management Group Inc rents and manages homes across Whittier and the surrounding LA County communities. Tell us what you are looking for, and our office will reply with what is open.</p>
+<div class="btns">
+<a class="btn" href="#rentals">See rental types</a>
+<a class="btn ghost" href="tel:+15629081415">Call (562) 908-1415</a>
+</div>
+</div>
+<div class="heroart">
+<svg viewBox="0 0 360 240" role="img" aria-label="Illustration of a Whittier street with an apartment building, a condo row and a house">
+<rect width="360" height="240" rx="12" fill="#f3e9d6"/>
+<circle cx="292" cy="54" r="24" fill="#e7b84a"/>
+<path d="M0 170 Q90 140 180 162 T360 150V240H0Z" fill="#9cb98a"/>
+<rect x="34" y="78" width="96" height="112" fill="#6d3f84"/>
+<g fill="#f3dca4"><rect x="46" y="92" width="18" height="16"/><rect x="73" y="92" width="18" height="16"/><rect x="100" y="92" width="18" height="16"/><rect x="46" y="120" width="18" height="16"/><rect x="73" y="120" width="18" height="16"/><rect x="100" y="120" width="18" height="16"/></g>
+<rect x="70" y="152" width="24" height="38" fill="#3a2047"/>
+<rect x="146" y="112" width="92" height="78" fill="#c99a2e"/>
+<path d="M146 112l23-20 23 20 23-20 23 20" fill="#8a5a3c"/>
+<g fill="#fff"><rect x="156" y="128" width="16" height="14"/><rect x="180" y="128" width="16" height="14"/><rect x="204" y="128" width="16" height="14"/></g>
+<rect x="250" y="130" width="78" height="60" fill="#fff"/>
+<path d="M244 132l45-34 45 34z" fill="#4b2a5c"/>
+<rect x="281" y="156" width="16" height="34" fill="#8a5a3c"/>
+<rect x="258" y="142" width="16" height="14" fill="#9cc3d9"/><rect x="304" y="142" width="16" height="14" fill="#9cc3d9"/>
+<rect x="0" y="190" width="360" height="50" fill="#5e6470"/>
+<g fill="#f3dca4"><rect x="20" y="212" width="30" height="4"/><rect x="90" y="212" width="30" height="4"/><rect x="160" y="212" width="30" height="4"/><rect x="230" y="212" width="30" height="4"/><rect x="300" y="212" width="30" height="4"/></g>
+</svg>
+<p class="cap">Illustration, not a photo</p>
+</div>
+</div>
+</div>
+
+<section id="rentals">
+<div class="wrap">
+<h2>Rentals</h2>
+<p class="lead">We could not confirm a specific vacancy for this preview, so each card below is a general inquiry card. Call or email for current availability, or send an inquiry with the form on this page.</p>
+<div class="filters" role="group" aria-label="Filter rentals by type">
+<button type="button" data-f="all" aria-pressed="true">All</button>
+<button type="button" data-f="studio" aria-pressed="false">Studios</button>
+<button type="button" data-f="apartment" aria-pressed="false">Apartments</button>
+<button type="button" data-f="condo" aria-pressed="false">Condos</button>
+<button type="button" data-f="house" aria-pressed="false">Houses</button>
+</div>
+<div class="grid" id="grid" aria-live="polite"></div>
+<p class="empty" id="empty">No cards match that filter.</p>
+</div>
+</section>
+
+<section class="about" id="owners">
+<div class="wrap">
+<h2>For property owners</h2>
+<p class="lead">Prime Management Group Inc is led by owner Danny Flores and works with owners of apartments, condos and houses in Whittier and nearby LA County.</p>
+<div class="cols">
+<div class="tile"><h3>Leasing</h3><p>Marketing your vacancy, answering inquiries and showing the home.</p></div>
+<div class="tile"><h3>Resident care</h3><p>A local office on Penn Street for residents to reach with questions and repair requests.</p></div>
+<div class="tile"><h3>Talk to Danny</h3><p>Call (562) 908-1415 or email info@primemgnt.com to discuss your property.</p></div>
+</div>
+</div>
+</section>
+
+<section id="inquire">
+<div class="wrap">
+<h2>Rental inquiry</h2>
+<p class="lead">Use this form to ask about a tour or to start an application. This demo does not send or store anything.</p>
+<form id="form" novalidate>
+<div><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
+<div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+<div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+<div><label for="f-type">I am asking about</label>
+<select id="f-type" name="type"><option value="">Any rental type</option><option>Studio</option><option>Apartment</option><option>Condo</option><option>House</option></select></div>
+<div><label for="f-req">Request</label>
+<select id="f-req" name="req"><option>Schedule a tour</option><option>Apply now</option><option>General question</option></select></div>
+<div><label for="f-move">Hoped-for move-in date</label><input id="f-move" name="move" type="date"></div>
+<div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="msg" placeholder="Tell us the area, size and budget you have in mind."></textarea></div>
+<p class="note full">Please do not enter Social Security numbers or other sensitive details here.</p>
+<div class="full"><button class="btn dark" type="submit">Send inquiry</button></div>
+<div class="thanks" id="thanks" role="status" tabindex="-1">Thanks. This is a demo, so nothing was sent. To reach the office now, call (562) 908-1415 or email info@primemgnt.com.</div>
+</form>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap contact">
+<div>
+<h2>Contact</h2>
+<p class="lead">Call or email for current availability, tours and owner questions.</p>
+<a class="btn dark" href="#inquire">Send an inquiry</a>
+</div>
+<address class="nap">
+<p><strong>Prime Management Group Inc</strong></p>
+<p>13215 E Penn St, Ste 315<br>Whittier, CA 90602</p>
+<p>Phone: <a href="tel:+15629081415">(562) 908-1415</a></p>
+<p>Email: <a href="mailto:info@primemgnt.com">info@primemgnt.com</a></p>
+</address>
+</div>
+</section>
+</main>
+
+<dialog id="modal" aria-labelledby="m-title">
+<div class="mhead"><h3 id="m-title">Details</h3><button class="x" type="button" id="m-close" aria-label="Close">×</button></div>
+<div class="mbody">
+<div class="gal" id="m-gal"></div>
+<p class="cap">Illustration, not a photo</p>
+<p id="m-desc"></p>
+<ul id="m-list"></ul>
+<div class="btns">
+<button class="btn dark" type="button" data-go="Schedule a tour">Schedule a tour</button>
+<button class="btn line" type="button" data-go="Apply now">Apply now</button>
+</div>
+</div>
+</dialog>
+
+<footer>
+<div class="wrap">
+<p>Prime Management Group Inc · 13215 E Penn St, Ste 315, Whittier, CA 90602 · <a href="tel:+15629081415">(562) 908-1415</a> · <a href="mailto:info@primemgnt.com">info@primemgnt.com</a></p>
+<p>Demo preview. Artwork on this page is illustration, not photos of any property. Equal housing opportunity.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+var C={plum:"#4b2a5c",plum2:"#6d3f84",gold:"#c99a2e",sky:"#dfe9f1",grass:"#9cb98a",wall:"#f3e9d6"};
+function art(kind,alt,v){
+var s='<svg viewBox="0 0 320 200" role="img" aria-label="'+alt+'"><rect width="320" height="200" fill="'+(v?"#efe4d2":C.sky)+'"/><rect y="160" width="320" height="40" fill="'+C.grass+'"/>';
+if(kind==="studio"){s+=v?'<rect x="40" y="40" width="240" height="120" fill="#fff"/><rect x="60" y="110" width="90" height="40" rx="6" fill="'+C.plum2+'"/><rect x="180" y="60" width="70" height="50" fill="#9cc3d9"/><rect x="190" y="120" width="60" height="30" fill="'+C.gold+'"/>':'<rect x="90" y="50" width="140" height="110" fill="'+C.plum2+'"/><rect x="110" y="70" width="40" height="34" fill="#f3dca4"/><rect x="170" y="70" width="40" height="34" fill="#f3dca4"/><rect x="146" y="120" width="28" height="40" fill="#3a2047"/>';}
+else if(kind==="apartment"){s+='<rect x="70" y="30" width="180" height="130" fill="'+(v?C.plum:C.plum2)+'"/>';for(var r=0;r<3;r++)for(var c=0;c<4;c++)s+='<rect x="'+(84+c*42)+'" y="'+(44+r*34)+'" width="26" height="20" fill="#f3dca4"/>';}
+else if(kind==="condo"){s+='<rect x="40" y="80" width="240" height="80" fill="'+C.gold+'"/><path d="M40 80l40-34 40 34 40-34 40 34 40-34 40 34" fill="#8a5a3c"/>';for(var i=0;i<6;i++)s+='<rect x="'+(54+i*38)+'" y="100" width="22" height="20" fill="#fff"/>';s+=v?'<rect x="130" y="130" width="60" height="30" fill="'+C.plum+'"/>':'';}
+else{s+='<rect x="90" y="90" width="140" height="70" fill="#fff"/><path d="M78 92l82-56 82 56z" fill="'+C.plum+'"/><rect x="148" y="116" width="24" height="44" fill="#8a5a3c"/><rect x="104" y="104" width="28" height="22" fill="#9cc3d9"/><rect x="188" y="104" width="28" height="22" fill="#9cc3d9"/>'+(v?'<circle cx="270" cy="130" r="22" fill="#5e8a4a"/>':'');}
+return s+"</svg>";}
+var L=[
+{id:"studio",type:"studio",badge:"Studio",title:"Studio apartments",desc:"Compact studio living in Whittier for one person or a couple.",more:"Ask about studio openings in Whittier and nearby LA County. We will tell you what is currently available."},
+{id:"apartment",type:"apartment",badge:"Apartment",title:"Apartments",desc:"Apartment homes in Whittier and nearby LA County communities.",more:"Tell us how many bedrooms you need and your preferred area, and the office will reply with current openings."},
+{id:"condo",type:"condo",badge:"Condo",title:"Condos",desc:"Condo rentals for residents who want a home with a little more space.",more:"Condo availability changes often. Send an inquiry or call for current openings."},
+{id:"house",type:"house",badge:"House",title:"Houses",desc:"Single-family house rentals in Whittier and the surrounding area.",more:"Ask about houses for rent in Whittier and nearby LA County. Call or email for current availability."}
+];
+var grid=document.getElementById("grid");
+L.forEach(function(x){
+var a=document.createElement("article");a.className="card";a.dataset.type=x.type;
+a.innerHTML='<figure>'+art(x.type,"Illustration of "+x.title.toLowerCase())+'<span class="badge">'+x.badge+'</span><span class="ill">Illustration, not a photo</span></figure><div class="body"><span class="gen">General inquiry card</span><h3>'+x.title+'</h3><p>'+x.desc+'</p><p class="avail">Call or email for current availability</p><button class="btn dark" type="button" data-id="'+x.id+'">More info</button></div>';
+grid.appendChild(a);});
+var fb=document.querySelectorAll(".filters button");
+fb.forEach(function(b){b.addEventListener("click",function(){
+fb.forEach(function(o){o.setAttribute("aria-pressed",o===b?"true":"false")});
+var f=b.dataset.f,n=0;
+grid.querySelectorAll(".card").forEach(function(c){var on=f==="all"||c.dataset.type===f;c.hidden=!on;if(on)n++;});
+document.getElementById("empty").style.display=n?"none":"block";});});
+var m=document.getElementById("modal"),cur=null,opener=null;
+grid.addEventListener("click",function(e){var b=e.target.closest("button[data-id]");if(!b)return;
+var x=L.filter(function(i){return i.id===b.dataset.id})[0];cur=x;opener=b;
+document.getElementById("m-title").textContent=x.title+" (general inquiry)";
+document.getElementById("m-gal").innerHTML=art(x.type,"Illustration of "+x.title.toLowerCase()+", exterior")+art(x.type,"Illustration of "+x.title.toLowerCase()+", second view",1);
+document.getElementById("m-desc").textContent=x.more;
+document.getElementById("m-list").innerHTML="<li>Type: "+x.badge+"</li><li>Area: Whittier and nearby LA County</li><li>Availability: call (562) 908-1415 or email info@primemgnt.com</li>";
+m.showModal();});
+function close(){m.close();if(opener)opener.focus();}
+document.getElementById("m-close").addEventListener("click",close);
+m.addEventListener("click",function(e){if(e.target===m)close();});
+m.querySelectorAll("[data-go]").forEach(function(b){b.addEventListener("click",function(){
+m.close();document.getElementById("f-req").value=b.dataset.go;document.getElementById("f-type").value=cur?cur.badge:"";
+document.getElementById("inquire").scrollIntoView();document.getElementById("f-name").focus();});});
+document.getElementById("form").addEventListener("submit",function(e){e.preventDefault();
+var t=document.getElementById("thanks");t.style.display="block";t.focus();});
+})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
