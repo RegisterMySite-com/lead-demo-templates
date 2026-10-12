@@ -1,0 +1,7 @@
+Listings shown on 2026-10-12/prime-management-group (4 cards, no pagination)
+
+1. Studio apartments - General inquiry card - Studio - no address, no price - "Call or email for current availability" - SVG illustration
+   Source: generic fallback. PadMapper 6537 Painter Ave #6539A studio checked 2026-10-12 and shows "no longer available".
+2. Apartments - General inquiry card - Apartment - no address, no price - SVG illustration. Source: Realters brief (rental types).
+3. Condos - General inquiry card - Condo - no address, no price - SVG illustration. Source: Realters brief.
+4. Houses - General inquiry card - House - no address, no price - SVG illustration. Source: Realters brief.
