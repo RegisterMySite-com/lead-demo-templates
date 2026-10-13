@@ -1,0 +1,16 @@
+Listings shown (source: https://hoagpropmgmt.appfolio.com/listings, checked 2026-10-13)
+
+1. 7808 2nd Street, Unit 07, Downey, CA 90241 - $2,100/mo - 1 bd / 1 ba - Apartment - Available Now
+   App fee $40, deposit $2,100, 12-month lease, no pets, no smoking. Split A/C, pool, on-site manager, laundry room; owner pays water, trash, landscaping.
+   https://hoagpropmgmt.appfolio.com/listings/detail/746e9526-500f-4a49-a494-c41224f7896a
+   Photos: photos/second-1..4.js (first 4 AppFolio photos)
+
+2. 5309-5311 Boswell Place, Los Angeles, CA 90022 - $2,500/mo - 2 bd / 1.5 ba - Townhome-style apartment - Available Now
+   App fee $40, deposit $2,500, 12-month lease. Bedrooms upstairs, fresh paint, fridge and stove, stackable W/D hookups.
+   https://hoagpropmgmt.appfolio.com/listings/detail/350ca88f-dff6-4c2c-8c3d-3835223d6c6b
+   Photos: photos/boswell-1..4.js (first 4 AppFolio photos)
+
+Not used: hoagpropertymgt.com/hoag-listings shows 25 results under "Available", e.g. 8101 Stewart and Gray Rd #1 ($1,850),
+10248 La Reina Ave #1 ($1,875), 12809 Oak St #E and #H, 10624 La Reina Ave #F, 10126 Western Ave #101, 10531 Downey Ave,
+5848 1/4 Ludell St, 10615 La Reina Ave #K (posted 2 weeks to 2+ months ago). None of them is on the live AppFolio feed,
+so they may already be rented; left off rather than risk showing stale units.
