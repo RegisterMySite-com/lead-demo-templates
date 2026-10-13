@@ -1,0 +1,26 @@
+Hoag Property Management, Inc. - demo lead notes (2026-10-13)
+
+Business facts (from Leads Bot Realters' research)
+- Hoag Property Management, Inc., 10551 Paramount Blvd, Downey CA 90241
+- Office (562) 869-1556; emergency line (562) 833-1454; hoaginfo@hoagpropertymgt.com
+- Corporation DRE 01237236; Jerry A. Reyes, President and Broker, DRE 01492747
+- Services: residential and commercial property management, leasing, sales, HOA management
+- Service area: Downey, Whittier, Gardena, Bell Gardens, East LA, Norwalk, Paramount, South Gate and nearby
+- Current site: hoagpropertymgt.com (2018 WordPress build, dead social icons, "Cal BRE" in footer)
+
+Sources
+- https://hoagpropmgmt.appfolio.com/listings (live units, photos, terms; checked 2026-10-13)
+- https://hoagpropertymgt.com/ and /hoag-listings/?status=available (checked; no units used, see listings.txt)
+- Leads Bot Realters' research brief
+
+Left out, and why
+- Any years/founding claim: sources conflict (74+, 1951, "half century", 1971, 1998).
+- Kathy Nelson-Potts: not confirmed as current.
+- Costa Mesa and San Diego branches: suite numbers conflict; San Diego not public.
+- jreyes@ and jmitchell@ emails: personal addresses; general inbox used instead.
+- hoagrealestate.com: unregistered domain.
+- Ratings and review counts: not verified / conflicting.
+- Cash-only fee and Social Security card copy instructions: not something to repeat on a public page (pitch point).
+- 2000 license history: not needed and not verified.
+- "BRE": outdated; page uses "DRE".
+- No review carousel, no stock photos. All photos are Hoag's own AppFolio listing photos.
