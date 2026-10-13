@@ -1,0 +1,30 @@
+.hpm-demo-banner { right:auto; left:14px; }
+  #hpm-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #c2623a; color: #fffdf8; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #hpm-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #1f5c55; color: #fffdf8;
+  }
+  #hpm-chat::backdrop { background: rgba(22,36,47,.55); }
+  #hpm-chat .bar { background: #2c7a70; color: #fffdf8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #hpm-chat h2 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.05rem; margin: 0; }
+  #hpm-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #hpm-chat button, #hpm-chat input, #hpm-chat textarea { font: inherit; }
+  #hpm-chat .choice { display: grid; gap: .45rem; }
+  #hpm-chat .choice button, #hpm-chat .quiet { background: #173f3a; color: #fffdf8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #hpm-chat .go { background: #c2623a; color: #fffdf8; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #hpm-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #hpm-chat .me, #hpm-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #hpm-chat .me { background: #2c7a70; justify-self: end; }
+  #hpm-chat .them { background: #1f5c55; border: 1px solid rgba(255,255,255,.12); }
+  #hpm-chat .meta { color: #ddd3c3; font-size: .75rem; }
+  #hpm-chat .row { display: flex; gap: .4rem; }
+  #hpm-chat input, #hpm-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #173f3a; color: inherit; }
+  #hpm-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #ddd3c3; margin-right: .35rem; }
+  #hpm-chat .dot.on { background: #c2623a; }
+  @media (max-width: 640px) { #hpm-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
