@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoag Property Management, Inc. | Downey, CA</title>
+<meta name="description" content="Hoag Property Management, Inc. in Downey, CA: residential and commercial property management, leasing, sales and HOA management.">
+<style>
+:root{--ink:#16302b;--teal:#1f5c55;--teal2:#2c7a70;--clay:#c2623a;--sand:#f4efe6;--paper:#fffdf9;--line:#ddd3c3;--muted:#5a6b66}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--clay);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:.6rem 1rem;z-index:99}
+.skip:focus{left:.5rem}
+.demo{background:var(--ink);color:#f4efe6;font-size:.82rem;text-align:center;padding:.45rem 1rem}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.1rem}
+header.top{background:var(--paper);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--ink)}
+.brand b{display:block;font-size:1.05rem;letter-spacing:.01em}
+.brand small{display:block;color:var(--muted);font-size:.75rem}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem .9rem}
+nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem;padding:.3rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--clay)}
+.hero{background:linear-gradient(135deg,var(--teal) 0%,var(--ink) 100%);color:#fff;padding:3.4rem 0 3rem;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-80px;bottom:-80px;width:320px;height:320px;border:40px solid rgba(194,98,58,.35);border-radius:50%}
+.hero h1{font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.12;margin:.2rem 0 .8rem;max-width:20ch}
+.hero p{max-width:56ch;color:#e6efec;margin:0 0 1.4rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;color:#f2c3a9;font-weight:700}
+.btn{display:inline-block;border:0;border-radius:6px;padding:.75rem 1.15rem;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;text-align:center}
+.btn-c{background:var(--clay);color:#fff}
+.btn-c:hover{background:#a8502c}
+.btn-o{background:transparent;color:#fff;border:2px solid #fff}
+.btn-t{background:var(--teal);color:#fff}
+.btn-t:hover{background:var(--ink)}
+.btn-l{background:#fff;color:var(--teal);border:2px solid var(--teal)}
+.acts{display:flex;flex-wrap:wrap;gap:.6rem;position:relative;z-index:1}
+.strip{background:var(--sand);border-bottom:1px solid var(--line)}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;padding:.8rem 1.1rem;font-size:.9rem}
+.strip strong{color:var(--teal)}
+section{padding:3rem 0}
+h2{font-size:clamp(1.45rem,3.4vw,2rem);margin:0 0 .4rem}
+.lead{color:var(--muted);margin:0 0 1.6rem;max-width:62ch}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.svc div{border:1px solid var(--line);border-top:4px solid var(--teal2);border-radius:8px;padding:1.1rem;background:#fff}
+.svc h3{margin:.1rem 0 .35rem;font-size:1.05rem}
+.svc p{margin:0;color:var(--muted);font-size:.93rem}
+#rentals{background:var(--sand)}
+.filters{display:flex;flex-wrap:wrap;gap:.8rem;align-items:flex-end;margin-bottom:1.3rem}
+.filters label{display:flex;flex-direction:column;font-size:.8rem;font-weight:700;gap:.25rem}
+select,input,textarea{font:inherit;padding:.55rem .6rem;border:1px solid #b9ad99;border-radius:6px;background:#fff;color:var(--ink);max-width:100%}
+.count{font-size:.88rem;color:var(--muted);margin:0 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.ph{position:relative;aspect-ratio:4/3;background:#cfd8d5}
+.ph img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:.6rem;top:.6rem;background:var(--clay);color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .55rem;border-radius:4px}
+.cb{padding:1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.cb h3{margin:0;font-size:1.05rem}
+.price{font-size:1.25rem;font-weight:800;color:var(--teal)}
+.meta{font-size:.87rem;color:var(--muted)}
+.cb p{margin:.2rem 0 .6rem;font-size:.92rem}
+.cb .btn{margin-top:auto}
+.empty{padding:1.2rem;background:#fff;border:1px dashed #b9ad99;border-radius:8px}
+.note{font-size:.85rem;color:var(--muted);margin-top:1.2rem}
+.lic{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.lic div{background:#fff;border:1px solid var(--line);border-radius:8px;padding:1rem}
+.lic span{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--clay);font-weight:700}
+.areas{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none;margin:1rem 0 0}
+.areas li{background:#e5eeec;color:var(--ink);border-radius:999px;padding:.3rem .8rem;font-size:.88rem}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem}
+form .row{display:flex;flex-direction:column;gap:.25rem;margin-bottom:.8rem}
+form label{font-weight:700;font-size:.88rem}
+.ok{background:#e5eeec;border-left:4px solid var(--teal);padding:.8rem;margin-top:.8rem}
+.ct p{margin:.3rem 0}
+footer{background:var(--ink);color:#d8e3e0;padding:2rem 0;font-size:.88rem}
+footer a{color:#f2c3a9}
+dialog{border:0;border-radius:12px;padding:0;width:min(760px,94vw);max-height:92vh;overflow:auto;color:var(--ink)}
+dialog::backdrop{background:rgba(10,25,22,.65)}
+.mh{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:1rem 1.1rem;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+.mh h2{font-size:1.2rem;margin:0}
+.x{background:none;border:0;font-size:1.6rem;line-height:1;cursor:pointer;color:var(--ink)}
+.mb{padding:1.1rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.5rem;margin-bottom:1rem}
+.gal img{aspect-ratio:4/3;object-fit:cover;border-radius:6px;width:100%}
+.mb ul{padding-left:1.2rem}
+.mb dl{display:grid;grid-template-columns:auto 1fr;gap:.25rem 1rem;margin:0 0 1rem}
+.mb dt{font-weight:700}
+.mb dd{margin:0}
+.tour{background:var(--sand);border-radius:8px;padding:1rem;margin-top:1rem}
+@media (max-width:600px){nav ul{gap:.2rem .7rem}nav a{font-size:.85rem}.hero{padding:2.4rem 0}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo concept by RegisterMySite.com for Hoag Property Management, Inc. Not the official website. Listings, prices and availability may change; confirm with the office.</div>
+<header class="top">
+<div class="wrap bar">
+<a class="brand" href="#top" aria-label="Hoag Property Management home">
+<svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+<rect x="1" y="1" width="42" height="42" rx="9" fill="#1f5c55"/>
+<path d="M8 21 22 9l14 12" fill="none" stroke="#c2623a" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 20v15M30 20v15M14 27.5h16" fill="none" stroke="#fffdf9" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="22" cy="17" r="2" fill="#f2c3a9"/>
+</svg>
+<span><b>Hoag Property Management</b><small>Downey, California</small></span>
+</a>
+<nav aria-label="Main">
+<ul>
+<li><a href="#rentals">Rentals</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#owners">Owners</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="hpm-open">Message</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="top">
+<div class="wrap">
+<div class="eyebrow">Southeast LA County property management</div>
+<h1>Homes to rent and buildings well cared for, right from Downey.</h1>
+<p>Hoag Property Management, Inc. handles residential and commercial property management, leasing, sales and HOA management across Downey, Whittier, Norwalk, South Gate and nearby cities.</p>
+<div class="acts">
+<a class="btn btn-c" href="#rentals">See available rentals</a>
+<a class="btn btn-o" href="tel:+15628691556">Call (562) 869-1556</a>
+</div>
+</div>
+</div>
+<div class="strip"><div class="wrap">
+<span><strong>Office:</strong> <a href="tel:+15628691556">(562) 869-1556</a></span>
+<span><strong>Emergency maintenance:</strong> <a href="tel:+15628331454">(562) 833-1454</a></span>
+<span><strong>Email:</strong> <a href="mailto:hoaginfo@hoagpropertymgt.com">hoaginfo@hoagpropertymgt.com</a></span>
+</div></div>
+
+<section id="rentals" aria-labelledby="rh">
+<div class="wrap">
+<h2 id="rh">Available rentals</h2>
+<p class="lead">Units currently posted on Hoag's online listings. Open a card for more photos, rental terms, and options to schedule a tour or apply.</p>
+<div class="filters" role="group" aria-label="Filter rentals">
+<label>Type<select id="fType"><option value="all">All types</option><option value="Apartment">Apartment</option><option value="Townhome-style">Townhome-style</option></select></label>
+<label>Bedrooms<select id="fBeds"><option value="0">Any</option><option value="1">1+</option><option value="2">2+</option></select></label>
+<label>Max rent<select id="fMax"><option value="0">Any</option><option value="2200">Up to $2,200</option><option value="2600">Up to $2,600</option></select></label>
+<button class="btn btn-l" type="button" id="fReset">Reset</button>
+</div>
+<p class="count" id="count" aria-live="polite"></p>
+<div class="grid" id="grid"></div>
+<p class="note">Prices and details are shown as posted on Hoag's AppFolio listings. Availability can change quickly, so please call the office to confirm.</p>
+</div>
+</section>
+
+<section id="services" aria-labelledby="sh">
+<div class="wrap">
+<h2 id="sh">What Hoag does</h2>
+<p class="lead">One local office for owners, residents and associations.</p>
+<div class="svc">
+<div><h3>Residential management</h3><p>Apartments, condos and homes: rent collection, maintenance coordination and resident care.</p></div>
+<div><h3>Commercial management</h3><p>Day-to-day oversight for commercial and retail space.</p></div>
+<div><h3>Leasing</h3><p>Marketing vacancies, showing units and screening applicants.</p></div>
+<div><h3>Sales</h3><p>Help buying or selling property in the communities Hoag serves.</p></div>
+<div><h3>HOA management</h3><p>Support for homeowner associations and their boards.</p></div>
+</div>
+</div>
+</section>
+
+<section id="owners" aria-labelledby="oh" style="background:var(--sand)">
+<div class="wrap two">
+<div>
+<h2 id="oh">For property owners</h2>
+<p>Thinking about professional management for a rental, a building or an association? Call the office or send a note, and Hoag's team will talk through your property.</p>
+<h3>Service area</h3>
+<ul class="areas">
+<li>Downey</li><li>Whittier</li><li>Gardena</li><li>Bell Gardens</li><li>East LA</li><li>Norwalk</li><li>Paramount</li><li>South Gate</li><li>Nearby cities</li>
+</ul>
+</div>
+<div>
+<h3 style="margin-top:0">Licensing</h3>
+<div class="lic">
+<div><span>Corporation</span><strong>Hoag Property Management, Inc.</strong><br>DRE 01237236</div>
+<div><span>President and Broker</span><strong>Jerry A. Reyes</strong><br>DRE 01492747</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" aria-labelledby="ch">
+<div class="wrap two">
+<div class="ct">
+<h2 id="ch">Contact</h2>
+<p><strong>Hoag Property Management, Inc.</strong></p>
+<p>10551 Paramount Blvd<br>Downey, CA 90241</p>
+<p>Office: <a href="tel:+15628691556">(562) 869-1556</a></p>
+<p>Emergency line: <a href="tel:+15628331454">(562) 833-1454</a></p>
+<p>Email: <a href="mailto:hoaginfo@hoagpropertymgt.com">hoaginfo@hoagpropertymgt.com</a></p>
+</div>
+<div>
+<h3 style="margin-top:0">Send a question</h3>
+<form id="cform" novalidate>
+<div class="row"><label for="cn">Name</label><input id="cn" name="name" autocomplete="name" required></div>
+<div class="row"><label for="ce">Email or phone</label><input id="ce" name="contact" required></div>
+<div class="row"><label for="cm">Message</label><textarea id="cm" name="msg" rows="4"></textarea></div>
+<button class="btn btn-t" type="submit">Send</button>
+<div id="cok" class="ok" hidden role="status">Thanks! This demo doesn't send messages. Please call (562) 869-1556 or email hoaginfo@hoagpropertymgt.com.</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p><strong>Hoag Property Management, Inc.</strong> | 10551 Paramount Blvd, Downey, CA 90241 | (562) 869-1556</p>
+<p>Corporation DRE 01237236 | Jerry A. Reyes, President and Broker, DRE 01492747</p>
+<p>Demo concept by RegisterMySite.com. Not affiliated with or endorsed by Hoag Property Management, Inc. Unit photos are from Hoag's own AppFolio listings.</p>
+</div>
+</footer>
+
+<dialog id="modal" aria-labelledby="mt">
+<div class="mh"><h2 id="mt"></h2><button class="x" type="button" id="mx" aria-label="Close">×</button></div>
+<div class="mb" id="mbody"></div>
+</dialog>
+
+<script src="photos/second-1.js"></script>
+<script src="photos/second-2.js"></script>
+<script src="photos/second-3.js"></script>
+<script src="photos/second-4.js"></script>
+<script src="photos/boswell-1.js"></script>
+<script src="photos/boswell-2.js"></script>
+<script src="photos/boswell-3.js"></script>
+<script src="photos/boswell-4.js"></script>
+<script>
+(function(){
+var AF="https://hoagpropmgmt.appfolio.com/listings";
+var U=[
+{id:"second",title:"7808 2nd St #7",city:"Downey, CA 90241",type:"Apartment",beds:1,baths:"1",rent:2100,
+desc:"Spacious downstairs 1-bedroom with a split A/C unit, pool and on-site laundry.",
+photos:["second-1","second-2","second-3","second-4"],
+alts:["Two-story apartment building at 7808 2nd St","Empty living room with wood-look floors","Open kitchen with white cabinets","Kitchen with sink and white cabinets"],
+uid:"746e9526-500f-4a49-a494-c41224f7896a",
+feat:["1 bedroom / 1 bathroom, downstairs","Split A/C unit","Swimming pool","On-site manager","Laundry room on site","Owner pays water, trash and landscaping","Stove included"],
+terms:[["Rent","$2,100/mo"],["Application fee","$40"],["Security deposit","$2,100"],["Lease","12 months"],["Pets","No cats or dogs"],["Smoking","No smoking"],["Status","Available now"]]},
+{id:"boswell",title:"5309-5311 Boswell Pl",city:"Los Angeles, CA 90022",type:"Townhome-style",beds:2,baths:"1.5",rent:2500,
+desc:"Townhome-style 2-bedroom, 1.5-bath apartment with bedrooms upstairs and fresh paint.",
+photos:["boswell-1","boswell-2","boswell-3","boswell-4"],
+alts:["Kitchen with gray cabinets","Living room with staircase","Staircase to the upstairs bedrooms","Living room with wood-look floors"],
+uid:"350ca88f-dff6-4c2c-8c3d-3835223d6c6b",
+feat:["2 bedrooms upstairs / 1.5 bathrooms","Freshly painted interior","Kitchen with ample cabinet space","Refrigerator and stove included","Washer and dryer hookups for a stackable unit"],
+terms:[["Rent","$2,500/mo"],["Application fee","$40"],["Security deposit","$2,500"],["Lease","12 months"],["Status","Available now"]]}
+];
+var P=window.LEAD_PHOTOS||{};
+function money(n){return "$"+n.toLocaleString("en-US")}
+function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e}
+var grid=document.getElementById("grid"),count=document.getElementById("count");
+var fT=document.getElementById("fType"),fB=document.getElementById("fBeds"),fM=document.getElementById("fMax");
+function render(){
+var t=fT.value,b=+fB.value,m=+fM.value;
+var list=U.filter(function(u){return (t==="all"||u.type===t)&&u.beds>=b&&(!m||u.rent<=m)});
+grid.innerHTML="";
+count.textContent=list.length+" of "+U.length+" rentals shown";
+if(!list.length){var e=el("div","empty","No rentals match those filters. Try resetting, or call (562) 869-1556 to ask about upcoming vacancies.");grid.appendChild(e);return}
+list.forEach(function(u){
+var c=el("article","card");
+var ph=el("div","ph");var im=document.createElement("img");im.src=P[u.photos[0]]||"";im.alt=u.alts[0];im.width=480;im.height=360;im.loading="lazy";ph.appendChild(im);ph.appendChild(el("span","badge",u.type));c.appendChild(ph);
+var cb=el("div","cb");cb.appendChild(el("h3",null,u.title));cb.appendChild(el("div","meta",u.city));
+cb.appendChild(el("div","price",money(u.rent)+"/mo"));cb.appendChild(el("div","meta",u.beds+" bd / "+u.baths+" ba | Available now"));
+cb.appendChild(el("p",null,u.desc));
+var bt=el("button","btn btn-t","More info");bt.type="button";bt.setAttribute("aria-label","More info about "+u.title);bt.addEventListener("click",function(){openM(u,bt)});cb.appendChild(bt);
+c.appendChild(cb);grid.appendChild(c)});
+}
+[fT,fB,fM].forEach(function(s){s.addEventListener("change",render)});
+document.getElementById("fReset").addEventListener("click",function(){fT.value="all";fB.value="0";fM.value="0";render()});
+var dlg=document.getElementById("modal"),mb=document.getElementById("mbody"),last=null;
+function openM(u,from){
+last=from;document.getElementById("mt").textContent=u.title+", "+u.city;mb.innerHTML="";
+var g=el("div","gal");u.photos.forEach(function(p,i){var im=document.createElement("img");im.src=P[p]||"";im.alt=u.alts[i];g.appendChild(im)});mb.appendChild(g);
+mb.appendChild(el("p","price",money(u.rent)+"/mo"));mb.appendChild(el("p",null,u.desc));
+var dl=document.createElement("dl");u.terms.forEach(function(r){dl.appendChild(el("dt",null,r[0]));dl.appendChild(el("dd",null,r[1]))});mb.appendChild(dl);
+mb.appendChild(el("h3",null,"Features"));var ul=document.createElement("ul");u.feat.forEach(function(f){ul.appendChild(el("li",null,f))});mb.appendChild(ul);
+var a=el("div","acts");
+var tb=el("button","btn btn-l","Schedule a tour");tb.type="button";
+var ap=el("a","btn btn-c","Apply now");ap.href=AF+"/rental_applications/new?listable_uid="+u.uid+"\u0026source=Website";ap.target="_blank";ap.rel="noopener";
+var vl=el("a","btn btn-l","View on AppFolio");vl.href=AF+"/detail/"+u.uid;vl.target="_blank";vl.rel="noopener";
+a.appendChild(tb);a.appendChild(ap);a.appendChild(vl);mb.appendChild(a);
+var tw=el("div","tour");tw.hidden=true;tw.id="tour";
+tw.innerHTML='<h3 style="margin-top:0">Schedule a tour</h3><form id="tform" novalidate><div class="row"><label for="tn">Name</label><input id="tn" autocomplete="name" required></div><div class="row"><label for="tp">Phone or email</label><input id="tp" required></div><div class="row"><label for="td">Preferred day</label><input id="td" type="date"></div><button class="btn btn-t" type="submit">Request tour</button><div class="ok" id="tok" hidden role="status">Thanks! This demo does not send requests. Please call (562) 869-1556 to set up a tour.</div></form>';
+mb.appendChild(tw);
+tb.addEventListener("click",function(){tw.hidden=false;document.getElementById("tn").focus()});
+tw.querySelector("form").addEventListener("submit",function(e){e.preventDefault();document.getElementById("tok").hidden=false});
+dlg.showModal();document.getElementById("mx").focus();
+}
+document.getElementById("mx").addEventListener("click",function(){dlg.close()});
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+dlg.addEventListener("close",function(){if(last)last.focus()});
+document.getElementById("cform").addEventListener("submit",function(e){e.preventDefault();document.getElementById("cok").hidden=false});
+render();
+})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
