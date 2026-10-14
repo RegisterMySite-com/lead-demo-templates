@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LS Property Management | Whittier Rentals and Property Management</title>
+<meta name="description" content="LS Property Management in Whittier, CA. Residential leasing and property management. Call (562) 696-7001.">
+<style>
+:root{--plum:#3b2340;--plum2:#5a3a61;--sage:#8fa58a;--sage2:#dfe7dc;--cream:#faf6ef;--ink:#231a24;--mute:#5d5560;--gold:#c99a3c;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--plum2)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:.5rem 1rem;z-index:99}
+.skip:focus{left:1rem}
+.demo{background:var(--ink);color:#f3ecf4;font-size:.82rem;text-align:center;padding:.45rem 1rem}
+header{background:var(--plum);color:#fff;position:sticky;top:0;z-index:20}
+.bar{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.02em}
+.brand small{display:block;font-weight:400;font-size:.72rem;opacity:.8;letter-spacing:.08em;text-transform:uppercase}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.2rem .9rem;margin:0;padding:0}
+nav a{color:#fff;text-decoration:none;font-size:.95rem;padding:.3rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--gold)}
+.hero{background:linear-gradient(120deg,var(--plum) 0%,var(--plum2) 60%,#6f5a52 100%);color:#fff;padding:3.5rem 1.1rem 4.5rem;position:relative;overflow:hidden}
+.hero .in{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.hero h1{font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.12;margin:.2rem 0 1rem}
+.kick{color:var(--sage2);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700}
+.hero p{max-width:36rem;font-size:1.08rem;opacity:.95}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-block;padding:.75rem 1.2rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;font-family:inherit}
+.b1{background:var(--gold);color:var(--ink)}
+.b2{border-color:#fff;color:#fff;background:transparent}
+.b3{background:var(--plum);color:#fff}
+.b4{border-color:var(--plum);color:var(--plum);background:#fff}
+.arch{justify-self:center;width:min(320px,80%)}
+section{padding:3.5rem 1.1rem}
+.wrap{max-width:1120px;margin:auto}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 .4rem;color:var(--plum)}
+.lead{color:var(--mute);max-width:44rem;margin:0 0 1.6rem}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.chip{border:2px solid var(--plum);background:#fff;color:var(--plum);border-radius:999px;padding:.4rem 1rem;font-weight:600;cursor:pointer;font-family:inherit;font-size:.95rem}
+.chip[aria-pressed="true"]{background:var(--plum);color:#fff}
+.feature{display:grid;grid-template-columns:1.2fr 1fr;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 12px 34px rgba(59,35,64,.14)}
+.feature .ph{position:relative;min-height:300px;background:var(--sage2)}
+.feature .ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.tag{position:absolute;top:1rem;left:1rem;background:var(--sage);color:var(--ink);font-weight:700;font-size:.8rem;padding:.3rem .7rem;border-radius:999px}
+.feature .body{padding:1.6rem}
+.price{font-size:2rem;font-weight:800;color:var(--plum)}
+.price span{font-size:1rem;font-weight:500;color:var(--mute)}
+.specs{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:.8rem 0}
+.specs li{background:var(--sage2);border-radius:8px;padding:.3rem .65rem;font-size:.9rem;font-weight:600}
+.empty{display:none;padding:1rem;background:#fff;border-radius:var(--r)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.svc div{background:#fff;border-left:5px solid var(--sage);border-radius:10px;padding:1.1rem}
+.svc h3{margin:.1rem 0 .3rem;color:var(--plum);font-size:1.1rem}
+.alt{background:var(--sage2)}
+.lic{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.lic div{background:#fff;border-radius:10px;padding:1.1rem;border:1px solid #cfd9cb}
+.lic b{display:block;color:var(--plum);font-size:1.05rem}
+.lic code{font-family:inherit;font-weight:700;font-size:1.15rem}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem}
+form{background:#fff;border-radius:var(--r);padding:1.4rem;box-shadow:0 6px 20px rgba(59,35,64,.1)}
+label{display:block;font-weight:600;margin:.7rem 0 .25rem}
+input,select,textarea{width:100%;padding:.65rem;border:1.5px solid #b9adbb;border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:100px}
+.note{font-size:.85rem;color:var(--mute)}
+.ok{display:none;margin-top:1rem;background:var(--sage2);padding:.8rem;border-radius:8px;font-weight:600}
+footer{background:var(--ink);color:#e9e1ea;padding:2rem 1.1rem;font-size:.9rem}
+footer a{color:#fff}
+dialog{border:0;border-radius:var(--r);padding:0;max-width:760px;width:calc(100% - 1.5rem);max-height:90vh}
+dialog::backdrop{background:rgba(35,26,36,.7)}
+.mh{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;background:var(--plum);color:#fff;position:sticky;top:0}
+.mh h3{margin:0;font-size:1.1rem}
+.x{background:transparent;border:2px solid #fff;color:#fff;border-radius:8px;font-size:1rem;padding:.25rem .6rem;cursor:pointer}
+.mb{padding:1.2rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.5rem;margin-bottom:1rem}
+.gal img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:8px;background:var(--sage2)}
+.mb ul{padding-left:1.2rem}
+@media (max-width:800px){.hero .in,.feature,.contact{grid-template-columns:1fr}.arch{display:none}.feature .ph{min-height:220px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo concept prepared for LS Property Management. Not the official website. Listing details are from their public AppFolio page and may change.</div>
+<header>
+<div class="bar">
+<a class="brand" href="#top" aria-label="LS Property Management home">
+<svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="12" fill="#8fa58a"/><path d="M8 25 24 11l16 14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 23v14h6" fill="none" stroke="#3b2340" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 26c-1.5-1.8-6-1.8-6 1.2 0 3.6 6.5 2.2 6.5 5.8 0 3.2-5 3.4-7 1.2" fill="none" stroke="#3b2340" stroke-width="3.2" stroke-linecap="round"/></svg>
+<span>LS Property Management<small>Whittier, California</small></span>
+</a>
+<nav aria-label="Main">
+<ul>
+<li><a href="#rentals">Rentals</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="lsp-open">Message</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="top">
+<div class="in">
+<div>
+<div class="kick">Whittier leasing and property management</div>
+<h1>A well-kept home, a well-run rental.</h1>
+<p>LS Property Management helps Whittier-area owners lease and care for their homes, and helps renters find a place that is ready to live in.</p>
+<div class="btns">
+<a class="btn b1" href="#rentals">See available rental</a>
+<a class="btn b2" href="tel:+15626967001">Call (562) 696-7001</a>
+</div>
+</div>
+<svg class="arch" viewBox="0 0 300 320" role="img" aria-label="Illustration, not a photo: a ranch-style house under an arch"><title>Illustration, not a photo</title><path d="M30 290V150a120 120 0 0 1 240 0v140z" fill="#5a3a61" stroke="#c99a3c" stroke-width="4"/><circle cx="210" cy="95" r="22" fill="#c99a3c"/><path d="M60 200l90-60 90 60" fill="#8fa58a"/><rect x="75" y="195" width="150" height="95" fill="#dfe7dc"/><rect x="135" y="230" width="30" height="60" fill="#3b2340"/><rect x="92" y="215" width="30" height="25" fill="#3b2340" opacity=".6"/><rect x="178" y="215" width="30" height="25" fill="#3b2340" opacity=".6"/><text x="150" y="312" font-size="12" text-anchor="middle" fill="#dfe7dc" font-family="system-ui,sans-serif">Illustration, not a photo</text></svg>
+</div>
+</div>
+
+<section id="rentals">
+<div class="wrap">
+<h2>Available now</h2>
+<p class="lead">Our current residential rental, with details and photos from our live listings page.</p>
+<div class="filters" role="group" aria-label="Filter by type">
+<button class="chip" type="button" data-f="all" aria-pressed="true">All</button>
+<button class="chip" type="button" data-f="house" aria-pressed="false">Houses</button>
+<button class="chip" type="button" data-f="apartment" aria-pressed="false">Apartments</button>
+</div>
+<article class="feature" id="card-dittmar" data-type="house" aria-labelledby="dt-h">
+<div class="ph"><img data-photo="lsp-front" alt="Front of 14363 Dittmar Dr, a single-story home with a green lawn" width="480" height="320"><span class="tag">Available now</span></div>
+<div class="body">
+<div class="kick" style="color:var(--plum2)">House for rent</div>
+<h3 id="dt-h" style="margin:.2rem 0;font-size:1.4rem">14363 Dittmar Dr, Whittier, CA 90603</h3>
+<div class="price">$4,100 <span>/ month</span></div>
+<ul class="specs"><li>3 bd</li><li>2 ba</li><li>1,341 sq ft</li><li>1-year lease</li></ul>
+<p>Ranch-style home in a quiet Whittier neighborhood with an open floor plan, updated kitchen, family room and a big backyard with a covered patio and fruit trees.</p>
+<div class="btns">
+<a class="btn b3" href="https://lspropertymanagement.appfolio.com/listings/rental_applications/new?listable_uid=510754a5-60f7-473b-87e1-a9bb1f9ed5f4&source=Website" target="_blank" rel="noopener">Apply now</a>
+<a class="btn b4" href="#contact" data-tour="14363 Dittmar Dr">Schedule a tour</a>
+<button class="btn b4" type="button" id="more-btn" aria-haspopup="dialog">More info</button>
+</div>
+</div>
+</article>
+<p class="empty" id="empty">No rentals of that type right now. Call (562) 696-7001 for current availability.</p>
+<p class="note" style="margin-top:1rem">See every listing on <a href="https://lspropertymanagement.appfolio.com/listings" target="_blank" rel="noopener">our AppFolio listings page</a>.</p>
+</div>
+</section>
+
+<section id="services" class="alt">
+<div class="wrap">
+<h2>For property owners</h2>
+<p class="lead">Residential property management for homes and rentals in Whittier and nearby communities.</p>
+<div class="svc">
+<div><h3>Leasing</h3><p>Listing, showings and online applications through AppFolio.</p></div>
+<div><h3>Tenant care</h3><p>A local office residents can call, plus a maintenance desk for repair requests.</p></div>
+<div><h3>Owner reporting</h3><p>Clear records for rent and property activity.</p></div>
+<div><h3>Maintenance</h3><p>Coordinated repairs to keep homes in good shape between and during leases.</p></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap">
+<h2>Licensed in California</h2>
+<p class="lead">LS Property Management is the business name of LS Real Estate Inc.</p>
+<div class="lic">
+<div><b>LS Real Estate Inc</b>Corporation license<br>DRE <code>01899596</code></div>
+<div><b>Brenda Ines Nunez</b>Broker<br>DRE <code>01808729</code></div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="alt">
+<div class="wrap contact">
+<div>
+<h2>Contact</h2>
+<p><b>LS Property Management</b><br>8152 Painter Ave Ste 200D<br>Whittier, CA 90602</p>
+<p><a class="btn b3" href="tel:+15626967001">(562) 696-7001</a></p>
+<p class="note">Applications and listings: <a href="https://lspropertymanagement.appfolio.com/listings" target="_blank" rel="noopener">AppFolio listings</a></p>
+</div>
+<form id="tour-form" novalidate>
+<h3 style="margin-top:0;color:var(--plum)">Schedule a tour or ask a question</h3>
+<label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required>
+<label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+<label for="f-prop">Property</label>
+<select id="f-prop" name="property"><option>14363 Dittmar Dr</option><option>General question</option><option>Owner services</option></select>
+<label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea>
+<p class="note">Demo form: nothing is sent or stored. Please do not enter sensitive information.</p>
+<button class="btn b3" type="submit">Request a tour</button>
+<div class="ok" id="ok" role="status" aria-live="polite"></div>
+</form>
+</div>
+</section>
+</main>
+
+<dialog id="more" aria-labelledby="m-h">
+<div class="mh"><h3 id="m-h">14363 Dittmar Dr, Whittier</h3><button class="x" type="button" id="m-x" aria-label="Close">Close</button></div>
+<div class="mb">
+<div class="gal">
+<img data-photo="lsp-living" alt="Living room with fireplace and wood-look floors" width="480" height="320">
+<img data-photo="lsp-dining" alt="Open living and dining area with ceiling fan" width="480" height="320">
+<img data-photo="lsp-family" alt="Family room opening to the kitchen" width="480" height="320">
+<img data-photo="lsp-kitchen" alt="Kitchen with green cabinets, gas range and tile backsplash" width="480" height="320">
+<img data-photo="lsp-sink" alt="Kitchen sink wall with farmhouse sink" width="480" height="320">
+<img data-photo="lsp-hall" alt="Room with sliding door to the backyard" width="480" height="320">
+<img data-photo="lsp-bedroom" alt="Bedroom with ceiling fan and double doors" width="480" height="320">
+</div>
+<p><b>$4,100 / month</b> | 3 bd, 2 ba, 1,341 sq ft | Available now | 1-year lease</p>
+<ul>
+<li>Open floor plan joining living room, dining area and a spacious family room</li>
+<li>Updated kitchen with Spanish tile backsplash, newer cabinets and modern appliances</li>
+<li>Indoor laundry room; primary suite with its own bathroom</li>
+<li>Dual-pane windows, laminate flooring, decorative fireplace</li>
+<li>Backyard with covered patio and mature fruit trees</li>
+<li>Two-car garage with a permitted bonus room</li>
+<li>Appliances: gas stove, microwave, dishwasher, garbage disposal, refrigerator, central AC and heat</li>
+<li>Landscaping included</li>
+<li>Small dogs allowed; cats not allowed</li>
+</ul>
+<div class="btns">
+<a class="btn b3" href="https://lspropertymanagement.appfolio.com/listings/rental_applications/new?listable_uid=510754a5-60f7-473b-87e1-a9bb1f9ed5f4&source=Website" target="_blank" rel="noopener">Apply now</a>
+<a class="btn b4" href="https://lspropertymanagement.appfolio.com/listings/detail/510754a5-60f7-473b-87e1-a9bb1f9ed5f4" target="_blank" rel="noopener">View on AppFolio</a>
+</div>
+</div>
+</dialog>
+
+<footer>
+<div class="wrap">
+<p><b>LS Property Management</b>, the business name of LS Real Estate Inc. Corporation DRE 01899596. Broker Brenda Ines Nunez, DRE 01808729.<br>8152 Painter Ave Ste 200D, Whittier, CA 90602 | <a href="tel:+15626967001">(562) 696-7001</a></p>
+<p class="note" style="color:#cbbfcd">Demo site concept. Not affiliated with or endorsed by the business. Listing information deemed reliable but not guaranteed; confirm with the office.</p>
+</div>
+</footer>
+
+<script src="photos/lsp-front.js"></script>
+<script src="photos/lsp-living.js"></script>
+<script src="photos/lsp-dining.js"></script>
+<script src="photos/lsp-family.js"></script>
+<script src="photos/lsp-kitchen.js"></script>
+<script src="photos/lsp-sink.js"></script>
+<script src="photos/lsp-hall.js"></script>
+<script src="photos/lsp-bedroom.js"></script>
+<script>
+(function(){
+var P=window.LEAD_PHOTOS||{};
+document.querySelectorAll("img[data-photo]").forEach(function(i){if(P[i.dataset.photo])i.src=P[i.dataset.photo];});
+var chips=document.querySelectorAll(".chip"),card=document.getElementById("card-dittmar"),empty=document.getElementById("empty");
+chips.forEach(function(c){c.addEventListener("click",function(){chips.forEach(function(x){x.setAttribute("aria-pressed","false")});c.setAttribute("aria-pressed","true");var f=c.dataset.f,show=(f==="all"||f===card.dataset.type);card.style.display=show?"":"none";empty.style.display=show?"none":"block";});});
+var d=document.getElementById("more"),mb=document.getElementById("more-btn");
+mb.addEventListener("click",function(){if(d.showModal)d.showModal();else d.setAttribute("open","");});
+document.getElementById("m-x").addEventListener("click",function(){d.close();mb.focus();});
+d.addEventListener("click",function(e){if(e.target===d)d.close();});
+document.querySelectorAll("[data-tour]").forEach(function(a){a.addEventListener("click",function(){document.getElementById("f-prop").value=a.dataset.tour;setTimeout(function(){document.getElementById("f-name").focus();},50);});});
+var f=document.getElementById("tour-form"),ok=document.getElementById("ok");
+f.addEventListener("submit",function(e){e.preventDefault();var n=f.elements["name"].value.trim(),p=f.elements["phone"].value.trim();ok.style.display="block";if(!n||!p){ok.textContent="Please add your name and phone number.";return;}ok.textContent="Thanks, "+n+". This is a demo, so nothing was sent. Please call (562) 696-7001 to book your tour.";f.reset();});
+})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
