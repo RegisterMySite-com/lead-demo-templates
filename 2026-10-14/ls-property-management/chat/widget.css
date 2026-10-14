@@ -1,0 +1,30 @@
+.lsp-demo-banner { right:auto; left:14px; }
+  #lsp-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #c99a3c; color: #fffdf8; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #lsp-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #3b2340; color: #fffdf8;
+  }
+  #lsp-chat::backdrop { background: rgba(22,36,47,.55); }
+  #lsp-chat .bar { background: #5a3a61; color: #fffdf8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #lsp-chat h2 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.05rem; margin: 0; }
+  #lsp-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #lsp-chat button, #lsp-chat input, #lsp-chat textarea { font: inherit; }
+  #lsp-chat .choice { display: grid; gap: .45rem; }
+  #lsp-chat .choice button, #lsp-chat .quiet { background: #2c1a30; color: #fffdf8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #lsp-chat .go { background: #c99a3c; color: #fffdf8; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #lsp-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #lsp-chat .me, #lsp-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #lsp-chat .me { background: #5a3a61; justify-self: end; }
+  #lsp-chat .them { background: #3b2340; border: 1px solid rgba(255,255,255,.12); }
+  #lsp-chat .meta { color: #ddd3c3; font-size: .75rem; }
+  #lsp-chat .row { display: flex; gap: .4rem; }
+  #lsp-chat input, #lsp-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #2c1a30; color: inherit; }
+  #lsp-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #ddd3c3; margin-right: .35rem; }
+  #lsp-chat .dot.on { background: #c99a3c; }
+  @media (max-width: 640px) { #lsp-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
