@@ -1,0 +1,17 @@
+LS Property Management - listings used (checked 2026-10-14 ~6:20 AM PT)
+Source: https://lspropertymanagement.appfolio.com/listings
+
+1) 14363 Dittmar Dr., Whittier, CA 90603 - HOUSE - LIVE ("Available Now")
+   Rent: $4,100/mo (matches packet)
+   3 bd / 2 ba, 1,341 sq ft, 1-year lease
+   Detail: https://lspropertymanagement.appfolio.com/listings/detail/510754a5-60f7-473b-87e1-a9bb1f9ed5f4
+   Apply:  https://lspropertymanagement.appfolio.com/listings/rental_applications/new?listable_uid=510754a5-60f7-473b-87e1-a9bb1f9ed5f4&source=Website
+   Features shown: open floor plan, family room, updated kitchen (Spanish tile backsplash), indoor laundry,
+   primary suite bath, dual-pane windows, laminate floors, decorative fireplace, covered patio, fruit trees,
+   two-car garage with permitted bonus room, gas stove/microwave/dishwasher/disposal/refrigerator/central AC-heat,
+   landscaping included, small dogs allowed, cats not allowed.
+   Photos: 8 of 18 AppFolio photos, downloaded, recompressed to 480px, embedded as photos/lsp-*.js (no hotlinking).
+
+Not used (commercial, per leave-out list):
+- 10704 Inez St, Whittier - Industrial, 8,000 sq ft, $8,000
+- 13418 Telegraph Rd, Whittier - 1,222 sq ft, $2,700
