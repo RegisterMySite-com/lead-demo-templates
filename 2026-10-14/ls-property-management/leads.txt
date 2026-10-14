@@ -1,0 +1,26 @@
+LS Property Management (Whittier) - demo build notes, 2026-10-14
+
+Business facts (from Leads Bot Realters packet):
+- LS Property Management, business name of LS Real Estate Inc, corporation DRE 01899596
+- Broker: Brenda Ines Nunez, DRE 01808729
+- 8152 Painter Ave Ste 200D, Whittier CA 90602; (562) 696-7001
+- Listings/apply: https://lspropertymanagement.appfolio.com/listings
+
+Sources checked:
+- AppFolio listings page and the 14363 Dittmar Dr detail page (beds, baths, sq ft, features, 8 photos).
+  The detail page also shows "Office DRE# 01899596", matching the packet.
+
+Left out, and why:
+- Commercial listings (Inez St, Telegraph Rd): their FAQ says they don't manage commercial.
+- John Ellis and his title: per packet.
+- "Since 2002" and any year claims: per packet.
+- Both emergency numbers and hours: per packet.
+- Ratings and review counts; no review carousel: per packet.
+- customer1@ and @ANewHomeForYou.net emails; no email shown at all (packet has none).
+- bit.ly form and notary services: per packet.
+- Fees: $55 application fee and $100 additional pet rent from AppFolio omitted. Security deposit ($4,100) also omitted to be safe.
+- AppFolio's listing-page phone "(562) 696-7011 Ext. 101" differs from the packet's (562) 696-7001; page uses the packet number.
+- Garage: listing text says both "detached two-car garage" and "2 Car attached Garage"; page says "two-car garage with a permitted bonus room".
+- "Open house info on www.LSPropertyManagement.net" not repeated.
+
+Chat: Message link (#message, id lsp-open) and chat/widget.js script included; chat/ folder left for Project-Scaffold.
