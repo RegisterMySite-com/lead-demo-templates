@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gentoo Property Management, Inc. | Bellflower Rentals and Property Management</title>
+<meta name="description" content="Gentoo Property Management, Inc. in Bellflower, CA. Apartments, townhouses and small houses for rent across Bellflower, Lakewood, Downey, Norwalk, Long Beach and nearby. Call (562) 274-5489.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231b2a3a'/%3E%3Cellipse cx='32' cy='38' rx='14' ry='18' fill='%23fff'/%3E%3Cpath d='M24 18 L32 26 L40 18' fill='%23f2a93b'/%3E%3C/svg%3E">
+<style>
+:root{--ink:#1b2a3a;--ink2:#2d4256;--ice:#e8f3f8;--glacier:#5fa8c7;--sun:#f2a93b;--sun-d:#b86f0a;--paper:#fbfdfe;--muted:#4a5a68;--line:#cfdde6;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:var(--ink2)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--sun);color:var(--ink);padding:.5rem 1rem;z-index:99}
+.skip:focus{left:0}
+.demo{background:var(--sun);color:var(--ink);text-align:center;font-size:.85rem;padding:.4rem 1rem;font-weight:600}
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.bar{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.01em}
+.brand small{display:block;font-weight:500;font-size:.72rem;color:#bcd6e3;letter-spacing:.06em;text-transform:uppercase}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.2rem;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:.45rem .65rem;border-radius:8px;font-size:.95rem}
+nav a:hover{background:var(--ink2)}
+.call{background:var(--sun);color:var(--ink)!important;font-weight:700}
+.hero{background:linear-gradient(160deg,var(--ink) 0%,var(--ink2) 55%,var(--glacier) 100%);color:#fff;padding:3.5rem 1rem 4rem}
+.hero .in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:center}
+.hero h1{font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;margin:.2rem 0 1rem}
+.hero p{font-size:1.1rem;color:#e3eff5;max-width:36rem}
+.kick{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:var(--sun);font-weight:700}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.4rem}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:.75rem 1.2rem;border-radius:999px;text-decoration:none;text-align:center}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.btn-sun:hover{background:#ffc061}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-line{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.hero-art{background:rgba(255,255,255,.08);border-radius:24px;padding:1rem}
+.cap{font-size:.75rem;color:var(--muted);margin:.35rem 0 0}
+.hero .cap{color:#d3e6ef;text-align:center}
+section{padding:3.5rem 1rem}
+.wrap{max-width:1120px;margin:0 auto}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin:0 0 .4rem}
+.lead{color:var(--muted);max-width:44rem;margin:0 0 1.6rem}
+.alt{background:var(--ice)}
+.notice{display:flex;gap:.8rem;align-items:flex-start;background:#fff7e8;border:2px solid var(--sun);border-radius:var(--r);padding:1rem 1.2rem;max-width:1120px;margin:0 auto}
+.notice strong{display:block}
+.filters{display:flex;flex-wrap:wrap;gap:.8rem;align-items:end;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem;margin-bottom:1.4rem}
+.filters label{display:flex;flex-direction:column;font-size:.85rem;font-weight:600;gap:.25rem;min-width:140px;flex:1}
+select,input,textarea{font:inherit;padding:.6rem;border:1px solid #9fb3c1;border-radius:10px;background:#fff;color:var(--ink);width:100%}
+.count{font-size:.9rem;color:var(--muted);margin:0 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.3rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(27,42,58,.06)}
+.ph{position:relative;aspect-ratio:4/3;background:var(--ice);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph svg{width:100%;height:100%}
+.badge{position:absolute;top:.6rem;left:.6rem;background:var(--ink);color:#fff;font-size:.75rem;font-weight:700;padding:.25rem .6rem;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}
+.tag{position:absolute;bottom:.5rem;right:.5rem;background:rgba(255,255,255,.92);color:var(--ink);font-size:.7rem;padding:.15rem .5rem;border-radius:6px}
+.body{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.price{font-size:1.4rem;font-weight:800}
+.price span{font-size:.85rem;font-weight:500;color:var(--muted)}
+.card h3{margin:0;font-size:1.05rem}
+.meta{font-size:.9rem;color:var(--muted);margin:0}
+.status{font-size:.8rem;font-weight:700;color:var(--sun-d);background:#fff3df;border-radius:8px;padding:.3rem .55rem;margin:0}
+.card .btn{margin-top:auto}
+.empty{padding:2rem;text-align:center;background:#fff;border-radius:var(--r);border:1px dashed var(--line)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.svc div{background:#fff;border-radius:var(--r);padding:1.2rem;border-top:4px solid var(--glacier)}
+.svc h3{margin:.2rem 0 .4rem;font-size:1.05rem}
+.svc p{margin:0;color:var(--muted);font-size:.95rem}
+.cities{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+.cities li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.35rem .85rem;font-weight:600}
+.lic{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.4rem}
+.lic div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem}
+.lic b{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem}
+.contact address{font-style:normal;font-size:1.05rem}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;display:grid;gap:.8rem}
+form label{font-weight:600;font-size:.9rem;display:grid;gap:.25rem}
+.ok{background:#e6f5ec;border:1px solid #6dbb8a;border-radius:10px;padding:.7rem;display:none}
+.ok.show{display:block}
+footer{background:var(--ink);color:#cfe0ea;padding:2rem 1rem;font-size:.9rem}
+footer a{color:#fff}
+footer .wrap{display:grid;gap:.6rem}
+.soc{display:flex;gap:1rem;flex-wrap:wrap}
+dialog{border:0;border-radius:18px;padding:0;max-width:min(720px,94vw);width:100%;color:var(--ink)}
+dialog::backdrop{background:rgba(15,25,35,.65)}
+.mh{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--line);gap:1rem}
+.mh h3{margin:0;font-size:1.15rem}
+.x{background:var(--ice);border:0;border-radius:50%;width:2.4rem;height:2.4rem;font-size:1.4rem;cursor:pointer;flex:none}
+.mb{padding:1.2rem;display:grid;gap:1rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem}
+.gal figure{margin:0}
+.gal img,.gal svg{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--ice)}
+.mb ul{margin:0;padding-left:1.2rem}
+.mf{display:flex;gap:.7rem;flex-wrap:wrap}
+@media (max-width:820px){.hero .in,.contact{grid-template-columns:1fr}.hero-art{max-width:320px}}
+@media (max-width:520px){nav ul{gap:0}nav a{padding:.4rem .45rem;font-size:.88rem}.bar{justify-content:center}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo concept site prepared for Gentoo Property Management, Inc. Not the official website. Listings may no longer be available.</div>
+<header>
+<div class="bar">
+<a class="brand" href="#top" aria-label="Gentoo Property Management, Inc. home">
+<svg width="42" height="42" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#2d4256"/><path d="M32 8c-11 0-18 10-18 24 0 13 7 24 18 24s18-11 18-24C50 18 43 8 32 8z" fill="#0f1a24"/><path d="M32 22c-7 0-11 7-11 15 0 9 5 15 11 15s11-6 11-15c0-8-4-15-11-15z" fill="#fff"/><path d="M20 20c3-3 6-3 8-1-2 2-5 2-8 1zM44 20c-3-3-6-3-8-1 2 2 5 2 8 1z" fill="#fff"/><path d="M28 24l4 5 4-5z" fill="#f2a93b"/><path d="M8 50h48l-6-8-8 4-10-12-10 12-8-4z" fill="#5fa8c7" opacity=".7"/></svg>
+<span>Gentoo Property Management<small>Bellflower, California</small></span></a>
+<nav aria-label="Main"><ul>
+<li><a href="#rentals">Rentals</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#areas">Areas</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="gpm-open">Message</a></li>
+<li><a class="call" href="tel:+15622745489">(562) 274-5489</a></li>
+</ul></nav>
+</div>
+</header>
+<main id="main">
+<div id="top" class="hero">
+<div class="in">
+<div>
+<p class="kick">Apartments, townhouses and small houses</p>
+<h1>Southeast LA County rentals, managed from Bellflower Blvd.</h1>
+<p>Gentoo Property Management, Inc. leases and manages homes across Bellflower, Lakewood, Downey, Long Beach and nearby cities. Call the office to see what is open now.</p>
+<div class="btns"><a class="btn btn-sun" href="#rentals">See recent rentals</a><a class="btn btn-ghost" href="tel:+15622745489">Call (562) 274-5489</a></div>
+</div>
+<div class="hero-art">
+<svg viewBox="0 0 400 300" role="img" aria-label="Illustration of townhouses and a small house under a sunny sky"><rect width="400" height="300" rx="18" fill="#e8f3f8"/><circle cx="330" cy="62" r="30" fill="#f2a93b"/><rect x="30" y="120" width="150" height="150" fill="#fff" stroke="#1b2a3a" stroke-width="4"/><path d="M20 124 105 64 190 124z" fill="#2d4256"/><rect x="52" y="148" width="34" height="30" fill="#5fa8c7"/><rect x="122" y="148" width="34" height="30" fill="#5fa8c7"/><rect x="52" y="200" width="34" height="30" fill="#5fa8c7"/><rect x="122" y="210" width="34" height="60" fill="#1b2a3a"/><rect x="210" y="170" width="160" height="100" fill="#fff" stroke="#1b2a3a" stroke-width="4"/><path d="M200 174 290 120 380 174z" fill="#f2a93b"/><rect x="236" y="196" width="36" height="30" fill="#5fa8c7"/><rect x="306" y="206" width="36" height="64" fill="#2d4256"/><rect y="268" width="400" height="32" fill="#7fb38e"/></svg>
+<p class="cap">Illustration, not a photo</p>
+</div>
+</div>
+</div>
+
+<section aria-label="Payment safety">
+<div class="notice"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#f2a93b"/><path d="M12 6v8M12 17v1" stroke="#1b2a3a" stroke-width="2.5" stroke-linecap="round"/></svg>
+<p><strong>We never take cash payments.</strong> If anyone asks you to pay in cash for a Gentoo rental, do not pay. Call the office at <a href="tel:+15622745489">(562) 274-5489</a> to check.</p></div>
+</section>
+
+<section id="rentals" class="alt">
+<div class="wrap">
+<h2>Recently posted rentals</h2>
+<p class="lead">These homes were posted on our social pages in September. Rentals move fast, so please call to confirm a home is still available before you visit.</p>
+<div class="filters" role="search" aria-label="Filter rentals">
+<label>Type<select id="f-type"><option value="all">All types</option><option value="Townhouse">Townhouse</option><option value="Apartment">Apartment</option></select></label>
+<label>Bedrooms<select id="f-beds"><option value="0">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option></select></label>
+<label>Max rent<select id="f-max"><option value="0">No max</option><option value="2000">$2,000</option><option value="2400">$2,400</option><option value="2600">$2,600</option></select></label>
+</div>
+<p class="count" id="count" aria-live="polite"></p>
+<div class="grid" id="grid"></div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<h2>Property management services</h2>
+<p class="lead">Residential rentals of all sizes, from single apartments to small houses.</p>
+<div class="svc">
+<div><h3>Leasing</h3><p>Marketing open units, showing homes and screening applicants.</p></div>
+<div><h3>Rent collection</h3><p>Clear, documented payments. We never take cash.</p></div>
+<div><h3>Maintenance</h3><p>Repair requests handled through the office, with urgent issues by phone.</p></div>
+<div><h3>Owner support</h3><p>Management for apartment, townhouse and small-house owners.</p></div>
+</div>
+<div class="lic">
+<div><b>Corporation license</b>Gentoo Property Management, Inc.<br>DRE #01944920</div>
+<div><b>Supervising broker</b>Goldene Jane Byma<br>DRE #01017485</div>
+</div>
+</div>
+</section>
+
+<section id="areas" class="alt">
+<div class="wrap">
+<h2>Areas we serve</h2>
+<p class="lead">Based in Bellflower and serving nearby cities in Southeast LA County and North Orange County.</p>
+<ul class="cities"><li>Bellflower</li><li>Lakewood</li><li>Downey</li><li>Norwalk</li><li>Paramount</li><li>Cerritos</li><li>Artesia</li><li>Long Beach</li><li>Whittier</li><li>Cypress</li></ul>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap contact">
+<div>
+<h2>Contact the office</h2>
+<address>Gentoo Property Management, Inc.<br>15362 Bellflower Blvd<br>Bellflower, CA 90706<br><a href="tel:+15622745489">(562) 274-5489</a></address>
+<p>For an urgent maintenance issue, call <a href="tel:+15622745489">(562) 274-5489</a>. If anyone is in danger, call 911.</p>
+<div class="btns"><a class="btn btn-ink" href="tel:+15622745489">Call the office</a></div>
+</div>
+<form id="form" novalidate>
+<h3 style="margin:0">Ask about a rental or a tour</h3>
+<label>Name<input id="n" name="name" autocomplete="name" required></label>
+<label>Phone<input id="p" name="phone" type="tel" autocomplete="tel" required></label>
+<label>Home you're interested in<select id="u" name="unit"><option value="">Any rental</option></select></label>
+<label>Message<textarea id="m" name="message" rows="3"></textarea></label>
+<button class="btn btn-sun" type="submit">Send request</button>
+<p class="ok" id="ok" role="status">Thanks! This is a demo, so nothing was sent. Please call (562) 274-5489.</p>
+<p class="cap">Demo form: it does not send or store anything. Please don't enter Social Security, ID or bank details.</p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div><strong>Gentoo Property Management, Inc.</strong> · DRE #01944920 · Supervising broker Goldene Jane Byma, DRE #01017485</div>
+<div>15362 Bellflower Blvd, Bellflower, CA 90706 · <a href="tel:+15622745489">(562) 274-5489</a></div>
+<div class="soc"><a href="https://www.facebook.com/gentoopm/" rel="noopener" target="_blank">Facebook</a><a href="https://www.instagram.com/gentoo_property_management_/" rel="noopener" target="_blank">Instagram</a></div>
+<div>Equal Housing Opportunity. Demo concept site, not affiliated with or endorsed by the business. Listing details come from public posts and may have changed.</div>
+</div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-t">
+<div class="mh"><h3 id="dlg-t"></h3><button class="x" id="dlg-x" aria-label="Close">×</button></div>
+<div class="mb" id="dlg-b"></div>
+</dialog>
+
+<script src="photos/gpm-savoy.js"></script>
+<script src="photos/gpm-blvd.js"></script>
+<script>
+(function(){
+var P=window.LEAD_PHOTOS||{};
+var ART='<svg viewBox="0 0 400 300" role="img" aria-label="Illustration of a two-story townhouse with a two-car garage"><rect width="400" height="300" fill="#e8f3f8"/><circle cx="340" cy="60" r="26" fill="#f2a93b"/><path d="M70 120 200 50 330 120z" fill="#2d4256"/><rect x="85" y="118" width="230" height="150" fill="#fff" stroke="#1b2a3a" stroke-width="4"/><rect x="110" y="140" width="50" height="40" fill="#5fa8c7"/><rect x="240" y="140" width="50" height="40" fill="#5fa8c7"/><rect x="105" y="200" width="130" height="68" fill="#cfdde6" stroke="#1b2a3a" stroke-width="3"/><path d="M105 217h130M105 234h130M105 251h130" stroke="#9fb3c1" stroke-width="2"/><rect x="255" y="200" width="40" height="68" fill="#1b2a3a"/><rect y="266" width="400" height="34" fill="#7fb38e"/></svg>';
+var U=[
+{id:"park",title:"9123½ Park St",city:"Bellflower",type:"Townhouse",beds:2,baths:"1.5",price:2550,src:"https://www.instagram.com/gentoo_property_management_/p/Dd5B3Mdox0l/",desc:"Two-story townhouse with a two-car garage and laundry hookups in the garage.",feat:["2 bedrooms, 1.5 baths, two stories","Two-car garage with laundry hookups","Kitchen with dishwasher and stove","Central A/C and heat","Small patio off the kitchen"],photo:null},
+{id:"savoy",title:"Savoy Apartments, 16216 Eucalyptus Ave",city:"Bellflower",type:"Apartment",beds:2,baths:"1",price:1995,src:"https://www.instagram.com/p/Dd1gi94mNzb/",desc:"Two-bedroom apartment at the Savoy Apartments on Eucalyptus Ave.",feat:["2 bedrooms, 1 bath","Savoy Apartments building","Call the office for unit details and a showing"],photo:"gpm-savoy",alt:"Front of the Savoy Apartments building with its script sign"},
+{id:"blvd",title:"15325 Bellflower Blvd",city:"Bellflower",type:"Townhouse",sub:"Townhouse apartment",beds:2,baths:"1.5",price:2300,src:"https://www.instagram.com/p/DdxWCrTGIpA/",desc:"Two-story end-unit townhouse apartment with assigned parking and a balcony.",feat:["2 bedrooms, 1.5 baths, two stories","Washer/dryer hookups and half bath downstairs","Full bath with shower/tub and linen closet upstairs","Ceiling fans in both bedrooms","Second-floor balcony and small entry patio","Assigned parking, on-site management","No pets; service and emotional support animals welcome"],photo:"gpm-blvd",alt:"Street view of the two-story building at 15325 Bellflower Blvd"}
+];
+function money(n){return "$"+n.toLocaleString("en-US")}
+function media(u,cls){
+if(u.photo&&P[u.photo]){return '<img src="'+P[u.photo]+'" alt="'+u.alt+'" loading="lazy"><span class="tag">Photo from their post</span>'}
+return ART+'<span class="tag">Illustration, not a photo</span>'}
+var grid=document.getElementById("grid"),count=document.getElementById("count");
+var ft=document.getElementById("f-type"),fb=document.getElementById("f-beds"),fm=document.getElementById("f-max");
+function render(){
+var t=ft.value,b=+fb.value,m=+fm.value;
+var list=U.filter(function(u){return (t==="all"||u.type===t)&&u.beds>=b&&(!m||u.price<=m)});
+count.textContent=list.length+" of "+U.length+" recently posted rentals shown";
+if(!list.length){grid.innerHTML='<div class="empty">No rentals match those filters. Call <a href="tel:+15622745489">(562) 274-5489</a> to ask about new openings.</div>';return}
+grid.innerHTML=list.map(function(u){
+return '<article class="card"><div class="ph">'+media(u)+'<span class="badge">'+(u.sub||u.type)+'</span></div><div class="body"><div class="price">'+money(u.price)+' <span>/ month</span></div><h3>'+u.title+'</h3><p class="meta">'+u.city+' · '+u.beds+' bd · '+u.baths+' ba</p><p>'+u.desc+'</p><p class="status">Recently posted, call to confirm availability.</p><button class="btn btn-line" data-id="'+u.id+'">More info</button></div></article>'}).join("");
+}
+[ft,fb,fm].forEach(function(s){s.addEventListener("change",render)});
+render();
+var sel=document.getElementById("u");
+U.forEach(function(u){var o=document.createElement("option");o.value=u.title;o.textContent=u.title+", "+u.city;sel.appendChild(o)});
+var dlg=document.getElementById("dlg"),last=null;
+grid.addEventListener("click",function(e){var bt=e.target.closest("button[data-id]");if(!bt)return;last=bt;open(bt.getAttribute("data-id"))});
+function open(id){
+var u=U.filter(function(x){return x.id===id})[0];
+document.getElementById("dlg-t").textContent=u.title+", "+u.city;
+var g='<figure>'+(u.photo&&P[u.photo]?'<img src="'+P[u.photo]+'" alt="'+u.alt+'"><figcaption class="cap">Photo from their September post</figcaption>':ART+'<figcaption class="cap">Illustration, not a photo</figcaption>')+'</figure>';
+g+='<figure><svg viewBox="0 0 400 300" role="img" aria-label="Map-style illustration of Bellflower"><rect width="400" height="300" fill="#e8f3f8"/><path d="M0 90h400M0 200h400M120 0v300M280 0v300" stroke="#fff" stroke-width="18"/><path d="M0 90h400M120 0v300" stroke="#f2a93b" stroke-width="5"/><circle cx="200" cy="145" r="18" fill="#1b2a3a"/><circle cx="200" cy="145" r="7" fill="#fff"/></svg><figcaption class="cap">Illustration, not a photo or map</figcaption></figure>';
+document.getElementById("dlg-b").innerHTML='<div class="gal">'+g+'</div><p class="price">'+money(u.price)+' <span>/ month</span></p><p class="status">Recently posted, call to confirm availability.</p><ul>'+u.feat.map(function(f){return "<li>"+f+"</li>"}).join("")+'</ul><p class="cap">Details from their <a href="'+u.src+'" target="_blank" rel="noopener">September social post</a>. Call the office for current terms.</p><div class="mf"><a class="btn btn-sun" href="tel:+15622745489">Apply now: call the office</a><a class="btn btn-line" href="#contact" data-tour="'+u.title+'">Schedule a tour</a></div>';
+if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");
+}
+function close(){if(dlg.close)dlg.close();else dlg.removeAttribute("open");if(last)last.focus()}
+document.getElementById("dlg-x").addEventListener("click",close);
+dlg.addEventListener("click",function(e){if(e.target===dlg)close();var t=e.target.closest("[data-tour]");if(t){sel.value=t.getAttribute("data-tour");close();setTimeout(function(){document.getElementById("n").focus()},50)}});
+document.getElementById("form").addEventListener("submit",function(e){e.preventDefault();var n=document.getElementById("n"),p=document.getElementById("p");if(!n.value.trim()){n.focus();n.setAttribute("aria-invalid","true");return}if(!p.value.trim()){p.focus();p.setAttribute("aria-invalid","true");return}document.getElementById("ok").classList.add("show");this.reset()});
+})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
