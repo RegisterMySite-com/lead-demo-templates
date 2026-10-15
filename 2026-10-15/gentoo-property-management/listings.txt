@@ -2,10 +2,10 @@ Gentoo Property Management, Inc. - listings used (checked 2026-10-15 ~6:35 AM PT
 None are confirmed still open. Each card says "Recently posted, call to confirm availability."
 No application link exists; Apply now = tel:+15622745489, Schedule a tour = on-page demo form (submits nothing).
 
-1) 9123½ Park St, Bellflower - TOWNHOUSE - $2,550/mo
+1) Park St, Bellflower (house number dropped, see leads.txt) - TOWNHOUSE - $2,550/mo
    2 bd / 1.5 ba, two stories, two-car garage with laundry hookups, dishwasher and stove, central A/C and heat, small patio.
    Source: https://www.instagram.com/gentoo_property_management_/p/Dd5B3Mdox0l/ (posted Sept 29, 2026)
-   Photo: NOT used. The post's lead image shows a house number reading "9123 3/4", not 9123 1/2, so it may
+   Photo: NOT used. The post's lead image shows a different house number than the post text, so it may
    not show this unit. Card uses original SVG art labeled "Illustration, not a photo".
 
 2) Savoy Apartments, 16216 Eucalyptus Ave, Bellflower - APARTMENT - $1,995/mo
