@@ -1,0 +1,30 @@
+Gentoo Property Management, Inc. (Bellflower) - demo build notes, 2026-10-15
+They have no website; this demo would be their first.
+
+Facts used (Leads Bot Realters packet):
+- Gentoo Property Management, Inc., corporation DRE 01944920
+- Supervising broker Goldene Jane Byma, DRE 01017485
+- 15362 Bellflower Blvd, Bellflower CA 90706; (562) 274-5489
+- Service cities: Bellflower, Lakewood, Downey, Norwalk, Paramount, Cerritos, Artesia, Long Beach, Whittier, Cypress
+- Rentals: apartments, townhouses and small houses
+- Facebook https://www.facebook.com/gentoopm/ ; Instagram https://www.instagram.com/gentoo_property_management_/
+- "We never take cash payments" note (they repeat this warning in their own posts)
+
+Sources checked:
+- The three Instagram posts listed in listings.txt (public og:title/og:description and lead image).
+
+Left out, and why:
+- 14130 and 14200 Bellflower Blvd one-bedrooms: posts conflict.
+- Thomas Byma, Gerrit/Garrett Byma: per packet.
+- Staff first names and personal phone numbers: the posts say to call "Pattie" at (562) 965-2606; omitted. All calls go to the office.
+- Yahoo email and every directory email: per packet; page shows no email.
+- Hours; years in business (1978 or 2013): per packet.
+- Ratings and review counts; no review carousel: per packet.
+- Deposits and specials: $1,000 deposit (15325 Bellflower Blvd) and the Savoy "move-in special / rent reduced" wording omitted.
+- "LLC": never used; name is Gentoo Property Management, Inc.
+- Park St post photo: shows "9123 3/4", not 9123 1/2, so SVG illustration used instead.
+
+Photos: 2 real photos from the posts, stored in-repo as base64 JS (no hotlinking). All other art is original SVG labeled
+"Illustration, not a photo". No stock photos.
+Chat: Message link (#message, id gpm-open) and chat/widget.js script included; chat/ folder left for Project-Scaffold.
+Urgent maintenance: (562) 274-5489, or 911 if someone is in danger.
