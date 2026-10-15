@@ -1,0 +1,29 @@
+<button type="button" id="gpm-launcher" aria-haspopup="dialog" aria-controls="gpm-chat">Message the office</button>
+<dialog id="gpm-chat" aria-labelledby="gpm-title" data-origin="">
+  <div class="bar">
+    <div>
+      <h2 id="gpm-title">Gentoo Property Management</h2>
+      <p class="meta" id="gpm-presence" style="margin:.15rem 0 0"><span class="dot" id="gpm-dot"></span><span id="gpm-who">Choose who to reach</span></p>
+    </div>
+    <button type="button" class="quiet" id="gpm-close" style="color:#fffdf8">Close</button>
+  </div>
+  <div class="body">
+    <div id="gpm-home" class="choice">
+      <p style="margin:0">A private chat with the office, or the after-hours specialist. A room is only you and one other person.</p>
+      <button type="button" data-desk="leasing"><strong>Leasing</strong><br><span class="meta">Ask about our recently posted rentals, applying, or the areas we serve</span></button>
+      <button type="button" data-desk="maintenance"><strong>Maintenance</strong><br><span class="meta">Write the office about a repair, or an owner question</span></button>
+      <button type="button" data-desk="specialist"><strong>24-hour specialist</strong><br><span class="meta">Answers from this page's notes, any time</span></button>
+      <p class="meta">Or call (562) 274-5489.</p>
+    </div>
+    <div id="gpm-room" hidden style="display:flex;flex-direction:column;gap:.6rem;height:100%">
+      <button type="button" class="quiet" id="gpm-back">Back</button>
+      <div id="gpm-log" class="log" aria-live="polite"></div>
+      <p id="gpm-typing" class="meta" hidden></p>
+      <form id="gpm-form" class="row">
+        <label class="meta" style="position:absolute;left:-999px" for="gpm-box">Message</label>
+        <input id="gpm-box" maxlength="1500" placeholder="Write a message" autocomplete="off">
+        <button class="go" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</dialog>
