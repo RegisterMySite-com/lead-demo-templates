@@ -1,0 +1,24 @@
+Gentoo Property Management, Inc. - listings used (checked 2026-10-15 ~6:35 AM PT)
+None are confirmed still open. Each card says "Recently posted, call to confirm availability."
+No application link exists; Apply now = tel:+15622745489, Schedule a tour = on-page demo form (submits nothing).
+
+1) 9123½ Park St, Bellflower - TOWNHOUSE - $2,550/mo
+   2 bd / 1.5 ba, two stories, two-car garage with laundry hookups, dishwasher and stove, central A/C and heat, small patio.
+   Source: https://www.instagram.com/gentoo_property_management_/p/Dd5B3Mdox0l/ (posted Sept 29, 2026)
+   Photo: NOT used. The post's lead image shows a house number reading "9123 3/4", not 9123 1/2, so it may
+   not show this unit. Card uses original SVG art labeled "Illustration, not a photo".
+
+2) Savoy Apartments, 16216 Eucalyptus Ave, Bellflower - APARTMENT - $1,995/mo
+   2 bd / 1 ba.
+   Source: https://www.instagram.com/p/Dd1gi94mNzb/ (posted Sept 28, 2026)
+   Photo: post's lead image (Savoy building sign), downloaded, recompressed to 480px, stored as photos/gpm-savoy.js.
+   The post is a "MOVE IN SPECIAL / Rent Reduced" post; the special wording is left off per packet.
+
+3) 15325 Bellflower Blvd, Bellflower - TOWNHOUSE APARTMENT - $2,300/mo
+   2 bd / 1.5 ba, end unit, assigned parking, w/d hookups and half bath downstairs, full bath upstairs,
+   ceiling fans, balcony, entry patio, on-site management, no pets (service/ESA welcome).
+   Source: https://www.instagram.com/p/DdxWCrTGIpA/ (posted Sept 26, 2026)
+   Photo: post's lead image (building showing "15325"), stored as photos/gpm-blvd.js.
+
+Only the first (lead) image of each post could be downloaded without logging in; carousel images were not reachable.
+Not used: 14130 and 14200 Bellflower Blvd one-bedrooms (posts conflict).
