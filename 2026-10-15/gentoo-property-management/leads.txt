@@ -22,7 +22,8 @@ Left out, and why:
 - Ratings and review counts; no review carousel: per packet.
 - Deposits and specials: $1,000 deposit (15325 Bellflower Blvd) and the Savoy "move-in special / rent reduced" wording omitted.
 - "LLC": never used; name is Gentoo Property Management, Inc.
-- Park St post photo: shows "9123 3/4", not 9123 1/2, so SVG illustration used instead.
+- Park St house number: the post says 9123 1/2 but its photo shows 9123 3/4, so the number was dropped
+  everywhere; shown as "Park St, Bellflower" and the photo replaced by an SVG illustration.
 
 Photos: 2 real photos from the posts, stored in-repo as base64 JS (no hotlinking). All other art is original SVG labeled
 "Illustration, not a photo". No stock photos.
