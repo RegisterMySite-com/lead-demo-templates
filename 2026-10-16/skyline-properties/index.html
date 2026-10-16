@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skyline Properties | Lakewood, Long Beach and Bellflower Rentals</title>
+<meta name="description" content="Skyline Properties in Lakewood, CA. Property management for homes, condos and small apartment buildings. Call (562) 920-2440.">
+<style>
+:root{--wine:#5c1a33;--wine2:#7d2a4a;--sky:#8fd0e0;--sky2:#e3f3f7;--paper:#fbf9f6;--ink:#1d1a1c;--mute:#5a5458;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--wine2)}
+:focus-visible{outline:3px solid #1b7f99;outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:.5rem 1rem;z-index:99}
+.skip:focus{left:1rem}
+.demo{background:var(--ink);color:#eee;font-size:.82rem;text-align:center;padding:.45rem 1rem}
+header{background:var(--wine);color:#fff;position:sticky;top:0;z-index:20}
+.bar{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding:.7rem 1.1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:700}
+.brand small{display:block;font-weight:400;font-size:.72rem;opacity:.85;letter-spacing:.08em;text-transform:uppercase}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.2rem .9rem;margin:0;padding:0}
+nav a{color:#fff;text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--sky)}
+.hero{background:linear-gradient(180deg,var(--wine) 0%,var(--wine2) 55%,#b0587a 100%);color:#fff;padding:3.2rem 1.1rem 0;overflow:hidden}
+.hero .in{max-width:1120px;margin:auto}
+.hero h1{font-size:clamp(1.8rem,4.6vw,3rem);line-height:1.12;margin:.2rem 0 1rem;max-width:40rem}
+.kick{color:var(--sky);text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700}
+.hero p{max-width:38rem;font-size:1.08rem}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.btn{display:inline-block;padding:.7rem 1.15rem;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:.98rem;font-family:inherit}
+.b1{background:var(--sky);color:var(--ink)}
+.b2{border-color:#fff;color:#fff;background:transparent}
+.b3{background:var(--wine);color:#fff}
+.b4{border-color:var(--wine);color:var(--wine);background:#fff}
+.city{display:block;width:100%;height:auto;margin-top:2rem}
+.ill{font-size:.75rem;opacity:.85;text-align:right;margin:.2rem 0 0;padding-bottom:.4rem}
+section{padding:3.2rem 1.1rem}
+.wrap{max-width:1120px;margin:auto}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 .4rem;color:var(--wine)}
+.lead{color:var(--mute);max-width:44rem;margin:0 0 1.4rem}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;background:#fff;padding:1rem;border-radius:var(--r);border:1px solid #e6dde1;margin-bottom:1.2rem}
+.filters label{font-weight:600;font-size:.9rem;display:block;margin-bottom:.2rem}
+select,input,textarea{width:100%;padding:.6rem;border:1.5px solid #bdb1b7;border-radius:8px;font:inherit;background:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.1rem}
+.card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 8px 24px rgba(92,26,51,.12);display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--sky2)}
+.cb{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.3rem;flex:1}
+.cb h3{margin:0;font-size:1.08rem}
+.type{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#1b6f86}
+.price{font-size:1.6rem;font-weight:800;color:var(--wine)}
+.price span{font-size:.95rem;font-weight:500;color:var(--mute)}
+.specs{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:.2rem 0 .4rem}
+.specs li{background:var(--sky2);border-radius:6px;padding:.2rem .55rem;font-size:.86rem;font-weight:600}
+.cb .btns{margin-top:auto;padding-top:.5rem}
+.cb .btn{padding:.55rem .8rem;font-size:.9rem}
+.pager{display:flex;gap:.5rem;justify-content:center;align-items:center;margin-top:1.4rem;flex-wrap:wrap}
+.pager button{min-width:2.6rem;padding:.5rem .8rem;border-radius:8px;border:2px solid var(--wine);background:#fff;color:var(--wine);font:inherit;font-weight:700;cursor:pointer}
+.pager button[aria-current="page"]{background:var(--wine);color:#fff}
+.pager button:disabled{opacity:.4;cursor:default}
+.empty{padding:1rem;background:#fff;border-radius:var(--r)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.svc div{background:#fff;border-top:5px solid var(--sky);border-radius:10px;padding:1.1rem}
+.svc h3{margin:.1rem 0 .3rem;color:var(--wine);font-size:1.1rem}
+.alt{background:var(--sky2)}
+.lic{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.lic div{background:#fff;border-radius:10px;padding:1.1rem;border:1px solid #c8e3ea}
+.lic b{display:block;color:var(--wine);font-size:1.05rem}
+.lic code{font-family:inherit;font-weight:700;font-size:1.15rem}
+.urgent{background:#fff;border-left:5px solid var(--wine);border-radius:10px;padding:1rem 1.1rem;margin-top:1.2rem}
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:2rem}
+form{background:#fff;border-radius:var(--r);padding:1.4rem;box-shadow:0 6px 20px rgba(92,26,51,.1)}
+form label{display:block;font-weight:600;margin:.7rem 0 .25rem}
+textarea{min-height:100px}
+.note{font-size:.85rem;color:var(--mute)}
+.ok{display:none;margin-top:1rem;background:var(--sky2);padding:.8rem;border-radius:8px;font-weight:600}
+footer{background:var(--ink);color:#e6e1e3;padding:2rem 1.1rem;font-size:.9rem}
+footer a{color:#fff}
+dialog{border:0;border-radius:var(--r);padding:0;max-width:760px;width:calc(100% - 1.5rem);max-height:90vh}
+dialog::backdrop{background:rgba(29,26,28,.7)}
+.mh{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:1rem 1.2rem;background:var(--wine);color:#fff;position:sticky;top:0}
+.mh h3{margin:0;font-size:1.05rem}
+.x{background:transparent;border:2px solid #fff;color:#fff;border-radius:8px;font:inherit;padding:.25rem .6rem;cursor:pointer}
+.mb{padding:1.2rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.5rem;margin-bottom:1rem}
+.gal img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:8px;background:var(--sky2)}
+.mb ul{padding-left:1.2rem}
+@media (max-width:800px){.contact{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo concept prepared for Skyline Properties. Not the official website. Listing details are from their public AppFolio page and may change.</div>
+<header>
+<div class="bar">
+<a class="brand" href="#top" aria-label="Skyline Properties home">
+<svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="10" fill="#8fd0e0"/><circle cx="33" cy="15" r="5" fill="#fff"/><path d="M7 39V27h6v-6h5v18h3V15h6v24h3V24h5v6h6v9z" fill="#5c1a33"/><path d="M7 39h34" stroke="#5c1a33" stroke-width="3" stroke-linecap="round"/></svg>
+<span>Skyline Properties<small>Lakewood, California</small></span>
+</a>
+<nav aria-label="Main">
+<ul>
+<li><a href="#rentals">Rentals</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="skp-open">Message</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="top">
+<div class="in">
+<div class="kick">Lakewood, Long Beach and Bellflower</div>
+<h1>Rentals and property management for the neighborhoods we call home.</h1>
+<p>Skyline Properties manages homes, condos and small apartment buildings across Lakewood, Long Beach and Bellflower, and helps renters find a clean, ready-to-move-in place.</p>
+<div class="btns">
+<a class="btn b1" href="#rentals">Browse rentals</a>
+<a class="btn b2" href="tel:+15629202440">Call (562) 920-2440</a>
+</div>
+<svg class="city" viewBox="0 0 1120 140" role="img" aria-label="Illustration, not a photo: a low city skyline at dusk"><title>Illustration, not a photo</title><circle cx="900" cy="60" r="34" fill="#f4d9a8" opacity=".9"/><path d="M0 140V96h60V70h40v26h50V54h34v42h44V80h56v-36h30v52h60V66h40v30h70V50h26v46h54V84h60V40h36v56h50V74h44v22h60V60h34v36h60V82h70v58z" fill="#3e1124" opacity=".95"/><path d="M0 140v-20h1120v20z" fill="#2a0b18"/></svg>
+<p class="ill">Illustration, not a photo</p>
+</div>
+</div>
+
+<section id="rentals">
+<div class="wrap">
+<h2>Available rentals</h2>
+<p class="lead">Current listings with details and photos from our live AppFolio listings page. Apply online, or schedule a tour below.</p>
+<div class="filters" role="search" aria-label="Filter rentals">
+<div><label for="f-type">Type</label><select id="f-type"><option value="">Any type</option><option value="apartment">Apartment</option><option value="house">House</option></select></div>
+<div><label for="f-beds">Bedrooms</label><select id="f-beds"><option value="">Any</option><option value="0">Studio</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option></select></div>
+<div><label for="f-city">City</label><select id="f-city"><option value="">Any city</option><option>Bellflower</option><option>Lakewood</option><option>Long Beach</option><option>Monterey Park</option></select></div>
+<div><label for="f-max">Max rent</label><select id="f-max"><option value="">No max</option><option value="1500">$1,500</option><option value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option></select></div>
+</div>
+<p class="note" id="count" role="status" aria-live="polite"></p>
+<div class="grid" id="grid"></div>
+<p class="empty" id="empty" hidden>No rentals match those filters. Call (562) 920-2440 for current availability.</p>
+<nav class="pager" id="pager" aria-label="Rental pages"></nav>
+<p class="note" style="margin-top:1rem">See every listing on <a href="https://skyline.appfolio.com/listings" target="_blank" rel="noopener">our AppFolio listings page</a>.</p>
+</div>
+</section>
+
+<section id="services" class="alt">
+<div class="wrap">
+<h2>For property owners</h2>
+<p class="lead">Residential management for homes, condos and small apartment buildings in Lakewood, Long Beach and Bellflower.</p>
+<div class="svc">
+<div><h3>Homes</h3><p>Single-family houses leased and cared for between and during tenancies.</p></div>
+<div><h3>Condos</h3><p>Condo units marketed, leased and managed for individual owners.</p></div>
+<div><h3>Small apartment buildings</h3><p>Leasing and day-to-day management for small multi-unit buildings.</p></div>
+<div><h3>Online applications</h3><p>Listings and rental applications through AppFolio.</p></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap">
+<h2>Licensed in California</h2>
+<p class="lead">Skyline Properties is the business name of Skyline Property Services Inc.</p>
+<div class="lic">
+<div><b>Skyline Property Services Inc</b>Corporation license<br>DRE <code>01264722</code></div>
+<div><b>Adrianna Marie Edwards</b>Designated broker<br>DRE <code>00615673</code></div>
+</div>
+<div class="urgent"><b>Residents: urgent maintenance?</b> Call (562) 920-2440. If anyone is in danger, call 911 first.</div>
+</div>
+</section>
+
+<section id="contact" class="alt">
+<div class="wrap contact">
+<div>
+<h2>Contact</h2>
+<p><b>Skyline Properties</b><br>6116 Bellflower Blvd<br>Lakewood, CA 90713</p>
+<p><a class="btn b3" href="tel:+15629202440">(562) 920-2440</a></p>
+<p class="note">Listings and applications: <a href="https://skyline.appfolio.com/listings" target="_blank" rel="noopener">AppFolio listings</a></p>
+</div>
+<form id="tour-form" novalidate>
+<h3 style="margin-top:0;color:var(--wine)">Schedule a tour</h3>
+<label for="t-name">Name</label><input id="t-name" name="name" autocomplete="name" required>
+<label for="t-phone">Phone</label><input id="t-phone" name="phone" type="tel" autocomplete="tel" required>
+<label for="t-prop">Property</label><select id="t-prop" name="property"><option>General question</option></select>
+<label for="t-msg">Preferred day and time</label><textarea id="t-msg" name="message"></textarea>
+<p class="note">Demo form: nothing is sent or stored. Please do not enter sensitive information.</p>
+<button class="btn b3" type="submit">Request a tour</button>
+<div class="ok" id="ok" role="status" aria-live="polite"></div>
+</form>
+</div>
+</section>
+</main>
+
+<dialog id="more" aria-labelledby="m-h">
+<div class="mh"><h3 id="m-h"></h3><button class="x" type="button" id="m-x">Close</button></div>
+<div class="mb" id="m-b"></div>
+</dialog>
+
+<footer>
+<div class="wrap">
+<p><b>Skyline Properties</b>, the business name of Skyline Property Services Inc. Corporation DRE 01264722. Designated broker Adrianna Marie Edwards, DRE 00615673.<br>6116 Bellflower Blvd, Lakewood, CA 90713 | <a href="tel:+15629202440">(562) 920-2440</a></p>
+<p class="note" style="color:#c9c1c5">Demo site concept. Not affiliated with or endorsed by the business. Listing information deemed reliable but not guaranteed; confirm with the office.</p>
+</div>
+</footer>
+
+<script src="photos/skp-banner3-1.js"></script>
+<script src="photos/skp-banner3-2.js"></script>
+<script src="photos/skp-banner3-3.js"></script>
+<script src="photos/skp-banner4-1.js"></script>
+<script src="photos/skp-banner4-2.js"></script>
+<script src="photos/skp-banner4-3.js"></script>
+<script src="photos/skp-greenmeadow-1.js"></script>
+<script src="photos/skp-greenmeadow-2.js"></script>
+<script src="photos/skp-greenmeadow-3.js"></script>
+<script src="photos/skp-hammel-1.js"></script>
+<script src="photos/skp-hammel-2.js"></script>
+<script src="photos/skp-hammel-3.js"></script>
+<script src="photos/skp-pleasant-1.js"></script>
+<script src="photos/skp-pleasant-2.js"></script>
+<script src="photos/skp-pleasant-3.js"></script>
+<script src="photos/skp-ramona-1.js"></script>
+<script src="photos/skp-ramona-2.js"></script>
+<script src="photos/skp-ramona-3.js"></script>
+<script src="photos/skp-woodruff-1.js"></script>
+<script src="photos/skp-woodruff-2.js"></script>
+<script src="photos/skp-woodruff-3.js"></script>
+<script>
+(function(){
+var AF="https://skyline.appfolio.com/listings/";
+var U=[
+{id:"pleasant",uid:"bb8cd217-6f33-4d6c-ab5b-157c5375d6c3",addr:"14 W Pleasant St, Unit B",city:"Long Beach",zip:"90805",type:"apartment",beds:1,baths:"1",sqft:"",rent:1625,ph:[2,1,3],alts:["Two-story building at 14 W Pleasant St","Living room with hardwood floors","Exterior stairs to the upstairs unit"],sum:"Large upstairs 1-bedroom with hardwood floors and a galley kitchen.",d:["Hardwood floors throughout and a large, light-filled living room","Galley kitchen with white shaker cabinets, gas range and refrigerator","Oversized bedroom with a walk-in closet; upgraded bathroom","Near Long Beach Blvd and Del Amo, the Metro Blue Line and the 710, 405 and 91","Water included; street parking only"]},
+{id:"banner4",uid:"4f01936c-4880-467c-aa9e-9c154f7d4117",addr:"4621 N Banner Dr #4",city:"Long Beach",zip:"90807",type:"apartment",beds:0,baths:"1",sqft:"430",rent:1450,ph:[1,2,3],alts:["Banner Drive Apartments building","Studio living area with new carpet","Studio with doors to the closets and bath"],sum:"Freshly painted Bixby Knolls studio with new carpet and two walk-in closets.",d:["Fresh paint and brand-new carpet; upstairs unit","Full kitchen with gas range and refrigerator, plus a separate dining area","Two spacious walk-in closets","Water included; street parking","Cats allowed; dogs not allowed"]},
+{id:"banner3",uid:"9a4d7ab0-8131-4acf-b6da-40c133d6d1cb",addr:"4623 N Banner Dr #3",city:"Long Beach",zip:"90807",type:"apartment",beds:1,baths:"1",sqft:"680",rent:1699,ph:[1,2,3],alts:["Banner Drive Apartments building","Building entry walkway","Living room with plank flooring"],sum:"Spacious upstairs 1-bedroom in Bixby Knolls with new plank flooring.",d:["Fresh paint and brand-new plank flooring","Large living room and a separate dining area","New stainless gas range and refrigerator","Window air conditioner in the living room","Water included; tenant pays gas, trash and electric; street parking only","One-year lease preferred"]},
+{id:"ramona",uid:"8fd19e5d-91f0-4b81-bb99-b95c2fb37551",addr:"9830 Ramona St #15",city:"Bellflower",zip:"90706",type:"apartment",beds:1,baths:"1",sqft:"450",rent:1850,ph:[1,2,3],alts:["Living room with vinyl plank flooring","Living room with ceiling fan and kitchen beyond","Dining area and kitchen"],sum:"Updated upstairs 1-bedroom with a remodeled bath and assigned parking.",d:["Fresh paint and vinyl plank flooring","Remodeled bathroom with new tub, tiled shower walls and vanity","Gas cooktop and wall oven, plenty of cabinets","Bedroom fits a queen bed; on-site laundry room","One assigned parking space","Water and trash included; tenant pays gas and electric; one-year lease; small pet considered"]},
+{id:"woodruff",uid:"87fbcc2b-55e9-40c8-8d39-e26b6110bd88",addr:"17818 Woodruff Ave #219",city:"Bellflower",zip:"90706",type:"apartment",beds:2,baths:"2",sqft:"700",rent:2500,ph:[1,2,3],alts:["Apartment building on Woodruff Ave","Building frontage and landscaping","Controlled-access entry gate"],sum:"2-bed, 2-bath apartment in a controlled-access community with pool and spa.",d:["Wood-look flooring; kitchen with new appliances","Stove, dishwasher, microwave and refrigerator","Pool, spa, patio and BBQ areas","Off-street parking; controlled-access property","Water and trash included","No pets"]},
+{id:"greenmeadow",uid:"416fa73e-e3f0-4ea3-9da2-5bb58e7130e4",addr:"6008 Greenmeadow Rd",city:"Lakewood",zip:"90713",type:"house",beds:3,baths:"1",sqft:"1,076",rent:3900,ph:[1,2,3],alts:["Front of 6008 Greenmeadow Rd with lawn","Living room with wood floors","Living and dining area"],sum:"Well-kept Lakewood home steps from Heartwell Park, with a detached 2-car garage.",d:["Wood floors and a dedicated dining area","Galley kitchen with granite counters and wood cabinets","Fresh interior paint, newer window coverings, separate laundry room","Long driveway and detached two-car garage","Backyard with covered patio and lemon and grapefruit trees","Lawn service included; tenant pays all utilities; renter's insurance required"]},
+{id:"hammel",uid:"fab11bf2-622d-42ab-824b-61d24b315239",addr:"433 W Hammel St",city:"Monterey Park",zip:"91754",type:"house",beds:3,baths:"2",sqft:"1,391",rent:4200,ph:[1,2,3],alts:["Front of 433 W Hammel St","Front door and porch","Open living area with plank flooring"],sum:"Remodeled 3-bedroom home with an open plan, quartz kitchen and 2-car garage.",d:["Open floor plan with luxury vinyl plank and recessed lighting","Kitchen with quartz counters, long island, coffee bar and new stainless appliances","Primary suite with walk-in shower and walk-in closet","Central air; washer and dryer area off the kitchen","Detached two-car garage and private backyard","Cats and dogs considered"]}
+];
+var P=window.LEAD_PHOTOS||{},PER=6,page=1,list=U.slice();
+var g=document.getElementById("grid"),pg=document.getElementById("pager"),em=document.getElementById("empty"),ct=document.getElementById("count");
+function money(n){return "$"+n.toLocaleString("en-US")}
+function bd(u){return u.beds===0?"Studio":u.beds+" bd"}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function pic(u,i){var im=el("img");im.src=P["skp-"+u.id+"-"+u.ph[i]]||"";im.alt=u.alts[i];im.width=480;im.height=320;im.loading="lazy";return im}
+function link(cls,href,txt){var a=el("a","btn "+cls,txt);a.href=href;a.target="_blank";a.rel="noopener";return a}
+function specs(u){var s=el("ul","specs");[bd(u),u.baths+" ba",u.sqft?u.sqft+" sq ft":"",u.type==="house"?"House":"Apartment"].forEach(function(t){if(t)s.appendChild(el("li","",t))});return s}
+var sel=document.getElementById("t-prop");U.forEach(function(u){var o=el("option","",u.addr+", "+u.city);sel.insertBefore(o,sel.firstChild)});sel.selectedIndex=U.length;
+function card(u){var c=el("article","card");c.appendChild(pic(u,0));var b=el("div","cb");b.appendChild(el("div","type",(u.type==="house"?"House":"Apartment")+" | "+u.city));var h=el("h3","",u.addr+", "+u.city+", CA "+u.zip);b.appendChild(h);var p=el("div","price",money(u.rent)+" ");p.appendChild(el("span","","/ month"));b.appendChild(p);b.appendChild(specs(u));b.appendChild(el("p","",u.sum));var bt=el("div","btns");bt.appendChild(link("b3",AF+"rental_applications/new?listable_uid="+u.uid+"&source=Website","Apply now"));var t=el("a","btn b4","Schedule a tour");t.href="#contact";t.addEventListener("click",function(){sel.value=u.addr+", "+u.city;setTimeout(function(){document.getElementById("t-name").focus()},60)});bt.appendChild(t);var m=el("button","btn b4","More info");m.type="button";m.setAttribute("aria-haspopup","dialog");m.addEventListener("click",function(){openM(u,m)});bt.appendChild(m);b.appendChild(bt);c.appendChild(b);return c}
+function render(){g.innerHTML="";pg.innerHTML="";var n=Math.max(1,Math.ceil(list.length/PER));if(page>n)page=n;list.slice((page-1)*PER,page*PER).forEach(function(u){g.appendChild(card(u))});em.hidden=list.length>0;ct.textContent=list.length+" rental"+(list.length===1?"":"s")+" found"+(n>1?", page "+page+" of "+n:"");if(n>1){var pv=el("button","","Previous");pv.disabled=page===1;pv.onclick=function(){go(page-1)};pg.appendChild(pv);for(var i=1;i<=n;i++){(function(i){var b=el("button","",String(i));b.setAttribute("aria-label","Page "+i);if(i===page)b.setAttribute("aria-current","page");b.onclick=function(){go(i)};pg.appendChild(b)})(i)}var nx=el("button","","Next");nx.disabled=page===n;nx.onclick=function(){go(page+1)};pg.appendChild(nx)}}
+function go(i){page=i;render();document.getElementById("rentals").scrollIntoView()}
+var F=["f-type","f-beds","f-city","f-max"].map(function(i){return document.getElementById(i)});
+function filt(){var ty=F[0].value,be=F[1].value,ci=F[2].value,mx=F[3].value;list=U.filter(function(u){return(!ty||u.type===ty)&&(be===""||(be==="0"?u.beds===0:u.beds>=+be))&&(!ci||u.city===ci)&&(!mx||u.rent<=+mx)});page=1;render()}
+F.forEach(function(f){f.addEventListener("change",filt)});
+var d=document.getElementById("more"),mb=document.getElementById("m-b"),last=null;
+function openM(u,btn){last=btn;document.getElementById("m-h").textContent=u.addr+", "+u.city;mb.innerHTML="";var ga=el("div","gal");[0,1,2].forEach(function(i){ga.appendChild(pic(u,i))});mb.appendChild(ga);mb.appendChild(el("p","",money(u.rent)+" / month | "+bd(u)+", "+u.baths+" ba"+(u.sqft?", "+u.sqft+" sq ft":"")+" | Available now"));var ul=el("ul");u.d.forEach(function(x){ul.appendChild(el("li","",x))});mb.appendChild(ul);var bt=el("div","btns");bt.appendChild(link("b3",AF+"rental_applications/new?listable_uid="+u.uid+"&source=Website","Apply now"));bt.appendChild(link("b4",AF+"detail/"+u.uid,"View on AppFolio"));mb.appendChild(bt);if(d.showModal)d.showModal();else d.setAttribute("open","")}
+function closeM(){d.close();if(last)last.focus()}
+document.getElementById("m-x").addEventListener("click",closeM);
+d.addEventListener("click",function(e){if(e.target===d)closeM()});
+var f=document.getElementById("tour-form"),ok=document.getElementById("ok");
+f.addEventListener("submit",function(e){e.preventDefault();var n=f.elements["name"].value.trim(),p=f.elements["phone"].value.trim();ok.style.display="block";if(!n||!p){ok.textContent="Please add your name and phone number.";return}ok.textContent="Thanks, "+n+". This is a demo, so nothing was sent. Please call (562) 920-2440 to book your tour.";f.reset();sel.selectedIndex=U.length});
+render();
+})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
