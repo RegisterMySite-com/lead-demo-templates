@@ -1,0 +1,17 @@
+Skyline Properties listings shown (AppFolio, checked 2026-10-16 morning PT)
+Apply: https://skyline.appfolio.com/listings/rental_applications/new?listable_uid=<uid>&source=Website
+Detail: https://skyline.appfolio.com/listings/detail/<uid>
+
+1. 14 W Pleasant St, Unit B, Long Beach 90805 | Apartment | 1 bd / 1 ba | sq ft not listed | $1,625 | uid bb8cd217-6f33-4d6c-ab5b-157c5375d6c3
+2. 4621 N Banner #4, Long Beach 90807 | Apartment | Studio / 1 ba | 430 sq ft | $1,450 | uid 4f01936c-4880-467c-aa9e-9c154f7d4117
+3. 4623 N Banner #3, Long Beach 90807 | Apartment | 1 bd / 1 ba | 680 sq ft | $1,699 | uid 9a4d7ab0-8131-4acf-b6da-40c133d6d1cb
+4. 9830 Ramona St #15, Bellflower 90706 | Apartment | 1 bd / 1 ba | 450 sq ft | $1,850 | uid 8fd19e5d-91f0-4b81-bb99-b95c2fb37551
+5. 17818 Woodruff Ave #219, Bellflower 90706 | Apartment | 2 bd / 2 ba | 700 sq ft | $2,500 | uid 87fbcc2b-55e9-40c8-8d39-e26b6110bd88
+6. 6008 Greenmeadow Rd, Lakewood 90713 | House | 3 bd / 1 ba | 1,076 sq ft | $3,900 (rent field; title says $3975) | uid 416fa73e-e3f0-4ea3-9da2-5bb58e7130e4
+7. 433 W Hammel St, Monterey Park 91754 | House | 3 bd / 2 ba | 1,391 sq ft | $4,200 | uid fab11bf2-622d-42ab-824b-61d24b315239
+
+Differences from packet / within listings
+- Pleasant is Unit B; Ramona is #15; Woodruff is #219 and has 2 baths
+- Greenmeadow: field says 1,076 sq ft, description says "over 1,100"; shown 1,076
+- Hammel: field says 2 ba / 1,391 sq ft, description says 1.75 ba / about 1,500; shown field values
+- Hammel is in Monterey Park, outside the stated Lakewood/Long Beach/Bellflower service area
