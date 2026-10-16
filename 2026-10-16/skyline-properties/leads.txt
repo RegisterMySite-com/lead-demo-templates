@@ -1,0 +1,27 @@
+Skyline Properties (Lakewood, CA) - lead demo, 2026-10-16
+
+Business
+- Skyline Properties, business name of Skyline Property Services Inc
+- Corporation license: DRE 01264722
+- Designated broker: Adrianna Marie Edwards, DRE 00615673
+- Office: 6116 Bellflower Blvd, Lakewood, CA 90713 | (562) 920-2440
+- Manages homes, condos and small apartment buildings in Lakewood, Long Beach and Bellflower
+- Urgent maintenance: (562) 920-2440, or 911 if anyone is in danger
+
+Sources
+- Lead packet from Leads Bot Realters (Oct 16)
+- https://skyline.appfolio.com/listings (checked 2026-10-16 morning PT; all 7 units live)
+- Each unit's AppFolio detail page for beds, baths, sq ft, rent, details and photos
+- Photos: first 3 AppFolio photos per unit, recompressed and stored in photos/ (not hotlinked)
+
+Left out, and why
+- Jim/James Webb and his license, Robert Young, Linda Haroldson, Dede Rains, Justin, Anne and all other staff names: packet rule; only the broker is named, on the license card
+- 1999 date and any years in business: unverified, packet rule
+- Hours: packet rule
+- Ratings and review counts: packet rule; no review carousel
+- Move-in specials (4623 N Banner #3 lists a reduced-deposit special): packet rule
+- 2000-2001 audit: packet rule
+- All emails and other domains (including RentWithSkyline.com named in listing text): packet rule
+- 6166 address; (626) numbers; (562) 310 number; "Orange County": packet rule
+- Phone numbers printed on AppFolio pages other than (562) 920-2440: (424) 551-9581, (424) 379-4365, and a resident-manager (714) number on 17818 Woodruff
+- Deposits, application fees and pet fees: not needed for the demo
