@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lido Property Management | Anaheim and Orange County Rentals</title>
+<meta name="description" content="Lido Property Management in Anaheim, CA. Apartments and single-family rentals in Orange County, plus Long Beach and Lakewood. Call (714) 956-0235.">
+<style>
+:root{--cob:#1a3fa8;--cob2:#2a5bd7;--sun:#f6c445;--sun2:#fff3cc;--tile:#f4f7fb;--ink:#141a26;--mute:#4f5868;--line:#d8deea;--r:16px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--tile);line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--cob2)}
+:focus-visible{outline:3px solid #b8860b;outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:.5rem 1rem;z-index:99}
+.skip:focus{left:1rem}
+.demo{background:var(--ink);color:#eef;font-size:.82rem;text-align:center;padding:.45rem 1rem}
+header{background:#fff;border-bottom:4px solid var(--sun);position:sticky;top:0;z-index:20}
+.bar{max-width:1140px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding:.65rem 1.1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--cob);text-decoration:none;font-weight:800;font-size:1.08rem}
+.brand small{display:block;font-weight:500;font-size:.7rem;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.2rem .95rem;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent;font-weight:600;font-size:.95rem}
+nav a:hover{border-color:var(--cob2)}
+.hero{background:var(--cob);color:#fff;position:relative;overflow:hidden}
+.hero .in{max-width:1140px;margin:auto;padding:3.2rem 1.1rem 4.6rem;position:relative;z-index:1}
+.hero h1{font-size:clamp(1.8rem,4.8vw,3.1rem);line-height:1.1;margin:.3rem 0 1rem;max-width:40rem}
+.kick{color:var(--sun);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin:0}
+.hero p.lead{max-width:36rem;font-size:1.08rem;opacity:.95}
+.waves{position:absolute;left:0;right:0;bottom:0;width:100%;height:70px}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-block;border:0;border-radius:999px;padding:.72rem 1.3rem;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;text-align:center}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.btn.cob{background:var(--cob);color:#fff}
+.btn.line{background:#fff;color:var(--cob);box-shadow:inset 0 0 0 2px var(--cob)}
+.btn:hover{filter:brightness(1.07)}
+section{padding:3rem 1.1rem}
+.wrap{max-width:1140px;margin:auto}
+h2{font-size:clamp(1.45rem,3vw,2rem);margin:0 0 .4rem;color:var(--cob)}
+.sub{color:var(--mute);margin:0 0 1.4rem;max-width:44rem}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem;margin-bottom:1rem}
+.filters label{display:block;font-size:.8rem;font-weight:700;color:var(--mute);margin-bottom:.2rem}
+select,input,textarea{width:100%;font:inherit;padding:.55rem .6rem;border:1px solid #b9c2d3;border-radius:10px;background:#fff;color:var(--ink)}
+.count{font-weight:600;margin:.2rem 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.1rem;list-style:none;margin:0;padding:0}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:3/2;background:var(--sun2);position:relative;overflow:hidden}
+.ph img,.ph svg{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;left:.6rem;bottom:.6rem;background:rgba(20,26,38,.82);color:#fff;font-size:.72rem;padding:.2rem .5rem;border-radius:6px}
+.price{position:absolute;right:.6rem;top:.6rem;background:var(--sun);color:var(--ink);font-weight:800;padding:.25rem .6rem;border-radius:999px;font-size:.95rem}
+.cb{padding:1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.cb h3{margin:0;font-size:1.05rem}
+.meta{color:var(--mute);font-size:.9rem;margin:0}
+.cb .acts{display:flex;gap:.5rem;margin-top:auto;padding-top:.6rem;flex-wrap:wrap}
+.cb .btn{padding:.5rem .95rem;font-size:.9rem;flex:1}
+.pager{display:flex;justify-content:center;gap:.4rem;margin-top:1.4rem;flex-wrap:wrap}
+.pager button{min-width:2.6rem;padding:.5rem .7rem;border-radius:10px;border:1px solid var(--line);background:#fff;font:inherit;cursor:pointer}
+.pager button[aria-current="page"]{background:var(--cob);color:#fff;border-color:var(--cob)}
+.pager button:disabled{opacity:.45;cursor:default}
+.empty{background:#fff;border:1px dashed var(--line);border-radius:var(--r);padding:1.4rem;text-align:center}
+.alt{background:#fff}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.box{background:var(--tile);border-radius:var(--r);padding:1.2rem;border-top:4px solid var(--cob2)}
+.box h3{margin:.1rem 0 .4rem}
+.box p{margin:0;color:var(--mute)}
+.lic{background:#fff;border:1px solid var(--line);border-left:6px solid var(--sun)}
+.lic .no{font-size:1.25rem;font-weight:800;color:var(--cob);margin:.2rem 0}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:.6rem}
+summary{cursor:pointer;padding:.9rem 1rem;font-weight:700}
+details p{margin:0;padding:0 1rem 1rem;color:var(--mute)}
+form.tour{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+form.tour .full{grid-column:1/-1}
+form.tour label{font-weight:700;font-size:.88rem;display:block;margin-bottom:.2rem}
+.note{background:var(--sun2);border-radius:10px;padding:.8rem 1rem}
+.urgent{background:#fff;border:2px solid var(--ink);border-radius:var(--r);padding:1.1rem}
+footer{background:var(--ink);color:#d9deea;padding:2.2rem 1.1rem;font-size:.9rem}
+footer a{color:var(--sun)}
+dialog{border:0;border-radius:var(--r);padding:0;max-width:min(760px,94vw);width:100%;max-height:92vh}
+dialog::backdrop{background:rgba(10,14,24,.65)}
+.mh{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:1rem 1.1rem;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1}
+.mh h3{margin:0}
+.x{border:0;background:var(--tile);border-radius:999px;width:2.4rem;height:2.4rem;font-size:1.3rem;cursor:pointer;flex:none}
+.mb{padding:1.1rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.6rem}
+.gal figure{margin:0}
+.gal img,.gal svg{border-radius:10px;width:100%;aspect-ratio:3/2;object-fit:cover}
+.gal figcaption{font-size:.75rem;color:var(--mute)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.5rem;margin:1rem 0;padding:0;list-style:none}
+.facts li{background:var(--tile);border-radius:10px;padding:.5rem .7rem;font-size:.9rem}
+.facts b{display:block;font-size:.72rem;color:var(--mute);text-transform:uppercase;letter-spacing:.06em}
+.feat{columns:2 200px;padding-left:1.1rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:560px){nav ul{gap:.1rem .8rem}nav a{font-size:.88rem}.hero .in{padding-top:2.2rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo concept by RegisterMySite. Not the official Lido Property Management website. Listings shown from their public AppFolio page; confirm details with the office.</div>
+<header>
+<div class="bar">
+<a class="brand" href="#top" aria-label="Lido Property Management home">
+<svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#1a3fa8"/><circle cx="33" cy="15" r="6" fill="#f6c445"/><path d="M6 27c4-3 8-3 12 0s8 3 12 0 8-3 12 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M6 35c4-3 8-3 12 0s8 3 12 0 8-3 12 0" fill="none" stroke="#9fc0ff" stroke-width="3" stroke-linecap="round"/><path d="M12 22V11h3v11M12 15h6" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+<span>Lido Property Management<small>Anaheim, California</small></span></a>
+<nav aria-label="Main"><ul>
+<li><a href="#rentals">Rentals</a></li>
+<li><a href="#faq">Applicant FAQ</a></li>
+<li><a href="#tour">Schedule a tour</a></li>
+<li><a href="#residents">Residents</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="lpm-open">Message</a></li>
+</ul></nav>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="top">
+<div class="in">
+<p class="kick">Orange County, Long Beach and Lakewood</p>
+<h1>Apartments and homes for rent, managed from Anaheim.</h1>
+<p class="lead">Lido Property Management leases and manages apartments and single-family rentals across Orange County, plus some in Long Beach and Lakewood. Browse every unit live on our AppFolio listings below.</p>
+<div class="btns"><a class="btn sun" href="#rentals">See available rentals</a><a class="btn ghost" href="tel:+17149560235">Call (714) 956-0235</a></div>
+</div>
+<svg class="waves" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30c100-25 200-25 300 0s200 25 300 0 200-25 300 0 200 25 300 0v40H0z" fill="#2a5bd7" opacity=".55"/><path d="M0 45c100-22 200-22 300 0s200 22 300 0 200-22 300 0 200 22 300 0v25H0z" fill="#f4f7fb"/></svg>
+</div>
+
+<section id="rentals">
+<div class="wrap">
+<h2>Available rentals</h2>
+<p class="sub">Every unit live on our AppFolio listings page this morning (Oct 19, 2026). Apply now opens that unit's own AppFolio application. Rents and details can change, so please confirm with the office.</p>
+<form class="filters" id="filters" aria-label="Filter rentals" onsubmit="return false">
+<div><label for="f-city">City</label><select id="f-city"><option value="">All cities</option></select></div>
+<div><label for="f-beds">Bedrooms</label><select id="f-beds"><option value="">Any</option><option value="0">Studio</option><option value="1">1 bedroom</option><option value="2">2 bedrooms</option><option value="3">3+ bedrooms</option></select></div>
+<div><label for="f-type">Type</label><select id="f-type"><option value="">All types</option></select></div>
+<div><label for="f-max">Max rent</label><select id="f-max"><option value="">No max</option><option value="2000">$2,000</option><option value="2250">$2,250</option><option value="2500">$2,500</option><option value="3000">$3,000</option><option value="3500">$3,500</option></select></div>
+</form>
+<p class="count" id="count" aria-live="polite"></p>
+<ul class="grid" id="cards"></ul>
+<nav class="pager" id="pager" aria-label="Rental pages"></nav>
+</div>
+</section>
+
+<section id="faq" class="alt">
+<div class="wrap">
+<h2>Applicant FAQ</h2>
+<p class="sub">Quick answers for people applying to a Lido rental.</p>
+<details><summary>How do I apply?</summary><p>Find the unit you like above and select Apply now. It opens that unit's own application on our AppFolio portal, where you complete and submit it online.</p></details>
+<details><summary>How do I check my application status?</summary><p>Call the office at <a href="tel:+17149560235">(714) 956-0235</a> and have the unit address handy. We will let you know where your application stands.</p></details>
+<details><summary>How do I book a showing?</summary><p>Use the Schedule a tour form on this page, or call the office at <a href="tel:+17149560235">(714) 956-0235</a> to set up a time to see the unit.</p></details>
+<details><summary>Are the photos of the actual unit?</summary><p>Photos come from each AppFolio listing. Some listings note that their photos show a similar unit, and we flag that in More info.</p></details>
+</div>
+</section>
+
+<section id="tour">
+<div class="wrap">
+<h2>Schedule a tour</h2>
+<p class="sub">Tell us which rental you would like to see. This demo form does not send anything; in the live site it would reach the leasing office.</p>
+<form class="tour" id="tourform" novalidate>
+<div><label for="t-name">Name</label><input id="t-name" name="name" autocomplete="name" required></div>
+<div><label for="t-phone">Phone</label><input id="t-phone" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="full"><label for="t-unit">Rental</label><select id="t-unit" name="unit"><option value="">Choose a rental</option></select></div>
+<div><label for="t-date">Preferred day</label><input id="t-date" name="date" type="date"></div>
+<div><label for="t-time">Preferred time</label><select id="t-time" name="time"><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+<div class="full"><label for="t-msg">Questions (optional)</label><textarea id="t-msg" name="msg" rows="3"></textarea></div>
+<div class="full"><button class="btn cob" type="submit">Request tour</button></div>
+<p class="full note" id="tourmsg" role="status" hidden></p>
+</form>
+</div>
+</section>
+
+<section id="residents" class="alt">
+<div class="wrap">
+<h2>For residents and owners</h2>
+<div class="cols">
+<div class="box"><h3>Leasing</h3><p>Marketing, showings and AppFolio applications for apartments and single-family rentals.</p></div>
+<div class="box"><h3>Property management</h3><p>Day-to-day management for rental owners across Orange County, plus Long Beach and Lakewood.</p></div>
+<div class="box"><h3>Maintenance requests</h3><p>Residents can call the office to report a repair.</p></div>
+</div>
+<div class="urgent" style="margin-top:1.2rem"><strong>Urgent maintenance:</strong> call <a href="tel:+17149560235">(714) 956-0235</a>. If anyone is in danger, call 911 first.</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<h2>Contact and licenses</h2>
+<div class="cols">
+<div class="box"><h3>Office</h3><p>2051 E Cerritos Ave Ste 8A<br>Anaheim, CA 92806<br><a href="tel:+17149560235">(714) 956-0235</a></p></div>
+<div class="box lic"><h3>Corporation license</h3><p>Top Deck Investments, Inc., doing business as Lido Property Management</p><p class="no">DRE #01908873</p></div>
+<div class="box lic"><h3>Designated broker</h3><p>Van Chi Mach</p><p class="no">DRE #01025507</p></div>
+</div>
+<p class="sub" style="margin-top:1.2rem">All listings: <a href="https://lidopm.appfolio.com/listings" rel="noopener">lidopm.appfolio.com/listings</a></p>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p><strong>Lido Property Management</strong>, a business name of Top Deck Investments, Inc. · DRE #01908873 · 2051 E Cerritos Ave Ste 8A, Anaheim, CA 92806 · <a href="tel:+17149560235">(714) 956-0235</a></p>
+<p>Demo concept by RegisterMySite, not affiliated with or endorsed by Lido Property Management. Listing data and photos from their public AppFolio page, checked Oct 19, 2026. Equal housing opportunity.</p>
+</div>
+</footer>
+
+<dialog id="modal" aria-labelledby="m-title">
+<div class="mh"><div><h3 id="m-title"></h3><p class="meta" id="m-sub"></p></div><button class="x" id="m-close" type="button" aria-label="Close">×</button></div>
+<div class="mb" id="m-body"></div>
+</dialog>
+
+<script src="listings.js"></script>
+<script src="photos/lpm-2210-locust-ave-3-1.js"></script>
+<script src="photos/lpm-2210-locust-ave-3-2.js"></script>
+<script src="photos/lpm-2872-la-salle-ave-4-1.js"></script>
+<script src="photos/lpm-2872-la-salle-ave-4-2.js"></script>
+<script src="photos/lpm-1607-e-chestnut-ave-7-1.js"></script>
+<script src="photos/lpm-1607-e-chestnut-ave-7-2.js"></script>
+<script src="photos/lpm-810-n-minter-st-303-1.js"></script>
+<script src="photos/lpm-810-n-minter-st-303-2.js"></script>
+<script src="photos/lpm-709-e-chestnut-ave-201-1.js"></script>
+<script src="photos/lpm-709-e-chestnut-ave-201-2.js"></script>
+<script src="photos/lpm-7500-crescent-ave-133-1.js"></script>
+<script src="photos/lpm-7500-crescent-ave-133-2.js"></script>
+<script src="photos/lpm-14300-chestnut-st-211-1.js"></script>
+<script src="photos/lpm-14300-chestnut-st-211-2.js"></script>
+<script src="photos/lpm-315-e-washington-ave-3f-1.js"></script>
+<script src="photos/lpm-315-e-washington-ave-3f-2.js"></script>
+<script src="photos/lpm-2616-green-meadow-rd-11-1.js"></script>
+<script src="photos/lpm-2616-green-meadow-rd-11-2.js"></script>
+<script src="photos/lpm-7500-crescent-ave-135-1.js"></script>
+<script src="photos/lpm-7500-crescent-ave-135-2.js"></script>
+<script src="photos/lpm-1544-e-quincy-ave-a-03-1.js"></script>
+<script src="photos/lpm-1544-e-quincy-ave-a-03-2.js"></script>
+<script src="photos/lpm-319-s-birch-st-5-1.js"></script>
+<script src="photos/lpm-319-s-birch-st-5-2.js"></script>
+<script src="photos/lpm-1742-w-lincoln-ave-unit-c1-1.js"></script>
+<script src="photos/lpm-1742-w-lincoln-ave-unit-c1-2.js"></script>
+<script src="photos/lpm-1124-w-balboa-blvd-4-1.js"></script>
+<script src="photos/lpm-1124-w-balboa-blvd-4-2.js"></script>
+<script src="photos/lpm-7051-9th-st-215-1.js"></script>
+<script src="photos/lpm-7051-9th-st-215-2.js"></script>
+<script src="photos/lpm-7500-crescent-ave-118-1.js"></script>
+<script src="photos/lpm-7500-crescent-ave-118-2.js"></script>
+<script src="photos/lpm-2201-s-kilson-dr-unit-a-1.js"></script>
+<script src="photos/lpm-2201-s-kilson-dr-unit-a-2.js"></script>
+<script src="photos/lpm-700-s-magnolia-ave-205-1.js"></script>
+<script src="photos/lpm-700-s-magnolia-ave-205-2.js"></script>
+<script src="photos/lpm-13871-shady-lane-6-1.js"></script>
+<script src="photos/lpm-13871-shady-lane-6-2.js"></script>
+<script>
+(function(){
+var U=window.LPM_UNITS||[],P=window.LEAD_PHOTOS||{},PER=6,page=1;
+var APP="https://lidopm.appfolio.com/listings/rental_applications/new?source=Website"+String.fromCharCode(38)+"listable_uid=";
+var DET="https://lidopm.appfolio.com/listings/detail/";
+function el(t,a,kids){var e=document.createElement(t);if(a)for(var k in a){if(k==="text")e.textContent=a[k];else if(k==="cls")e.className=a[k];else e.setAttribute(k,a[k]);}(kids||[]).forEach(function(c){if(c)e.appendChild(typeof c==="string"?document.createTextNode(c):c);});return e;}
+function money(n){return "$"+n.toLocaleString("en-US");}
+function bedTxt(u){return u.beds===0?"Studio":u.beds+" bd";}
+function bathTxt(u){return (u.baths%1?u.baths:u.baths.toFixed(0))+" ba";}
+function line(u){return bedTxt(u)+" / "+bathTxt(u)+(u.sqft?" · "+u.sqft.toLocaleString("en-US")+" sq ft":"")+" · "+u.type;}
+var NS="http://www.w3.org/2000/svg";
+function illo(){var s=document.createElementNS(NS,"svg");s.setAttribute("viewBox","0 0 300 200");s.setAttribute("role","img");s.setAttribute("aria-label","Illustration of an apartment building, not a photo");
+s.innerHTML='<rect width="300" height="200" fill="#fff3cc"/><circle cx="240" cy="45" r="22" fill="#f6c445"/><rect x="70" y="60" width="160" height="110" fill="#2a5bd7"/><g fill="#fff3cc"><rect x="88" y="78" width="26" height="22"/><rect x="137" y="78" width="26" height="22"/><rect x="186" y="78" width="26" height="22"/><rect x="88" y="118" width="26" height="22"/><rect x="186" y="118" width="26" height="22"/></g><rect x="137" y="128" width="26" height="42" fill="#141a26"/><path d="M0 178c50-12 100-12 150 0s100 12 150 0v22H0z" fill="#1a3fa8"/>';return s;}
+function photo(u,n){var src=P[u.id+"-"+n];if(u.photos&&src)return el("img",{src:src,alt:(n===1?"Listing photo of ":"Second listing photo of ")+u.street+", "+u.city,loading:"lazy",width:"480",height:"320"});return illo();}
+function media(u){var d=el("div",{cls:"ph"},[photo(u,1),el("span",{cls:"price",text:money(u.rent)+"/mo"})]);if(!u.photos)d.appendChild(el("span",{cls:"tag",text:"Illustration, not a photo"}));return d;}
+var fc=document.getElementById("f-city"),fb=document.getElementById("f-beds"),ft=document.getElementById("f-type"),fm=document.getElementById("f-max");
+function uniq(k){return U.map(function(u){return u[k];}).filter(function(v,i,a){return a.indexOf(v)===i;}).sort();}
+uniq("city").forEach(function(c){fc.appendChild(el("option",{value:c,text:c}));});
+uniq("type").forEach(function(c){ft.appendChild(el("option",{value:c,text:c}));});
+var tu=document.getElementById("t-unit");U.forEach(function(u){tu.appendChild(el("option",{value:u.id,text:u.street+", "+u.city+" · "+money(u.rent)}));});
+function filtered(){return U.filter(function(u){
+if(fc.value&&u.city!==fc.value)return false;
+if(fb.value!==""){var b=+fb.value;if(b===3?u.beds<3:u.beds!==b)return false;}
+if(ft.value&&u.type!==ft.value)return false;
+if(fm.value&&u.rent>+fm.value)return false;return true;});}
+function render(){var L=filtered(),pages=Math.max(1,Math.ceil(L.length/PER));if(page>pages)page=pages;
+var g=document.getElementById("cards");g.textContent="";
+document.getElementById("count").textContent=L.length?("Showing "+L.length+" rental"+(L.length===1?"":"s")+(pages>1?" · page "+page+" of "+pages:"")):"";
+if(!L.length){g.appendChild(el("li",{cls:"empty"},["No rentals match those filters. ",el("button",{cls:"btn line",type:"button",id:"reset",text:"Clear filters"})]));document.getElementById("reset").onclick=function(){fc.value=fb.value=ft.value=fm.value="";page=1;render();};}
+L.slice((page-1)*PER,page*PER).forEach(function(u){
+var more=el("button",{cls:"btn line",type:"button",text:"More info","aria-label":"More info about "+u.street+", "+u.city});more.onclick=function(){openM(u,more);};
+g.appendChild(el("li",{cls:"card"},[media(u),el("div",{cls:"cb"},[el("h3",{text:u.street}),el("p",{cls:"meta",text:u.city}),el("p",{cls:"meta",text:line(u)}),el("div",{cls:"acts"},[more,el("a",{cls:"btn cob",href:APP+u.uid,target:"_blank",rel:"noopener",text:"Apply now","aria-label":"Apply now for "+u.street+" (opens AppFolio)"})])])]));});
+var pg=document.getElementById("pager");pg.textContent="";if(pages>1){
+function b(t,p,dis,cur,lab){var x=el("button",{type:"button",text:t,"aria-label":lab||("Page "+p)});if(dis)x.disabled=true;if(cur)x.setAttribute("aria-current","page");x.onclick=function(){page=p;render();document.getElementById("rentals").scrollIntoView();};pg.appendChild(x);}
+b("‹",page-1,page===1,false,"Previous page");for(var i=1;i<=pages;i++)b(String(i),i,false,i===page);b("›",page+1,page===pages,false,"Next page");}}
+[fc,fb,ft,fm].forEach(function(s){s.onchange=function(){page=1;render();};});
+var dlg=document.getElementById("modal"),last=null;
+function openM(u,btn){last=btn;document.getElementById("m-title").textContent=u.street;document.getElementById("m-sub").textContent=u.city+" · "+money(u.rent)+"/mo";
+var b=document.getElementById("m-body");b.textContent="";
+var gal=el("div",{cls:"gal"});
+if(u.photos){[1,2].forEach(function(n){gal.appendChild(el("figure",{},[photo(u,n),el("figcaption",{text:"Photo "+n+" of 2 from AppFolio"})]));});}
+else gal.appendChild(el("figure",{},[illo(),el("figcaption",{text:"Illustration, not a photo. This listing has no photos on AppFolio."})]));
+b.appendChild(gal);
+var f=el("ul",{cls:"facts"});[["Rent",money(u.rent)+"/mo"],["Bedrooms",u.beds===0?"Studio":String(u.beds)],["Baths",String(u.baths%1?u.baths:u.baths.toFixed(0))],["Sq ft",u.sqft?u.sqft.toLocaleString("en-US"):"Not listed"],["Type",u.type],["City",u.city]].forEach(function(r){f.appendChild(el("li",{},[el("b",{text:r[0]}),r[1]]));});b.appendChild(f);
+b.appendChild(el("h4",{text:"Features"}));var ul=el("ul",{cls:"feat"});u.feat.forEach(function(x){ul.appendChild(el("li",{text:x}));});b.appendChild(ul);
+if(u.sim)b.appendChild(el("p",{cls:"note",text:"The AppFolio listing notes that some photos show a similar unit."}));
+var go=el("a",{cls:"btn line",href:"#tour",text:"Schedule a tour"});go.onclick=function(){tu.value=u.id;dlg.close();};
+b.appendChild(el("div",{cls:"btns"},[el("a",{cls:"btn cob",href:APP+u.uid,target:"_blank",rel:"noopener",text:"Apply now"}),go,el("a",{cls:"btn line",href:DET+u.uid,target:"_blank",rel:"noopener",text:"View on AppFolio"})]));
+dlg.showModal();document.getElementById("m-close").focus();}
+document.getElementById("m-close").onclick=function(){dlg.close();};
+dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close();});
+dlg.addEventListener("close",function(){if(last)last.focus();});
+document.getElementById("tourform").addEventListener("submit",function(e){e.preventDefault();var n=document.getElementById("t-name"),p=document.getElementById("t-phone"),m=document.getElementById("tourmsg");m.hidden=false;
+if(!n.value.trim()||!p.value.trim()){m.textContent="Please add your name and phone number.";(n.value.trim()?p:n).focus();return;}
+m.textContent="Thanks, "+n.value.trim()+". This is a demo, so nothing was sent. To book now, call (714) 956-0235.";});
+render();})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
