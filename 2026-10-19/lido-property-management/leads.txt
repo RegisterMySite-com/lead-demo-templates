@@ -1,0 +1,30 @@
+Lido Property Management (Anaheim, CA) - lead demo, 2026-10-19
+
+Business
+- Lido Property Management, business name of Top Deck Investments, Inc.
+- Corporation license: DRE 01908873
+- Designated broker: Van Chi Mach, DRE 01025507
+- Office: 2051 E Cerritos Ave Ste 8A, Anaheim, CA 92806 | (714) 956-0235
+- Manages apartments and single-family rentals in Orange County, plus some in Long Beach and Lakewood
+- Urgent maintenance: (714) 956-0235, or 911 if anyone is in danger
+
+Sources
+- Lead packet from Leads Bot Realters (Oct 19)
+- https://lidopm.appfolio.com/listings (checked 2026-10-19 morning PT; 20 units live, all shown)
+- Each unit's AppFolio detail page for beds, baths, sq ft, rent, features and photos
+- Photos: AppFolio card photo plus one more gallery photo per unit, recompressed and stored in photos/ (not hotlinked)
+
+Left out, and why
+- Ray Johnston, Matthew Smith, Mike Mattson, Leonel/Lionel and all other staff, including the leasing agents named in listing text: packet rule. Only Van Chi Mach is named, on the license card.
+- 731 E Ball Rd address: packet rule
+- Hours: packet rule
+- Years in business: packet rule
+- "150+ homes / 75+ buildings" claim: packet rule
+- Ratings, review counts and BBB: packet rule; no review carousel
+- Move-in specials and dollar-off amounts (many listings show $750-$1,195 off, 2 weeks free, or first month free): packet rule
+- Gmail and staff emails: packet rule; the page has no email
+- Per-listing phone numbers (10 different leasing-agent numbers in listing text): packet rule; the page uses only (714) 956-0235
+- Second business name: packet rule
+- "Orange County only" claim: packet rule; the page says Orange County plus some in Long Beach and Lakewood
+- Shady Lane ZIP: packet rule; ZIPs are left off all cards for consistency
+- Application fees, security deposits and pet deposits: no fees on the page; the FAQ has no fees or timelines
