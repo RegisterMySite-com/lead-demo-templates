@@ -1,0 +1,31 @@
+Calvo Group (West Covina, CA) - lead demo, 2026-10-20
+
+Business
+- Calvo Group, business name of Business Financial Services Corp
+- Corporation license: DRE 01209224
+- Designated broker: Paul C. Calvo, DRE 00613114
+- Office: 1619 W Garvey Ave N, Ste 201, West Covina, CA 91790 | (626) 814-8000
+- Owns and operates apartment buildings across LA County: Pasadena, Studio City, Huntington Park, South Gate, Covina, Azusa, El Monte, Glendale, Whittier and North Hollywood
+- Urgent maintenance: (626) 814-8000, or 911 if anyone is in danger
+
+Sources
+- Lead packet from Leads Bot Realters (Oct 20)
+- Calvo Group property pages (checked 2026-10-20 morning PT; HTML text and image files only, fetched with curl, no scripts run, no redirects followed): Bowen Court, El Patio Apartments, South Gate Apts, Acama Gardens, Laurel Village Apartments, King Edwards Apartments (page slug arrow-apartments), Cortada Apartments, Boynton St
+- Photos: up to three per community from its property page, recompressed and stored in photos/ (not hotlinked)
+
+Not linked
+- No links to the company website, RevoPay, Yardi or any other outside site. Only tel: links. Apply and Pay rent go to the on-page Contact the office section.
+
+Left out, and why
+- Peggy Calvo, Gritt Klein-Liao, Burt Mulwitz: packet rule. Only Paul C. Calvo is named, on the license card.
+- All emails, including the per-building manager emails: packet rule
+- Building and manager phone numbers: packet rule; the page uses only (626) 814-8000
+- Rents, deposits, floor-plan prices and unit status: packet rule; every card says Call for current availability
+- Hours, years, "30 years" claims and Bowen Court's construction years: packet rule (no years)
+- Unit counts (Bowen Court lists a unit count): no unit counts on the page
+- Ratings, review counts: packet rule; no review carousel
+- Specials and promotions: packet rule
+- Other business names (Paul Calvo & Co, Regency Apartments, BFS): packet rule. The Huntington Park "Regency Apts Albany" page was skipped for this reason; El Patio is the Huntington Park card.
+- Job posts, properties-for-sale and we-buy pages: packet rule / not relevant
+- Any site problems or spam: packet rule; not mentioned
+- Buildings outside the packet's city list (Ontario, Orange County, Riverside and others shown on the site): not in the packet
