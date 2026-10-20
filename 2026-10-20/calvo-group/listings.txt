@@ -1,0 +1,19 @@
+Calvo Group featured communities (property pages checked 2026-10-20 morning PT)
+No vacancy feed. Every card says "Call for current availability". No rents, unit status or building phones.
+
+1. Bowen Court | Pasadena | 539 E Villa St, Pasadena, CA 91101 | Bungalow court | 1 and 2 bedroom | 3 photos
+2. El Patio Apartments | Huntington Park | 2411 E Gage Ave, Huntington Park, CA 90255 | Apartments | bachelor, studio and 1 bedroom | 3 photos
+3. South Gate Apts | South Gate | 9301 Atlantic Ave, South Gate, CA 90280 | Garden-style apartments | studio, 1 and 2 bedroom | 1 photo (two other page images were rotated sideways and skipped)
+4. Acama Gardens | Studio City | 11150 Acama St, Studio City, CA 91602 | Gated community | studio, 1 and 2 bedroom | 3 photos
+5. Laurel Village Apartments | North Hollywood | 7500 Laurel Canyon Blvd, North Hollywood, CA 91605 | Apartments | 1 and 2 bedroom | 3 photos
+6. King Edwards Apartments | Azusa | 705 E Arrow Hwy, Azusa, CA 91702 | Apartments | 2 bedroom | 3 photos
+7. Cortada Apartments | El Monte | street address not on its page, shown as El Monte, CA | Family community | 2 bedroom | 3 photos
+8. Boynton St | Glendale | 1214 Boynton St, Glendale, CA 91205 | Garden-style apartments | studio, 1 and 2 bedroom | 3 photos
+
+Notes
+- 8 cards, paginated 6 per page (2 pages), city filter.
+- No illustrations needed; every card has at least one real photo from its property page.
+- Descriptions and features are rewritten from each property page, with rents, deposits, emails, phones, unit counts and years removed.
+- The Azusa page's URL says "arrow-apartments" but the page title is King Edwards Apartments; the card uses the page title.
+- Photos: recompressed to 480px wide (Acama Gardens and Bowen Court card photos at 400px to stay under 45KB) and stored as photos/<id>.js.
+- Covina (N Vecino Dr, plus a shopping center) and Whittier (10134 Scott Ave) only have street-address listings, so they are not carded; both cities still appear in the cities list.
