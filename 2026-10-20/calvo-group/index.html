@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calvo Group | Apartment Communities Across LA County</title>
+<meta name="description" content="Calvo Group owns and operates apartment buildings across LA County. Office in West Covina. Call (626) 814-8000.">
+<style>
+:root{--plum:#4a2545;--plum2:#6d3b66;--sage:#8fae8b;--sage2:#e6efe3;--cream:#fbf8f2;--clay:#c8743f;--ink:#1f1a1e;--mute:#5c5459;--line:#e2d9dd;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+img{max-width:100%;display:block}
+a{color:var(--plum2)}
+:focus-visible{outline:3px solid var(--clay);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#fff;padding:.5rem 1rem;z-index:99}
+.skip:focus{left:1rem}
+.demo{background:var(--ink);color:#f3eef1;font-size:.82rem;text-align:center;padding:.45rem 1rem}
+header{background:#fff;border-bottom:3px solid var(--sage);position:sticky;top:0;z-index:20}
+.bar{max-width:1140px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding:.65rem 1.1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--plum);text-decoration:none;font-weight:800;font-size:1.1rem}
+.brand small{display:block;font-weight:500;font-size:.7rem;color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
+nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.2rem .95rem;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent;font-weight:600;font-size:.95rem}
+nav a:hover{border-color:var(--clay)}
+.hero{background:linear-gradient(135deg,var(--plum),var(--plum2));color:#fff}
+.hero .in{max-width:1140px;margin:auto;padding:3.4rem 1.1rem;display:grid;gap:2rem;grid-template-columns:1.3fr 1fr;align-items:center}
+.hero h1{font-size:clamp(1.8rem,4.6vw,3rem);line-height:1.1;margin:.3rem 0 1rem}
+.kick{color:var(--sage2);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin:0}
+.hero p.lead{font-size:1.08rem;opacity:.95;max-width:36rem}
+.cities{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;padding:0;margin:0}
+.cities li{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.25rem .7rem;font-size:.88rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-block;border:0;border-radius:10px;padding:.72rem 1.2rem;font:inherit;font-weight:700;text-decoration:none;cursor:pointer;text-align:center}
+.btn.clay{background:var(--clay);color:#fff}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.btn.plum{background:var(--plum);color:#fff}
+.btn.line{background:#fff;color:var(--plum);box-shadow:inset 0 0 0 2px var(--plum)}
+.btn:hover{filter:brightness(1.08)}
+section{padding:3rem 1.1rem}
+.wrap{max-width:1140px;margin:auto}
+h2{font-size:clamp(1.45rem,3vw,2rem);margin:0 0 .4rem;color:var(--plum)}
+.sub{color:var(--mute);margin:0 0 1.4rem;max-width:46rem}
+.filters{display:flex;flex-wrap:wrap;gap:.7rem;align-items:end;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem;margin-bottom:1rem}
+.filters label{display:block;font-size:.8rem;font-weight:700;color:var(--mute);margin-bottom:.2rem}
+select,input,textarea{width:100%;font:inherit;padding:.55rem .6rem;border:1px solid #c6b9c0;border-radius:10px;background:#fff;color:var(--ink)}
+.count{font-weight:600;margin:.2rem 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.1rem;list-style:none;margin:0;padding:0}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:3/2;background:var(--sage2);position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:.6rem;top:.6rem;background:var(--plum);color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .55rem;border-radius:6px}
+.cb{padding:1rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.cb h3{margin:0;font-size:1.08rem}
+.meta{color:var(--mute);font-size:.9rem;margin:0}
+.avail{display:inline-block;align-self:flex-start;background:var(--sage2);color:#2f4a2c;font-weight:700;font-size:.82rem;padding:.2rem .6rem;border-radius:999px}
+.acts{display:flex;gap:.5rem;margin-top:auto;padding-top:.6rem;flex-wrap:wrap}
+.acts .btn{padding:.5rem .9rem;font-size:.9rem;flex:1}
+.pager{display:flex;justify-content:center;gap:.4rem;margin-top:1.4rem;flex-wrap:wrap}
+.pager button{min-width:2.6rem;padding:.5rem .7rem;border-radius:10px;border:1px solid var(--line);background:#fff;font:inherit;cursor:pointer}
+.pager button[aria-current="page"]{background:var(--plum);color:#fff;border-color:var(--plum)}
+.pager button:disabled{opacity:.45;cursor:default}
+.alt{background:#fff}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.box{background:var(--cream);border-radius:var(--r);padding:1.2rem;border-top:4px solid var(--sage)}
+.box h3{margin:.1rem 0 .4rem}
+.box p{margin:0;color:var(--mute)}
+.lic .no{font-size:1.25rem;font-weight:800;color:var(--plum);margin:.2rem 0}
+form.tour{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+form.tour .full{grid-column:1/-1}
+form.tour label{font-weight:700;font-size:.88rem;display:block;margin-bottom:.2rem}
+.note{background:var(--sage2);border-radius:10px;padding:.8rem 1rem}
+.urgent{background:#fff4ec;border-left:6px solid var(--clay);border-radius:10px;padding:1rem 1.2rem}
+dialog{border:0;border-radius:var(--r);padding:0;max-width:760px;width:calc(100% - 2rem)}
+dialog::backdrop{background:rgba(31,26,30,.6)}
+.mh{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--line)}
+.mh h3{margin:0;color:var(--plum)}
+.x{background:none;border:0;font-size:1.6rem;cursor:pointer;line-height:1}
+.mb{padding:1.2rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem;margin-bottom:1rem}
+.gal img{border-radius:10px;aspect-ratio:3/2;object-fit:cover;width:100%}
+footer{background:var(--ink);color:#e8e1e5;padding:2rem 1.1rem;font-size:.9rem}
+footer a{color:#fff}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-width:760px){.hero .in{grid-template-columns:1fr}nav ul{gap:.2rem .7rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo" role="note">Demo concept only. Not the official Calvo Group website. Forms on this page do not send anything.</div>
+<header>
+<div class="bar">
+<a class="brand" href="#top" aria-label="Calvo Group home">
+<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#4a2545"/><path d="M8 30V18l7-5 7 5v12" fill="none" stroke="#e6efe3" stroke-width="2.4" stroke-linejoin="round"/><path d="M20 30V14l6-4 6 4v16" fill="none" stroke="#c8743f" stroke-width="2.4" stroke-linejoin="round"/><path d="M6 30h28" stroke="#8fae8b" stroke-width="2.4" stroke-linecap="round"/></svg>
+<span>Calvo Group<small>Apartment communities, LA County</small></span>
+</a>
+<nav aria-label="Main"><ul>
+<li><a href="#communities">Communities</a></li>
+<li><a href="#residents">Residents</a></li>
+<li><a href="#tour">Schedule a tour</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#message" id="cvg-open">Message</a></li>
+</ul></nav>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="top"><div class="in">
+<div>
+<p class="kick">West Covina office</p>
+<h1>Apartment homes across LA County</h1>
+<p class="lead">Calvo Group owns and operates apartment buildings from Pasadena and Glendale to Huntington Park and Whittier. Call the office for current availability.</p>
+<div class="btns"><a class="btn clay" href="#communities">Featured communities</a><a class="btn ghost" href="tel:+16268148000">Call (626) 814-8000</a></div>
+</div>
+<div><p class="kick">Cities we serve</p>
+<ul class="cities"><li>Pasadena</li><li>Studio City</li><li>Huntington Park</li><li>South Gate</li><li>Covina</li><li>Azusa</li><li>El Monte</li><li>Glendale</li><li>Whittier</li><li>North Hollywood</li></ul></div>
+</div></div>
+
+<section id="communities"><div class="wrap">
+<h2>Featured communities</h2>
+<p class="sub">A sample of the buildings Calvo Group operates. Availability changes, so every community is listed as call for current availability.</p>
+<div class="filters" role="search">
+<div style="min-width:220px"><label for="fcity">City</label><select id="fcity"><option value="">All cities</option></select></div>
+<button class="btn line" type="button" id="freset">Reset</button>
+</div>
+<p class="count" id="count" aria-live="polite"></p>
+<ul class="grid" id="grid"></ul>
+<nav class="pager" id="pager" aria-label="Community pages"></nav>
+</div></section>
+
+<section id="residents" class="alt"><div class="wrap">
+<h2>Residents and applicants</h2>
+<p class="sub">Applications and rent payments are handled through the office.</p>
+<div class="cols">
+<div class="box"><h3>Apply</h3><p>Call or visit the office to start an application for any community.</p><p style="margin-top:.8rem"><a class="btn plum" href="#contact">Apply</a></p></div>
+<div class="box"><h3>Pay rent</h3><p>Contact the office for how to pay rent at your building.</p><p style="margin-top:.8rem"><a class="btn plum" href="#contact">Pay rent</a></p></div>
+<div class="box"><h3>Maintenance</h3><p>Use the Message link for the Maintenance desk, or call the office.</p></div>
+</div>
+<div class="urgent" style="margin-top:1.2rem" role="note"><strong>Urgent maintenance:</strong> call <a href="tel:+16268148000">(626) 814-8000</a>. If anyone is in danger, call <a href="tel:911">911</a> first.</div>
+</div></section>
+
+<section id="tour"><div class="wrap">
+<h2>Schedule a tour</h2>
+<p class="sub">Pick a community and a time that works. This demo form does not send anything.</p>
+<form class="tour" id="tourform" novalidate>
+<div><label for="tname">Name</label><input id="tname" name="name" autocomplete="name" required></div>
+<div><label for="tphone">Phone</label><input id="tphone" name="phone" type="tel" autocomplete="tel"></div>
+<div><label for="tcomm">Community</label><select id="tcomm" name="community"></select></div>
+<div><label for="tdate">Preferred date</label><input id="tdate" name="date" type="date"></div>
+<div class="full"><label for="tmsg">Notes</label><textarea id="tmsg" name="notes" rows="3"></textarea></div>
+<div class="full"><button class="btn plum" type="submit">Request a tour</button></div>
+<p class="full note" id="tourmsg" role="status" hidden>Thanks. This is a demo, so nothing was sent. Please call (626) 814-8000 to book.</p>
+</form>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap">
+<h2>About Calvo Group</h2>
+<p class="sub">Calvo Group is the business name of Business Financial Services Corp. The company owns and operates apartment buildings across LA County.</p>
+<div class="cols">
+<div class="box lic"><h3>Corporation license</h3><p>Business Financial Services Corp</p><p class="no">DRE 01209224</p></div>
+<div class="box lic"><h3>Designated broker</h3><p>Paul C. Calvo</p><p class="no">DRE 00613114</p></div>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Contact the office</h2>
+<p class="sub">For applications, rent payments, availability and tours, contact the office.</p>
+<div class="cols">
+<div class="box"><h3>Office</h3><p>1619 W Garvey Ave N, Ste 201<br>West Covina, CA 91790</p></div>
+<div class="box"><h3>Phone</h3><p><a href="tel:+16268148000">(626) 814-8000</a></p></div>
+<div class="box"><h3>Message</h3><p>Use the Message link in the menu for the Leasing or Maintenance desk.</p></div>
+</div>
+</div></section>
+</main>
+
+<dialog id="modal" aria-labelledby="mtitle">
+<div class="mh"><h3 id="mtitle"></h3><button class="x" type="button" id="mclose" aria-label="Close">×</button></div>
+<div class="mb" id="mbody"></div>
+</dialog>
+
+<footer><div class="wrap">
+<p>Calvo Group, business name of Business Financial Services Corp. Corporation DRE 01209224. Designated broker Paul C. Calvo, DRE 00613114.</p>
+<p>1619 W Garvey Ave N, Ste 201, West Covina, CA 91790 · <a href="tel:+16268148000">(626) 814-8000</a></p>
+<p>Demo concept by RegisterMySite. Photos are from Calvo Group property pages. Not the official website.</p>
+</div></footer>
+
+<script src="listings.js"></script>
+<script src="photos/cvg-acama-1.js"></script>
+<script src="photos/cvg-acama-2.js"></script>
+<script src="photos/cvg-acama-3.js"></script>
+<script src="photos/cvg-bowen-1.js"></script>
+<script src="photos/cvg-bowen-2.js"></script>
+<script src="photos/cvg-bowen-3.js"></script>
+<script src="photos/cvg-boynton-1.js"></script>
+<script src="photos/cvg-boynton-2.js"></script>
+<script src="photos/cvg-boynton-3.js"></script>
+<script src="photos/cvg-cortada-1.js"></script>
+<script src="photos/cvg-cortada-2.js"></script>
+<script src="photos/cvg-cortada-3.js"></script>
+<script src="photos/cvg-elpatio-1.js"></script>
+<script src="photos/cvg-elpatio-2.js"></script>
+<script src="photos/cvg-elpatio-3.js"></script>
+<script src="photos/cvg-kingedwards-1.js"></script>
+<script src="photos/cvg-kingedwards-2.js"></script>
+<script src="photos/cvg-kingedwards-3.js"></script>
+<script src="photos/cvg-laurel-1.js"></script>
+<script src="photos/cvg-laurel-2.js"></script>
+<script src="photos/cvg-laurel-3.js"></script>
+<script src="photos/cvg-southgate-1.js"></script>
+<script>
+(function(){
+var D=window.CVG_COMMUNITIES||[],P=window.LEAD_PHOTOS||{},PER=6,page=1;
+var grid=document.getElementById("grid"),pager=document.getElementById("pager"),count=document.getElementById("count"),fcity=document.getElementById("fcity"),tcomm=document.getElementById("tcomm");
+function el(t,a,txt){var e=document.createElement(t);if(a)for(var k in a)e.setAttribute(k,a[k]);if(txt)e.textContent=txt;return e}
+var cities=[];D.forEach(function(c){if(cities.indexOf(c.city)<0)cities.push(c.city)});cities.sort();
+cities.forEach(function(c){fcity.appendChild(el("option",{value:c},c))});
+D.forEach(function(c){tcomm.appendChild(el("option",{value:c.id},c.name+", "+c.city))});
+function list(){var v=fcity.value;return D.filter(function(c){return !v||c.city===v})}
+function render(){
+var L=list(),pages=Math.max(1,Math.ceil(L.length/PER));if(page>pages)page=pages;
+count.textContent=L.length+(L.length===1?" community":" communities")+(pages>1?" · page "+page+" of "+pages:"");
+grid.innerHTML="";
+L.slice((page-1)*PER,page*PER).forEach(function(c){
+var li=el("li",{"class":"card"}),ph=el("div",{"class":"ph"});
+var img=el("img",{src:P[c.photos[0]]||"",alt:c.name+" in "+c.city+", photo from the property page",loading:"lazy"});
+ph.appendChild(img);ph.appendChild(el("span",{"class":"badge"},c.type));li.appendChild(ph);
+var cb=el("div",{"class":"cb"});cb.appendChild(el("h3",null,c.name));cb.appendChild(el("p",{"class":"meta"},c.city+" · "+c.beds));
+cb.appendChild(el("p",null,c.desc));cb.appendChild(el("span",{"class":"avail"},"Call for current availability"));
+var a=el("div",{"class":"acts"}),m=el("button",{"class":"btn line",type:"button"},"More info");m.addEventListener("click",function(){openM(c,m)});
+var t=el("a",{"class":"btn plum",href:"#tour"},"Schedule a tour");t.addEventListener("click",function(){tcomm.value=c.id});
+a.appendChild(m);a.appendChild(t);a.appendChild(el("a",{"class":"btn line",href:"#contact"},"Apply"));cb.appendChild(a);li.appendChild(cb);grid.appendChild(li)});
+pager.innerHTML="";if(pages>1){
+var pv=el("button",{type:"button"},"Prev");pv.disabled=page===1;pv.onclick=function(){page--;render()};pager.appendChild(pv);
+for(var i=1;i<=pages;i++)(function(i){var b=el("button",{type:"button","aria-label":"Page "+i},String(i));if(i===page)b.setAttribute("aria-current","page");b.onclick=function(){page=i;render();document.getElementById("communities").scrollIntoView()};pager.appendChild(b)})(i);
+var nx=el("button",{type:"button"},"Next");nx.disabled=page===pages;nx.onclick=function(){page++;render()};pager.appendChild(nx)}}
+fcity.addEventListener("change",function(){page=1;render()});
+document.getElementById("freset").addEventListener("click",function(){fcity.value="";page=1;render()});
+var modal=document.getElementById("modal"),mb=document.getElementById("mbody"),last=null;
+function openM(c,btn){last=btn;document.getElementById("mtitle").textContent=c.name+", "+c.city;mb.innerHTML="";
+var g=el("div",{"class":"gal"});c.photos.forEach(function(p,i){g.appendChild(el("img",{src:P[p]||"",alt:c.name+" photo "+(i+1)+" of "+c.photos.length}))});mb.appendChild(g);
+mb.appendChild(el("p",null,c.desc));mb.appendChild(el("p",{"class":"meta"},c.addr+" · "+c.type+" · "+c.beds));
+var u=el("ul");c.feats.forEach(function(f){u.appendChild(el("li",null,f))});mb.appendChild(u);
+mb.appendChild(el("p",{"class":"avail"},"Call for current availability"));
+var a=el("div",{"class":"acts"});var t=el("a",{"class":"btn plum",href:"#tour"},"Schedule a tour");t.onclick=function(){tcomm.value=c.id;modal.close()};
+var ap=el("a",{"class":"btn line",href:"#contact"},"Apply");ap.onclick=function(){modal.close()};
+a.appendChild(t);a.appendChild(ap);a.appendChild(el("a",{"class":"btn line",href:"tel:+16268148000"},"Call the office"));mb.appendChild(a);
+modal.showModal();document.getElementById("mclose").focus()}
+document.getElementById("mclose").onclick=function(){modal.close()};
+modal.addEventListener("click",function(e){if(e.target===modal)modal.close()});
+modal.addEventListener("close",function(){if(last)last.focus()});
+document.getElementById("tourform").addEventListener("submit",function(e){e.preventDefault();document.getElementById("tourmsg").hidden=false});
+render();
+})();
+</script>
+<script src="chat/widget.js"></script>
+</body>
+</html>
