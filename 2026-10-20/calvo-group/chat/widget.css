@@ -1,0 +1,30 @@
+.cvg-demo-banner { right:auto; left:14px; }
+  #cvg-launcher {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+    background: #c8743f; color: #fffdf8; border: 0; border-radius: 999px;
+    padding: .75rem 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 650;
+  }
+  #cvg-chat {
+    width: min(420px, calc(100vw - 1.2rem)); height: min(640px, calc(100vh - 1.2rem));
+    border: none; padding: 0; background: #4a2545; color: #fffdf8;
+  }
+  #cvg-chat::backdrop { background: rgba(22,36,47,.55); }
+  #cvg-chat .bar { background: #c8743f; color: #fffdf8; padding: .8rem .9rem; display: flex; justify-content: space-between; gap: .6rem; align-items: center; }
+  #cvg-chat h2 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.05rem; margin: 0; }
+  #cvg-chat .body { display: flex; flex-direction: column; height: calc(100% - 58px); padding: .8rem; gap: .6rem; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  #cvg-chat button, #cvg-chat input, #cvg-chat textarea { font: inherit; }
+  #cvg-chat .choice { display: grid; gap: .45rem; }
+  #cvg-chat .choice button, #cvg-chat .quiet { background: #2f1730; color: #fffdf8; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .7rem .8rem; text-align: left; cursor: pointer; }
+  #cvg-chat .go { background: #c8743f; color: #fffdf8; border: 0; border-radius: 999px; padding: .55rem .9rem; cursor: pointer; }
+  #cvg-chat .log { flex: 1; overflow: auto; display: grid; gap: .55rem; align-content: start; }
+  #cvg-chat .me, #cvg-chat .them { max-width: 85%; padding: .5rem .65rem; border-radius: 10px; }
+  #cvg-chat .me { background: #c8743f; justify-self: end; }
+  #cvg-chat .them { background: #4a2545; border: 1px solid rgba(255,255,255,.12); }
+  #cvg-chat .meta { color: #ddd3c3; font-size: .75rem; }
+  #cvg-chat .row { display: flex; gap: .4rem; }
+  #cvg-chat input, #cvg-chat textarea { width: 100%; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; padding: .5rem .6rem; background: #2f1730; color: inherit; }
+  #cvg-chat .dot { width: .55rem; height: .55rem; border-radius: 50%; display: inline-block; background: #ddd3c3; margin-right: .35rem; }
+  #cvg-chat .dot.on { background: #c8743f; }
+  @media (max-width: 640px) { #cvg-chat { width: 100vw; height: 100vh; max-height: 100vh; } }
