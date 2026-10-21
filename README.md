@@ -90,3 +90,8 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 
 ## 2026-10-20
 - `calvo-group` — West Covina owner-operator concept for Calvo Group (Business Financial Services Corp): eight featured LA County apartment communities (Bowen Court Pasadena, El Patio Huntington Park, South Gate Apts, Acama Gardens Studio City, Laurel Village North Hollywood, King Edwards Azusa, Cortada El Monte, Boynton St Glendale) with real property-page photos stored in the repo, each labeled call for current availability with no rents or unit status, city filter with pagination at 6 per page, more-info photo modal, on-page tour form (no submit), Apply and Pay rent to the on-page Contact the office section, no outside links except tel:, DRE corp and designated broker licenses shown separately, no years, hours, specials or ratings, listing data in `listings.js`, plus private office chat worker files (`chat/`, Leasing and Maintenance desks + 24-hour specialist; not live until deploy + data-origin)
+
+## 2026-10-21
+- `pupuseria-el-kiosco` — custom pupusa builder (up to 3 fillings, size, qty) + cart ready for later DoorDash/Uber Eats handoff
+- `nancys-pupuseria` — filterable menu by category + add-to-cart (pupusas, platters, sides, drinks)
+- `pupuseria-salvadorena` — party pupusa planner (guests, per-person, filling mix, estimated total)
