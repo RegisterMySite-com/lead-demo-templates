@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pupuseria El Kiosco | Long Beach Pupusas</title>
+  <meta name="description" content="Pupuseria El Kiosco | Authentic Salvadoran pupusas in Long Beach — demo website by RegisterMySite">
+  <style>
+    :root { --bg:#140e09; --panel:#1e160f; --ink:#f8f4ee; --muted:#b8a99a; --line:rgba(255,255,255,.08); --accent:#e85d04; --ok:#3dd68c; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(20,14,9,.85); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg { width:36px; height:36px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#fff; }
+    .btn.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    input, select { width:100%; background:#120e0a; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1b140f; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .fillings { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+    .filling { border:1px solid var(--line); border-radius:999px; padding:8px 14px; cursor:pointer; background:#120e0a; }
+    .filling.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .cart-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--line); }
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" fill="#e85d04"/><circle cx="18" cy="18" r="8" fill="#f8f4ee"/><path d="M10 22 Q18 28 26 22" stroke="#140e09" stroke-width="2" fill="none"/></svg>
+    Pupuseria El Kiosco
+  </a>
+  <nav class="links">
+    <a href="#builder">Build a pupusa</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+15626120692">(562) 612-0692</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Long Beach · Artesia Blvd · since 2017</p>
+    <h1>Fresh pupusas, made the way you like them.</h1>
+    <p class="lede">Google 4.3 from about 930 reviews. Family-run Salvadoran kitchen. Call ahead or build your order here — this demo cart is ready for a later DoorDash or Uber Eats handoff.</p>
+  </div></section>
+  <section id="builder"><div class="wrap" style="display:grid; grid-template-columns:1.2fr .8fr; gap:18px;">
+    <div class="card">
+      <h2>Build your pupusa</h2>
+      <p class="lede">Pick up to three fillings. Classic or loaded. Add to the cart and we’ll call it ready for pickup or delivery later.</p>
+      <label>Size</label>
+      <select id="size"><option value="regular">Regular</option><option value="large">Large (+$1)</option></select>
+      <div style="height:10px"></div>
+      <label>Fillings (max 3)</label>
+      <div class="fillings" id="fills"></div>
+      <label>Quantity</label>
+      <input type="number" id="qty" value="2" min="1" max="12">
+      <div style="height:12px"></div>
+      <button class="btn" id="addBtn">Add to cart</button>
+    </div>
+    <div class="card">
+      <h3>Your cart</h3>
+      <div id="cart"></div>
+      <p class="lede">Demo only. Phone to place a real order today. Later this can push to DoorDash / Uber Eats.</p>
+      <a class="btn" href="tel:+15626120692">Call to order</a>
+    </div>
+  </div></section>
+  <section id="menu"><div class="wrap cards">
+    <article class="card"><h3>Classic pupusas</h3><p>Cheese, beans, chicharrón, or revuelta. Served with curtido and salsa.</p></article>
+    <article class="card"><h3>Specialty</h3><p>Loroco, zucchini, chicken, or mixed. Ask what’s fresh.</p></article>
+    <article class="card"><h3>Sides & drinks</h3><p>Tamales, yuca, plantains, horchata, and Salvadoran coffee.</p></article>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Pupuseria El Kiosco</strong><br>1642 E Artesia Blvd<br>Long Beach, CA 90805</div>
+  <div>Phone<br><a href="tel:+15626120692">(562) 612-0692</a><br>Email not published</div>
+  <div>Reviews<br>Google 4.3 (~930)<br>Yelp 3.9 (243)<br>Facebook 3.9</div>
+  <div>Social<br><a href="https://facebook.com/120335207671660" target="_blank" rel="noopener">Facebook</a><br>Instagram @pupuseriaelkiosco</div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+const fillings = ['Cheese','Beans','Chicharrón','Revuelta','Loroco','Zucchini','Chicken'];
+const fillsEl = document.getElementById('fills');
+let selected = new Set();
+fillings.forEach(f => {
+  const b = document.createElement('button');
+  b.className = 'filling';
+  b.textContent = f;
+  b.onclick = () => {
+    if (selected.has(f)) selected.delete(f);
+    else if (selected.size < 3) selected.add(f);
+    else return;
+    b.classList.toggle('on', selected.has(f));
+  };
+  fillsEl.appendChild(b);
+});
+let cart = [];
+function renderCart() {
+  const el = document.getElementById('cart');
+  if (!cart.length) { el.innerHTML = '<p class="lede">Empty. Build one above.</p>'; return; }
+  let total = 0;
+  el.innerHTML = cart.map((item,i) => {
+    const price = (item.size === 'large' ? 4.5 : 3.5) * item.qty;
+    total += price;
+    return `<div class="cart-row"><span>${item.qty}× ${item.size} (${[...item.fillings].join(', ')||'plain'})</span><span>$${price.toFixed(2)}</span></div>`;
+  }).join('') + `<p><strong>Total $${total.toFixed(2)}</strong></p>`;
+}
+document.getElementById('addBtn').onclick = () => {
+  const size = document.getElementById('size').value;
+  const qty = Math.max(1, parseInt(document.getElementById('qty').value)||1);
+  if (!selected.size) { alert('Pick at least one filling'); return; }
+  cart.push({size, qty, fillings: new Set(selected)});
+  selected.clear();
+  document.querySelectorAll('.filling').forEach(b => b.classList.remove('on'));
+  renderCart();
+};
+renderCart();
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pupuseria Salvadorena | Long Beach Willow St</title>
+  <meta name="description" content="Pupuseria Salvadorena | Long Beach pupusas — demo website by RegisterMySite">
+  <style>
+    :root { --bg:#110f0c; --panel:#1a1612; --ink:#f7f3ee; --muted:#b5a89c; --line:rgba(255,255,255,.08); --accent:#d4a373; --ok:#e9c46a; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(17,15,12,.85); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg { width:36px; height:36px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#1a1406; }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    input { width:100%; background:#14110e; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1c1814; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .result { margin-top:16px; padding:16px; background:#14110e; border-radius:12px; }
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="16" fill="#d4a373"/><path d="M10 14h16v2H10zm0 6h16v2H10zm0 6h12v2H10z" fill="#110f0c"/></svg>
+    Pupuseria Salvadorena
+  </a>
+  <nav class="links">
+    <a href="#planner">Party planner</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+15624266004">(562) 426-6004</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Long Beach · Willow St · Willow Glen Plaza</p>
+    <h1>Busy weekends, fresh pupusas, room for the whole table.</h1>
+    <p class="lede">Google 4.1 from 700+ reviews. Popular times peak on weekends. Plan a party order below — this demo calculator helps estimate quantity and cost before you call.</p>
+  </div></section>
+  <section id="planner"><div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+    <div class="card">
+      <h2>Party pupusa planner</h2>
+      <p class="lede">How many people? We’ll suggest a mix of fillings and a rough total.</p>
+      <label>Guests</label>
+      <input type="number" id="guests" value="8" min="2" max="50">
+      <div style="height:10px"></div>
+      <label>Pupusas per person</label>
+      <input type="number" id="per" value="2" min="1" max="5" step="0.5">
+      <div style="height:10px"></div>
+      <label>Cheese / beans / meat mix (%)</label>
+      <input type="range" id="mix" min="0" max="100" value="40">
+      <div id="mixLabel" style="font-size:13px;color:var(--muted);margin-top:4px">40% cheese · 30% beans · 30% meat</div>
+      <div style="height:12px"></div>
+      <button class="btn" id="calc">Calculate</button>
+      <div class="result" id="result"></div>
+    </div>
+    <div class="card">
+      <h3>Why plan ahead</h3>
+      <p>Weekends get busy. Call with your count so the griddle is ready. This tool is demo-only; phone for the real quote and pickup time.</p>
+      <a class="btn" href="tel:+15624266004">Call the kitchen</a>
+    </div>
+  </div></section>
+  <section id="menu"><div class="wrap cards">
+    <article class="card"><h3>Pupusas</h3><p>Cheese, beans, chicharrón, revuelta, loroco, and more. Curtido and salsa on the side.</p></article>
+    <article class="card"><h3>Platters & sides</h3><p>Family platters, yuca, plantains, and Salvadoran tamales when available.</p></article>
+    <article class="card"><h3>Drinks</h3><p>Horchata, tamarind, coffee, and bottled sodas.</p></article>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Pupuseria Salvadorena</strong><br>1336 W Willow St Ste 102<br>Long Beach, CA 90810</div>
+  <div>Phone<br><a href="tel:+15624266004">(562) 426-6004</a><br>Email not published</div>
+  <div>Reviews<br>Google 4.1 (727+)<br>Yelp 3.7 (278)</div>
+  <div>Social<br><a href="https://facebook.com/105987222775742" target="_blank" rel="noopener">Facebook</a></div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+const mix = document.getElementById('mix');
+const mixLabel = document.getElementById('mixLabel');
+mix.oninput = () => {
+  const c = +mix.value;
+  const b = Math.round((100-c)*0.5);
+  const m = 100 - c - b;
+  mixLabel.textContent = `${c}% cheese · ${b}% beans · ${m}% meat`;
+};
+document.getElementById('calc').onclick = () => {
+  const guests = Math.max(2, +document.getElementById('guests').value || 8);
+  const per = Math.max(1, +document.getElementById('per').value || 2);
+  const total = Math.ceil(guests * per);
+  const cPct = +mix.value / 100;
+  const cheese = Math.round(total * cPct);
+  const rest = total - cheese;
+  const beans = Math.round(rest * 0.5);
+  const meat = rest - beans;
+  const avg = 3.6;
+  const cost = (total * avg).toFixed(2);
+  document.getElementById('result').innerHTML = `
+    <strong>${total} pupusas</strong> for ${guests} guests<br>
+    ~${cheese} cheese · ${beans} beans · ${meat} meat<br>
+    Estimated materials ${cost} (demo pricing; call for real quote)
+  `;
+};
+</script>
+</body>
+</html>

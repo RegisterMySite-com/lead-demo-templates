@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nancy's Pupuseria | Buena Park</title>
+  <meta name="description" content="Nancy's Pupuseria | Salvadoran pupusas in Buena Park — demo website by RegisterMySite">
+  <style>
+    :root { --bg:#0f1210; --panel:#161b17; --ink:#f4f6f3; --muted:#a8b5ab; --line:rgba(255,255,255,.08); --accent:#2d6a4f; --ok:#52b788; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(15,18,16,.85); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg { width:36px; height:36px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#fff; }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--ok); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1b221d; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    .filter { border:1px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer; background:#121612; }
+    .filter.on { background:var(--accent); color:#fff; }
+    .menu-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .item { border:1px solid var(--line); border-radius:14px; padding:14px; }
+    .cart-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--line); }
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36"><rect width="36" height="36" rx="8" fill="#2d6a4f"/><text x="18" y="24" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">NP</text></svg>
+    Nancy's Pupuseria
+  </a>
+  <nav class="links">
+    <a href="#menu">Menu</a>
+    <a href="#cart">Cart</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+17149952086">(714) 995-2086</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Buena Park · Knott Ave · family spot</p>
+    <h1>Pupusas the neighborhood keeps coming back for.</h1>
+    <p class="lede">Google 4.1 (702 reviews) · Yelp 3.9 (551). Long-running Salvadoran kitchen. Browse the menu, add to cart — this demo is ready for a later delivery-app connection.</p>
+  </div></section>
+  <section id="menu"><div class="wrap">
+    <h2>Menu</h2>
+    <div class="filters" id="filters"></div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div></section>
+  <section id="cart"><div class="wrap" style="display:grid; grid-template-columns:1fr 280px; gap:18px;">
+    <div></div>
+    <div class="card">
+      <h3>Cart</h3>
+      <div id="cartItems"></div>
+      <p class="lede">Demo cart. Call to place a real order. Later connectable to DoorDash / Uber Eats.</p>
+      <a class="btn" href="tel:+17149952086">Call to order</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Nancy's Pupuseria</strong><br>8511 Knott Ave<br>Buena Park, CA 90620</div>
+  <div>Phone<br><a href="tel:+17149952086">(714) 995-2086</a><br>Email not published</div>
+  <div>Reviews<br>Google 4.1 (702)<br>Yelp 3.9 (551)</div>
+  <div>Social<br><a href="https://facebook.com/105925896115316" target="_blank" rel="noopener">Facebook</a><br><a href="https://instagram.com/nancyspupuseria" target="_blank" rel="noopener">Instagram</a></div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+const items = [
+  {name:'Cheese pupusa', cat:'Pupusas', price:3.25},
+  {name:'Bean pupusa', cat:'Pupusas', price:3.25},
+  {name:'Chicharrón pupusa', cat:'Pupusas', price:3.75},
+  {name:'Revuelta pupusa', cat:'Pupusas', price:3.75},
+  {name:'Loroco pupusa', cat:'Pupusas', price:4.00},
+  {name:'Pupusa platter (3)', cat:'Platters', price:10.50},
+  {name:'Curtido side', cat:'Sides', price:1.50},
+  {name:'Yuca frita', cat:'Sides', price:4.50},
+  {name:'Horchata', cat:'Drinks', price:2.75},
+  {name:'Salvadoran coffee', cat:'Drinks', price:2.25}
+];
+const cats = ['All',...new Set(items.map(i=>i.cat))];
+let current = 'All';
+let cart = {};
+function renderFilters() {
+  document.getElementById('filters').innerHTML = cats.map(c => `<button class="filter ${c===current?'on':''}" data-c="${c}">${c}</button>`).join('');
+}
+function renderMenu() {
+  const list = items.filter(i => current==='All' || i.cat===current);
+  document.getElementById('menuGrid').innerHTML = list.map(i => `
+    <div class="item"><strong>${i.name}</strong><br><span style="color:var(--muted)">${i.cat} · $${i.price.toFixed(2)}</span><br>
+    <button class="btn" style="margin-top:8px;padding:8px 12px;font-size:14px" data-name="${i.name}">Add</button></div>`).join('');
+}
+function renderCart() {
+  const el = document.getElementById('cartItems');
+  const lines = Object.entries(cart);
+  if (!lines.length) { el.innerHTML = '<p class="lede">Empty</p>'; return; }
+  let total = 0;
+  el.innerHTML = lines.map(([name,qty]) => {
+    const item = items.find(i=>i.name===name);
+    const sub = item.price * qty;
+    total += sub;
+    return `<div class="cart-row"><span>${name} × ${qty}</span><span>$${sub.toFixed(2)}</span></div>`;
+  }).join('') + `<p><strong>Total $${total.toFixed(2)}</strong></p>`;
+}
+document.getElementById('filters').addEventListener('click', e => {
+  const b = e.target.closest('.filter'); if (!b) return;
+  current = b.dataset.c; renderFilters(); renderMenu();
+});
+document.getElementById('menuGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-name]'); if (!b) return;
+  const name = b.dataset.name;
+  cart[name] = (cart[name]||0) + 1;
+  renderCart();
+});
+renderFilters(); renderMenu(); renderCart();
+</script>
+</body>
+</html>
