@@ -95,3 +95,8 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `pupuseria-el-kiosco` — custom pupusa builder (up to 3 fillings, size, qty) + cart ready for later DoorDash/Uber Eats handoff
 - `nancys-pupuseria` — filterable menu by category + add-to-cart (pupusas, platters, sides, drinks)
 - `pupuseria-salvadorena` — party pupusa planner (guests, per-person, filling mix, estimated total)
+
+## 2026-10-25
+- `thai-laos-market-esan` — filterable restaurant + market menu (steam-table combos + staples) + cart ready for later DoorDash / Uber Eats
+- `tasty-food-to-go` — filterable to-go menu by category + pickup cart
+- `thai-princess-restaurant` — filterable large menu with spice levels + order cart
