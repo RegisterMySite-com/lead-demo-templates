@@ -100,3 +100,8 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `thai-laos-market-esan` — filterable restaurant + market menu (steam-table combos + staples) + cart ready for later DoorDash / Uber Eats
 - `tasty-food-to-go` — filterable to-go menu by category + pickup cart
 - `thai-princess-restaurant` — filterable large menu with spice levels + order cart
+
+## 2026-10-28
+- `tn-hong-kong-express` — Overflowing Box Builder (filterable proteins/sides/add-ons + cart ready for later DoorDash / Uber Eats / Grubhub handoff)
+- `fu-wing-low` — Family Feast Planner (guest-count banquet trays + cart)
+- `ta-chen-chinese-restaurant` — classic Chinese menu with category + spice filters + order cart

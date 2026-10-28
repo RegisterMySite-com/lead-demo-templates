@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TN Hong Kong Express | Westminster</title>
+  <meta name="description" content="TN Hong Kong Express (Hong Kong Express) in Westminster — overflowing takeout boxes. Demo website by RegisterMySite.">
+  <style>
+    :root { --bg:#0c0f14; --panel:#141820; --ink:#f5f7fa; --muted:#9aa6b5; --line:rgba(255,255,255,.09); --accent:#e11d48; --ok:#fb7185; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(12,15,20,.88); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg { width:40px; height:40px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#fff; }
+    .btn:hover { filter:brightness(1.08); }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--ok); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:62ch; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1a1f28; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    .filter { border:1px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer; background:#12161e; color:var(--ink); }
+    .filter.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .menu-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .item { border:1px solid var(--line); border-radius:14px; padding:14px; background:#12161e; }
+    .cart-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--line); }
+    .builder { display:grid; grid-template-columns:1fr 300px; gap:18px; }
+    @media (max-width:800px) { .builder { grid-template-columns:1fr; } nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="10" fill="#e11d48"/>
+      <path d="M10 22 L20 12 L30 22 L28 28 L12 28 Z" fill="#fff"/>
+      <rect x="14" y="26" width="12" height="4" rx="1" fill="#fbbf24"/>
+    </svg>
+    TN Hong Kong Express
+  </a>
+  <nav class="links">
+    <a href="#builder">Overflowing Box</a>
+    <a href="#menu">Menu</a>
+    <a href="#cart">Cart</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+17148926514">(714) 892-6514</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Westminster · Beach Blvd · next to Shun Fat · family-run</p>
+    <h1>The overflowing box, built for the internet.</h1>
+    <p class="lede">Google 4.4 (~1,200 reviews) · Yelp 4.0 (986). Viral Instagram @hongkongexpresswestminster. Build your own overflowing takeout box, filter the menu, and add to cart. Demo ready for later DoorDash / Uber Eats / Grubhub handoff. Your Google listing currently points to an airline — this is the real site.</p>
+  </div></section>
+  <section id="builder"><div class="wrap">
+    <h2>Overflowing Box Builder</h2>
+    <div class="builder">
+      <div>
+        <div class="filters" id="filters"></div>
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+      <div class="card">
+        <h3>Your overflowing box</h3>
+        <p style="color:var(--muted);font-size:14px">Add proteins, sides, and rice. The classic move is more than the box can hold.</p>
+        <div id="boxItems"></div>
+        <p id="boxTotal" style="font-weight:700;margin-top:12px"></p>
+        <button class="btn" id="addBox" style="width:100%;margin-top:12px">Add this box to cart</button>
+      </div>
+    </div>
+  </div></section>
+  <section id="cart"><div class="wrap">
+    <h2>Order cart</h2>
+    <div class="card" style="max-width:480px">
+      <div id="cartItems"></div>
+      <p class="lede">Demo cart only. Call to place a real order. Later connectable to DoorDash, Uber Eats, Grubhub, Postmates.</p>
+      <a class="btn" href="tel:+17148926514">Call to order</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">TN Hong Kong Express</strong><br>15452 Beach Blvd<br>Westminster, CA 92683<br><span style="font-size:12px">next to Shun Fat Supermarket</span></div>
+  <div>Phone<br><a href="tel:+17148926514">(714) 892-6514</a><br>Email: none listed</div>
+  <div>Reviews<br>Google 4.4 (~1,122)<br>Yelp 4.0 (986)</div>
+  <div>Social<br><a href="https://instagram.com/hongkongexpresswestminster" target="_blank" rel="noopener">Instagram @hongkongexpresswestminster</a><br><a href="https://facebook.com/240188975836140" target="_blank" rel="noopener">Facebook</a></div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+const items = [
+  {name:'Honey Walnut Shrimp', cat:'Proteins', price:16.95},
+  {name:'Mongolian Beef', cat:'Proteins', price:15.50},
+  {name:'Orange Chicken', cat:'Proteins', price:14.50},
+  {name:'Kung Pao Chicken', cat:'Proteins', price:14.95},
+  {name:'Beef & Broccoli', cat:'Proteins', price:15.25},
+  {name:'Salt & Pepper Wings', cat:'Proteins', price:13.50},
+  {name:'Chow Mein', cat:'Sides', price:8.50},
+  {name:'Fried Rice', cat:'Sides', price:7.95},
+  {name:'Steamed Rice', cat:'Sides', price:2.50},
+  {name:'Egg Rolls (2)', cat:'Sides', price:5.50},
+  {name:'Hot & Sour Soup', cat:'Sides', price:4.95},
+  {name:'Extra Sauce', cat:'Add-ons', price:1.00}
+];
+const cats = ['All',...new Set(items.map(i=>i.cat))];
+let current = 'All';
+let box = {};
+let cart = {};
+function renderFilters() {
+  document.getElementById('filters').innerHTML = cats.map(c => `<button class="filter ${c===current?'on':''}" data-c="${c}">${c}</button>`).join('');
+}
+function renderMenu() {
+  const list = items.filter(i => current==='All' || i.cat===current);
+  document.getElementById('menuGrid').innerHTML = list.map(i => `
+    <div class="item"><strong>${i.name}</strong><br><span style="color:var(--muted)">${i.cat} · $${i.price.toFixed(2)}</span><br>
+    <button class="btn" style="margin-top:8px;padding:8px 12px;font-size:14px" data-name="${i.name}">Add to box</button></div>`).join('');
+}
+function renderBox() {
+  const el = document.getElementById('boxItems');
+  const lines = Object.entries(box);
+  if (!lines.length) { el.innerHTML = '<p style="color:var(--muted)">Empty box</p>'; document.getElementById('boxTotal').textContent=''; return; }
+  let total = 0;
+  el.innerHTML = lines.map(([name,qty]) => {
+    const item = items.find(i=>i.name===name);
+    const sub = item.price * qty;
+    total += sub;
+    return `<div class="cart-row"><span>${name} × ${qty}</span><span>$${sub.toFixed(2)}</span></div>`;
+  }).join('');
+  document.getElementById('boxTotal').textContent = `Box subtotal $${total.toFixed(2)}`;
+}
+function renderCart() {
+  const el = document.getElementById('cartItems');
+  const lines = Object.entries(cart);
+  if (!lines.length) { el.innerHTML = '<p class="lede">Empty</p>'; return; }
+  let total = 0;
+  el.innerHTML = lines.map(([name,qty]) => {
+    const item = items.find(i=>i.name===name) || {price:0};
+    const sub = (item.price||0) * qty;
+    total += sub;
+    return `<div class="cart-row"><span>${name} × ${qty}</span><span>$${sub.toFixed(2)}</span></div>`;
+  }).join('') + `<p><strong>Total $${total.toFixed(2)}</strong></p>`;
+}
+document.getElementById('filters').addEventListener('click', e => {
+  const b = e.target.closest('.filter'); if (!b) return;
+  current = b.dataset.c; renderFilters(); renderMenu();
+});
+document.getElementById('menuGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-name]'); if (!b) return;
+  const name = b.dataset.name;
+  box[name] = (box[name]||0) + 1;
+  renderBox();
+});
+document.getElementById('addBox').addEventListener('click', () => {
+  Object.entries(box).forEach(([name,qty]) => {
+    cart[name] = (cart[name]||0) + qty;
+  });
+  box = {};
+  renderBox();
+  renderCart();
+});
+renderFilters(); renderMenu(); renderBox(); renderCart();
+</script>
+</body>
+</html>

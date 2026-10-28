@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fu Wing Low | Fountain Valley</title>
+  <meta name="description" content="Fu Wing Low in Fountain Valley — classic family Cantonese since the early 1980s. Demo website by RegisterMySite.">
+  <style>
+    :root { --bg:#0f1410; --panel:#161c17; --ink:#f4f6f3; --muted:#a8b5ab; --line:rgba(255,255,255,.08); --accent:#16a34a; --ok:#4ade80; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(15,20,16,.88); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg { width:40px; height:40px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#fff; }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--ok); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:62ch; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1b221d; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    .filter { border:1px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer; background:#121612; color:var(--ink); }
+    .filter.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .menu-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .item { border:1px solid var(--line); border-radius:14px; padding:14px; background:#121612; }
+    .cart-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--line); }
+    .planner { display:grid; grid-template-columns:1fr 320px; gap:18px; }
+    @media (max-width:800px) { .planner { grid-template-columns:1fr; } nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="10" fill="#16a34a"/>
+      <circle cx="20" cy="18" r="8" fill="#fff"/>
+      <path d="M12 28 Q20 22 28 28" stroke="#fff" stroke-width="2" fill="none"/>
+    </svg>
+    Fu Wing Low
+  </a>
+  <nav class="links">
+    <a href="#feast">Family Feast</a>
+    <a href="#menu">Menu</a>
+    <a href="#cart">Cart</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+17148394481">(714) 839-4481</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Fountain Valley · Brookhurst St · Meadowlark Park Plaza · family since ~1982</p>
+    <h1>Second-generation Cantonese, ready for the table.</h1>
+    <p class="lede">Yelp 4.2 (~575) · Google 4.6 (368). Founded by Kenny Sue; now run by his son David. Closed Mondays. Plan a family feast by guest count, filter classic dishes, and add trays to cart. Demo ready for later delivery-app handoff. No website of their own today — Google points to a directory listing.</p>
+  </div></section>
+  <section id="feast"><div class="wrap">
+    <h2>Family Feast Planner</h2>
+    <div class="planner">
+      <div>
+        <label style="color:var(--muted);font-size:14px">Guests <input type="number" id="guests" value="8" min="2" max="40" style="width:70px;margin-left:8px;padding:6px;border-radius:8px;border:1px solid var(--line);background:#121612;color:#fff"></label>
+        <div class="filters" id="filters" style="margin-top:12px"></div>
+        <div class="menu-grid" id="menuGrid"></div>
+      </div>
+      <div class="card">
+        <h3>Feast for <span id="guestLabel">8</span></h3>
+        <div id="feastItems"></div>
+        <p id="feastTotal" style="font-weight:700;margin-top:12px"></p>
+        <button class="btn" id="addFeast" style="width:100%;margin-top:12px">Add feast to cart</button>
+      </div>
+    </div>
+  </div></section>
+  <section id="cart"><div class="wrap">
+    <h2>Order cart</h2>
+    <div class="card" style="max-width:480px">
+      <div id="cartItems"></div>
+      <p class="lede">Demo cart only. Call to place a real order. Hours: Tue–Sun (closed Mon).</p>
+      <a class="btn" href="tel:+17148394481">Call to order</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Fu Wing Low</strong><br>16545 Brookhurst St<br>Fountain Valley, CA 92708<br><span style="font-size:12px">Meadowlark Park Plaza</span></div>
+  <div>Phone<br><a href="tel:+17148394481">(714) 839-4481</a><br>Email: none listed</div>
+  <div>Reviews<br>Yelp 4.2 (~573)<br>Google 4.6 (368)</div>
+  <div>Social<br><a href="https://facebook.com/111552282214146" target="_blank" rel="noopener">Facebook</a><br>Instagram hashtag #fuwinglow</div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+const items = [
+  {name:'Peking Duck (half)', cat:'Banquet', price:28.00},
+  {name:'Honey Walnut Shrimp', cat:'Seafood', price:17.95},
+  {name:'Lobster with Ginger & Scallion', cat:'Seafood', price:32.00},
+  {name:'Beef Chow Fun', cat:'Noodles', price:15.50},
+  {name:'Eggplant with Garlic Sauce', cat:'Vegetables', price:13.50},
+  {name:'Hot & Sour Soup (family)', cat:'Soups', price:12.00},
+  {name:'Fried Rice (family)', cat:'Rice', price:14.00},
+  {name:'Steamed Fish', cat:'Seafood', price:22.00},
+  {name:'Mongolian Beef', cat:'Beef', price:16.50},
+  {name:'Sesame Balls', cat:'Desserts', price:7.50}
+];
+const cats = ['All',...new Set(items.map(i=>i.cat))];
+let current = 'All';
+let feast = {};
+let cart = {};
+function renderFilters() {
+  document.getElementById('filters').innerHTML = cats.map(c => `<button class="filter ${c===current?'on':''}" data-c="${c}">${c}</button>`).join('');
+}
+function renderMenu() {
+  const list = items.filter(i => current==='All' || i.cat===current);
+  document.getElementById('menuGrid').innerHTML = list.map(i => `
+    <div class="item"><strong>${i.name}</strong><br><span style="color:var(--muted)">${i.cat} · $${i.price.toFixed(2)}</span><br>
+    <button class="btn" style="margin-top:8px;padding:8px 12px;font-size:14px" data-name="${i.name}">Add tray</button></div>`).join('');
+}
+function updateGuest() {
+  const g = parseInt(document.getElementById('guests').value)||8;
+  document.getElementById('guestLabel').textContent = g;
+}
+function renderFeast() {
+  const el = document.getElementById('feastItems');
+  const lines = Object.entries(feast);
+  if (!lines.length) { el.innerHTML = '<p style="color:var(--muted)">Add trays for the table</p>'; document.getElementById('feastTotal').textContent=''; return; }
+  let total = 0;
+  el.innerHTML = lines.map(([name,qty]) => {
+    const item = items.find(i=>i.name===name);
+    const sub = item.price * qty;
+    total += sub;
+    return `<div class="cart-row"><span>${name} × ${qty}</span><span>$${sub.toFixed(2)}</span></div>`;
+  }).join('');
+  document.getElementById('feastTotal').textContent = `Feast total $${total.toFixed(2)}`;
+}
+function renderCart() {
+  const el = document.getElementById('cartItems');
+  const lines = Object.entries(cart);
+  if (!lines.length) { el.innerHTML = '<p class="lede">Empty</p>'; return; }
+  let total = 0;
+  el.innerHTML = lines.map(([name,qty]) => {
+    const item = items.find(i=>i.name===name);
+    const sub = item.price * qty;
+    total += sub;
+    return `<div class="cart-row"><span>${name} × ${qty}</span><span>$${sub.toFixed(2)}</span></div>`;
+  }).join('') + `<p><strong>Total $${total.toFixed(2)}</strong></p>`;
+}
+document.getElementById('filters').addEventListener('click', e => {
+  const b = e.target.closest('.filter'); if (!b) return;
+  current = b.dataset.c; renderFilters(); renderMenu();
+});
+document.getElementById('menuGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-name]'); if (!b) return;
+  const name = b.dataset.name;
+  feast[name] = (feast[name]||0) + 1;
+  renderFeast();
+});
+document.getElementById('guests').addEventListener('input', updateGuest);
+document.getElementById('addFeast').addEventListener('click', () => {
+  Object.entries(feast).forEach(([name,qty]) => {
+    cart[name] = (cart[name]||0) + qty;
+  });
+  feast = {};
+  renderFeast();
+  renderCart();
+});
+renderFilters(); renderMenu(); updateGuest(); renderFeast(); renderCart();
+</script>
+</body>
+</html>

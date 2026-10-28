@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ta Chen Chinese Restaurant | Garden Grove</title>
+  <meta name="description" content="Ta Chen Chinese Restaurant in Garden Grove — classic family Chinese. Demo website by RegisterMySite.">
+  <style>
+    :root { --bg:#12100e; --panel:#1c1814; --ink:#f7f4ef; --muted:#b5a99a; --line:rgba(255,255,255,.08); --accent:#d97706; --ok:#fbbf24; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(18,16,14,.88); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg { width:40px; height:40px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#fff; }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--ok); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:62ch; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#221e1a; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    .filter { border:1px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer; background:#1a1612; color:var(--ink); }
+    .filter.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .menu-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .item { border:1px solid var(--line); border-radius:14px; padding:14px; background:#1a1612; }
+    .cart-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--line); }
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="10" fill="#d97706"/>
+      <path d="M12 26 L20 14 L28 26 Z" fill="#fff"/>
+      <rect x="16" y="26" width="8" height="4" rx="1" fill="#fef3c7"/>
+    </svg>
+    Ta Chen
+  </a>
+  <nav class="links">
+    <a href="#menu">Menu</a>
+    <a href="#cart">Cart</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+17148926994">(714) 892-6994</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Garden Grove · Chapman Ave · Valley View & Chapman · family-run</p>
+    <h1>Your domain is still yours. The site can come back.</h1>
+    <p class="lede">Yelp 4.1 (347) · Google 4.5 (232). tachenrestaurant.com is registered through 2027 but currently does not resolve. Filter the classic menu by category or spice, add to cart. Demo ready for later DoorDash / Uber Eats handoff. Closed Mondays. Run by David and family.</p>
+  </div></section>
+  <section id="menu"><div class="wrap">
+    <h2>Classic Chinese menu</h2>
+    <div class="filters" id="filters"></div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div></section>
+  <section id="cart"><div class="wrap">
+    <h2>Order cart</h2>
+    <div class="card" style="max-width:480px">
+      <div id="cartItems"></div>
+      <p class="lede">Demo cart only. Call to place a real order. Hours: Tue–Thu 11:30a–9p, Fri 1:30–10p, Sat 12–10p, Sun 3–9:30p, closed Mon.</p>
+      <a class="btn" href="tel:+17148926994">Call to order</a>
+    </div>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Ta Chen Chinese Restaurant</strong><br>6082 Chapman Ave<br>Garden Grove, CA 92845<br><span style="font-size:12px">Valley View & Chapman plaza</span></div>
+  <div>Phone<br><a href="tel:+17148926994">(714) 892-6994</a><br>Email: none listed</div>
+  <div>Reviews<br>Yelp 4.1 (347)<br>Google 4.5 (232)</div>
+  <div>Social<br><a href="https://facebook.com/285283485070" target="_blank" rel="noopener">Facebook</a></div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+const items = [
+  {name:'Kung Pao Chicken', cat:'Chicken', spice:'Medium', price:14.50},
+  {name:'General Tso’s Chicken', cat:'Chicken', spice:'Mild', price:14.95},
+  {name:'Orange Chicken', cat:'Chicken', spice:'Mild', price:14.50},
+  {name:'Mongolian Beef', cat:'Beef', spice:'Medium', price:15.95},
+  {name:'Beef & Broccoli', cat:'Beef', spice:'Mild', price:15.50},
+  {name:'Sweet & Sour Pork', cat:'Pork', spice:'Mild', price:14.25},
+  {name:'Shrimp with Lobster Sauce', cat:'Seafood', spice:'Mild', price:16.95},
+  {name:'Mapo Tofu', cat:'Vegetarian', spice:'Spicy', price:13.50},
+  {name:'Vegetable Lo Mein', cat:'Noodles', spice:'Mild', price:12.50},
+  {name:'Hot & Sour Soup', cat:'Soups', spice:'Medium', price:4.95},
+  {name:'Egg Rolls (2)', cat:'Starters', spice:'None', price:5.50},
+  {name:'Fried Banana', cat:'Desserts', spice:'None', price:6.50}
+];
+const cats = ['All',...new Set(items.map(i=>i.cat))];
+const spices = ['All spice',...new Set(items.map(i=>i.spice))];
+let currentCat = 'All';
+let currentSpice = 'All spice';
+let cart = {};
+function renderFilters() {
+  const catBtns = cats.map(c => `<button class="filter ${c===currentCat?'on':''}" data-type="cat" data-c="${c}">${c}</button>`).join('');
+  const spiceBtns = spices.map(s => `<button class="filter ${s===currentSpice?'on':''}" data-type="spice" data-c="${s}">${s}</button>`).join('');
+  document.getElementById('filters').innerHTML = catBtns + '<br style="flex-basis:100%">' + spiceBtns;
+}
+function renderMenu() {
+  const list = items.filter(i => (currentCat==='All' || i.cat===currentCat) && (currentSpice==='All spice' || i.spice===currentSpice));
+  document.getElementById('menuGrid').innerHTML = list.map(i => `
+    <div class="item"><strong>${i.name}</strong><br><span style="color:var(--muted)">${i.cat} · ${i.spice} · $${i.price.toFixed(2)}</span><br>
+    <button class="btn" style="margin-top:8px;padding:8px 12px;font-size:14px" data-name="${i.name}">Add</button></div>`).join('');
+}
+function renderCart() {
+  const el = document.getElementById('cartItems');
+  const lines = Object.entries(cart);
+  if (!lines.length) { el.innerHTML = '<p class="lede">Empty</p>'; return; }
+  let total = 0;
+  el.innerHTML = lines.map(([name,qty]) => {
+    const item = items.find(i=>i.name===name);
+    const sub = item.price * qty;
+    total += sub;
+    return `<div class="cart-row"><span>${name} × ${qty}</span><span>$${sub.toFixed(2)}</span></div>`;
+  }).join('') + `<p><strong>Total $${total.toFixed(2)}</strong></p>`;
+}
+document.getElementById('filters').addEventListener('click', e => {
+  const b = e.target.closest('.filter'); if (!b) return;
+  if (b.dataset.type === 'cat') currentCat = b.dataset.c;
+  else currentSpice = b.dataset.c;
+  renderFilters(); renderMenu();
+});
+document.getElementById('menuGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-name]'); if (!b) return;
+  const name = b.dataset.name;
+  cart[name] = (cart[name]||0) + 1;
+  renderCart();
+});
+renderFilters(); renderMenu(); renderCart();
+</script>
+</body>
+</html>
