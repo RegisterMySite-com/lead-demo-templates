@@ -1,0 +1,109 @@
+# Croff Electric — dossier (rank 1)
+
+- Slug: `croff-electric` → https://sites.registermysite.com/croff-electric
+- Researched: 2026-10-24 (PT)
+
+## Names
+- **dba**: Croff Electric
+- **legal**: Jeremy Eugene Croff (sole ownership)
+- **note**: SCE's directory and Angi say 'Croff Electric Inc.', but CSLB lists a sole ownership. Use 'Croff Electric' on the site.
+- **sources**: https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1044752; https://evhome.sce.com/sites/default/files/docs/Contractor-Directory.pdf
+
+## Owner
+- **name**: Jeremy Croff
+- **detail**: Reviews describe a family team of 'father, sons' (Yelp, Nancy S., 2026-09-30). A Nextdoor neighbor says Jeremy 'lives right in Bixby'.
+- **sources**: https://www.mapquest.com/us/california/croff-electric-424961351; https://nextdoor.com/pages/croff-electric-long-beach-ca/
+
+## Address
+- **value**: 4401 Gardenia Ave, Long Beach, CA 90807 (City BL site). CSLB lists 4425 Gardenia Ave.
+- **display_note**: Yelp/MapQuest hide the street and show only 'Serving Long Beach Area, 90807'. Ask Jeremy before showing the street. For the map, pin 90807 / Bixby Knolls or the BL address.
+- **sources**: https://services6.arcgis.com/yCArG7wGXGyWLqav/arcgis/rest/services/Business_Licenses_Public_View/FeatureServer/0; https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1044752; https://www.mapquest.com/us/california/croff-electric-424961351
+
+## Phone
+(310) 406-6909
+
+## Public email / forms
+- **exists**: True
+- **value**: croffelectric@yahoo.com
+- **source**: https://evhome.sce.com/sites/default/files/docs/Contractor-Directory.pdf
+- **forms**: YES: build forms.registermysite.com POST to this address
+
+## Hours
+- **value**: Mon-Sat 7:00 AM-5:00 PM, Sun closed (MapQuest/Yelp feed). Google via ServiceAgent shows Mon-Sat 8-5.
+- **sources**: https://www.mapquest.com/us/california/croff-electric-424961351; https://serviceagent.ai/directory/new-york/long-beach-ca/electrician/croff-electric/
+
+## Services
+- **value**: Electrical repairs and troubleshooting; Panel upgrades / electric panel installation & repair; EV charger installation (hardwired), incl. SCE Charge Ready Home in-network; Lighting / LED retrofits, can lights; Ceiling fans; Outlets, switches, 240V outlets (stove, HVAC prep); Circuit breakers; Doorbells; Rewiring older homes; Generators; Electrical inspection; Solar conduit prep
+- **sources**: https://www.yelp.com/biz/croff-electric-long-beach (search snippet); https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm; https://evhome.sce.com/sites/default/files/docs/Contractor-Directory.pdf; https://www.mapquest.com/us/california/croff-electric-424961351
+
+## Prices
+- **value**: No published price list. HomeAdvisor reviews show past job costs of $121, $125, $135, $250, $400, $575 and $600. Angi reviews show $650 and $2,000 (commercial). HomeAdvisor says the trip charge depends on travel. Free estimates are offered.
+- **sources**: https://www.homeadvisor.com/rated.JeremyEugeneCroff.80664336.html; https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm
+
+## Payment
+- **value**: Credit card, Zelle, Venmo
+- **source**: https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm
+
+## Service area
+- **value**: Long Beach area (Yelp 'Serving Long Beach Area'); reviews from Long Beach and Lakewood
+- **sources**: https://www.mapquest.com/us/california/croff-electric-424961351; https://nextdoor.com/pages/croff-electric-long-beach-ca/
+
+## Years in business
+- **value**: CSLB license issued 09/24/2018 (8 yrs). HomeAdvisor says '8 years of experience'. Long Beach BL since 2021-04-12.
+- **sources**: https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1044752; https://www.homeadvisor.com/rated.JeremyEugeneCroff.80664336.html; https://services6.arcgis.com/yCArG7wGXGyWLqav/arcgis/rest/services/Business_Licenses_Public_View/FeatureServer/0
+
+## Licenses
+- {"type": "CSLB C-10 Electrical", "number": "1044752", "status": "Current and active", "issued": "2018-09-24", "expires": "2028-09-30", "bond": "$25,000 American Contractors Indemnity #100406341", "workers_comp": "Exempt (no employees), eff. 2026-09-01", "lookup_url": "https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1044752", "verified": "2026-10-24 via CSLB site"}
+- {"type": "City of Long Beach business license", "number": "BU22104948", "status": "Active (Renewed 2026-08-27)", "category": "Contracting - Electrical", "issued": "2021-04-12", "expires": "not shown", "lookup_url": "https://services6.arcgis.com/yCArG7wGXGyWLqav/arcgis/rest/services/Business_Licenses_Public_View/FeatureServer/0 (BizMap public view)", "verified": "2026-10-24"}
+
+## Reviews
+**platforms**:
+- platform: Yelp (via MapQuest feed); rating: 5.0; count: 113; newest: 2026-10-20; url: https://www.yelp.com/biz/croff-electric-long-beach; feed_url: https://www.mapquest.com/us/california/croff-electric-424961351; note: MapQuest shows Yelp's aggregate. A 2024 Yelp snapshot in search showed 4.9 (83). Yelp itself blocks automated reads. Yelp shows a 'Verified License' badge.
+- platform: Google Business Profile; rating: 4.8; count: 17; newest: not found; url: https://serviceagent.ai/directory/new-york/long-beach-ca/electrician/croff-electric/; note: Read through ServiceAgent, which pulls from GBP
+- platform: HomeAdvisor; rating: 4.4; count: 37; newest: Jun 2024; url: https://www.homeadvisor.com/rated.JeremyEugeneCroff.80664336.html
+- platform: Angi; rating: 5.0; count: 8; newest: Feb 2024; url: https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm
+- platform: Nextdoor; rating: n/a (recommendations); count: not shown; newest: 19 Jun (2026, matches Yelp Robert A. 2026-06-19); url: https://nextdoor.com/pages/croff-electric-long-beach-ca/; note: Neighborhood Favorite 2022
+- platform: BBB; rating: not found; count: not found; url: not found
+- platform: Facebook/Instagram; rating: not found; url: not found (LeadSwift lists them as not found: https://leadswift.com/public/lists/detail/96606462-croff-electric)
+- **newest_review**: {'date': '2026-10-20', 'author': 'Rob', 'link': 'https://www.yelp.com/biz/croff-electric-long-beach?hrid=igtaLPhY1UW1F8GieHbh1Q'}
+- **in_window_count**: 3 Yelp reviews since 2026-07-26 (10/20, 09/30, 09/04)
+**carousel**:
+- author: Rob; date: 2026-10-20; stars: 5; text: Jeremy was able to give me a quote over the phone which was very helpful! His quote was very reasonably priced.; link: https://www.yelp.com/biz/croff-electric-long-beach?hrid=igtaLPhY1UW1F8GieHbh1Q
+- author: Nancy S.; date: 2026-09-30; stars: 5; text: So lucky to get a referral to Croff Electric for rewiring my 100 year old house in a historic neighborhood. This team of father, sons, and dad works like a well oiled machine…; link: https://www.yelp.com/biz/croff-electric-long-beach?hrid=ZpY8gmJHaLvuioHdroc8wQ
+- author: Coco M.; date: 2026-09-04; stars: 5; text: Replied within 24 hours, explained the process and how long it will take to finish the installation…; link: https://www.yelp.com/biz/croff-electric-long-beach?hrid=-dRvjcnc-SiNvU1aqSRoEw
+- author: Robert A.; date: 2026-06-19; stars: 5; text: They installed a hardwired EV charger for my home and completed conduit prep work for a future solar installation. The work was clean, professional…; link: https://www.yelp.com/biz/croff-electric-long-beach?hrid=gBH8Myfk5DM37zUkKTW5bw
+- author: Cole I.; date: 2026-06-03; stars: 5; text: Jeremy and team were great to work with! They were prompt, responsive, and gave a very reasonable quote for the work.; link: https://www.yelp.com/biz/croff-electric-long-beach?hrid=DZXb5p3Cu-VltlrmLAFDxQ
+- author: Ben W.; date: Feb 2024; stars: 5; text: I've used Croff Electric several times over the years, at multiple commercial buildings I manage. Their work is professional and their prices are fair.; link: https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm
+- **carousel_source_note**: Yelp excerpts come from the MapQuest Yelp feed, which truncates them (JSON-LD on https://www.mapquest.com/us/california/croff-electric-424961351).
+
+## Photos
+- **value**: https://s3-media0.fl.yelpcdn.com/bphoto/RUjvC9r6yLjR6oitgslzSQ/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/6-NETpfHZpsFdFRax9Pzkw/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/fyNcCZrcfVutt06GqcyljA/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/xxM6gHPOz3plSJqIY3Ebyg/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/zS63YkvShyQToU-hjEWhzA/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/EY-h9FDrLlCQGGKuhd5LKg/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/ZCwi7XOt5cSNMfoG_bXxfw/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/dHD8z7OzAkbxGy2E7hllUw/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/PCi480K-8eEAddu_UVsenw/l.jpg; https://s3-media0.fl.yelpcdn.com/bphoto/ZgloLWvVFebP1pnDBQVjfg/l.jpg
+- **source**: https://www.mapquest.com/us/california/croff-electric-424961351 (Yelp photo feed)
+- **rights_note**: Yelp photos may come from the business or from customers, so ownership isn't confirmed. Review them before use. They're fine for a demo; ask Jeremy before going live. If none suit the hero, use a licensed stock or generated EV-charger/panel image.
+
+## FAQs
+- {"q": "Do you give free estimates?", "a": "Yes. Free estimates are listed on Angi and HomeAdvisor, and a recent reviewer got a quote over the phone.", "sources": ["https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm", "https://www.mapquest.com/us/california/croff-electric-424961351"]}
+- {"q": "Are you licensed?", "a": "Yes. CSLB C-10 #1044752, active through 09/30/2028, bonded $25,000.", "sources": ["https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1044752"]}
+- {"q": "Do you install EV chargers?", "a": "Yes. Hardwired EV chargers, and Croff is an SCE Charge Ready Home in-network contractor (directory updated 06/24/2026).", "sources": ["https://evhome.sce.com/sites/default/files/docs/Contractor-Directory.pdf"]}
+- {"q": "How can I pay?", "a": "Credit card, Zelle or Venmo.", "sources": ["https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm"]}
+- {"q": "Do you offer emergency service?", "a": "Angi and HomeAdvisor say no emergency services. Don't promise 24/7.", "sources": ["https://www.angi.com/companylist/us/ca/long-beach/croff-electric-inc-reviews-9846920.htm"]}
+- {"q": "What are your hours?", "a": "Mon-Sat 7 AM-5 PM, closed Sunday (Yelp feed).", "sources": ["https://www.mapquest.com/us/california/croff-electric-424961351"]}
+
+## Languages
+- **value**: not found (assume English)
+- **sources**: 
+
+## EN/ES toggle decision
+- **owner_hispanic**: No indication (Croff family)
+- **neighborhood**: Long Beach is 43.8% Hispanic/Latino (Census QuickFacts). ZIP-level 90807 figure not verified.
+- **recommend_toggle**: True
+- **why**: Long Beach is heavily Hispanic at the city level, so this meets Ryan's 'heavily Hispanic neighborhood' rule. Include the EN/ES toggle.
+- **source**: https://www.census.gov/quickfacts/fact/table/longbeachcitycalifornia,gardengrovecitycalifornia/RHI725224
+
+## Industry tool
+- **name**: EV Charger & Panel Readiness Planner
+- **desc**: The user picks a charger level (Level 2 at 32/40/48A), panel size (100/125/200A), home age, the main loads they already have (AC, electric range, dryer, spa) and the distance from panel to parking spot. The tool estimates the breaker size, wire gauge, and whether a load calc or panel upgrade is likely. It flags permit and SCE Charge Ready Home eligibility, then sends the summary to the estimate form. The demo shouldn't show prices, since Croff publishes none. Show complexity tiers and say 'free estimate'.
+- **why**: His best recent reviews are EV charger, panel and rewire jobs, and he's on SCE's Charge Ready Home list. Note: a static 'EV charger planner' demo already exists in lead-demo-templates/2026-09-28/croff-electric, which this build should supersede.
+
+## Chatbot notes
+Use only the facts above. Don't state prices or emergency service. For quotes, collect name, phone, address/ZIP, job type and photos, then send them to (310) 406-6909 or the form.

@@ -1,0 +1,11 @@
+# Peng's Smog Check Station
+
+> A family-run, STAR-certified, test-only smog check station at 2041 E Carson St, Ste B, Long Beach, CA 90807. Walk-ins welcome Mon–Fri 8:30 AM–5:00 PM and Sat 8:30 AM–3:30 PM; motor homes by appointment. Phone (562) 424-2368. BAR ARD 147631.
+
+## Site
+- [Home](https://diyregistry.com/s/pengs-smog-check/): Smog Check Ready? tool, open/closed board, services, reviews, map, FAQ
+- [Full business facts](https://diyregistry.com/s/pengs-smog-check/llms-full.txt)
+
+## Verify
+- [BAR Auto Shop Locator](https://www.bar.ca.gov/locator) (search ARD 147631)
+- [Yelp reviews](https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2)

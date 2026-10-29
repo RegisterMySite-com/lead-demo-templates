@@ -1,0 +1,55 @@
+# Croff Electric: full business facts
+
+Canonical page: https://diyregistry.com/s/croff-electric/
+Facts checked: 2026-10-24. This is a RegisterMySite demo, not yet published by the business.
+
+## Identity
+- Name: Croff Electric
+- Owner: Jeremy Croff (the CSLB record lists Jeremy Eugene Croff, sole ownership)
+- Team: family-run. Reviewers describe a "father, sons" crew.
+- Location: Long Beach, CA. Service-area business; the street address isn't published.
+- Phone: (310) 406-6909
+- Email: croffelectric@yahoo.com
+- Languages: English
+
+## Licenses
+- California CSLB C-10 Electrical Contractor #1044752: current and active, issued 2018-09-24, expires 2028-09-30. Bonded for $25,000. Verify: https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1044752
+- City of Long Beach business license BU22104948 (Contracting – Electrical): active, renewed 2026-08-27.
+- Listed as an in-network contractor in SCE's Charge Ready Home directory (updated 06/24/2026).
+
+## Hours
+- Monday–Saturday 7:00 AM–5:00 PM. Sunday closed. These are the hours on Yelp; Google shows Mon–Sat 8–5.
+- No 24/7 emergency service.
+
+## Services
+- Hardwired Level 2 EV charger installation, including for SCE Charge Ready Home
+- Electric panel upgrades, installation and repair; circuit breakers
+- Rewiring older and historic homes
+- Lighting: LED retrofits, can lights, fixtures
+- Ceiling fans
+- Outlets and switches; 240V circuits (stove, dryer, HVAC prep)
+- Doorbells, generators
+- Electrical inspection and troubleshooting
+- Conduit prep for future solar
+
+## Service area
+- Long Beach and nearby communities, including Lakewood
+
+## Estimates and payment
+- Free estimates. Quotes are sometimes given over the phone.
+- No published prices.
+- Payment: credit card, Zelle, Venmo
+
+## Reviews (October 2026)
+- Yelp: 5.0 from 113 reviews. Newest: 2026-10-20. https://www.yelp.com/biz/croff-electric-long-beach
+- Google: 4.8 from about 17 reviews
+- Angi: 5.0 from 8 reviews
+- HomeAdvisor: 4.4 from 37 reviews
+- Nextdoor: Neighborhood Favorite 2022
+- Recent excerpts:
+  - "Jeremy was able to give me a quote over the phone which was very helpful! His quote was very reasonably priced." (Rob, 2026-10-20)
+  - "So lucky to get a referral to Croff Electric for rewiring my 100 year old house in a historic neighborhood…" (Nancy S., 2026-09-30)
+  - "They installed a hardwired EV charger for my home and completed conduit prep work for a future solar installation…" (Robert A., 2026-06-19)
+
+## On-page tool
+- EV Charger & Panel Readiness Planner. You enter charger amps, panel size, home age, existing big loads, distance and location. It shows a typical breaker and copper wire size (from the NEC 125% continuous-load rule) and a readiness tier: straightforward, load calc recommended, or panel upgrade likely. It's a rough guide only, with no prices, and you can send the summary with your free-estimate request.

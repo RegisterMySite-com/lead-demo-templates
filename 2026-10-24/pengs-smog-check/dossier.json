@@ -1,0 +1,282 @@
+{
+ "slug": "pengs-smog-check",
+ "rank": 3,
+ "site_url": "https://sites.registermysite.com/pengs-smog-check",
+ "researched": "2026-10-24 (PT)",
+ "names": {
+  "dba": "Peng's Smog Check Station (BAR: 'PENGS SMOG CHECK STATION'; City BL: 'PENG SMOG CHECK STATION')",
+  "legal": "Pengchiv Sreng (City of Long Beach BL holder)",
+  "sources": [
+   "https://services6.arcgis.com/yCArG7wGXGyWLqav/arcgis/rest/services/Business_Licenses_Public_View/FeatureServer/0",
+   "https://www.bar.ca.gov/locator"
+  ]
+ },
+ "owner": {
+  "name": "Pengchiv Sreng (named on the LB business license)",
+  "detail": "Family-owned. Reviews describe 'the couple that works here' / 'the couple who run this place'. They ran the smog station at the 76 station at 4101 Cherry Ave (LB BL issued 1990-11-20) and moved to 2041 E Carson St in 2017-2018.",
+  "sources": [
+   "https://services6.arcgis.com/yCArG7wGXGyWLqav/arcgis/rest/services/Business_Licenses_Public_View/FeatureServer/0",
+   "https://www.mapquest.com/us/california/pengs-smog-check-station-387976924",
+   "https://pengs-smog-check-station-long-beach.localautorepairs.net/"
+  ]
+ },
+ "address": {
+  "value": "2041 E Carson St, Ste B, Long Beach, CA 90807",
+  "sources": [
+   "https://www.mapquest.com/us/california/pengs-smog-check-station-387976924",
+   "https://www.bar.ca.gov/locator"
+  ]
+ },
+ "phone": "(562) 424-2368",
+ "public_email": {
+  "exists": false,
+  "value": "not found",
+  "source": "searched Yelp/Google/directories; none listed",
+  "forms": "NO: leave out forms.registermysite.com. Use click-to-call and the chatbot."
+ },
+ "facebook": {
+  "value": "facebook.com/pengsmog (from a search-result summary, not opened)",
+  "source": "WebSearch result citing Yelp"
+ },
+ "hours": {
+  "value": "Mon-Fri 8:30 AM-5:00 PM, Sat 8:30 AM-3:30 PM, Sun closed",
+  "sources": [
+   "https://www.mapquest.com/us/california/pengs-smog-check-station-387976924",
+   "https://pengs-smog-check-station-long-beach.localautorepairs.net/",
+   "https://smogcheckdeals.com/pengs-smog-check-station-long-beach"
+  ],
+  "conflict": "emissions-testing.com lists different hours. Ignore it."
+ },
+ "services": {
+  "value": [
+   "Regular smog check",
+   "STAR-certified smog (DMV-directed vehicles, gross polluters)",
+   "Biennial inspection",
+   "Transfer of ownership",
+   "Out-of-state smog checks",
+   "Diesel and hybrid",
+   "Natural gas / CNG",
+   "Motor homes (appointment required)"
+  ],
+  "note": "Test-only station: no repairs.",
+  "sources": [
+   "https://pengs-smog-check-station-long-beach.localautorepairs.net/",
+   "https://smogcheckdeals.com/pengs-smog-check-station-long-beach"
+  ]
+ },
+ "prices": {
+  "value": "No published price. A Google reviewer (Brittany Martin) says 'his price is fair at 60 bucks'. The state certificate is $8.25 on top when the car passes. BAR's statewide average is about $69.16 (Aug 2026). MapQuest says there's a free re-test if a vehicle fails (generated summary; confirm before using).",
+  "sources": [
+   "https://pengs-smog-check-station-long-beach.localautorepairs.net/",
+   "https://smogcheckdeals.com/pengs-smog-check-station-long-beach",
+   "https://www.mapquest.com/us/california/pengs-smog-check-station-387976924"
+  ]
+ },
+ "payment": {
+  "value": "Cash, credit card (smogcheckdeals)",
+  "source": "https://smogcheckdeals.com/pengs-smog-check-station-long-beach"
+ },
+ "service_area": {
+  "value": "Walk-in station serving Long Beach (Bixby Knolls / North LB, Carson St near Cherry Ave). Reviews mention local Hyundai and Lexus dealers testing there.",
+  "sources": [
+   "https://pengs-smog-check-station-long-beach.localautorepairs.net/"
+  ]
+ },
+ "years_in_business": {
+  "value": "'Servicing Long Beach for the past 30 years' (owner text on Google). LB BL at the old Cherry Ave site was issued 1990-11-20. BAR smog license since 2002 (smogcheckdeals).",
+  "sources": [
+   "https://pengs-smog-check-station-long-beach.localautorepairs.net/",
+   "https://services6.arcgis.com/yCArG7wGXGyWLqav/arcgis/rest/services/Business_Licenses_Public_View/FeatureServer/0",
+   "https://smogcheckdeals.com/pengs-smog-check-station-long-beach"
+  ]
+ },
+ "licenses": [
+  {
+   "type": "BAR Automotive Repair Dealer, listed as a smog-inspection and STAR station",
+   "number": "ARD 147631",
+   "status": "Listed on BAR's Auto Shop Locator (only shows current shops); passes the 'Can perform smog inspections' and 'STAR' filters",
+   "expires": "not shown by the locator (the DCA detail page is behind a Turnstile check)",
+   "lookup_url": "https://www.bar.ca.gov/locator",
+   "verified": "2026-10-24"
+  },
+  {
+   "type": "City of Long Beach business license",
+   "number": "BU21803792",
+   "status": "Active (Renewed 2025-11-17)",
+   "category": "Auto Repair - Minor, Tune-Up, Smog Test",
+   "issued": "2017-11-20",
+   "expires": "not shown",
+   "lookup_url": "https://services6.arcgis.com/yCArG7wGXGyWLqav/arcgis/rest/services/Business_Licenses_Public_View/FeatureServer/0",
+   "verified": "2026-10-24"
+  }
+ ],
+ "reviews": {
+  "platforms": [
+   {
+    "platform": "Yelp (via MapQuest feed)",
+    "rating": 5.0,
+    "count": 166,
+    "newest": "2026-10-09",
+    "url": "https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2",
+    "feed_url": "https://www.mapquest.com/us/california/pengs-smog-check-station-387976924",
+    "note": "A Yelp search snippet shows 165 reviews, 'Updated September 2026'"
+   },
+   {
+    "platform": "Google Business Profile",
+    "rating": 4.9,
+    "count": 213,
+    "newest": "'3 months ago' (liza aznar), listed 2026-09-24",
+    "url": "https://pengs-smog-check-station-long-beach.localautorepairs.net/"
+   },
+   {
+    "platform": "SmogCheckDeals",
+    "rating": 4.9,
+    "count": 215,
+    "url": "https://smogcheckdeals.com/pengs-smog-check-station-long-beach"
+   },
+   {
+    "platform": "Facebook",
+    "rating": "not checked",
+    "url": "facebook.com/pengsmog (unverified)"
+   },
+   {
+    "platform": "BBB / Nextdoor / MapQuest native",
+    "rating": "not found",
+    "url": "not found"
+   }
+  ],
+  "newest_review": {
+   "date": "2026-10-09",
+   "author": "Paul N.",
+   "link": "https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2?hrid=ZwEYuidpahtKHYV5e-fiVQ"
+  },
+  "in_window_count": "1 dated Yelp review since 2026-07-26 (10/09). Google shows one '3 months ago' review, about late July, at the edge of the window.",
+  "carousel": [
+   {
+    "author": "Paul N.",
+    "date": "2026-10-09",
+    "stars": 5,
+    "text": "Been going to Pengs for many years. Always quick and friendly service. Highly recommended!",
+    "link": "https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2?hrid=ZwEYuidpahtKHYV5e-fiVQ"
+   },
+   {
+    "author": "Donald L.",
+    "date": "2026-06-29",
+    "stars": 5,
+    "text": "Had a great and easy experience with Peng's Smog check station. They're super friendly, quick, and knowledgeable.",
+    "link": "https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2?hrid=O60ZS7oA92yIQBysMBY8cg"
+   },
+   {
+    "author": "Beatriz R.",
+    "date": "2026-06-08",
+    "stars": 5,
+    "text": "The person that answered the phone was so polite, friendly, and patiently explained…",
+    "link": "https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2?hrid=5Fd1AhCodl6-w0x51fpffQ"
+   },
+   {
+    "author": "Chanda D.",
+    "date": "2026-05-10",
+    "stars": 5,
+    "text": "Super fast and friendly service! I always come here to get my smog check and I tell all my friends to come here too.",
+    "link": "https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2?hrid=Xoeo8_w7KGCnTa039IrEQg"
+   },
+   {
+    "author": "Eunhye S.",
+    "date": "2026-04-11",
+    "stars": 5,
+    "text": "The couple that works here are friendly, efficient, honest, and affordable.",
+    "link": "https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2?hrid=nOEKpPI8PoiOi7Hzo7vq7Q"
+   },
+   {
+    "author": "Sonny C. (Google)",
+    "date": "~4 months ago (as of 2026-09-24 listing)",
+    "stars": 5,
+    "text": "I've never had a shorter wait time… The couple who run this place a very nice and efficient. They value your time.",
+    "link": "https://pengs-smog-check-station-long-beach.localautorepairs.net/"
+   }
+  ]
+ },
+ "photos": {
+  "value": [
+   "https://s3-media0.fl.yelpcdn.com/bphoto/vL7FBFFdp-VkXdjv4QULGQ/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/8vAL96sr_qagtAVntrCfrw/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/L5ChMnkjCWp_NudPSjiouA/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/b1fYhe4OwSdBqhvPdQpI_g/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/FQd7YFV42deriq0VyZu1KA/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/5ngMeCyDmiP35sq3tSC1qA/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/2hJKmdEZ_bhfh_4Qf89TKQ/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/MCi0gLVkC6k3U8RnjQBKKA/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/bIDXGFZuWvYqhT6H0X06Wg/l.jpg",
+   "https://s3-media0.fl.yelpcdn.com/bphoto/0AXpmGQz-i0S7yXw3BJsQQ/l.jpg",
+   "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnjNl1SP4s9r2g_6XZOBRRTLlYfe685Aq_buxU3Chnqzfd6PSZppS-pZI_xw1uwlWTj3i98VM7ZQcbi2UIavMaNgQRpCmRxitiRs_EdIOr83jo_2BJQ5FRIq96ugv6wVCp-tncGmA=w800-h600-k-no"
+  ],
+  "source": "https://www.mapquest.com/us/california/pengs-smog-check-station-387976924 (Yelp feed); Google photo via localautorepairs.net",
+  "rights_note": "Ownership isn't confirmed ('Photos… belong to their owners'). Fine for a demo; ask before going live. Hero: a car on a smog dyno or a shop bay (stock or generated if needed)."
+ },
+ "faqs": [
+  {
+   "q": "Do I need an appointment?",
+   "a": "No, walk-ins are welcome. Motor homes need an appointment.",
+   "sources": [
+    "https://pengs-smog-check-station-long-beach.localautorepairs.net/"
+   ]
+  },
+  {
+   "q": "Are you STAR certified?",
+   "a": "Yes. Shown on BAR's locator STAR filter.",
+   "sources": [
+    "https://www.bar.ca.gov/locator"
+   ]
+  },
+  {
+   "q": "How long does it take?",
+   "a": "Usually 15-30 minutes, per directories and reviews.",
+   "sources": [
+    "https://smogcheckdeals.com/pengs-smog-check-station-long-beach",
+    "https://pengs-smog-check-station-long-beach.localautorepairs.net/"
+   ]
+  },
+  {
+   "q": "Do you do repairs if I fail?",
+   "a": "No. It's a test-only station; get repairs elsewhere and come back for the retest. MapQuest mentions a free re-test (confirm with Peng's).",
+   "sources": [
+    "https://smogcheckdeals.com/pengs-smog-check-station-long-beach",
+    "https://www.mapquest.com/us/california/pengs-smog-check-station-387976924"
+   ]
+  },
+  {
+   "q": "What should I bring?",
+   "a": "Your registration or DMV renewal notice and payment. The check engine light must be off (on 2000+ cars a lit light fails).",
+   "sources": [
+    "https://smogcheckdeals.com/pengs-smog-check-station-long-beach"
+   ]
+  },
+  {
+   "q": "Do you test diesel, hybrid, CNG or out-of-state cars?",
+   "a": "Yes, all of those, plus transfer-of-ownership checks.",
+   "sources": [
+    "https://pengs-smog-check-station-long-beach.localautorepairs.net/"
+   ]
+  }
+ ],
+ "languages": {
+  "value": "English. Spanish is claimed by emissions-testing.com but contradicted by smogcheckdeals.com ('English'), so it's unverified.",
+  "sources": [
+   "https://emissions-testing.com/states/california/long-beach/pengs-smog-check-station",
+   "https://smogcheckdeals.com/pengs-smog-check-station-long-beach"
+  ]
+ },
+ "hispanic": {
+  "owner_hispanic": "No (owner name Pengchiv Sreng)",
+  "neighborhood": "Long Beach is 43.8% Hispanic/Latino (Census QuickFacts)",
+  "recommend_toggle": true,
+  "why": "Heavily Hispanic city and a walk-in consumer audience. Include EN/ES.",
+  "source": "https://www.census.gov/quickfacts/fact/table/longbeachcitycalifornia,gardengrovecitycalifornia/RHI725224"
+ },
+ "tool_idea": {
+  "name": "Smog Check Ready? + Walk-in Planner",
+  "desc": "The user enters model year, fuel type (gas, hybrid, diesel, CNG), vehicle type (car, truck, motor home), the reason (DMV renewal, sale/transfer, out-of-state) and whether the DMV notice says 'STAR'. The tool tells them if Peng's can test it, whether they need an appointment (motor homes), a what-to-bring checklist and a check-engine-light warning. It shows a ballpark total of test plus $8.25 certificate (labeled 'call to confirm'), and a 'best time to walk in' board from the posted hours. It ends with a click-to-call button.",
+  "why": "It's a pure consumer funnel and it reduces phone questions. It also fits the reviews' 'fast, friendly, short wait' theme. Note: a static demo exists in lead-demo-templates/2026-10-05/pengs-smog-check."
+ },
+ "chatbot_training_notes": "No email, so the bot answers FAQs and pushes a call to (562) 424-2368. It must not promise a price or a free retest until confirmed."
+}
