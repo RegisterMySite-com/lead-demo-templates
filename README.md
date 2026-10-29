@@ -105,3 +105,8 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `tn-hong-kong-express` — Overflowing Box Builder (filterable proteins/sides/add-ons + cart ready for later DoorDash / Uber Eats / Grubhub handoff)
 - `fu-wing-low` — Family Feast Planner (guest-count banquet trays + cart)
 - `ta-chen-chinese-restaurant` — classic Chinese menu with category + spice filters + order cart
+
+## 2026-10-29
+- `poke-kai` — interactive build-your-own poke bowl (size, base, protein, max 5 toppings, sauces) with live pricing + cart ready for later DoorDash / Uber Eats
+- `panda-poke` — build-your-own poke bowl customizer (high-rated Main Street Seal Beach location) + cart
+- `poke-plus` — dual poke bowl + Filipino longanisa breakfast plate builder with cart
