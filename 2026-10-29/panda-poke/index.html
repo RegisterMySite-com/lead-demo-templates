@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panda Poke | Seal Beach Poke</title>
+  <meta name="description" content="Panda Poke on Main Street in Seal Beach — highly rated poke bowls. Demo website by RegisterMySite.">
+  <style>
+    :root { --bg:#0f172a; --panel:#1e293b; --ink:#f1f5f9; --muted:#94a3b8; --line:rgba(255,255,255,.1); --accent:#f59e0b; --ok:#22c55e; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px,calc(100% - 32px)); margin:0 auto; }
+    header.nav { position:sticky; top:0; z-index:40; backdrop-filter:blur(16px); background:rgba(15,23,42,.88); border-bottom:1px solid var(--line); }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:72px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.02em; }
+    .brand svg { width:36px; height:36px; flex:none; }
+    nav.links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:14px; }
+    nav.links a:hover { color:var(--ink); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border:0; border-radius:999px; padding:12px 18px; font-weight:650; cursor:pointer; background:var(--accent); color:#1c1917; }
+    .btn.ghost { background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .hero { padding:72px 0 48px; }
+    .kicker { text-transform:uppercase; letter-spacing:.16em; font-size:12px; color:var(--accent); font-weight:700; }
+    h1 { font-size:clamp(36px,6vw,64px); line-height:1.05; margin:10px 0 16px; letter-spacing:-.03em; }
+    .lede { color:var(--muted); font-size:18px; max-width:58ch; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:20px; }
+    section { padding:28px 0 56px; }
+    h2 { font-size:32px; letter-spacing:-.03em; margin:0 0 16px; }
+    label { display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    select { width:100%; background:#0f172a; color:var(--ink); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font:inherit; }
+    footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--muted); font-size:14px; }
+    .nap { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+    .demo-banner { position:fixed; right:14px; bottom:14px; z-index:50; background:#1e293b; border:1px solid var(--line); color:#d7dde5; font-size:12px; padding:8px 12px; border-radius:999px; }
+    .opts { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+    .opt { border:1px solid var(--line); border-radius:999px; padding:8px 14px; cursor:pointer; background:#0f172a; }
+    .opt.on { background:var(--accent); color:#1c1917; border-color:var(--accent); }
+    .cart-row { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--line); }
+    .rating { color:var(--ok); font-weight:700; }
+    @media (max-width:720px) { nav.links { display:none; } .hero { padding-top:40px; } }
+  </style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-row">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="16" fill="#f59e0b"/><path d="M10 22 Q18 12 26 22" fill="none" stroke="#1c1917" stroke-width="2.5"/><circle cx="15" cy="20" r="2" fill="#1c1917"/><circle cx="21" cy="18" r="1.5" fill="#1c1917"/></svg>
+    Panda Poke
+  </a>
+  <nav class="links">
+    <a href="#builder">Build a bowl</a>
+    <a href="#menu">Menu</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <a class="btn" href="tel:+15622068000">(562) 206-8000</a>
+</div></header>
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <p class="kicker">Seal Beach · Main Street · opened ~2022</p>
+    <h1>Top-rated poke on Main Street.</h1>
+    <p class="lede">Yelp 4.7 (212 reviews) and Google 4.9 (~137). Independent shop with foot traffic. Build your bowl here or call ahead — demo cart ready for later delivery handoff.</p>
+  </div></section>
+  <section id="builder"><div class="wrap" style="display:grid; grid-template-columns:1.2fr .8fr; gap:18px;">
+    <div class="card">
+      <h2>Build your poke bowl</h2>
+      <p class="lede">Size, base, protein, toppings (max 5), sauces. Live total. Sometimes listed as Papa Poke — same great bowls.</p>
+      <label>Size</label>
+      <select id="size"><option value="regular" data-price="13.50">Regular ($13.50)</option><option value="large" data-price="16.50">Large ($16.50)</option></select>
+      <div style="height:10px"></div>
+      <label>Base</label>
+      <div class="opts" id="bases"></div>
+      <label>Protein</label>
+      <div class="opts" id="proteins"></div>
+      <label>Toppings (max 5)</label>
+      <div class="opts" id="toppings"></div>
+      <label>Sauces (max 2)</label>
+      <div class="opts" id="sauces"></div>
+      <div style="height:12px"></div>
+      <button class="btn" id="addBtn">Add bowl to cart</button>
+    </div>
+    <div class="card">
+      <h3>Your cart</h3>
+      <div id="cart"></div>
+      <p class="lede">Demo only. Phone or email to order for real.</p>
+      <a class="btn" href="tel:+15622068000">Call to order</a>
+    </div>
+  </div></section>
+  <section id="menu"><div class="wrap cards">
+    <article class="card"><h3>Signature bowls</h3><p>Spicy ahi, salmon teriyaki, or mixed seafood. Highly rated by locals.</p></article>
+    <article class="card"><h3>Build-your-own</h3><p>Rice, greens, or both. Fresh toppings daily. Ask about specials.</p></article>
+    <article class="card"><h3>Main Street location</h3><p>Easy parking and foot traffic. Perfect for lunch or takeout.</p></article>
+  </div></section>
+</main>
+<footer id="visit"><div class="wrap nap">
+  <div><strong style="color:#fff">Panda Poke</strong><br>347 Main St, Unit B<br>Seal Beach, CA 90740</div>
+  <div>Phone<br><a href="tel:+15622068000">(562) 206-8000</a><br>Email<br><a href="mailto:ryokanbowl2022@gmail.com">ryokanbowl2022@gmail.com</a></div>
+  <div>Reviews<br><span class="rating">Yelp 4.7 (212)</span><br><span class="rating">Google 4.9 (~137)</span></div>
+  <div>Social<br><a href="https://facebook.com/102160129291143" target="_blank" rel="noopener">Facebook</a><br>Opened around Oct 2022</div>
+</div></footer>
+<div class="demo-banner">Demo by RegisterMySite · not the live business site</div>
+<script>
+const bases = ['White rice','Brown rice','Mixed greens','Half rice / half greens'];
+const proteins = ['Ahi tuna','Salmon','Spicy ahi','Shrimp','Tofu','Mixed seafood'];
+const toppings = ['Avocado','Edamame','Seaweed salad','Cucumber','Mango','Crab','Green onion','Sesame seeds','Jalapeño','Crispy garlic'];
+const sauces = ['Shoyu','Spicy mayo','Ponzu','Wasabi aioli','Sriracha','Eel sauce'];
+
+function makeOpts(arr, containerId, max) {
+  const el = document.getElementById(containerId);
+  const set = new Set();
+  arr.forEach(item => {
+    const b = document.createElement('button');
+    b.className = 'opt';
+    b.textContent = item;
+    b.onclick = () => {
+      if (set.has(item)) set.delete(item);
+      else if (set.size < max) set.add(item);
+      else return;
+      b.classList.toggle('on', set.has(item));
+    };
+    el.appendChild(b);
+  });
+  return set;
+}
+const baseSet = makeOpts(bases, 'bases', 1);
+const proteinSet = makeOpts(proteins, 'proteins', 1);
+const toppingSet = makeOpts(toppings, 'toppings', 5);
+const sauceSet = makeOpts(sauces, 'sauces', 2);
+
+let cart = [];
+function renderCart() {
+  const el = document.getElementById('cart');
+  if (!cart.length) { el.innerHTML = '<p class="lede">Empty. Build a bowl above.</p>'; return; }
+  let total = 0;
+  el.innerHTML = cart.map(item => {
+    total += item.price;
+    return `<div class="cart-row"><span>${item.size} ${item.protein} on ${item.base}</span><span>$${item.price.toFixed(2)}</span></div>`;
+  }).join('') + `<p><strong>Total $${total.toFixed(2)}</strong></p>`;
+}
+document.getElementById('addBtn').onclick = () => {
+  if (!baseSet.size || !proteinSet.size) { alert('Pick a base and a protein'); return; }
+  const sizeSel = document.getElementById('size');
+  const price = parseFloat(sizeSel.options[sizeSel.selectedIndex].dataset.price);
+  cart.push({
+    size: sizeSel.value,
+    base: [...baseSet][0],
+    protein: [...proteinSet][0],
+    toppings: [...toppingSet],
+    sauces: [...sauceSet],
+    price
+  });
+  [baseSet, proteinSet, toppingSet, sauceSet].forEach(s => s.clear());
+  document.querySelectorAll('.opt').forEach(b => b.classList.remove('on'));
+  renderCart();
+};
+renderCart();
+</script>
+</body>
+</html>
