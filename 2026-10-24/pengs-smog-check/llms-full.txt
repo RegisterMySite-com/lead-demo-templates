@@ -1,0 +1,53 @@
+# Peng's Smog Check Station: full business facts
+
+Canonical page: https://diyregistry.com/s/pengs-smog-check/
+Facts checked: 2026-10-24. This is a RegisterMySite demo, not yet published by the business.
+
+## Identity
+- Name: Peng's Smog Check Station (BAR lists "PENGS SMOG CHECK STATION")
+- Owner on the city business license: Pengchiv Sreng
+- Family-run. Reviewers describe "the couple who run this place."
+- Address: 2041 E Carson St, Ste B, Long Beach, CA 90807 (North Long Beach, on Carson St near Cherry Ave)
+- Phone: (562) 424-2368
+- Email: none published
+- History: about 30 years serving Long Beach. It started at 4101 Cherry Ave (city license issued 1990) and moved to E Carson St around 2017–2018. BAR smog license since 2002 (per a directory).
+- Languages: English. Spanish service isn't verified.
+
+## Licenses
+- California Bureau of Automotive Repair, Automotive Repair Dealer ARD 147631. Listed on BAR's Auto Shop Locator as a smog-inspection and STAR station. https://www.bar.ca.gov/locator
+- City of Long Beach business license BU21803792 (Auto Repair – Minor, Tune-Up, Smog Test): active, renewed 2025-11-17.
+
+## Hours
+- Monday–Friday 8:30 AM–5:00 PM
+- Saturday 8:30 AM–3:30 PM
+- Sunday closed
+
+## Services
+This is a test-only station. It does no repairs.
+- Regular / biennial smog check (DMV renewal)
+- STAR-certified smog checks, including for DMV-directed vehicles and gross polluters
+- Transfer-of-ownership smog checks
+- Out-of-state vehicle smog checks
+- Diesel and hybrid vehicles
+- Natural gas (CNG) vehicles
+- Motor homes, by appointment only
+
+## Visit
+- Walk-ins welcome. Only motor homes need an appointment.
+- Typical visit: 15–30 minutes
+- Bring: your DMV renewal notice or registration, plus payment
+- Payment: cash or credit card
+- The check engine light must be off. On 2000 and newer vehicles, a lit light fails.
+- Price: no published price. Call for the current test price. The state adds an $8.25 smog certificate fee when a car passes.
+
+## Reviews (October 2026)
+- Yelp: 5.0 from 166 reviews. Newest: 2026-10-09. https://www.yelp.com/biz/pengs-smog-check-station-long-beach-2
+- Google: 4.9 from about 213 reviews
+- Recent excerpts:
+  - "Been going to Pengs for many years. Always quick and friendly service. Highly recommended!" (Paul N., 2026-10-09)
+  - "Had a great and easy experience with Peng's Smog check station. They're super friendly, quick, and knowledgeable." (Donald L., 2026-06-29)
+  - "The couple that works here are friendly, efficient, honest, and affordable." (Eunhye S., 2026-04-11)
+
+## On-page tools
+- Smog Check Ready?: you enter model year, fuel, vehicle type, the reason for the check, a STAR notice, and whether the check engine light or battery is an issue. It says whether Peng's can test the vehicle, whether an appointment is needed, and what to bring. It's a rough guide only.
+- Open/closed board: computed from the posted hours in Long Beach time.

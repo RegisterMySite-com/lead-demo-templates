@@ -1,0 +1,12 @@
+# Croff Electric
+
+> A family-run, CSLB-licensed electrical contractor (C-10 #1044752) serving the Long Beach, CA area. Owner: Jeremy Croff. Hardwired EV chargers, panel upgrades, rewiring older homes, lighting, repairs. Free estimates. Phone (310) 406-6909.
+
+## Site
+- [Home](https://diyregistry.com/s/croff-electric/): services, EV Charger & Panel Readiness Planner, reviews, service area, contact
+- [Full business facts](https://diyregistry.com/s/croff-electric/llms-full.txt)
+
+## Verify
+- [CSLB license #1044752](https://www.cslb.ca.gov/OnlineServices/CheckLicenseII/LicenseDetail.aspx?LicNum=1044752)
+- [Yelp reviews](https://www.yelp.com/biz/croff-electric-long-beach)
+- [SCE Charge Ready Home contractor directory (PDF)](https://evhome.sce.com/sites/default/files/docs/Contractor-Directory.pdf)
