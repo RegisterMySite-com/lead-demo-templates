@@ -110,3 +110,8 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `poke-kai` — interactive build-your-own poke bowl (size, base, protein, max 5 toppings, sauces) with live pricing + cart ready for later DoorDash / Uber Eats
 - `panda-poke` — build-your-own poke bowl customizer (high-rated Main Street Seal Beach location) + cart
 - `poke-plus` — dual poke bowl + Filipino longanisa breakfast plate builder with cart
+
+## 2026-10-30
+- `han-yang` — soup bowl builder (galbi tang / seolleongtang broths, proteins, add-ons) + cart ready for later DoorDash / Uber Eats
+- `hak-heang` — banquet & wedding planner (guest count, packages, live band Fri–Sun) + inquiry form
+- `udom-khmer` — filterable Khmer menu by category + add-to-cart (plus event/karaoke notes)
