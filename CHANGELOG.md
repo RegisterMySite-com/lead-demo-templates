@@ -1,5 +1,13 @@
 # Changelog
 
+## [2026-10-30] - 2026-10-30
+### Added
+- Three new static HTML demo sites for daily leads:
+  - `2026-10-30/han-yang` — Soup bowl builder (galbi tang / seolleongtang) + cart for delivery-app handoff
+  - `2026-10-30/hak-heang` — Banquet & wedding planner (guest count, packages, live band) + inquiry form
+  - `2026-10-30/udom-khmer` — Filterable Khmer menu by category + cart
+- README.md entry for 2026-10-30
+
 ## [2026-10-28] - 2026-10-28
 ### Added
 - Three new static HTML demo sites for daily leads:
