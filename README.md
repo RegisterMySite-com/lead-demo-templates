@@ -115,3 +115,4 @@ These are outreach demos, not the businesses' live sites. Each `chat/` worker st
 - `han-yang` — soup bowl builder (galbi tang / seolleongtang broths, proteins, add-ons) + cart ready for later DoorDash / Uber Eats
 - `hak-heang` — banquet & wedding planner (guest count, packages, live band Fri–Sun) + inquiry form
 - `udom-khmer` — filterable Khmer menu by category + add-to-cart (plus event/karaoke notes)
+- `pacific-apartment-homes` — South Bay LA owner-operator PM board for Pacific Apartment Homes / BD Management (19 live AppFolio units $2,275–$5,395 in Hermosa Beach, El Segundo, Torrance, Redondo Beach, Santa Monica), city/beds/max-rent filters with pagination at 6 per page, photo modal, Schedule a tour + Apply now to real AppFolio applications, no advertised office address on their site, no review carousel, chat hook `pah-open` + `chat/widget.js` for Project-Scaffold
