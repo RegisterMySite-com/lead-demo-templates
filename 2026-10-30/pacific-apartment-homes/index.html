@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pacific Apartment Homes | Remodeled South Bay Apartments</title>
+<meta name="description" content="Remodeled and new-construction apartments in Hermosa Beach, El Segundo, Torrance, Redondo Beach and Santa Monica from Pacific Apartment Homes and BD Management Company.">
+<style>
+:root{--ink:#14303f;--sea:#1f6f8b;--foam:#e8f3f5;--sand:#f6efe4;--sun:#e9a23b;--muted:#5d7380;--line:#d5e2e6;--r:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:var(--sea)}img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:.02em}
+.brand svg{flex:none}.brand small{display:block;font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.04em}
+nav.main{display:flex;gap:22px;align-items:center}nav.main a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+nav.main a:hover{color:var(--sea)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:11px 20px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}.btn.pri{background:var(--sea);color:#fff}.btn.sun{background:var(--sun);color:#1d1404}
+.btn.ghost{background:#fff;color:var(--sea);border:2px solid var(--sea)}.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+.menu-btn{display:none;background:none;border:0;font-size:26px;cursor:pointer;color:var(--ink)}
+.hero{position:relative;color:#fff;overflow:hidden;background:#0f3446}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.55;transition:opacity 1.2s}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,40,55,.92) 0%,rgba(10,40,55,.55) 55%,rgba(10,40,55,.15) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:96px 20px 110px}
+.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 16px;max-width:720px}
+.hero p{font-size:19px;max-width:600px;margin:0 0 28px;color:#dcecf1}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.wave{position:absolute;left:0;right:0;bottom:-1px;z-index:3}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px}.stats div{font-size:14px;color:#cfe3ea}.stats b{display:block;font-size:26px;color:#fff}
+section{padding:72px 0}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--sea)}
+h2{font-size:clamp(26px,3.4vw,38px);margin:6px 0 14px;line-height:1.15}.lead{color:var(--muted);max-width:720px;font-size:17px}
+.about{background:var(--sand)}.about .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.pill-list li{background:#fff;border:1px solid #eadfcc;border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mosaic img{border-radius:var(--r);aspect-ratio:4/3;object-fit:cover;width:100%;background:#e6ddd0}
+.mosaic img:first-child{grid-column:span 2;aspect-ratio:16/8}
+.filters{display:flex;flex-wrap:wrap;gap:12px;align-items:end;background:var(--foam);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:24px 0}
+.filters label{display:flex;flex-direction:column;font-size:13px;font-weight:700;color:var(--muted);gap:5px}
+.filters select{font:inherit;padding:9px 12px;border-radius:10px;border:1px solid #b9cdd3;background:#fff;min-width:170px;color:var(--ink)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid #b9cdd3;background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;color:var(--ink)}
+.chip.on{background:var(--sea);color:#fff;border-color:var(--sea)}
+.count{margin-left:auto;font-weight:700;color:var(--ink);align-self:center}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(20,48,63,.05);transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 10px 28px rgba(20,48,63,.13);transform:translateY(-2px)}
+.card .ph{position:relative;aspect-ratio:4/3;background:linear-gradient(120deg,#dfecef,#f3f8f9)}.card .ph img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;left:12px;top:12px;background:#fff;color:var(--ink);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700}
+.tag.deal{left:auto;right:12px;background:var(--sun)}
+.card .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.price{font-size:22px;font-weight:800}.price small{font-size:14px;color:var(--muted);font-weight:600}
+.meta{color:var(--muted);font-size:14px;font-weight:600}.card h3{font-size:17px;margin:2px 0}.card p{margin:0;color:#3c5664;font-size:14.5px}
+.card .act{display:flex;gap:8px;margin-top:auto;padding-top:12px}.card .act .btn{padding:9px 14px;font-size:14px;flex:1}
+.pager{display:flex;justify-content:center;gap:8px;margin-top:30px}.pager button{min-width:42px;height:42px;border-radius:10px;border:1px solid #b9cdd3;background:#fff;font:inherit;font-weight:700;cursor:pointer;color:var(--ink)}
+.pager button.on{background:var(--ink);color:#fff;border-color:var(--ink)}.pager button[disabled]{opacity:.4;cursor:default}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r);grid-column:1/-1}
+.areas{background:var(--foam)}.area-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+.area{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;cursor:pointer;text-align:left;font:inherit;color:var(--ink)}
+.area b{display:block;font-size:17px}.area span{color:var(--muted);font-size:14px}.area:hover{border-color:var(--sea)}
+.contact .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.cbox{border:1px solid var(--line);border-radius:var(--r);padding:22px}.cbox h3{margin:0 0 6px;font-size:17px}.cbox p{margin:0 0 10px;color:var(--muted);font-size:14.5px}
+.cbox a.tel{font-size:20px;font-weight:800;text-decoration:none}
+footer{background:var(--ink);color:#bcd2da;padding:34px 0;font-size:14px}footer a{color:#fff}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;z-index:80;background:rgba(8,28,38,.7);display:none;align-items:flex-start;justify-content:center;padding:30px 14px;overflow:auto}
+.modal.open{display:flex}.sheet{background:#fff;border-radius:18px;max-width:960px;width:100%;overflow:hidden;position:relative;animation:pop .2s ease-out}
+@keyframes pop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.x{position:absolute;right:12px;top:12px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:#fff;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.gal{position:relative;background:#0e2a37;aspect-ratio:16/9}.gal img{width:100%;height:100%;object-fit:contain}
+.gal .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:22px;cursor:pointer}
+.gal .prev{left:12px}.gal .next{right:12px}.gal .ctr{position:absolute;right:14px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;border-radius:999px;padding:3px 10px;font-size:13px}
+.thumbs{display:flex;gap:8px;padding:10px 16px;background:#f3f7f8;overflow-x:auto}.thumbs img{width:86px;height:60px;object-fit:cover;border-radius:8px;cursor:pointer;opacity:.6;border:2px solid transparent}
+.thumbs img.on{opacity:1;border-color:var(--sea)}
+.mbody{padding:22px 26px 26px;display:grid;grid-template-columns:1.4fr 1fr;gap:26px}.mbody h3{margin:0 0 4px;font-size:24px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0}.facts div{background:var(--foam);border-radius:10px;padding:10px 12px;font-size:14px}.facts b{display:block;font-size:16px}
+.feat{padding-left:18px;margin:8px 0;color:#3c5664}.side{background:var(--sand);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:10px;align-self:start}
+.side .btn{width:100%}.note{font-size:13px;color:var(--muted)}
+.dlg form{padding:24px 26px;display:grid;gap:12px}.dlg h3{margin:0}.dlg label{display:grid;gap:4px;font-size:14px;font-weight:600}
+.dlg input,.dlg select,.dlg textarea{font:inherit;padding:10px 12px;border:1px solid #b9cdd3;border-radius:10px}
+.demo{background:#fff7e8;border:1px solid #f0d49e;border-radius:10px;padding:10px 12px;font-size:14px}
+@media (max-width:960px){.cards{grid-template-columns:repeat(2,1fr)}.area-grid{grid-template-columns:repeat(3,1fr)}.about .grid,.mbody{grid-template-columns:1fr}.contact .grid{grid-template-columns:1fr}}
+@media (max-width:720px){nav.main{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}nav.main.open{display:flex}.menu-btn{display:block}
+.cards{grid-template-columns:1fr}.area-grid{grid-template-columns:1fr 1fr}.count{margin-left:0;width:100%}.filters select{min-width:0;width:100%}.filters label{flex:1 1 140px}section{padding:54px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="#top" aria-label="Pacific Apartment Homes home">
+<svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1f6f8b"/><path d="M8 24c4-4 8-4 12 0s8 4 12 0" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M8 30c4-4 8-4 12 0s8 4 12 0" stroke="#9fd3df" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="20" cy="14" r="5" fill="#e9a23b"/></svg>
+<span>Pacific Apartment Homes<small>BD Management Company</small></span></a>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="main" id="nav"><a href="#rentals">Rentals</a><a href="#about">About</a><a href="#areas">Areas</a><a href="#contact">Contact</a><a href="#" id="pah-open">Message us</a><a class="btn pri" href="tel:+13109535750">Call leasing</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction"><div class="bg" id="heroBg"></div>
+<div class="wrap">
+<div class="eyebrow" style="color:#9fd3df">South Bay, Los Angeles</div>
+<h1>Boutique apartments with the finish of new construction</h1>
+<p>We take 1960s and 1970s apartment buildings in great South Bay locations and remodel them into comfortable homes, with social spaces like fire pits, BBQs, pools and rooftop decks.</p>
+<div class="cta"><a class="btn sun" href="#rentals">See available homes</a><a class="btn ghost" style="background:transparent;color:#fff;border-color:#fff" href="#contact">Contact leasing</a></div>
+<div class="stats" id="stats"></div>
+</div>
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" height="40" width="100%" aria-hidden="true"><path d="M0 30 C240 60 480 0 720 30 S1200 60 1440 30 V60 H0Z" fill="#fff"/></svg>
+</section>
+
+<section id="rentals"><div class="wrap">
+<div class="eyebrow">Available now and soon</div>
+<h2>Find your next apartment</h2>
+<p class="lead">Every listing below comes from our live AppFolio vacancies. Open a home for more photos and details, book a tour, or start your application online.</p>
+<div class="filters" role="search">
+<label>City<select id="fCity"><option value="">All cities</option></select></label>
+<div><div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:5px">Bedrooms</div>
+<div class="chips" id="fBeds"><button class="chip on" data-v="">Any</button><button class="chip" data-v="0">Studio</button><button class="chip" data-v="1">1 bed</button><button class="chip" data-v="2">2 beds</button></div></div>
+<label>Max rent<select id="fRent"><option value="">No max</option><option>2500</option><option>3000</option><option>3500</option><option>4000</option><option>4500</option></select></label>
+<label>Sort<select id="fSort"><option value="rent">Rent, low to high</option><option value="rentd">Rent, high to low</option><option value="city">City</option></select></label>
+<div class="count" id="count" aria-live="polite"></div>
+</div>
+<div class="cards" id="cards"></div>
+<nav class="pager" id="pager" aria-label="Listing pages"></nav>
+</div></section>
+
+<section class="about" id="about"><div class="wrap grid">
+<div><div class="eyebrow">About us</div>
+<h2>A family company remodeling South Bay buildings</h2>
+<p class="lead">Pacific Apartment Homes, LLC and BD Management Company own and manage remodeled apartment buildings in and around the South Bay of Southern California and Santa Barbara. Our goal is to turn an existing building in a great area into a boutique place to live.</p>
+<ul class="pill-list"><li>In-unit washer and dryer in many homes</li><li>Air conditioning in many homes</li><li>Pools, spas and fire pits</li><li>Rooftop and ocean-view decks</li><li>Online applications</li><li>Cats and dogs considered</li></ul>
+</div>
+<div class="mosaic" id="mosaic"></div>
+</div></section>
+
+<section class="areas" id="areas"><div class="wrap">
+<div class="eyebrow">Where we are</div>
+<h2>Neighborhoods with homes open today</h2>
+<p class="lead">Tap a city to see what is available there.</p>
+<div class="area-grid" id="areaGrid"></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div class="eyebrow">Contact</div>
+<h2>Talk to our leasing team</h2>
+<div class="grid">
+<div class="cbox"><h3>All leasing inquiries</h3><p>Questions about any listing, tours and applications.</p><a class="tel" href="tel:+13109535750">310-953-5750</a></div>
+<div class="cbox"><h3>1803 PCH, 720 21st St and 1620 E Maple</h3><p>Tours and questions for these three Hermosa Beach and El Segundo buildings.</p><a class="tel" href="tel:+13104228406">310-422-8406</a></div>
+<div class="cbox"><h3>General inquiries</h3><p>This line is monitored daily, with replies in 24 to 48 hours.</p><a class="tel" href="tel:+18058865705">(805) 886-5705</a></div>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><div><b style="color:#fff">Pacific Apartment Homes and BD Management Company</b><br>Apartments in Hermosa Beach, El Segundo, Torrance, Redondo Beach and Santa Monica.</div>
+<div>Listings and applications by <a href="https://bohlinger.appfolio.com/listings" rel="noopener" target="_blank">AppFolio</a><br>Demo site preview</div></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div class="sheet">
+<button class="x" data-close aria-label="Close">×</button>
+<div class="gal"><img id="gImg" alt=""><button class="nav prev" id="gPrev" aria-label="Previous photo">‹</button><button class="nav next" id="gNext" aria-label="Next photo">›</button><span class="ctr" id="gCtr"></span></div>
+<div class="thumbs" id="thumbs"></div>
+<div class="mbody"><div><div class="meta" id="mCity"></div><h3 id="mTitle"></h3><p id="mHead" style="margin:0;font-weight:600"></p>
+<div class="facts" id="mFacts"></div><p id="mDesc" style="color:#3c5664"></p><ul class="feat" id="mFeat"></ul><p class="note" id="mNote"></p></div>
+<aside class="side"><div class="price" id="mPrice"></div><div class="note" id="mDeal"></div>
+<button class="btn pri" id="mTour">Schedule a tour</button><a class="btn sun" id="mApply" target="_blank" rel="noopener">Apply now</a>
+<a class="btn ghost" id="mView" target="_blank" rel="noopener">View on AppFolio</a><p class="note" id="mCall"></p></aside></div>
+</div></div>
+
+<div class="modal dlg" id="tour" role="dialog" aria-modal="true" aria-labelledby="tTitle"><div class="sheet" style="max-width:520px">
+<button class="x" data-close aria-label="Close">×</button>
+<form onsubmit="return false"><h3 id="tTitle">Schedule a tour</h3><div class="demo">Demo form, nothing is sent. To book a tour now, call <a id="tPhone" href="tel:+13109535750">310-953-5750</a>.</div>
+<label>Home<input id="tHome" readonly></label><label>Name<input autocomplete="name"></label><label>Phone<input type="tel" autocomplete="tel"></label>
+<label>Preferred tour<select><option>In person</option><option>Virtual</option></select></label><label>Preferred day and time<input placeholder="For example, Saturday morning"></label>
+<button class="btn pri" disabled aria-disabled="true">Demo only, nothing is sent</button></form>
+</div></div>
+
+<script src="listings.js"></script>
+<script>
+(function(){
+var U=window.PAH_UNITS||[],PER=6,page=1,st={city:"",beds:"",rent:"",sort:"rent"};
+var $=function(s){return document.querySelector(s)};
+var money=function(n){return "$"+n.toLocaleString("en-US")};
+var bedTxt=function(b){return b===0?"Studio":b+" bd"};
+var pend={};
+function photo(id){return (window.LEAD_PHOTOS||{})[id]}
+function load(ids,cb){var n=ids.length;if(!n){cb();return}var done=function(){if(--n===0)cb()};
+ids.forEach(function(i){if(photo(i)){done();return}if(pend[i]){pend[i].push(done);return}pend[i]=[done];var s=document.createElement("script");s.src="photos/"+i+".js";s.onload=s.onerror=function(){var q=pend[i];pend[i]=null;q.forEach(function(f){f()})};document.head.appendChild(s)})}
+function setImg(img,id){var d=photo(id);if(d)img.src=d}
+var cities=[];U.forEach(function(u){if(cities.indexOf(u.city)<0)cities.push(u.city)});cities.sort();
+cities.forEach(function(c){var o=document.createElement("option");o.value=o.textContent=c;$("#fCity").appendChild(o)});
+var mn=Math.min.apply(null,U.map(function(u){return u.rent})),mx=Math.max.apply(null,U.map(function(u){return u.rent}));
+$("#stats").innerHTML="<div><b>"+U.length+"</b>homes listed</div><div><b>"+cities.length+"</b>South Bay and Westside cities</div><div><b>"+money(mn)+" to "+money(mx)+"</b>monthly rent</div>";
+function list(){var r=U.filter(function(u){return (!st.city||u.city===st.city)&&(st.beds===""||u.beds===+st.beds)&&(!st.rent||u.rent<=+st.rent)});
+r.sort(function(a,b){return st.sort==="rentd"?b.rent-a.rent:st.sort==="city"?(a.city<b.city?-1:a.city>b.city?1:a.rent-b.rent):a.rent-b.rent});return r}
+function render(){var r=list(),pages=Math.max(1,Math.ceil(r.length/PER));if(page>pages)page=pages;var sl=r.slice((page-1)*PER,page*PER);
+$("#count").textContent=r.length+(r.length===1?" home":" homes");var c=$("#cards");c.innerHTML="";
+if(!r.length){c.innerHTML='<div class="empty">No homes match these filters. Try another city or a higher max rent.</div>'}
+sl.forEach(function(u){var el=document.createElement("article");el.className="card";
+el.innerHTML='<div class="ph"><img alt=""><span class="tag">'+(u.avail==="Now"?"Available now":"Available "+u.avail)+'</span>'+(u.special?'<span class="tag deal">Move-in special</span>':'')+'</div><div class="bd"><div class="price">'+money(u.rent)+' <small>/ month</small></div><div class="meta">'+bedTxt(u.beds)+' · '+u.baths+' ba'+(u.sqft?' · '+u.sqft.toLocaleString("en-US")+' sq ft':'')+' · '+u.city+'</div><h3></h3><p></p><div class="act"><button class="btn pri">More info</button><a class="btn ghost" target="_blank" rel="noopener">Apply now</a></div></div>';
+el.querySelector("h3").textContent=u.street;el.querySelector("p").textContent=u.head;var im=el.querySelector("img");im.alt=u.alts[0]||u.street;
+el.querySelector(".act a").href=u.apply;el.querySelector(".act button").onclick=function(){openUnit(u)};
+load([u.photos[0]],function(){setImg(im,u.photos[0])});c.appendChild(el)});
+var p=$("#pager");p.innerHTML="";if(r.length>PER){var b=function(t,n,dis,on){var x=document.createElement("button");x.textContent=t;x.disabled=dis;if(on){x.className="on";x.setAttribute("aria-current","page")}x.setAttribute("aria-label",typeof t==="number"?"Page "+t:t==="‹"?"Previous page":"Next page");x.onclick=function(){page=n;render();document.getElementById("rentals").scrollIntoView()};p.appendChild(x)};
+b("‹",page-1,page===1);for(var i=1;i<=pages;i++)b(i,i,false,i===page);b("›",page+1,page===pages)}}
+$("#fCity").onchange=function(){st.city=this.value;page=1;render()};$("#fRent").onchange=function(){st.rent=this.value;page=1;render()};$("#fSort").onchange=function(){st.sort=this.value;page=1;render()};
+document.querySelectorAll("#fBeds .chip").forEach(function(ch){ch.onclick=function(){document.querySelectorAll("#fBeds .chip").forEach(function(x){x.classList.remove("on")});ch.classList.add("on");st.beds=ch.dataset.v;page=1;render()}});
+var cur=null,gi=0,lastFocus=null;
+function show(i){gi=(i+cur.photos.length)%cur.photos.length;setImg($("#gImg"),cur.photos[gi]);$("#gImg").alt=cur.alts[gi]||cur.street;$("#gCtr").textContent=(gi+1)+" / "+cur.photos.length;
+document.querySelectorAll("#thumbs img").forEach(function(t,k){t.classList.toggle("on",k===gi)});var one=cur.photos.length<2;$("#gPrev").hidden=one;$("#gNext").hidden=one}
+function openModal(m){lastFocus=document.activeElement;m.classList.add("open");document.body.style.overflow="hidden";var f=m.querySelector(".x");f&&f.focus()}
+function closeModal(m){m.classList.remove("open");if(!document.querySelector(".modal.open"))document.body.style.overflow="";lastFocus&&lastFocus.focus()}
+function openUnit(u){cur=u;$("#mCity").textContent=u.city+", CA";$("#mTitle").textContent=u.street;$("#mHead").textContent=u.head;$("#mDesc").textContent=u.desc;
+$("#mFacts").innerHTML="";[["Rent",money(u.rent)+" / mo"],["Layout",(u.beds===0?"Studio":u.beds+" bedroom")+", "+u.baths+" bath"],["Size",u.sqft?u.sqft.toLocaleString("en-US")+" sq ft":"Ask leasing"],["Available",u.avail==="Now"?"Now":u.avail]].forEach(function(f){var d=document.createElement("div");d.innerHTML="<b></b>";d.querySelector("b").textContent=f[1];d.insertBefore(document.createTextNode(f[0]),d.firstChild);$("#mFacts").appendChild(d)});
+$("#mFeat").innerHTML="";u.feat.forEach(function(f){var li=document.createElement("li");li.textContent=f;$("#mFeat").appendChild(li)});
+$("#mPrice").innerHTML=money(u.rent)+' <small style="font-size:14px;color:var(--muted)">/ month</small>';$("#mDeal").textContent=u.special?"Special listed on AppFolio: "+u.special+". Ask leasing for current terms.":"";
+$("#mApply").href=u.apply;$("#mView").href=u.view;$("#mCall").innerHTML="";var a=document.createElement("a");a.href="tel:+1"+u.tourPhone.replace(/-/g,"");a.textContent=u.tourPhone;$("#mCall").append("Prefer to talk? Call ",a,".");
+$("#mNote").textContent=u.similar?"Some photos show a similar remodeled unit, as noted on the AppFolio listing.":"";
+var th=$("#thumbs");th.innerHTML="";u.photos.forEach(function(id,k){var t=document.createElement("img");t.alt=u.alts[k]||"";t.onclick=function(){show(k)};th.appendChild(t)});th.hidden=u.photos.length<2;
+load(u.photos,function(){document.querySelectorAll("#thumbs img").forEach(function(t,k){setImg(t,u.photos[k])});show(0)});show(0);openModal($("#modal"))}
+$("#gPrev").onclick=function(){show(gi-1)};$("#gNext").onclick=function(){show(gi+1)};
+$("#mTour").onclick=function(){$("#tHome").value=cur.street+", "+cur.city;var t=$("#tPhone");t.textContent=cur.tourPhone;t.href="tel:+1"+cur.tourPhone.replace(/-/g,"");openModal($("#tour"))};
+document.querySelectorAll("[data-close]").forEach(function(b){b.onclick=function(){closeModal(b.closest(".modal"))}});
+document.querySelectorAll(".modal").forEach(function(m){m.addEventListener("click",function(e){if(e.target===m)closeModal(m)})});
+document.addEventListener("keydown",function(e){var m=[].slice.call(document.querySelectorAll(".modal.open")).pop();if(!m)return;if(e.key==="Escape")closeModal(m);if(m.id==="modal"&&!$("#tour").classList.contains("open")){if(e.key==="ArrowLeft")show(gi-1);if(e.key==="ArrowRight")show(gi+1)}});
+var ag=$("#areaGrid");cities.forEach(function(c){var n=U.filter(function(u){return u.city===c}).length,b=document.createElement("button");b.className="area";b.innerHTML="<b></b><span></span>";b.querySelector("b").textContent=c;b.querySelector("span").textContent=n+(n===1?" home":" homes")+" listed";b.onclick=function(){st.city=c;$("#fCity").value=c;page=1;render();document.getElementById("rentals").scrollIntoView()};ag.appendChild(b)});
+var hero=U.filter(function(u){return u.photos.length>1}).slice(0,6).map(function(u){return u.photos[0]}),hi=0;
+load(hero,function(){var bg=$("#heroBg");function nx(){var d=photo(hero[hi%hero.length]);if(d){bg.style.opacity=0;setTimeout(function(){bg.style.backgroundImage="url("+d+")";bg.style.opacity=.55},400)}hi++}nx();if(!matchMedia("(prefers-reduced-motion: reduce)").matches)setInterval(nx,6000)});
+var mz=[U[U.length-1],U[Math.floor(U.length/2)],U[0]].map(function(u,k){return {id:u.photos[Math.min(k,u.photos.length-1)],alt:u.alts[Math.min(k,u.alts.length-1)]}});
+load(mz.map(function(m){return m.id}),function(){mz.forEach(function(m){var i=document.createElement("img");setImg(i,m.id);i.alt=m.alt;$("#mosaic").appendChild(i)})});
+$("#menuBtn").onclick=function(){var n=$("#nav"),o=n.classList.toggle("open");this.setAttribute("aria-expanded",o)};document.querySelectorAll("#nav a").forEach(function(a){a.addEventListener("click",function(){$("#nav").classList.remove("open")})});
+$("#pah-open").addEventListener("click",function(e){e.preventDefault();if(window.PAHChat&&window.PAHChat.open)window.PAHChat.open();else location.hash="contact"});
+render();
+})();
+</script>
+<script src="chat/widget.js" defer onerror="this.remove()"></script>
+</body>
+</html>

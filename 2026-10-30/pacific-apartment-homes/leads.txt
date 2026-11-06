@@ -1,0 +1,36 @@
+Pacific Apartment Homes / BD Management Company (South Bay, Los Angeles County) - lead demo, 2026-10-30
+
+Business
+- Pacific Apartment Homes, LLC and BD Management Company (family owner-operator; brand used on site, Google, Yelp and Instagram is "Pacific Apartment Homes")
+- Phones shown on the page (all from pacificapthomes.com home and /contact-us pages, fetched 2026-10-30):
+  - All leasing inquiries: 310-953-5750
+  - 1803 PCH, 720 21st St and 1620 E Maple: 310-422-8406 (also printed on those AppFolio listings)
+  - General inquiries: (805) 886-5705, "monitored daily with a turnaround time of 24-48 hours"
+- Advertised address: none. Their website shows no office or mailing address. The lead packet cites a Google listing at 1140 Highland Ave #223, Manhattan Beach and a Santa Barbara PMB on state filings; I could not verify either from a page I opened, so the demo shows no street address, only the cities with live listings.
+- No emails or staff names are shown on the page (the site lists them, but the demo routes everything to phone, AppFolio and the chat hook).
+
+Sources
+- Lead packet from Leads Bot Realters: /workspace/leads-pm-2026-10-30.md
+- https://www.pacificapthomes.com/ (about text, areas, contact phones)
+- https://www.pacificapthomes.com/contact-us
+- https://bohlinger.appfolio.com/listings (19 vacancies live on 2026-10-30, $2,275-$5,395)
+- Each unit's AppFolio detail page (https://bohlinger.appfolio.com/listings/detail/<uid>) for address, beds, baths, sq ft, rent, availability, amenities, pet policy, specials and photos
+- Photos: up to 3 per unit from each AppFolio gallery (720 21st St #24 has only 1 usable photo; its 2nd image is a logo), recompressed to 560px and stored as base64 JS in photos/ (not hotlinked). 13 listings say their photos show a similar unit; the modal says so. No signs or phone numbers visible in chosen photos.
+
+Apply links
+- Each card's Apply now goes to that unit's AppFolio application (listings/rental_applications/new?listable_uid=...&source=Website). All 19 returned HTTP 200 on 2026-10-30. Not walked through in a browser.
+
+Reviews
+- Review carousel left out. No social review profile was opened and verified for this run (the Instagram fetch came back empty, and the Google and Yelp ratings in the packet come from third-party snippets). No quotes, stars or counts are on the page.
+
+Page structure
+- Single page: hero with rotating real listing photos, Rentals (filters for city, bedrooms, max rent, sort; 6 per page = 4 pages), About, Areas (city buttons that filter), Contact, footer.
+- More-info modal: photo gallery with thumbnails and arrows, facts, features, special as listed, Schedule a tour, Apply now, View on AppFolio, and the right tour phone.
+- Schedule a tour dialog is a demo form: "Demo form, nothing is sent", submit disabled.
+- Chat hook for Project-Scaffold: nav link id="pah-open" calls window.PAHChat.open() if present, and the page loads chat/widget.js (deferred; removed silently if missing).
+
+Notes for Realters
+- Many phone numbers: each AppFolio listing shows a different tracking number (for example (424) 416-2636 for 420 Illinois, (424) 999-7609 for Emerald St). The demo uses only the three numbers on their own website.
+- Specials change often; the modal labels them "as listed on AppFolio" and tells renters to confirm.
+- Fees and deposits shown on AppFolio ($40 application fee, $800-$2,000 deposits) were left off the cards.
+- 720 21st St is "new construction" on AppFolio but "newly remodeled" on the site; the cards follow AppFolio.
